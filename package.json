@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "watch": "node_modules/.bin/webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js --watch",
-    "build": "node_modules/.bin/webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "package": "NODE_ENV=production node_modules/.bin/webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "lint": "node_modules/.bin/eslint src/js"
+    "watch": "webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js --watch",
+    "build": "webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "package": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "lint": "eslint src/js"
   },
   "repository": {
     "type": "git",
@@ -14,11 +14,7 @@
   },
   "license": "BSD-3-Clause",
   "dependencies": {
-    "bootstrap-sass": "^3.3.7",
-    "font-awesome": "^4.7.0",
-    "jquery-highlight": "^3.3.0",
-    "laravel-mix": "^0.5",
-    "cwp-new-theme": "^0.1"
+    "laravel-mix": "^0.5"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
