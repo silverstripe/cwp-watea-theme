@@ -1,1 +1,11 @@
 // Define agency specific variables
+
+// BreadCrumbs
+$gray-base:              #000 !default;
+$gray-light: lighten($gray-base, 46.4%); // #767676 (edited)
+
+$breadcrumb-padding-horizontal: 0;
+
+//** Breadcrumb background color
+$breadcrumb-bg:                 #fff;
+$breadcrumb-active-color: $gray-light;
