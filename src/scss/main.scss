@@ -1,9 +1,8 @@
-@import "_variables";
-
 // Get the base theme's styles
 @import "../../../new-theme/src/scss/main";
 
 // Define advanced theme imports below
-@import "components/_pages";
+@import "_variables";
 
-
+@import "components/_header";
+@import "_base";
