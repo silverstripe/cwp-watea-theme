@@ -1,3 +1,11 @@
 .page-header .breadcrumb {
-   margin-bottom: -$line-height-computed;
+  margin-bottom: -$line-height-computed;
+}
+
+.news-item h4 a {
+    text-decoration: underline;
+}
+
+.news-item__publish-date {
+  margin-top: -.5rem;
 }
