@@ -1,8 +1,17 @@
 // Define agency specific variables
 // Bootstrap overrides
 //
-// Copy variables from `node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss` 
+// Copy variables from `node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss`
 // to this file to override default values without modifying source files.
+
+// Brand Colours
+$brand-primary: #001F2C;
+$brand-secondary: #214350;
+
+// Font Family
+$font-family-sans-serif: 'Nunito Sans', sans-serif;
+$font-family-base:  $font-family-sans-serif !default;
+$font-size-default: 16px;
 
 // BreadCrumbs
 $gray-base: #000 !default;
@@ -39,3 +48,14 @@ $navbar-default-link-color: #767676;
 
 // Navbar background color
 $navbar-default-bg: #fff;
+
+// Focus outline
+$outline-focus: rgb(94, 158, 215);
+
+// Navbar links
+$navbar-link-color: #FFF !default;
+$navbar-link-hover-color: #FFF !default;
+$navbar-link-hover-bg: transparent !default;
+$navbar-link-active-color: #0F7EB2 !default;
+$navbar-submenu-link-color: #333333 !default;
+$navbar-submenu-border-color: #214350 !default;

@@ -1,0 +1,12 @@
+@mixin form-controls-style() {
+  background: $brand-secondary;
+  border-color: $brand-secondary;
+  color: $navbar-link-color;
+  border-radius: 2px;
+  padding: 14px 15px;
+}
+
+@mixin outline-focus() {
+  outline: $outline-focus auto 5px;
+  outline: auto 5px -webkit-focus-ring-color;
+}
