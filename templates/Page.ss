@@ -19,6 +19,7 @@
         <main id="main">
             $Layout
         </main>
+        <% include FooterQuicklinks %>
         <footer>
             <% include Footer %>
         </footer>
