@@ -11,11 +11,6 @@
                 <% include NewsSummary %>
             </aside>
         </div>
-
-        <div class="row">
-            <% include Quicklinks %>
-            <% include Features %>
-        </div>
     </div>
 </div>
 <% include PageUtilities %>
