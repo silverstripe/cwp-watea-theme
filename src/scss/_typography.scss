@@ -10,6 +10,12 @@ ul, ol {
   margin-bottom: $line-height-computed * .75;
 }
 
+ul, ol {
+  li {
+    margin-bottom: 8px;
+  }
+}
+
 h5, .h5,
 h6, .h6 {
   line-height: $line-height-base;

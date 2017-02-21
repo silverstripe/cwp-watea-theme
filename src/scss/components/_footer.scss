@@ -1,0 +1,17 @@
+// Footer Features & Quicklinks
+.quick-links {
+  background-color: $gray-lighter;
+  padding: ($line-height-computed * 3) ($line-height-computed * 4);
+  border-top: 1px solid darken($gray-lighter, 10%);
+}
+.quicklinks-list {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 0;
+}
+
+.quick-links a {
+  color: $link-color-darker;
+}
