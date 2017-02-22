@@ -33,10 +33,13 @@ $text-color: $gray;
 
 //** Global textual link color.
 $link-color: $brand-primary;
+// Custom style
+$link-color-darker: darken($link-color, 3.5%);
 //** Link hover color set via `darken()` function.
 $link-hover-color:      darken($link-color, 15%);
 //** Link hover decoration.
 $link-hover-decoration: underline;
+
 
 
 //== Typography
