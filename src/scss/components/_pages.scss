@@ -1,7 +1,3 @@
-.page-header .breadcrumb {
-  margin-bottom: -$line-height-computed;
-}
-
 .news-item h4 a {
   text-decoration: underline;
 }
@@ -28,4 +24,41 @@
   color: $gray-light;
   float: left;
   text-align: left;
+}
+
+.page-header {
+  padding-bottom: ($line-height-computed / 3) - 2;
+  margin: $line-height-computed 0 ($line-height-computed * 1.5);
+  border-bottom: 2px solid $page-header-border-color;
+
+  h1, .h1,
+  h2, .h2,
+  h3, .h3 {
+    margin-bottom: ($line-height-computed / 3);
+  }
+
+  .breadcrumb {
+    margin-bottom: -$line-height-computed;
+  }
+}
+
+.label {
+  border-radius: $border-radius-base;
+}
+
+.well {
+  box-shadow: none;
+}
+
+// Page Sidebar
+.sidebar-header {
+  border-bottom: 1px solid $gray;
+  padding-bottom: 8px;
+  margin-top: 4px;
+}
+
+.sidebar-nav a {
+  padding: $padding-base-vertical / 2 0;
+  display: block;
+  text-decoration: underline;
 }
