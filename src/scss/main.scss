@@ -1,14 +1,5 @@
-// Get the base theme's styles
-@import "../../../new-theme/src/scss/main";
+@import "../../../new-theme/src/scss/_variables";
+@import "./_variables";
 
-// Define advanced theme imports below
-@import "_variables";
-
-// Mixins
-@import "utils/_mixins";
-
-@import "components/_header";
-@import "components/_pages";
-@import "_base";
-@import "components/_pages";
-@import "components/_sidebar";
+@import "../../../new-theme/src/scss/manifest";
+@import "./_manifest";
