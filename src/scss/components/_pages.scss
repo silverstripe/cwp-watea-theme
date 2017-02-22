@@ -3,9 +3,29 @@
 }
 
 .news-item h4 a {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .news-item__publish-date {
   margin-top: -.5rem;
+}
+
+.page-utilities {
+  border-top: 1px solid $gray-lighter;
+  padding-top: $line-height-computed;
+
+  a.fa {
+    color: $gray-light;
+    font-size: 2rem;
+
+    &:hover {
+      color: $gray;
+    }
+  }
+}
+
+.page-utilities_last-modified {
+  color: $gray-light;
+  float: left;
+  text-align: left;
 }
