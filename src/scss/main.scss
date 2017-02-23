@@ -1,5 +1,11 @@
-@import "../../../new-theme/src/scss/_variables";
+// Theme specific variables and overrides
 @import "./_variables";
+// Base theme styles
+@import "../../../new-theme/src/scss/main";
 
-@import "../../../new-theme/src/scss/manifest";
-@import "./_manifest";
+// Mixins
+@import "utils/_mixins";
+
+@import "components/_footer";
+@import "components/_pages";
+@import "_typography";
