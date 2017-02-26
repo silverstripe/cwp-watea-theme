@@ -1,0 +1,258 @@
+body > header {
+  background: $navbar-inverse-bg;
+  color: $navbar-default-bg;
+  font-size: $font-size-base;
+
+  .open > a:focus {
+    @include outline-focus();
+  }
+
+  .language-selector {
+    text-transform: capitalize;
+    .btn-default {
+      text-transform: capitalize;
+      @include form-controls-style();
+      padding: $padding-base-horizontal 15px;
+    }
+
+    i.fa-language {
+      margin-right: $padding-large-vertical!important;
+    }
+
+    .dropdown-menu {
+      z-index: $zindex-dropdown;
+    }
+  }
+
+  .form-control,
+  button[type='submit'] {
+    height: $navbar-height;
+    @include form-controls-style();
+
+    &:focus {
+      @include outline-focus();
+      background: $navbar-inverse-border-color;
+      color: $navbar-inverse-link-hover-color;
+    }
+  }
+
+  // Add focus status removed by Bootstrap
+  .dropdown-toggle:focus {
+    @include outline-focus();
+  }
+
+  // Main navigation
+  .main-nav {
+    background: $navbar-inverse-bg;
+    color: $navbar-default-bg;
+
+    .navbar {
+      border-bottom: 1px solid $navbar-inverse-border-color;
+      background: transparent;
+
+      .navbar-collapse {
+        position: relative;
+        top: 13px;
+        z-index: $zindex-navbar;
+      }
+
+      // Change caret icon
+      .fa-caret-down:before {
+        content: "\F107";
+      }
+
+      li.nav__item {
+        border-bottom: 4px solid $navbar-inverse-brand-hover-bg;
+
+        > a {
+          color: $navbar-inverse-link-hover-color;
+          margin-bottom: -4px;
+          border-bottom: 4px solid $navbar-inverse-brand-hover-bg;
+
+          &:focus, &:hover {
+            background: $navbar-default-link-hover-bg;
+            border-bottom-color: $brand-primary;
+          }
+        }
+
+        &.dropdown {
+          a {
+            border-bottom: 0;
+          }
+
+          > a:hover, > a:focus {
+            color: $navbar-inverse-link-hover-color!important;
+            background: $navbar-default-link-hover-bg; // red;// $brand-primary;
+          }
+
+          &.active {
+            padding-bottom: 4px;
+            border-color: $brand-primary;
+            background: $brand-primary;
+            > a:hover, > a:focus {
+              // background: $brand-primary;
+            }
+          }
+
+          &.open {
+            > a, > button {
+              background: transparent;
+            }
+            li > a {
+              color: $navbar-default-link-hover-color;
+            }
+          }
+
+          &.active.open {
+            .dropdown-menu {
+              margin-top: -1px!important;
+            }
+          }
+        }
+      }
+
+      .active {
+        > a,
+        > a:hover {
+          color: $navbar-inverse-link-hover-color;
+          background-color: $brand-primary;
+        }
+
+        .navbar__touch-caret {
+          padding: 14px 15px 14px 8px;
+          background: $brand-primary;
+        }
+      }
+    }
+
+    .dropdown-menu {
+      margin-top: 4px!important;
+
+      li.active a {
+        background: $brand-primary!important;
+        color: $navbar-inverse-link-hover-color!important;
+      }
+    }
+  }
+
+  //Accessibilty links to navigation
+  .skip-links {
+    a {
+      color: $navbar-inverse-link-hover-color;
+
+      &:focus, &:active {
+        background: $navbar-inverse-border-color;
+        position: absolute;
+      }
+    }
+  }
+}
+
+// @media
+
+@media (max-width: $grid-float-breakpoint-max) {
+  body > header {
+    .site-header {
+      .navbar-toggle {
+        padding: 17px 10px;
+      }
+    }
+
+    .main-nav {
+
+      .navbar {
+
+        li.nav__item {
+          > a {
+            border-bottom: 0;
+
+            &:focus, &:hover {
+              background: $navbar-inverse-brand-hover-bg;
+            }
+            &:hover:before, &:focus:before {
+              @include main-nav-mobile-hover();
+            }
+          }
+
+          // Dropdown
+          &.dropdown {
+            padding-right: 0;
+
+            a {
+              color: $navbar-inverse-link-hover-color!important;
+              background: $navbar-inverse-brand-hover-bg;
+            }
+
+            > a {
+              &:focus, &:hover {
+                background: $navbar-inverse-brand-hover-bg;
+              }
+            }
+
+            &.open {
+              background: $navbar-inverse-border-color!important;
+
+              // Change caret direction pointing up
+              .navbar__touch-caret .fa-caret-down:before {
+                content: "\f106";
+              }
+
+            }
+
+            &.active {
+              padding-bottom: 0!important;
+              border-color: $navbar-inverse-brand-hover-bg;
+
+              &:hover, &:focus {
+                background: $navbar-inverse-border-color;
+                .navbar__touch-caret {
+                  background: $navbar-inverse-border-color!important;
+                }
+              }
+
+              .navbar__touch-caret {
+                background: $navbar-inverse-brand-hover-bg;
+              }
+            }
+
+            &.active.open {
+              border-color: $navbar-inverse-brand-hover-bg!important;
+            }
+
+            .dropdown-menu {
+              li {
+                position: relative;
+                a:hover, a:focus {
+                  background: $navbar-inverse-brand-hover-bg;
+                }
+                a:hover:before, a:focus:before {
+                  @include main-nav-mobile-hover();
+                }
+              }
+            }
+          }
+
+        }
+
+        .navbar-collapse {
+          border-color: $navbar-inverse-brand-hover-bg!important;
+          top: 0;
+
+          .navbar-form {
+            border-color: $navbar-inverse-brand-hover-bg;
+            box-shadow: none;
+          }
+        }
+
+        .navbar-nav {
+          margin-top: 0;
+        }
+
+        .navbar__touch-caret {
+          padding: $nav-link-padding!important;
+        }
+
+      }
+    }
+  }
+}

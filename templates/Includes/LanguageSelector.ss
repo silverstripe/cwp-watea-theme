@@ -8,7 +8,7 @@
             <span class="pull-left">
                 <i class="fa fa-language" aria-hidden="true"></i>
             </span>
-            <span class="caret"></span>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
         </button>
         <ul class="dropdown-menu dropdown-menu-right">
             <% loop $AvailableTranslationsWithLocale %>
