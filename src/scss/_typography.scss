@@ -43,6 +43,19 @@ blockquote {
   }
 }
 
+h1, .h1,
+h2, .h2 {
+  letter-spacing: -0.5px;
+}
+
+.captionImage {
+  border-bottom: 2px solid $gray-lighter;
+
+  p {
+    color: $text-muted;
+    font-size: $font-size-small;
+  }
+}
 
 // Table styles
 

@@ -6,7 +6,8 @@
 // Mixins
 @import "utils/_mixins";
 
+@import "_typography";
+@import "components/_forms";
 @import "components/_header";
 @import "components/_footer";
 @import "components/_pages";
-@import "_typography";
