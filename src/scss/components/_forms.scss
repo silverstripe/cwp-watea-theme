@@ -1,0 +1,34 @@
+// Formfields
+label {
+  font-weight: 600;
+}
+
+.help-block {
+  color: $text-muted;
+}
+
+
+// Buttons
+.btn-default {
+  &:focus,
+  &.focus,
+  &:hover  {
+    background-color: $btn-default-bg;
+    color: darken($btn-default-color, 12%);
+  }
+}
+
+.btn {
+  padding-right: $padding-base-horizontal * 1.5;
+  padding-left: $padding-base-horizontal * 1.5;
+}
+
+.btn-lg {
+  padding-right: $padding-large-horizontal * 1.5;
+  padding-left: $padding-large-horizontal * 1.5;
+}
+
+.btn-sm {
+  padding-right: $padding-small-horizontal * 1.4;
+  padding-left: $padding-small-horizontal * 1.4;
+}
