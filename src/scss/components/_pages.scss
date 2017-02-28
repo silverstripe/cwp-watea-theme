@@ -1,9 +1,16 @@
-.news-item h4 a {
-  text-decoration: underline;
-}
+// Generic page styles
+// Add underline to links in general content areas only
+#main,
+.quick-links {
+  a:not(.btn) {
+    text-decoration: underline;
+  }
 
-.news-item__publish-date {
-  margin-top: -.5rem;
+  // Remove underline from icons
+  a.fa,
+  a .fa {
+    text-decoration: none;
+  }
 }
 
 .page-utilities {
@@ -50,7 +57,7 @@
   box-shadow: none;
 }
 
-// Page Sidebar
+// Page sidebar
 .sidebar-header {
   border-bottom: 1px solid $gray;
   padding-bottom: 8px;
@@ -60,10 +67,26 @@
 .sidebar-nav a {
   padding: $padding-base-vertical / 2 0;
   display: block;
-  text-decoration: underline;
 }
 
+// Homepage
 // Jumbotron
 .jumbotron {
     margin-top: -24px;
+}
+
+// Features & Quicklinks
+.quick-links {
+  background-color: $gray-lighter;
+  padding: ($line-height-computed * 3) ($line-height-computed * 4);
+  border-top: 1px solid darken($gray-lighter, 10%);
+
+  a {
+    color: $link-color-darker;
+  }
+}
+
+// Homepage news
+.news-item__publish-date {
+  margin-top: -.5rem;
 }
