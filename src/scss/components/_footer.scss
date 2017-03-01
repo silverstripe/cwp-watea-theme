@@ -1,0 +1,58 @@
+footer {
+  margin-top: 0;
+  background-color: $navbar-inverse-bg;
+  padding: ($line-height-computed * 1.8) 0;
+
+  // Horizontal divder line
+  hr {
+    border-top: 1px solid $navbar-inverse-border-color;
+    margin-bottom: $line-height-computed * 1.5;
+
+    @media (min-width: $screen-md-min) {
+      border-color: transparent;
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+  }
+
+  a:hover,
+  p {
+    color: $navbar-inverse-link-hover-color;
+  }
+}
+
+// NZ Gov logo
+.footer_govt-logo a {
+  position: relative;
+  display: inline-block;
+  margin-bottom: $line-height-computed;
+}
+
+// Footer navigation and Copyright
+.footer_nav-links a {
+  color: $navbar-inverse-link-hover-color;
+  margin-right: $line-height-computed;
+}
+
+// Social media icons
+.footer_social-links .fa {
+  font-size: 2.2rem;
+  margin-bottom: $line-height-computed * 1.2;
+}
+
+// Secondary branding logo (defaults to CWP logo)
+.footer_brand-secondary {
+  &::after {
+    content: '';
+    width: 0;
+    height: calc(100% + 12px);
+    position: absolute;
+    border: 1px solid $navbar-inverse-border-color;
+    right: 10px;
+    top: -6px;
+  }
+
+  img {
+    margin-right: $line-height-computed * 1.1;
+  }
+}

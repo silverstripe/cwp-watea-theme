@@ -1,0 +1,22 @@
+@mixin form-controls-style() {
+  background: $navbar-inverse-border-color;
+  border-color: $navbar-inverse-border-color;
+  color: $navbar-inverse-link-hover-color;
+  border-radius: $border-radius-base;
+  padding: 14px 15px;
+}
+
+@mixin outline-focus() {
+  outline: $outline-focus auto 5px;
+  outline: auto 5px -webkit-focus-ring-color;
+}
+
+@mixin main-nav-mobile-hover() {
+  content: "";
+  width: 4px;
+  height: 100%;
+  background: $brand-primary;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

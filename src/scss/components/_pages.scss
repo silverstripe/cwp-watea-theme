@@ -1,0 +1,93 @@
+// Generic page styles
+// Add underline to links in general content areas only
+#main,
+.quick-links {
+  a:not(.btn) {
+    text-decoration: underline;
+  }
+
+  // Remove underline from icons
+  a.fa,
+  a .fa {
+    text-decoration: none;
+  }
+}
+
+.page-utilities {
+  border-top: 1px solid $gray-lighter;
+  padding-top: $line-height-computed;
+
+  a.fa {
+    color: $gray-light;
+    font-size: 2rem;
+
+    &:hover {
+      color: $gray;
+    }
+  }
+}
+
+.page-utilities_last-modified {
+  color: $gray-light;
+  float: left;
+  text-align: left;
+}
+
+.page-header {
+  padding-bottom: ($line-height-computed / 3) - 2;
+  margin: $line-height-computed 0 ($line-height-computed * 1.5);
+  border-bottom: 2px solid $page-header-border-color;
+
+  h1, .h1,
+  h2, .h2,
+  h3, .h3 {
+    margin-bottom: ($line-height-computed / 3);
+  }
+
+  .breadcrumb {
+    margin-bottom: -$line-height-computed;
+  }
+}
+
+.label {
+  border-radius: $border-radius-base;
+  padding-bottom: .2em;
+}
+
+.well {
+  box-shadow: none;
+}
+
+// Page sidebar
+.sidebar-header {
+  border-bottom: 1px solid $gray;
+  padding-bottom: 8px;
+  margin-top: 4px;
+}
+
+.sidebar-nav a {
+  padding: $padding-base-vertical / 2 0;
+  display: block;
+}
+
+// Homepage
+// Jumbotron
+.jumbotron {
+    margin-top: -24px;
+}
+
+// Features & Quicklinks
+.quick-links {
+  background-color: $gray-lighter;
+  padding: ($line-height-computed * 3) ($line-height-computed * 4);
+  border-top: 1px solid darken($gray-lighter, 10%);
+
+  a {
+    color: $link-color-darker;
+  }
+}
+
+// Homepage news
+.news-item__publish-date {
+  margin-top: -.5rem;
+}

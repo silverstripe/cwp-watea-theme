@@ -1,0 +1,16 @@
+{
+    "name": "cwp/new-theme_advanced",
+    "description": "CWP agency theme",
+    "type": "silverstripe-theme",
+    "keywords": ["silverstripe", "theme"],
+    "license": "BSD-3-Clause",
+    "require": {
+        "cwp/new-theme": "dev-develop"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://gitlab.cwp.govt.nz/cwp/new-theme.git"
+        }
+    ]
+}
