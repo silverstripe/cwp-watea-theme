@@ -16,7 +16,7 @@ body > header {
     }
 
     i.fa-language {
-      margin-right: $padding-large-vertical!important;
+      margin-right: $padding-large-vertical !important;
     }
 
     .dropdown-menu {
@@ -62,11 +62,8 @@ body > header {
       }
 
       li.nav__item {
-        border-bottom: 4px solid $navbar-inverse-brand-hover-bg;
-
         > a {
           color: $navbar-inverse-link-hover-color;
-          margin-bottom: -4px;
           border-bottom: 4px solid $navbar-inverse-brand-hover-bg;
 
           &:focus, &:hover {
@@ -77,20 +74,18 @@ body > header {
 
         &.dropdown {
           a {
-            border-bottom: 0;
+            border-color: transparent !important;
           }
 
           > a:hover, > a:focus {
-            color: $navbar-inverse-link-hover-color!important;
-            background: $navbar-default-link-hover-bg; // red;// $brand-primary;
+            color: $navbar-inverse-link-hover-color !important;
+            background: $navbar-default-link-hover-bg;
           }
 
           &.active {
-            padding-bottom: 4px;
-            border-color: $brand-primary;
             background: $brand-primary;
             > a:hover, > a:focus {
-              // background: $brand-primary;
+              border-color: $brand-primary;
             }
           }
 
@@ -105,7 +100,7 @@ body > header {
 
           &.active.open {
             .dropdown-menu {
-              margin-top: -1px!important;
+              margin-top: -5px !important;
             }
           }
         }
@@ -126,11 +121,9 @@ body > header {
     }
 
     .dropdown-menu {
-      margin-top: 4px!important;
-
       li.active a {
-        background: $brand-primary!important;
-        color: $navbar-inverse-link-hover-color!important;
+        background: $brand-primary !important;
+        color: $navbar-inverse-link-hover-color !important;
       }
     }
   }
@@ -159,9 +152,7 @@ body > header {
     }
 
     .main-nav {
-
       .navbar {
-
         li.nav__item {
           > a {
             border-bottom: 0;
@@ -179,7 +170,7 @@ body > header {
             padding-right: 0;
 
             a {
-              color: $navbar-inverse-link-hover-color!important;
+              color: $navbar-inverse-link-hover-color !important;
               background: $navbar-inverse-brand-hover-bg;
             }
 
@@ -190,23 +181,22 @@ body > header {
             }
 
             &.open {
-              background: $navbar-inverse-border-color!important;
+              background: $navbar-inverse-border-color !important;
 
               // Change caret direction pointing up
               .navbar__touch-caret .fa-caret-down:before {
                 content: "\f106";
               }
-
             }
 
             &.active {
-              padding-bottom: 0!important;
+              padding-bottom: 0 !important;
               border-color: $navbar-inverse-brand-hover-bg;
 
               &:hover, &:focus {
                 background: $navbar-inverse-border-color;
                 .navbar__touch-caret {
-                  background: $navbar-inverse-border-color!important;
+                  background: $navbar-inverse-border-color !important;
                 }
               }
 
@@ -216,7 +206,7 @@ body > header {
             }
 
             &.active.open {
-              border-color: $navbar-inverse-brand-hover-bg!important;
+              border-color: $navbar-inverse-brand-hover-bg !important;
             }
 
             .dropdown-menu {
@@ -231,11 +221,10 @@ body > header {
               }
             }
           }
-
         }
 
         .navbar-collapse {
-          border-color: $navbar-inverse-brand-hover-bg!important;
+          border-color: $navbar-inverse-brand-hover-bg !important;
           top: 0;
 
           .navbar-form {
@@ -249,9 +238,8 @@ body > header {
         }
 
         .navbar__touch-caret {
-          padding: $nav-link-padding!important;
+          padding: $nav-link-padding !important;
         }
-
       }
     }
   }
