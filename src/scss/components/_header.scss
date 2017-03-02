@@ -98,10 +98,8 @@ body > header {
             }
           }
 
-          &.active.open {
-            .dropdown-menu {
-              margin-top: -5px !important;
-            }
+          .dropdown-menu {
+            margin-top: -5px !important;
           }
         }
       }
