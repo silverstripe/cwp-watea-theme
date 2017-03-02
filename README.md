@@ -1,22 +1,22 @@
 # CWP Agency theme
 
-This theme is a [subtheme](https://docs.silverstripe.org/en/3/developer_guides/templates/themes) of the [`cwp-base` theme](https://gitlab.cwp.govt.nz/cwp/new-theme). It provides a more visually appealing example for starting a theme for a CWP website.
+This theme is a [subtheme](https://docs.silverstripe.org/en/3/developer_guides/templates/themes) of the [`starter-theme` theme](https://gitlab.cwp.govt.nz/cwp/starter-theme). It provides a more visually appealing example for starting a theme for a CWP website.
 
 ## Installation
 
 Install this theme module with Composer:
 
 ```
-composer require cwp/new-theme_advanced
+composer require cwp/watea-theme
 ```
 
 You may need to add this repository to your `composer.json` as a VCS repository.
 
 ## Getting started
 
-This theme is designed to augment the base functionality and framework provided by the [`cwp-base` theme](https://gitlab.cwp.govt.nz/cwp/new-theme). As such, all of the documentation for the base theme is relevant to this theme as well. We suggest you familiarise yourself with this documentation.
+This theme is designed to augment the base functionality and framework provided by the [`starter-theme`](https://gitlab.cwp.govt.nz/cwp/starter-theme). As such, all of the documentation for the base theme is relevant to this theme as well. We suggest you familiarise yourself with this documentation.
 
-As a general rule, we have endeavoured to constrain changes for this theme to CSS and Javascript wherever possible, as opposed to modifying the templates. As a subtheme, all templates in this theme will be applied over the top (with priority) of the base theme, and will be available to the SilverStripe template manifest under the "new-theme" theme name. You will not see this theme in theme selectors, etc.
+As a general rule, we have endeavoured to constrain changes for this theme to CSS and Javascript wherever possible, as opposed to modifying the templates. As a subtheme, all templates in this theme will be applied over the top (with priority) of the base theme, and will be available to the SilverStripe template manifest under the "starter-theme" theme name. You will not see this theme in theme selectors, etc.
 
 If you need to modify template markup from the SilverStripe framework, other modules or even the base theme, you can copy them into this subtheme and modify them here.
 
@@ -27,13 +27,13 @@ If you need to modify template markup from the SilverStripe framework, other mod
 For development you will need to install the required NPM packages. Ensure you have changed into this theme's directory first:
 
 ```
-cd themes/new-theme_advanced
+cd themes/starter_watea
 npm install
 ```
 
 ### Backend changes
 
-This theme and the base-theme also come with the [`cwp/theme-module`](https://gitlab.cwp.govt.nz/cwp/cwp-theme-module) which helps us to cleanup some parts of the CMS, rename some settings fields and provide a little bit of extra functionality to help these themes to work.
+This theme and the base-theme also come with the [`cwp/agency-extensions` module](https://gitlab.cwp.govt.nz/cwp/agency-extensions) which helps us to cleanup some parts of the CMS, rename some settings fields and provide a little bit of extra functionality to help these themes to work.
 
 If you need to extend or modify these changes at all, you can control the theme's extensions with YAML configuration, or create your own extensions in your `mysite` code.
 
@@ -60,11 +60,11 @@ For example:
 
 ```
 # File: templates/Page.ss - in the <head>
-<link rel="stylesheet" href="{$ThemeDir}_advanced/dist/css/main.css">
+<link rel="stylesheet" href="$ThemeDir(watea)/dist/css/main.css">
 
 # File: templates/Page.ss - near the bottom of the <body>
 <script src="{$ThemeDir}/dist/js/main.js"></script>
-<script src="{$ThemeDir}_advanced/dist/js/main.js"></script>
+<script src="$ThemeDir(watea)/dist/js/main.js"></script>
 ```
 
 ### Linting

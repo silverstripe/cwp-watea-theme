@@ -1,5 +1,5 @@
 {
-  "name": "cwp-new-theme-advanced",
+  "name": "cwp-watea-theme",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.cwp.govt.nz/cwp/cwp-agencies-theme.git"
+    "url": "https://gitlab.cwp.govt.nz/cwp/watea-theme.git"
   },
   "license": "BSD-3-Clause",
   "dependencies": {

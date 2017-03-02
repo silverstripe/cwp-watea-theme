@@ -88,7 +88,7 @@ $image-spacing: $line-height-computed !default;
 
 // [converter] If $bootstrap-sass-asset-helper if used, provide path relative to the assets load path.
 // [converter] This is because some asset helpers, such as Sprockets, do not work with file-relative paths.
-$icon-font-path: "/themes/new-theme/dist/fonts/" !default;
+$icon-font-path: "/themes/starter/dist/fonts/" !default;
 // Font-awesome path
 $fa-font-path: $icon-font-path !default;
 
