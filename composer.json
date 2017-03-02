@@ -5,7 +5,7 @@
   "keywords": ["silverstripe", "theme"],
   "license": "BSD-3-Clause",
   "require": {
-    "cwp/dev-theme": "*",
+    "cwp/starter-theme": "*",
     "cwp/agency-extensions": "*"
   },
   "extra": {
