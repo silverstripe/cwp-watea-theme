@@ -9,6 +9,6 @@
     "cwp/agency-extensions": "*"
   },
   "extra": {
-    "installer-name": "dev_watea"
+    "installer-name": "starter_watea"
   }
 }
