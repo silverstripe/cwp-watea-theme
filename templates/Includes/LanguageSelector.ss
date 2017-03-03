@@ -1,4 +1,4 @@
-<% if $AvailableTranslationsWithLocale %>
+<% if $AvailableTranslations %>
     <div class="btn-group pull-right language-selector" id="header-language-toggle">
         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="hidden-xs">
@@ -11,7 +11,7 @@
             <i class="fa fa-angle-down" aria-hidden="true"></i>
         </button>
         <ul class="dropdown-menu dropdown-menu-right">
-            <% loop $AvailableTranslationsWithLocale %>
+            <% loop $AvailableTranslations %>
                 <li <% if $Current %> class="active"<% end_if %>>
                     <a href="$Link" lang="$Locale">
                         $LangName
