@@ -1,0 +1,86 @@
+.carousel {
+
+  // Slides
+  .item {
+    padding-top: $jumbotron-padding*3;
+    padding-bottom: $jumbotron-padding*3;
+    background-size: cover!important;
+    background-position: center!important;
+    background-repeat: no-repeat!important;
+  }
+
+  // Carousel with images
+  .carousel-has-image {
+
+    h1,
+    p,
+    a {
+      color: $carousel-text-color;
+      text-shadow: $carousel-text-shadow;
+    }
+
+    a:not(.btn-primary) {
+      text-decoration: underline;
+    }
+
+    .container {
+      z-index: $zindex-navbar;
+      position: relative;
+    }
+  }
+
+  // Controls navigate left or right
+  .carousel-controls {
+
+    .carousel-control {
+      border: 0;
+      font-size: $font-size-h2;
+      z-index: $zindex-dropdown;
+
+      &:focus {
+          outline: $outline-focus auto 5px;
+          outline: auto 5px -webkit-focus-ring-color;
+      }
+    }
+  }
+
+  // carousel slides indicators
+  .carousel-indicators {
+    bottom: 35px;
+  }
+
+  // Play and pause button
+  .carousel-play-controls {
+    @extend .carousel-indicators;
+    bottom: $padding-small-horizontal;
+    z-index: $zindex-modal;
+
+    button {
+        border-radius: $border-radius-large;
+    }
+  }
+
+  // Overlay carousel mask
+  .carousel-mask {
+    position: absolute;
+    background: $carousel-mask-bg-color;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+//-- @media for mobile screen
+
+@media (max-width: $grid-float-breakpoint-max) {
+  .carousel {
+    // Move up carousel slides indicator
+    .carousel-indicators {
+      bottom: $jumbotron-padding;
+    }
+    .carousel-play-controls {
+      bottom: $padding-small-horizontal;
+    }
+  }
+}
