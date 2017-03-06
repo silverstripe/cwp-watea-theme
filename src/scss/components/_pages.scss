@@ -1,7 +1,7 @@
 // Generic page styles
 // Add underline to links in general content areas only
 #main,
-.quick-links {
+.showcase {
   a:not(.btn) {
     text-decoration: underline;
   }
@@ -77,10 +77,11 @@
 }
 
 // Features & Quicklinks
-.quick-links {
+.showcase {
   background-color: $gray-lighter;
-  padding: ($line-height-computed * 3) ($line-height-computed * 4);
   border-top: 1px solid darken($gray-lighter, 10%);
+  padding-bottom: ($line-height-computed * 3);
+  padding-top: ($line-height-computed * 3);
 
   a {
     color: $link-color-darker;
