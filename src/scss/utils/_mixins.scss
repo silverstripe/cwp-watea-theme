@@ -1,12 +1,6 @@
+// Styles for header, search and language selector
 @mixin form-controls-style() {
   background: $theme-bg-lighter;
   border-color: $theme-bg-lighter;
   color: $navbar-default-link-hover-color;
-  border-radius: $border-radius-base;
-  padding: 14px 15px;
-}
-
-@mixin outline-focus() {
-  outline: $outline-focus auto 5px;
-  outline: auto 5px -webkit-focus-ring-color;
 }
