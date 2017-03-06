@@ -1,14 +1,16 @@
 // Generic page styles
 // Add underline to links in general content areas only
-#main,
-.showcase {
-  a:not(.btn) {
-    text-decoration: underline;
-  }
+.main a,
+.showcase a {
+  text-decoration: underline;
+}
 
-  // Remove underline from icons
-  a.fa,
-  a .fa {
+// No underlines for certain components
+.main {
+  .pagination a,
+  a.label,
+  a.btn,
+  a.fa {
     text-decoration: none;
   }
 }
@@ -73,9 +75,14 @@
 // Homepage
 // Jumbotron
 .jumbotron {
-    margin-top: -24px;
-    padding-top: 0;
-    padding-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: -$line-height-computed;           //24px
+  margin-bottom: $line-height-computed * 3.0;   //72px
+}
+
+.home-page h1:first-of-type {
+  margin-top: 0;
 }
 
 // Features & Quicklinks
