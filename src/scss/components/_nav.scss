@@ -13,14 +13,6 @@
 }
 
 .main-nav {
-  li {
-    margin-bottom: 0;
-  }
-
-  .nav-item > a {
-    padding-top: $navbar-padding-vertical;
-    padding-bottom: $navbar-padding-vertical;
-  }
 
   .nav-item.current > a {
     background-color: $brand-primary;
@@ -102,10 +94,20 @@
         background-color: $theme-bg-lighter; // requires nesting TODO
       }
     }
+
+    .open .dropdown-menu > li > a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
   }
 
   // Desktop only
   @media (min-width: $grid-float-breakpoint-max) {
+
+    .nav-item > a {
+      padding-top: $navbar-padding-vertical;
+      padding-bottom: $navbar-padding-vertical;
+    }
 
     // 1st level
     .nav-item {
