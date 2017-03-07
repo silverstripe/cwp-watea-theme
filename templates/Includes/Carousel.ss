@@ -36,11 +36,11 @@
             <%-- Controls --%>
             <div class="carousel-controls">
               <button class="right carousel-control" href="#carousel-slide" data-slide="next">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
                 <span class="sr-only"><%t CwpCarousel.NEXT "Go to next slide." %></span>
               </button>
               <button class="left carousel-control" href="#carousel-slide" data-slide="prev">
-                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                <i class="fa fa-angle-left fa-2x" aria-hidden="true"></i>
                 <span class="sr-only"><%t CwpCarousel.PREVIOUS "Go to previous slide." %></span>
               </button>
             </div>
