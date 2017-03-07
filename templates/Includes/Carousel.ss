@@ -1,6 +1,6 @@
 <% if $VisibleCarouselItems %>
     <div <% if $VisibleCarouselItems.Count > 1 %>id="carousel-slide" data-ride="carousel"<% end_if %>
-      class="jumbotron carousel slide text-center">
+      class="carousel slide text-center">
 
       <div class="carousel-inner">
           <% if $VisibleCarouselItems.Count > 1 %>
