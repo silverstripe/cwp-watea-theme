@@ -12,34 +12,38 @@
 
           <div class="carousel-interface">
 
-            <%-- Play or Pause --%>
-            <div class="carousel-play-controls">
-              <button type="button" class="btn btn-default btn-sm" id="carousel-pause" aria-label="<%t CwpCarousel.PAUSESLIDE "Pause carousel slides." %>">
-                <i class="fa fa-pause" aria-hidden="true"></i> <%t CwpCarousel.PAUSE "Pause" %>
-              </button>
-              <button type="button" class="btn btn-default btn-sm" id="carousel-play" aria-label="<%t CwpCarousel.PLAYSLIDE "Play carousel slides." %>" style="display:none;">
-                <i class="fa fa-play" aria-hidden="true"></i> <%t CwpCarousel.PLAY "Play" %>
-              </button>
+            <div class="controls-wrapper">
+
+              <%-- Indicators --%>
+              <ol class="carousel-indicators" role="tablist">
+                <% loop $VisibleCarouselItems %>
+                  <li data-target="#carousel-slide" data-slide-to="$Pos(0)" class="<% if $Pos == 1 %>active<% end_if %>" name="carousel-item-{$Pos}"></li>
+                <% end_loop %>
+              </ol>
+
+              <%-- Play or Pause --%>
+              <div class="carousel-play-controls">
+                <button type="button" class="btn btn-link btn-sm" id="carousel-pause" aria-label="<%t CwpCarousel.PAUSESLIDE "Pause carousel slides." %>">
+                  <i class="fa fa-pause" aria-hidden="true"></i>
+                </button>
+                <button type="button" class="btn btn-link btn-sm" id="carousel-play" aria-label="<%t CwpCarousel.PLAYSLIDE "Play carousel slides." %>" style="display:none;">
+                  <i class="fa fa-play" aria-hidden="true"></i>
+                </button>
+              </div>
+
             </div>
 
             <%-- Controls --%>
             <div class="carousel-controls">
-              <button class="left carousel-control" href="#carousel-slide" data-slide="prev">
-                <i class="fa fa-angle-left" aria-hidden="true"></i>
-                <span class="sr-only"><%t CwpCarousel.PREVIOUS "Go to previous slide." %></span>
-              </button>
               <button class="right carousel-control" href="#carousel-slide" data-slide="next">
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
                 <span class="sr-only"><%t CwpCarousel.NEXT "Go to next slide." %></span>
               </button>
+              <button class="left carousel-control" href="#carousel-slide" data-slide="prev">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                <span class="sr-only"><%t CwpCarousel.PREVIOUS "Go to previous slide." %></span>
+              </button>
             </div>
-
-            <%-- Indicators --%>
-            <ol class="carousel-indicators" role="tablist">
-              <% loop $VisibleCarouselItems %>
-                <li data-target="#carousel-slide" data-slide-to="$Pos(0)" class="<% if $Pos == 1 %>active<% end_if %>" name="carousel-item-{$Pos}"></li>
-              <% end_loop %>
-            </ol>
 
           </div>
           <% end_if %>
