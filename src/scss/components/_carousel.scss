@@ -30,33 +30,49 @@
   }
 
   // Controls navigate left or right
-  .carousel-controls {
+  .carousel-control {
+    border: 0;
+    font-size: $font-size-h2;
+    z-index: $zindex-navbar;
 
-    .carousel-control {
-      border: 0;
-      font-size: $font-size-h2;
-      z-index: $zindex-navbar;
-
-      &:focus {
-          outline: $outline-focus auto 5px;
-          outline: auto 5px -webkit-focus-ring-color;
-      }
+    &:focus {
+        outline: $outline-focus auto 5px;
+        outline: auto 5px -webkit-focus-ring-color;
     }
   }
 
-  // carousel slides indicators
+  // Controls wrapper
+  .controls-wrapper {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    margin-left: -30%;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+  }
+
+  // Carousel slides indicators
   .carousel-indicators {
-    bottom: 35px;
+    display: inline-block;
+    position: static;
+    width: auto;
+    margin: 0;
+    padding: 7px 0 7px 14px;
   }
 
   // Play and pause button
   .carousel-play-controls {
-    @extend .carousel-indicators;
+    display: inline-block;
     bottom: $padding-small-horizontal;
-    z-index: $zindex-modal;
+    bottom: 2px;
+    position: relative;
 
     button {
-        border-radius: $border-radius-large;
+      color: $carousel-text-color;
+      border-radius: $border-radius-large;
     }
   }
 
@@ -68,19 +84,5 @@
     left: 0;
     width: 100%;
     height: 100%;
-  }
-}
-
-//-- @media for mobile screen
-
-@media (max-width: $grid-float-breakpoint-max) {
-  .carousel {
-    // Move up carousel slides indicator
-    .carousel-indicators {
-      bottom: $jumbotron-padding;
-    }
-    .carousel-play-controls {
-      bottom: $padding-small-horizontal;
-    }
   }
 }
