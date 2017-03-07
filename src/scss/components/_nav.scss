@@ -14,6 +14,10 @@
 
 .main-nav {
 
+  .navbar {
+    z-index: $zindex-navbar;
+  }
+
   .nav-item.current > a {
     background-color: $brand-primary;
 
