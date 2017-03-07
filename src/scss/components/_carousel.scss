@@ -26,6 +26,7 @@
 
   // Controls navigate left or right
   .carousel-control {
+    background-image: none;
     border: 0;
     font-size: $font-size-h2;
     z-index: $zindex-navbar;
