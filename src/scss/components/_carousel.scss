@@ -1,4 +1,7 @@
 .carousel {
+  margin-top: -25px;
+  margin-bottom: $jumbotron-padding * 2;
+
   // Slides
   .item {
     padding-top: $jumbotron-padding * 3;
