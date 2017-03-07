@@ -16,7 +16,7 @@
             <% include Header %>
             <% include MainNav %>
         </header>
-        <main id="main">
+        <main id="main" class="main">
             $Layout
         </main>
         <% include FooterQuicklinks %>
