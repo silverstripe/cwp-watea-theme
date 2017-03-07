@@ -81,14 +81,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap_accessibility_plugin_plugins_js_bootstrap_accessibility__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap_accessibility_plugin_plugins_js_bootstrap_accessibility___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_bootstrap_accessibility_plugin_plugins_js_bootstrap_accessibility__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_carousel__ = __webpack_require__(3);
-// Define agency theme component imports
-
-// accessibility plugin (It need to be in this order)
+// Accessibility plugin (needs to be in this order)
 
 
 // Define local components
 
-//
+
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__components_carousel__["a" /* default */])();
 
 /***/ }),
@@ -115,7 +113,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__components_carousel__["a" /* 
 
   $carousel.carousel({
     wrap: true,
-    interval: 5000
+    interval: 10000
   });
 
   $carouselPause.click(function () {

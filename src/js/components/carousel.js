@@ -9,7 +9,7 @@ export default function () {
 
   $carousel.carousel({
     wrap: true,
-    interval: 5000,
+    interval: 10000,
   });
 
   $carouselPause.click(() => {
