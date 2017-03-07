@@ -87,11 +87,7 @@
                     </div>
                 <% end_if %>
 
-                <%-- Apply mask if slide has image --%>
-                <% if $Image %>
-                  <div class="carousel-mask"></div>
-                <% end_if %>
-
+                <div class="carousel-mask"></div>
               </div>
           <% end_loop %>
       </div>

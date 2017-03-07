@@ -1,16 +1,11 @@
 .carousel {
-
   // Slides
   .item {
-    padding-top: $jumbotron-padding*3;
-    padding-bottom: $jumbotron-padding*3;
-    background-size: cover!important;
-    background-position: center!important;
-    background-repeat: no-repeat!important;
-  }
-
-  // Carousel with images
-  .carousel-has-image {
+    padding-top: $jumbotron-padding * 3;
+    padding-bottom: $jumbotron-padding * 3;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
 
     h1,
     p,
