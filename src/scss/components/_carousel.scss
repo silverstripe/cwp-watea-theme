@@ -35,7 +35,7 @@
     .carousel-control {
       border: 0;
       font-size: $font-size-h2;
-      z-index: $zindex-dropdown;
+      z-index: $zindex-navbar;
 
       &:focus {
           outline: $outline-focus auto 5px;
