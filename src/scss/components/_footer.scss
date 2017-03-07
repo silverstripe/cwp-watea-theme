@@ -54,5 +54,8 @@ footer {
 
   img {
     margin-right: $line-height-computed * 1.1;
+    max-height: $line-height-computed * 6;
+    max-width: $line-height-computed * 10;
+    width: auto;
   }
 }
