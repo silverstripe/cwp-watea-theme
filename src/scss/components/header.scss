@@ -1,24 +1,56 @@
+// Header can also be inside articles or sections so limit to site header
 body > header {
   background: $navbar-default-bg;
   color: $navbar-default-color;
+}
 
-  .open > a:focus {
-    @include outline-focus();
-  }
+// Language selector
+.language-selector {
+  text-transform: capitalize;
 
-  .language-selector {
+  .dropdown-toggle {
+    @include form-controls-style();
     text-transform: capitalize;
+    padding: $padding-base-horizontal 15px;
 
-    .btn-default {
-      text-transform: capitalize;
-      @include form-controls-style();
-      padding: $padding-base-horizontal 15px;
-
-      .dropdown-menu {
-        z-index: $zindex-dropdown;
-      }
+    i.fa-language {
+      margin-right: $padding-large-vertical !important;
     }
   }
+
+  .dropdown-toggle:focus,
+  &.open .dropdown-toggle {
+    box-shadow: none;
+    border-color: $dropdown-bg;
+    background-color: $navbar-default-link-active-color;
+
+    &.btn { // Requires nesting
+      background-color: $navbar-default-link-active-color;
+      color: $link-color;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $navbar-default-link-active-color;
+      color: $link-color;
+      box-shadow: none;
+      border-color: $dropdown-bg;
+    }
+  }
+
+  .dropdown-menu {
+    border-color: $brand-primary;
+    margin-top: 0;
+
+    > .active > a:focus {
+      @include outline-focus(); // Show focus on all links (override BS)
+    }
+  }
+}
+
+
+// Main site header search
+.site-header-search {
 
   .form-control,
   button[type="submit"] {
@@ -30,9 +62,32 @@ body > header {
     }
   }
 
-  // Add focus status removed by Bootstrap
-  .dropdown-toggle:focus {
-    @include outline-focus();
+  .form-control {
+    box-shadow: none;
+    padding: $padding-large-vertical $padding-large-horizontal;
+    height: ($line-height-computed + ($padding-large-vertical * 2) + 2);
+
+    &::-webkit-input-placeholder,
+    &:-moz-placeholder,
+    &::-moz-placeholder,
+    &:-ms-input-placeholder {
+      color: $navbar-default-link-active-color;
+    }
+  }
+
+  // Search button hover
+  .btn {
+    padding: $padding-large-vertical $padding-large-horizontal;
+
+    &:active:hover,
+    &:active:focus,
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $brand-primary;
+      color: $btn-primary-color;
+      border-color: $brand-primary;
+    }
   }
 }
 
@@ -49,44 +104,7 @@ body > header {
   background: $navbar-default-bg;
 }
 
-// Search placeholder text
-.form-control::-webkit-input-placeholder { color: $navbar-default-link-active-color; }
-.form-control:-moz-placeholder { color: $navbar-default-link-active-color; }
-.form-control::-moz-placeholder { color: $navbar-default-link-active-color; }
-.form-control:-ms-input-placeholder { color: $navbar-default-link-active-color; }
-
-// Search button hover
-.btn-default {
-  &:hover {
-    background-color: $brand-primary;
-    color: $btn-primary-color;
-  }
-  &:active:hover,
-  &:active:focus,
-  &:active,
-  &:focus {
-    background-color: darken($brand-primary, 10%);
-    color: $btn-primary-color;
-  }
-}
-
-
-
-.language-selector.open > .btn-default.dropdown-toggle {
-  background-color: $navbar-default-link-active-color;
-
-  &:active:hover,
-  &:active:focus,
-  &:active,
-  &:focus {
-    background-color: $navbar-default-link-active-color;
-    color: $link-color;
-    box-shadow: none;
-  }
-}
-
-// @media
-
+// Mobile only
 @media (max-width: $grid-float-breakpoint-max) {
   // Site header
   .site-header {

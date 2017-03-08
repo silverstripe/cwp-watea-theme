@@ -59,7 +59,7 @@ $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !def
 $font-family-base:        $font-family-sans-serif !default;
 
 $font-size-base:          16px !default;
-$font-size-large:         floor(($font-size-base * 1.25)) !default; // ~20px
+$font-size-large:         floor(($font-size-base * 1.125)) !default; // ~18px
 $font-size-small:         floor(($font-size-base * 0.875)) !default; // ~14px
 
 $font-size-h1:            floor(($font-size-base * 2.5)) !default; // ~40px
@@ -110,7 +110,7 @@ $icon-font-svg-id:        "glyphicons_halflingsregular" !default;
 $padding-base-vertical:     8px !default;
 $padding-base-horizontal:   12px !default;
 
-$padding-large-vertical:    14px !default;
+$padding-large-vertical:    12px !default;
 $padding-large-horizontal:  16px !default;
 
 $padding-small-vertical:    6px !default;
@@ -165,7 +165,7 @@ $table-border-color:            #ddd !default;
 $btn-font-weight:                normal !default;
 
 $btn-default-color:              $brand-primary !default;
-$btn-default-bg:                 #fff !default;
+$btn-default-bg:                 transparent !default;
 $btn-default-border:             $brand-primary !default;
 
 $btn-primary-color:              #fff !default;
@@ -289,7 +289,7 @@ $dropdown-caret-color:           #000 !default;
 // Note: These variables are not generated into the Customizer.
 
 $zindex-navbar:            1000 !default;
-$zindex-dropdown: 1010 !default;
+$zindex-dropdown:          1010 !default;
 $zindex-popover:           1060 !default;
 $zindex-tooltip:           1070 !default;
 $zindex-navbar-fixed:      1030 !default;
