@@ -1,8 +1,5 @@
 $bootstrap-sass-asset-helper: false !default;
 
-//Font
-@import url('//fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext');
-
 //
 // Variables
 // --------------------------------------------------
@@ -47,6 +44,9 @@ $link-hover-color:      darken($link-color, 15%) !default;
 //** Link hover decoration.
 $link-hover-decoration: underline !default;
 
+
+//Font selected from google fonts
+@import url('//fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,600,600i,700,700ii&subset=latin-ext');
 
 //== Typography
 //
