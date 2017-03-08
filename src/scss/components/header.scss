@@ -1,0 +1,133 @@
+// Header can also be inside articles or sections so limit to site header
+body > header {
+  background: $navbar-default-bg;
+  color: $navbar-default-color;
+}
+
+// Language selector
+.language-selector {
+  text-transform: capitalize;
+
+  .dropdown-toggle {
+    @include form-controls-style();
+    text-transform: capitalize;
+    padding: $padding-base-horizontal 15px;
+
+    i.fa-language {
+      margin-right: $padding-large-vertical !important;
+    }
+  }
+
+  .dropdown-toggle:focus,
+  &.open .dropdown-toggle {
+    box-shadow: none;
+    border-color: $dropdown-bg;
+    background-color: $navbar-default-link-active-color;
+
+    &.btn { // Requires nesting
+      background-color: $navbar-default-link-active-color;
+      color: $link-color;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $navbar-default-link-active-color;
+      color: $link-color;
+      box-shadow: none;
+      border-color: $dropdown-bg;
+    }
+  }
+
+  .dropdown-menu {
+    border-color: $brand-primary;
+    margin-top: 0;
+
+    > .active > a:focus {
+      @include outline-focus(); // Show focus on all links (override BS)
+    }
+  }
+}
+
+
+// Main site header search
+.site-header-search {
+
+  .form-control,
+  button[type="submit"] {
+    height: $navbar-height;
+    @include form-controls-style();
+
+    &:focus {
+      @include outline-focus();
+    }
+  }
+
+  .form-control {
+    box-shadow: none;
+    padding: $padding-large-vertical $padding-large-horizontal;
+    height: ($line-height-computed + ($padding-large-vertical * 2) + 2);
+
+    &::-webkit-input-placeholder,
+    &:-moz-placeholder,
+    &::-moz-placeholder,
+    &:-ms-input-placeholder {
+      color: $navbar-default-link-active-color;
+    }
+  }
+
+  // Search button hover
+  .btn {
+    padding: $padding-large-vertical $padding-large-horizontal;
+
+    &:active:hover,
+    &:active:focus,
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $brand-primary;
+      color: $btn-primary-color;
+      border-color: $brand-primary;
+    }
+  }
+}
+
+// Branding dimension restrictions
+.site-header-brand img {
+  max-height: $line-height-computed * 6;
+  max-width: $line-height-computed * 10;
+  width: auto;
+}
+
+//Accessibilty links to navigation
+.skip-links a {
+  color: $navbar-default-link-color;
+  background: $navbar-default-bg;
+}
+
+// Mobile only
+@media (max-width: $grid-float-breakpoint-max) {
+  // Site header
+  .site-header {
+    min-height: 111px;
+
+    .site-header-brand {
+      margin-right: $line-height-computed * 5.5;
+      font-size: 1.8em;
+    }
+
+    .navbar-toggle,
+    .language-selector {
+      position: absolute;
+      top: $line-height-computed * 1.2;
+    }
+
+    .navbar-toggle {
+      right: $line-height-computed * 0.6;
+      padding: 17px 10px;
+    }
+
+    .language-selector {
+      right: $line-height-computed * 2.8;
+    }
+  }
+}

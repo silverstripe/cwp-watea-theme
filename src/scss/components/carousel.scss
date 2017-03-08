@@ -1,0 +1,87 @@
+.carousel {
+  margin-top: -25px;
+  margin-bottom: $jumbotron-padding * 2;
+
+  // Slides
+  .item {
+    padding-top: $jumbotron-padding * 3;
+    padding-bottom: $jumbotron-padding * 3;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    h1,
+    p,
+    a {
+      color: $carousel-text-color;
+      text-shadow: $carousel-text-shadow;
+    }
+
+    a:not(.btn-primary) {
+      text-decoration: underline;
+    }
+
+    .container {
+      z-index: $zindex-navbar;
+      position: relative;
+    }
+  }
+
+  // Controls navigate left or right
+  .carousel-control {
+    background-image: none;
+    border: 0;
+    font-size: $font-size-h2;
+    z-index: $zindex-navbar;
+
+    &:focus {
+      outline: $outline-focus auto 5px;
+      outline: auto 5px -webkit-focus-ring-color;
+    }
+  }
+
+  // Controls wrapper
+  .controls-wrapper {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    margin-left: -30%;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+  }
+
+  // Carousel slides indicators
+  .carousel-indicators {
+    display: inline-block;
+    position: static;
+    width: auto;
+    margin: 0;
+    padding: 7px 0 7px 14px;
+  }
+
+  // Play and pause button
+  .carousel-play-controls {
+    display: inline-block;
+    bottom: $padding-small-horizontal;
+    bottom: 2px;
+    position: relative;
+
+    button {
+      color: $carousel-text-color;
+      border-radius: $border-radius-large;
+    }
+  }
+
+  // Overlay carousel mask
+  .carousel-mask {
+    position: absolute;
+    background: $carousel-mask-bg-color;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

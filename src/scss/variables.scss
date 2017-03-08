@@ -1,8 +1,5 @@
 $bootstrap-sass-asset-helper: false !default;
 
-//Font
-@import url('//fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext');
-
 //
 // Variables
 // --------------------------------------------------
@@ -25,6 +22,9 @@ $brand-info:            #008489 !default; // #5bc0de !default;
 $brand-warning:         #a76501 !default; // #f0ad4e !default;
 $brand-danger:          #d4423c !default; // #d9534f !default
 
+$theme-bg:              #001F2C !default;
+$theme-bg-lighter:      #214350 !default;
+
 
 //== Scaffolding
 //
@@ -45,6 +45,9 @@ $link-hover-color:      darken($link-color, 15%) !default;
 $link-hover-decoration: underline !default;
 
 
+//Font selected from google fonts
+@import url("//fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,600,600i,700,700ii&subset=latin-ext");
+
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
@@ -56,7 +59,7 @@ $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !def
 $font-family-base:        $font-family-sans-serif !default;
 
 $font-size-base:          16px !default;
-$font-size-large:         floor(($font-size-base * 1.25)) !default; // ~20px
+$font-size-large:         floor(($font-size-base * 1.125)) !default; // ~18px
 $font-size-small:         floor(($font-size-base * 0.875)) !default; // ~14px
 
 $font-size-h1:            floor(($font-size-base * 2.5)) !default; // ~40px
@@ -88,9 +91,11 @@ $image-spacing: $line-height-computed !default;
 
 // [converter] If $bootstrap-sass-asset-helper if used, provide path relative to the assets load path.
 // [converter] This is because some asset helpers, such as Sprockets, do not work with file-relative paths.
-$icon-font-path: "/themes/new-theme/dist/fonts/" !default;
-// Font-awesome path
-$fa-font-path: $icon-font-path !default;
+// Starter & watea theme: Note that this may need to be adjusted if you are installing into a sub-folder rather
+// than the root of a domain
+$icon-font-path: "/themes/starter/dist/fonts/" !default;
+// Font-awesome path (using CDN to avoid subfolder installation problems)
+$fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts" !default;
 
 //** File name for all font files.
 $icon-font-name:          "glyphicons-halflings-regular" !default;
@@ -105,7 +110,7 @@ $icon-font-svg-id:        "glyphicons_halflingsregular" !default;
 $padding-base-vertical:     8px !default;
 $padding-base-horizontal:   12px !default;
 
-$padding-large-vertical:    14px !default;
+$padding-large-vertical:    12px !default;
 $padding-large-horizontal:  16px !default;
 
 $padding-small-vertical:    6px !default;
@@ -160,7 +165,7 @@ $table-border-color:            #ddd !default;
 $btn-font-weight:                normal !default;
 
 $btn-default-color:              $brand-primary !default;
-$btn-default-bg:                 #fff !default;
+$btn-default-bg:                 transparent !default;
 $btn-default-border:             $brand-primary !default;
 
 $btn-primary-color:              #fff !default;
@@ -203,7 +208,7 @@ $input-bg-disabled:              $gray-lighter !default;
 //** Text color for `<input>`s
 $input-color:                    $text-color !default;
 //** `<input>` border color
-$input-border:                   rgba(#001F2C, .20) !default;
+$input-border:                   rgba($theme-bg, .2) !default;
 
 // TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //** Default `.form-control` border radius
@@ -248,7 +253,7 @@ $cursor-disabled:                not-allowed !default;
 //** Background for the dropdown menu.
 $dropdown-bg:                    #fff !default;
 //** Dropdown menu `border-color`.
-$dropdown-border:                rgba(0,0,0,.15) !default;
+$dropdown-border:                rgba(0, 0, 0, .15) !default;
 //** Dropdown menu `border-color` **for IE8**.
 $dropdown-fallback-border:       #ccc !default;
 //** Divider color for between dropdown items.
@@ -284,7 +289,7 @@ $dropdown-caret-color:           #000 !default;
 // Note: These variables are not generated into the Customizer.
 
 $zindex-navbar:            1000 !default;
-$zindex-dropdown: 1010 !default;
+$zindex-dropdown:          1010 !default;
 $zindex-popover:           1060 !default;
 $zindex-tooltip:           1070 !default;
 $zindex-navbar-fixed:      1030 !default;
@@ -338,7 +343,7 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 //** Number of columns in the grid.
 $grid-columns:              12 !default;
 //** Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width:         30px !default;
+$grid-gutter-width:         40px !default;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
 $grid-float-breakpoint:     $screen-sm-min !default;
@@ -378,36 +383,37 @@ $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 $navbar-collapse-max-height:       340px !default;
 
-$navbar-default-color:             #777 !default;
-$navbar-default-bg:                #f8f8f8 !default;
-$navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-color:             #fff !default;
+$navbar-default-bg:                $theme-bg !default;
+$navbar-default-border:            0 !default;
 
 // Navbar links
-$navbar-default-link-color:                #777 !default;
-$navbar-default-link-hover-color:          #333 !default;
+$navbar-default-link-color:                darken(#fff, 10%) !default;
+$navbar-default-link-hover-color:          #fff !default;
 $navbar-default-link-hover-bg:             transparent !default;
-$navbar-default-link-active-color:         #555 !default;
-$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
-$navbar-default-link-disabled-color:       #ccc !default;
+$navbar-default-link-active-color:         #fff !default;
+$navbar-default-link-active-bg:            $brand-primary !default;
+$navbar-default-link-disabled-color:       #444 !default;
 $navbar-default-link-disabled-bg:          transparent !default;
 
 // Navbar brand label
 $navbar-default-brand-color:               $navbar-default-link-color !default;
-$navbar-default-brand-hover-color:         darken($navbar-default-brand-color, 10%) !default;
+$navbar-default-brand-hover-color:         #fff !default;
 $navbar-default-brand-hover-bg:            transparent !default;
 
 // Navbar toggle
-$navbar-default-toggle-hover-bg:           #ddd !default;
-$navbar-default-toggle-icon-bar-bg:        #888 !default;
-$navbar-default-toggle-border-color:       #ddd !default;
+$navbar-default-toggle-hover-bg:           #333 !default;
+$navbar-default-toggle-icon-bar-bg:        #fff !default;
+$navbar-default-toggle-border-color:       #333 !default;
 
+// Custom Navbar hover border
+$nav-hover-border-width:                   4px !default;
 
 //=== Inverted navbar
 // Reset inverted navbar basics
-$navbar-inverse-color:                      lighten($gray-light, 15%)!default;
-$navbar-inverse-bg: #001F2C;
-$navbar-inverse-border:                     darken($navbar-inverse-bg, 10%)!default;
-$navbar-inverse-border-color: #214350;
+$navbar-inverse-color:                      lighten($gray-light, 15%) !default;
+$navbar-inverse-bg:                         #222 !default;
+$navbar-inverse-border:                     darken($navbar-inverse-bg, 10%) !default;
 
 // Inverted navbar links
 $navbar-inverse-link-color:                 lighten($gray-light, 15%) !default;
@@ -555,7 +561,7 @@ $popover-bg:                          #fff !default;
 //** Popover maximum width
 $popover-max-width:                   276px !default;
 //** Popover border color
-$popover-border-color:                rgba(0,0,0,.2) !default;
+$popover-border-color:                rgba(0, 0, 0, .2) !default;
 //** Popover fallback border color
 $popover-fallback-border-color:       #ccc !default;
 
@@ -613,7 +619,7 @@ $modal-title-line-height:     $line-height-base !default;
 //** Background color of modal content area
 $modal-content-bg:                             #fff !default;
 //** Modal content border color
-$modal-content-border-color:                   rgba(0,0,0,.2) !default;
+$modal-content-border-color:                   rgba(0, 0, 0, .2) !default;
 //** Modal content border color **for IE8**
 $modal-content-fallback-border-color:          #999 !default;
 
@@ -778,11 +784,6 @@ $thumbnail-caption-padding:   20px !default;
 $well-bg:                     #f5f5f5 !default;
 $well-border:                 darken($well-bg, 7%) !default;
 
-//== Focus outline
-//
-//##
-$outline-focus: rgb(94, 158, 215);
-
 //== Badges
 //
 //##
@@ -822,8 +823,8 @@ $breadcrumb-separator:          "/" !default;
 //
 //##
 
-$carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6) !default;
-
+$carousel-text-shadow:                        0 1px 2px rgba(0, 0, 0, .6) !default;
+$carousel-text-color:                         #fff !default;
 $carousel-control-color:                      #fff !default;
 $carousel-control-width:                      15% !default;
 $carousel-control-opacity:                    .5 !default;
@@ -834,6 +835,7 @@ $carousel-indicator-border-color:             #fff !default;
 
 $carousel-caption-color:                      #fff !default;
 
+$carousel-mask-bg-color:                      rgba(0, 31, 44, 0.45) !default;
 
 //== Close
 //

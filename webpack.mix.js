@@ -7,6 +7,6 @@ mix.js('src/js/main.js', 'dist/js/main.js');
 
 mix.webpackConfig({
   externals: {
-    'jquery': 'jquery'
+    jquery: 'jQuery'
   }
 });

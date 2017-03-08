@@ -1,14 +1,16 @@
 // Generic page styles
 // Add underline to links in general content areas only
-#main,
-.quick-links {
-  a:not(.btn) {
-    text-decoration: underline;
-  }
+.main a,
+.showcase a {
+  text-decoration: underline;
+}
 
-  // Remove underline from icons
-  a.fa,
-  a .fa {
+// No underlines for certain components
+.main {
+  .pagination a,
+  a.label,
+  a.btn,
+  a.fa {
     text-decoration: none;
   }
 }
@@ -38,9 +40,12 @@
   margin: $line-height-computed 0 ($line-height-computed * 1.5);
   border-bottom: 2px solid $page-header-border-color;
 
-  h1, .h1,
-  h2, .h2,
-  h3, .h3 {
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3 {
     margin-bottom: ($line-height-computed / 3);
   }
 
@@ -73,14 +78,22 @@
 // Homepage
 // Jumbotron
 .jumbotron {
-    margin-top: -24px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: -$line-height-computed;           //24px
+  margin-bottom: $line-height-computed * 3;   //72px
+}
+
+.home-page h1:first-of-type {
+  margin-top: 0;
 }
 
 // Features & Quicklinks
-.quick-links {
+.showcase {
   background-color: $gray-lighter;
-  padding: ($line-height-computed * 3) ($line-height-computed * 4);
   border-top: 1px solid darken($gray-lighter, 10%);
+  padding-bottom: ($line-height-computed * 3);
+  padding-top: ($line-height-computed * 3);
 
   a {
     color: $link-color-darker;

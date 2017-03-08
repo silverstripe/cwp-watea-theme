@@ -1,11 +1,11 @@
 footer {
   margin-top: 0;
-  background-color: $navbar-inverse-bg;
+  background-color: $navbar-default-bg;
   padding: ($line-height-computed * 1.8) 0;
 
   // Horizontal divder line
   hr {
-    border-top: 1px solid $navbar-inverse-border-color;
+    border-top: 1px solid $theme-bg-lighter;
     margin-bottom: $line-height-computed * 1.5;
 
     @media (min-width: $screen-md-min) {
@@ -17,7 +17,7 @@ footer {
 
   a:hover,
   p {
-    color: $navbar-inverse-link-hover-color;
+    color: $navbar-default-link-hover-color;
   }
 }
 
@@ -30,7 +30,7 @@ footer {
 
 // Footer navigation and Copyright
 .footer_nav-links a {
-  color: $navbar-inverse-link-hover-color;
+  color: $navbar-default-link-hover-color;
   margin-right: $line-height-computed;
 }
 
@@ -43,16 +43,19 @@ footer {
 // Secondary branding logo (defaults to CWP logo)
 .footer_brand-secondary {
   &::after {
-    content: '';
+    content: "";
     width: 0;
     height: calc(100% + 12px);
     position: absolute;
-    border: 1px solid $navbar-inverse-border-color;
+    border: 1px solid $theme-bg-lighter;
     right: 10px;
     top: -6px;
   }
 
   img {
     margin-right: $line-height-computed * 1.1;
+    max-height: $line-height-computed * 6;
+    max-width: $line-height-computed * 10;
+    width: auto;
   }
 }

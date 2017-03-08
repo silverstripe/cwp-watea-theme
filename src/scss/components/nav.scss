@@ -1,0 +1,163 @@
+// Main navigation
+@media (max-width: $grid-float-breakpoint-max) {
+  .navbar-toggle {
+    padding: $padding-large-vertical $padding-base-horizontal;
+    margin-right: 0;
+  }
+}
+
+// Override BS default behavior
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover {
+  background-color: transparent;
+}
+
+.main-nav {
+
+  .navbar {
+    z-index: $zindex-navbar;
+  }
+
+  .nav-item.current > a {
+    background-color: $brand-primary;
+
+    &:focus,
+    &:hover {
+      background-color: $brand-primary;
+    }
+  }
+
+  // Change caret icon for theme
+  .fa-caret-down:before {
+    content: "\F107";
+  }
+
+  .dropdown {
+    &:hover .navbar-touch-caret,
+    &:focus .navbar-touch-caret {
+      background-color: transparent;
+    }
+
+    // When active
+    &.current {
+      .navbar-touch-caret,
+      &:hover .navbar-touch-caret,
+      &:focus .navbar-touch-caret {
+        background: $brand-primary;
+
+        &:hover,
+        &:focus {
+          background-color: $brand-primary;
+        }
+      }
+    }
+  }
+
+  // Mobile only
+  @media (max-width: $grid-float-breakpoint-max) {
+
+    .navbar-nav {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .navbar-collapse {
+      box-shadow: none;
+    }
+
+    // Add hover border to left side
+    .nav-item > a,
+    .dropdown-menu a {
+      position: relative;
+
+      &:hover:before,
+      &:focus:before {
+        content: "";
+        width: $nav-hover-border-width;
+        height: 100%;
+        background: $brand-primary;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    // Dropdown
+    .dropdown {
+      // Change caret direction pointing up
+      &.open .navbar-touch-caret .fa-caret-down:before {
+        content: "\f106";
+      }
+
+      .navbar-touch-caret {
+        padding-left: $navbar-padding-horizontal;
+      }
+
+      .dropdown-menu {
+        padding: 0;
+        background-color: $theme-bg-lighter; // requires nesting
+      }
+    }
+
+    .open .dropdown-menu > li > a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  // Desktop only
+  @media (min-width: $grid-float-breakpoint-max) {
+
+    .nav-item > a {
+      padding-top: $navbar-padding-vertical;
+      padding-bottom: $navbar-padding-vertical;
+    }
+
+    // 1st level
+    .nav-item {
+      > .link {
+        border-bottom: $nav-hover-border-width solid $navbar-default-brand-hover-bg;
+
+        &:focus,
+        &:hover {
+          border-bottom-color: $brand-primary;
+        }
+      }
+
+      > .current {
+        border-bottom: $nav-hover-border-width solid $brand-primary;
+
+        &:focus,
+        &:hover {
+          border-bottom-color: $brand-primary;
+        }
+      }
+
+      > .dropdown-menu {
+        margin-top: (-$nav-hover-border-width - 1px);
+        margin-left: -1px;
+      }
+    }
+
+    .navbar-nav > .nav-item { // requires further nesting
+      margin-bottom: -$nav-hover-border-width;
+    }
+
+    // 1st level with dropdown
+    .dropdown {
+      // allow space for caret
+      padding-right: $navbar-padding-horizontal + 6px; // 6px approx half width of icon
+
+      > .link {
+        &:focus,
+        &:hover {
+          border-bottom-color: $navbar-default-brand-hover-bg;
+        }
+      }
+
+      &.current .navbar-touch-caret {
+        border-bottom: $nav-hover-border-width solid $brand-primary;
+      }
+    }
+  }
+}

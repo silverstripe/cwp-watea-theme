@@ -8,7 +8,7 @@
         <% if $RSSLink %>
         <link rel='alternate' type='application/rss+xml' title='RSS' href='$RSSLink'>
         <% end_if %>
-        <link rel="stylesheet" href="{$ThemeDir}_advanced/dist/css/main.css">
+        <link rel="stylesheet" href="$ThemeDir(watea)/dist/css/main.css">
         <% include Favicon %>
     </head>
     <body class="$ClassName">
@@ -16,7 +16,7 @@
             <% include Header %>
             <% include MainNav %>
         </header>
-        <main id="main">
+        <main id="main" class="main">
             $Layout
         </main>
         <% include FooterQuicklinks %>
@@ -24,7 +24,7 @@
             <% include Footer %>
         </footer>
         <script src="{$ThemeDir}/dist/js/main.js"></script>
-        <script src="{$ThemeDir}_advanced/dist/js/main.js"></script>
+        <script src="$ThemeDir(watea)/dist/js/main.js"></script>
         <% if $SiteConfig.GACode %>
             <script>
                 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
