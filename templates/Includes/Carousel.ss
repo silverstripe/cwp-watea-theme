@@ -52,7 +52,7 @@
 
               <%-- Items --%>
               <div class="<% if First %>active <% end_if %>item <% if $Image %>carousel-has-image<% end_if %>"
-                <% if $Image %> style="background:url($Image.URL);"<% end_if %>
+                <% if $Image %> style="background-image:url($Image.URL);"<% end_if %>
                 <% if $Title %> aria-labelledby="carousel-title-{$Pos}"<% end_if %>
                 <% if $Content %> aria-describedby="carousel-desc-{$Pos}"<% end_if %>>
 
