@@ -6,7 +6,8 @@
     "watch": "webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js --watch",
     "build": "webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "package": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "lint": "eslint src/js"
+    "lint-js": "node_modules/.bin/eslint src/js",
+    "lint-sass": "node_modules/.bin/sass-lint -v"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "eslint-config-airbnb": "^14.0.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
-    "eslint-plugin-react": "^6.9.0"
+    "eslint-plugin-react": "^6.9.0",
+    "sass-lint": "^1.10.2"
   }
 }
