@@ -11,6 +11,9 @@
                 <span>$SiteConfig.Title</span>
             <% end_if %>
         </a>
+        <% if $SiteConfig.Tagline %>
+            <span class="site-header-brand-tagline small">$SiteConfig.Tagline</span>
+        <% end_if %>
     </div>
     <button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
         <span class="sr-only"><%t CWP_Header.Toggle "Toggle navigation" %></span>
