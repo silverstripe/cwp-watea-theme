@@ -35,8 +35,8 @@
     z-index: $zindex-navbar;
 
     &:focus {
-        outline: $outline-focus auto 5px;
-        outline: auto 5px -webkit-focus-ring-color;
+      outline: $outline-focus auto 5px;
+      outline: auto 5px -webkit-focus-ring-color;
     }
   }
 

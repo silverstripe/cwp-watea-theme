@@ -1,17 +1,26 @@
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6,
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
 p,
 .lead,
-ul, ol {
+ul,
+ol {
   margin-bottom: $line-height-computed * .75;
 }
 
-h5, .h5,
-h6, .h6 {
+h5,
+.h5,
+h6,
+.h6 {
   line-height: $line-height-base;
 }
 
@@ -33,13 +42,15 @@ blockquote {
   }
 
   .blockquote-footer:before {
-    content: '\2014 '; // em dash, space
+    content: "\2014 "; // em dash, space
   }
 }
 
-h1, .h1,
-h2, .h2 {
-  letter-spacing: -0.5px;
+h1,
+.h1,
+h2,
+.h2 {
+  letter-spacing: -.5px;
 }
 
 .captionImage {
@@ -90,6 +101,6 @@ h2, .h2 {
 tfoot {
   td:first-child::before,
   th:first-child::before {
-    content: '\2014 '; // em dash, space
+    content: "\2014 "; // em dash, space
   }
 }

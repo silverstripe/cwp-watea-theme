@@ -21,7 +21,7 @@ body > header {
   }
 
   .form-control,
-  button[type='submit'] {
+  button[type="submit"] {
     height: $navbar-height;
     @include form-controls-style();
 
@@ -74,6 +74,7 @@ body > header {
 
 .language-selector.open > .btn-default.dropdown-toggle {
   background-color: $navbar-default-link-active-color;
+
   &:active:hover,
   &:active:focus,
   &:active,
@@ -95,15 +96,18 @@ body > header {
       margin-right: $line-height-computed * 5.5;
       font-size: 1.8em;
     }
+
     .navbar-toggle,
     .language-selector {
       position: absolute;
       top: $line-height-computed * 1.2;
     }
+
     .navbar-toggle {
       right: $line-height-computed * 0.6;
       padding: 17px 10px;
     }
+
     .language-selector {
       right: $line-height-computed * 2.8;
     }

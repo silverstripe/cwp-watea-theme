@@ -59,7 +59,9 @@ rules:
   no-invalid-hex: 2
   no-mergeable-selectors: 2
   no-trailing-zero: 2
-  no-url-protocols: 2
+  no-url-protocols:
+    - 2
+    - allow-protocol-relative-urls: true
   quotes:
     - 2
     - style: double
