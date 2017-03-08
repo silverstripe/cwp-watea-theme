@@ -1,7 +1,8 @@
 body > header {
-    background: $navbar-default-bg;
-    color: $navbar-default-color;
-    .open > a:focus {
+  background: $navbar-default-bg;
+  color: $navbar-default-color;
+
+  .open > a:focus {
     @include outline-focus();
   }
 
@@ -9,13 +10,9 @@ body > header {
     text-transform: capitalize;
 
     .btn-default {
-        text-transform: capitalize;
-        @include form-controls-style();
-        padding: $padding-base-horizontal 15px;
-
-      i.fa-language {
-        margin-right: $padding-large-vertical !important;
-      }
+      text-transform: capitalize;
+      @include form-controls-style();
+      padding: $padding-base-horizontal 15px;
 
       .dropdown-menu {
         z-index: $zindex-dropdown;
