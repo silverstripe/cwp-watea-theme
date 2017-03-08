@@ -1,15 +1,15 @@
 // Theme specific variables and overrides
-@import "./_variables";
+@import "./variables";
 // Base theme styles
 @import "../../../starter/src/scss/main";
 
 // Mixins
-@import "utils/_mixins";
+@import "./utils/mixins";
 
-@import "_typography";
-@import "components/_forms";
-@import "components/_header";
-@import "components/_nav";
-@import "components/_footer";
-@import "components/_pages";
-@import "./components/_carousel";
+@import "./typography";
+@import "./components/carousel";
+@import "./components/footer";
+@import "./components/forms";
+@import "./components/header";
+@import "./components/nav";
+@import "./components/pages";

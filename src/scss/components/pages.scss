@@ -40,9 +40,12 @@
   margin: $line-height-computed 0 ($line-height-computed * 1.5);
   border-bottom: 2px solid $page-header-border-color;
 
-  h1, .h1,
-  h2, .h2,
-  h3, .h3 {
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3 {
     margin-bottom: ($line-height-computed / 3);
   }
 
@@ -78,7 +81,7 @@
   padding-top: 0;
   padding-bottom: 0;
   margin-top: -$line-height-computed;           //24px
-  margin-bottom: $line-height-computed * 3.0;   //72px
+  margin-bottom: $line-height-computed * 3;   //72px
 }
 
 .home-page h1:first-of-type {

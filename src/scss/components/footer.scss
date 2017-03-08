@@ -43,7 +43,7 @@ footer {
 // Secondary branding logo (defaults to CWP logo)
 .footer_brand-secondary {
   &::after {
-    content: '';
+    content: "";
     width: 0;
     height: calc(100% + 12px);
     position: absolute;
