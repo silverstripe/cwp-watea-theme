@@ -1,24 +1,22 @@
 # CWP Agency theme
 
-This theme is a [subtheme](https://docs.silverstripe.org/en/3/developer_guides/templates/themes) of the [`starter-theme` theme](https://gitlab.cwp.govt.nz/cwp/starter-theme). It provides a more visually appealing example for starting a theme for a CWP website.
+This theme is a [subtheme](https://docs.silverstripe.org/en/3/developer_guides/templates/themes) of the [Starter theme](https://gitlab.cwp.govt.nz/cwp/starter-theme). It provides a more visually appealing example for starting a theme for a CWP website.
 
 ## Installation
 
 Install this theme module with Composer:
 
 ```
-composer require cwp/watea-theme
+composer require cwp/watea-theme --repository=https://packages.cwp.govt.nz
 ```
-
-You may need to add this repository to your `composer.json` as a VCS repository.
 
 ## Getting started
 
-This theme is designed to augment the base functionality and framework provided by the [`starter-theme`](https://gitlab.cwp.govt.nz/cwp/starter-theme). As such, all of the documentation for the base theme is relevant to this theme as well. We suggest you familiarise yourself with this documentation.
+This theme is designed to augment the base functionality and framework provided by the [Starter theme](https://gitlab.cwp.govt.nz/cwp/starter-theme). As such, all of the documentation for the Starter theme is relevant to this theme as well. We suggest you familiarise yourself with this documentation.
 
-As a general rule, we have endeavoured to constrain changes for this theme to CSS and Javascript wherever possible, as opposed to modifying the templates. As a subtheme, all templates in this theme will be applied over the top (with priority) of the base theme, and will be available to the SilverStripe template manifest under the "starter-theme" theme name. You will not see this theme in theme selectors, etc.
+As a general rule, we have endeavoured to constrain changes for this theme to CSS and Javascript wherever possible, as opposed to modifying and duplicating the templates. As a subtheme, all templates in this theme will be applied over the top (with priority) of the Starter theme, and will be available to the SilverStripe template manifest under the "starter" theme name. You will not see the Watea theme in theme selectors, etc.
 
-If you need to modify template markup from the SilverStripe framework, other modules or even the base theme, you can copy them into this subtheme and modify them here.
+If you need to modify template markup from the SilverStripe framework, other modules or even the Starter theme, you can copy them into this subtheme and modify them here.
 
 ## Development
 
@@ -33,7 +31,7 @@ npm install
 
 ### Backend changes
 
-This theme and the base-theme also come with the [`cwp/agency-extensions` module](https://gitlab.cwp.govt.nz/cwp/agency-extensions) which helps us to cleanup some parts of the CMS, rename some settings fields and provide a little bit of extra functionality to help these themes to work.
+This theme and the base-theme also come with the [`cwp/agency-extensions` module](https://gitlab.cwp.govt.nz/cwp/agency-extensions) which helps us to clean up some parts of the CMS, rename some settings fields and provide a little bit of extra functionality to help the Watea theme work.
 
 If you need to extend or modify these changes at all, you can control the theme's extensions with YAML configuration, or create your own extensions in your `mysite` code.
 
@@ -52,9 +50,11 @@ Or to "watch" for changes in real time as you develop (faster):
 npm run watch  # Compiles as "build", then watches for changes and recompiles as necessary
 ```
 
-> **Please note:** This subtheme's compiled Javascript assets are only relevant to this theme, and should be applied on top of the base theme's assets. Ensure that you include them in the correct order.
+> **Please note:** This subtheme's compiled Javascript assets are only relevant to this theme, and should be applied on top of the Starter theme's assets. Ensure that you include them in the correct order.
 >
-> For CSS, this theme contains _a fully compiled_ set of styles for both themes. You should only include this theme's CSS (not the base theme).
+> For CSS, this theme contains _a fully compiled_ set of styles for both themes. You should only include this theme's CSS (not the Starter theme).
+>
+> To be able to "npm run build" in the Watea theme, you may also be required to have run "npm install" in the Starter theme.
 
 For example:
 
@@ -72,8 +72,11 @@ For example:
 Every now and then (e.g. before you commit) you should run a quick linter check over your Javascript and SASS source code:
 
 ```
-npm run lint
+npm run lint-js
+npm run lint-sass
 ```
+
+For information on the rules and configuration around these linters, please see the [Starter theme](https://gitlab.cwp.govt.nz/cwp/starter-theme) documentation regarding "working with standards".
 
 ## Versioning
 
