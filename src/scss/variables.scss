@@ -91,9 +91,11 @@ $image-spacing: $line-height-computed !default;
 
 // [converter] If $bootstrap-sass-asset-helper if used, provide path relative to the assets load path.
 // [converter] This is because some asset helpers, such as Sprockets, do not work with file-relative paths.
+// Starter & watea theme: Note that this may need to be adjusted if you are installing into a sub-folder rather
+// than the root of a domain
 $icon-font-path: "/themes/starter/dist/fonts/" !default;
-// Font-awesome path
-$fa-font-path: $icon-font-path !default;
+// Font-awesome path (using CDN to avoid subfolder installation problems)
+$fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts" !default;
 
 //** File name for all font files.
 $icon-font-name:          "glyphicons-halflings-regular" !default;
