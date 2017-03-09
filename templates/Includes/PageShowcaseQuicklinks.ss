@@ -1,5 +1,5 @@
 <% if $QuickLinks %>
-    <div class="col-md-4 showcase-quicklinks">
+    <div class="col-md-4 page-showcase-quicklinks">
         <h2 class="h4"><%t CWP.Home.Quicklinks.Title "Quicklinks" %></h2>
         <ul>
             <% loop $QuickLinks %>

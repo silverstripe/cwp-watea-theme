@@ -1,16 +1,16 @@
 // Generic page styles
-// Add underline to links in general content areas only
-.main a,
-.showcase a {
-  text-decoration: underline;
-}
 
-// No underlines for certain components
 .main {
+  // Add underline to links in general content areas only
+  a {
+    text-decoration: underline;
+  }
+
+  // No underlines for certain components
   .pagination a,
-  a.label,
-  a.btn,
-  a.fa {
+  .label,
+  .btn,
+  .fa {
     text-decoration: none;
   }
 }
@@ -18,8 +18,9 @@
 .page-utilities {
   border-top: 1px solid $gray-lighter;
   padding-top: $line-height-computed;
+  padding-bottom: $line-height-computed / 5;
 
-  a.fa {
+  .fa {
     color: $gray-light;
     font-size: 2rem;
 
@@ -29,7 +30,16 @@
   }
 }
 
-.page-utilities_last-modified {
+.page-utilities-actions {
+  margin-top: -$line-height-computed * .66;
+  margin-bottom: 0;
+
+  > li {
+    padding: 0;
+  }
+}
+
+.page-utilities-last-modified {
   color: $gray-light;
   float: left;
   text-align: left;
@@ -75,8 +85,7 @@
   display: block;
 }
 
-// Homepage
-// Jumbotron
+// Homepage Jumbotron
 .jumbotron {
   padding-top: 0;
   padding-bottom: 0;
@@ -84,35 +93,44 @@
   margin-bottom: $line-height-computed * 3;   //72px
 }
 
+// Align homepage content with sidebar news header
 .home-page h1:first-of-type {
   margin-top: 0;
 }
 
-// Features & Quicklinks
-.showcase {
+// Page features & quicklinks, used on homepage
+.page-showcase {
   background-color: $gray-lighter;
   border-top: 1px solid darken($gray-lighter, 10%);
-  padding-bottom: ($line-height-computed * 3);
-  padding-top: ($line-height-computed * 3);
+  padding-bottom: $line-height-computed;
+  padding-top: $line-height-computed * 3;
 
   a {
     color: $link-color-darker;
+    text-decoration: underline;
   }
 }
 
-// Homepage news
-.news-item__publish-date {
-  margin-top: -.5rem;
+.page-showcase-quicklinks,
+.page-showcase-feature {
+  margin-bottom: $line-height-computed * 2;
 }
 
-// News/events page adjustment to bring the first heading inline with the top of the sidebar
-.NewsHolder .main section article:first-child header h2,
-.EventHolder .main section article:first-child header h2 {
-  margin-top: 4px;
+.page-showcase-quicklinks {
+  ul {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: $line-height-computed / 3;
+  }
 }
 
-// Blog page adjustment to bring the first heading inline with the top of the sidebar if there's no content above it.
-// If it has content, the article is not the first-child so this style is not applied to it.
-.blog-main article:first-child header h2 {
-  margin-top: 4px;
+// News/events/blog items adjustment to bring only the first of the articles inline with the sidebar
+.news-events-article,
+.blog-entry {
+  &:first-child h2 {
+    margin-top: 4px;
+  }
 }

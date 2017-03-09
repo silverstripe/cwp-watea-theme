@@ -19,7 +19,7 @@
         <main id="main" class="main">
             $Layout
         </main>
-        <% include FooterQuicklinks %>
+        <% include PageShowcase %>
         <footer class="footer-site">
             <% include Footer %>
         </footer>
