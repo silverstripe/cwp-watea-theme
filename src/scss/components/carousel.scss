@@ -1,87 +1,171 @@
 .carousel {
-  margin-top: -25px;
+  margin-top: -$line-height-computed;
   margin-bottom: $jumbotron-padding * 2;
+
+  .container {
+    position: relative;
+  }
 
   // Slides
   .item {
-    padding-top: $jumbotron-padding * 3;
+    padding-top: $jumbotron-padding * 2;
     padding-bottom: $jumbotron-padding * 3;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: $navbar-default-bg;
+    min-height: 360px;
+    border-top: 1px solid rgba($theme-bg-lighter, .5);
+    color: $carousel-text-color;
+
+    // if links are not on image use dark text shadow to break coloured underlines with decenders
+    a {
+      @include textShadowToCropUnderline ($theme-bg);
+      color: $carousel-text-color;
+    }
 
     h1,
-    p,
-    a {
-      color: $carousel-text-color;
+    h2,
+    h3,
+    p {
       text-shadow: $carousel-text-shadow;
-    }
-
-    a:not(.btn-primary) {
-      text-decoration: underline;
-    }
-
-    .container {
-      z-index: $zindex-navbar;
-      position: relative;
-    }
-  }
-
-  // Controls navigate left or right
-  .carousel-control {
-    background-image: none;
-    border: 0;
-    font-size: $font-size-h2;
-    z-index: $zindex-navbar;
-
-    &:focus {
-      outline: $outline-focus auto 5px;
-      outline: auto 5px -webkit-focus-ring-color;
-    }
-  }
-
-  // Controls wrapper
-  .controls-wrapper {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    z-index: 15;
-    width: 60%;
-    margin-left: -30%;
-    padding-left: 0;
-    list-style: none;
-    text-align: center;
-  }
-
-  // Carousel slides indicators
-  .carousel-indicators {
-    display: inline-block;
-    position: static;
-    width: auto;
-    margin: 0;
-    padding: 7px 0 7px 14px;
-  }
-
-  // Play and pause button
-  .carousel-play-controls {
-    display: inline-block;
-    bottom: $padding-small-horizontal;
-    bottom: 2px;
-    position: relative;
-
-    button {
       color: $carousel-text-color;
-      border-radius: $border-radius-large;
+    }
+
+    // remove lighter border-top if there is an image
+    &.carousel-has-image {
+      border-top-color: $theme-bg;
+
+      a {
+        text-shadow: $carousel-text-shadow;
+      }
+    }
+
+    .btn {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .btn-link {
+      position: relative;
+      background-image: linear-gradient(to bottom, lighten($brand-primary, 20%) 50%, rgba($brand-primary, 0) 50%);
+      background-repeat: repeat-x;
+      background-size: 2px 2px; // height of line, repeated dot for underline width (only half of size is seen)
+      background-position: 0 calc(1.3em + $padding-large-vertical); // position of line from top
+      padding-left: 0;
+      padding-right: 0;
+
+      &:hover {
+        background-image: linear-gradient(to bottom, lighten($brand-primary, 40%) 50%, rgba($brand-primary, 0) 50%);
+      }
     }
   }
+}
 
-  // Overlay carousel mask
-  .carousel-mask {
-    position: absolute;
+// Carousel content
+.carousel-content > p { 
+  // Mimic .lead
+  margin-bottom: $line-height-computed * 1.25; // Increase distance between text and actions
+  font-size: floor(($font-size-base * 1.15));
+  font-weight: 300;
+  line-height: 1.4;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: ($font-size-base * 1.5);
+  }
+
+  // Custom carousel link style for theme
+  a {
+    @include customUnderline(lighten($brand-primary, 20%));
+
+    &:hover {
+      @include customUnderline(lighten($brand-primary, 10%));
+      background-color: rgba($theme-bg, .2);
+    }
+  }
+}
+
+// Controls wrapper
+.carousel-controls-wrapper {
+  position: absolute;
+  bottom: 10px;
+  left: 50%; // center
+  z-index: 2;
+  width: 60%; // not to obstruct left/right arrows
+  margin-left: -30%; // back half of width to center
+  text-align: center;
+}
+
+// Controls navigate left or right
+.carousel-control {
+  z-index: 2;
+  border: 0;
+
+  &.left,
+  &.right {
+    background-image: none;
+  }
+
+  &:hover {
+    background-color: rgba($theme-bg-lighter, .2);
+  }
+
+  &:focus {
+    @include outline-focus;
+  }
+}
+
+
+// Carousel slides indicators
+.carousel-indicators {
+  display: inline-block;
+  position: static;
+  width: auto;
+  margin: 0;
+  padding: 7px 0 7px 14px;
+
+  li,
+  li.active {
+    margin-right: 4px;
+    margin-left: 4px;
+
+    &:hover {
+      border-color: rgba($carousel-text-color, .8);
+    }
+  }
+}
+
+// Play and pause button
+.carousel-play-controls {
+  display: inline-block;
+  bottom: $padding-small-horizontal;
+  bottom: 2px;
+  position: relative;
+
+  .btn-link {
+    color: $carousel-text-color;
+
+    &:hover {
+      color: rgba($carousel-text-color, .8);
+    }
+  }
+}
+
+// If only single carousel item center text vertically as no carousel controls
+.carousel-static .item {
+  padding-top: $jumbotron-padding * 3;
+}
+
+// Overlay carousel mask
+.carousel-mask {
+  position: absolute;
+  background: $jumbotron-bg;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  .carousel-has-image & {
     background: $carousel-mask-bg-color;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
   }
 }
