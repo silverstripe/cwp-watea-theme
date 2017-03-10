@@ -104,3 +104,15 @@
 .news-item__publish-date {
   margin-top: -.5rem;
 }
+
+// News/events page adjustment to bring the first heading inline with the top of the sidebar
+.NewsHolder .main section article:first-child header h2,
+.EventHolder .main section article:first-child header h2 {
+  margin-top: 4px;
+}
+
+// Blog page adjustment to bring the first heading inline with the top of the sidebar if there's no content above it.
+// If it has content, the article is not the first-child so this style is not applied to it.
+.blog-main article:first-child header h2 {
+  margin-top: 4px;
+}
