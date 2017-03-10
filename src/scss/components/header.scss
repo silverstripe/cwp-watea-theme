@@ -48,6 +48,22 @@ body > header {
   }
 }
 
+//  These must be separate to work
+.site-header-search .form-control::-webkit-input-placeholder {
+  color: $navbar-default-link-active-color;
+}
+
+.site-header-search .form-control:-moz-placeholder {
+  color: $navbar-default-link-active-color;
+}
+
+.site-header-search .form-control::-moz-placeholder {
+  color: $navbar-default-link-active-color;
+}
+
+.site-header-search .form-control:-ms-input-placeholder {
+  color: $navbar-default-link-active-color;
+}
 
 // Main site header search
 .site-header-search {
@@ -66,13 +82,6 @@ body > header {
     box-shadow: none;
     padding: $padding-large-vertical $padding-large-horizontal;
     height: ($line-height-computed + ($padding-large-vertical * 2) + 2);
-
-    &::-webkit-input-placeholder,
-    &:-moz-placeholder,
-    &::-moz-placeholder,
-    &:-ms-input-placeholder {
-      color: $navbar-default-link-active-color;
-    }
   }
 
   // Search button hover
