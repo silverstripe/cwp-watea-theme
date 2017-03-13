@@ -22,26 +22,26 @@ footer {
 }
 
 // NZ Gov logo
-.footer_govt-logo a {
+.footer-govt-logo a {
   position: relative;
   display: inline-block;
   margin-bottom: $line-height-computed;
 }
 
 // Footer navigation and Copyright
-.footer_nav-links a {
+.footer-nav-links a {
   color: $navbar-default-link-hover-color;
   margin-right: $line-height-computed;
 }
 
 // Social media icons
-.footer_social-links .fa {
+.footer-social-links .fa {
   font-size: 2.2rem;
   margin-bottom: $line-height-computed * 1.2;
 }
 
 // Secondary branding logo (defaults to CWP logo)
-.footer_brand-secondary {
+.footer-brand-secondary {
   &::after {
     content: "";
     width: 0;
