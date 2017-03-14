@@ -20,7 +20,7 @@
             $Layout
         </main>
         <% include FooterQuicklinks %>
-        <footer>
+        <footer class="footer-site">
             <% include Footer %>
         </footer>
         <script src="{$ThemeDir}/dist/js/main.js"></script>
