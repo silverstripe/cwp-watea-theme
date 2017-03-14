@@ -1,4 +1,6 @@
+/* eslint-disable */
 import $ from 'jquery';
+/* eslint-enable */
 
 export default function () {
   // Carousel Documentation: https://paypal.github.io/bootstrap-accessibility-plugin/demo.html#carousel

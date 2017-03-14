@@ -2,6 +2,6 @@
 import accessibility from 'bootstrap-accessibility-plugin/plugins/js/bootstrap-accessibility';
 
 // Define local components
-import carousel_config from './components/carousel';
+import carouselConfig from './components/carousel';
 
-carousel_config();
+carouselConfig();
