@@ -104,3 +104,18 @@ tfoot {
     content: "\2014 "; // em dash, space
   }
 }
+
+// Used typically under a header to provide additional info like author or dates.
+.meta-info {
+  header + &,
+  h1 + &,
+  .h1 + &,
+  h2 + &,
+  .h2 + &,
+  h3 + &,
+  .h3 + &,
+  h4 + &,
+  .h4 + & {
+    margin-top: -$line-height-computed / 2;
+  }
+}
