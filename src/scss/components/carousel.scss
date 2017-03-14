@@ -51,7 +51,7 @@
       background-image: linear-gradient(to bottom, lighten($brand-primary, 20%) 50%, rgba($brand-primary, 0) 50%);
       background-repeat: repeat-x;
       background-size: 2px 2px; // height of line, repeated dot for underline width (only half of size is seen)
-      background-position: 0 calc(1.3em + $padding-large-vertical); // position of line from top
+      background-position: 0 ($line-height-computed + $padding-large-vertical); // position of line from top
       padding-left: 0;
       padding-right: 0;
 
@@ -63,7 +63,7 @@
 }
 
 // Carousel content
-.carousel-content > p { 
+.carousel-content > p {
   // Mimic .lead
   margin-bottom: $line-height-computed * 1.25; // Increase distance between text and actions
   font-size: floor(($font-size-base * 1.15));
