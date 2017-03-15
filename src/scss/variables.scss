@@ -832,7 +832,9 @@ $carousel-control-font-size:                  64px !default;
 $carousel-indicator-active-bg:                $carousel-text-color !default;
 $carousel-indicator-border-color:             $carousel-text-color !default;
 $carousel-caption-color:                      $carousel-text-color !default;
-$carousel-mask-bg-color:                      rgba($theme-bg-lighter, 0.55) !default; // Meets 3.1 for large text (should meet contrast of 4.5 to $carousel-text-color, if large text then 3.1)
+
+// Meets 3:1 for large text (if using small text this should meet contrast of 4.5:1 to $carousel-text-color)
+$carousel-mask-bg-color:                      rgba($theme-bg-lighter, 0.55) !default;
 $carousel-link-underline-color:               lighten($brand-primary, 20%);
 
 

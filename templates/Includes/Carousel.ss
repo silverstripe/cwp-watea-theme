@@ -1,6 +1,6 @@
 <% if $VisibleCarouselItems %>
 
-    <%-- determine if is carousel or single item --%>
+    <%-- Determine if a carousel or single item --%>
     <% if $VisibleCarouselItems.Count > 1 %>
         <div id="carousel-slide" data-ride="carousel" class="carousel slide text-center">
     <% else %>
