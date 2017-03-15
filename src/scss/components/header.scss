@@ -12,10 +12,6 @@ body > header {
     @include form-controls-style();
     text-transform: capitalize;
     padding: $padding-base-horizontal 15px;
-
-    i.fa-language {
-      margin-right: $padding-large-vertical !important;
-    }
   }
 
   .dropdown-toggle:focus,
