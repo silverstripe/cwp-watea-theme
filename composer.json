@@ -1,10 +1,11 @@
 {
   "name": "cwp/watea-theme",
-  "description": "CWP agency theme",
+  "description": "CWP Watea theme",
   "type": "silverstripe-theme",
   "keywords": ["silverstripe", "theme"],
   "license": "BSD-3-Clause",
   "require": {
+    "cwp/cwp": "^1.6@dev",
     "cwp/starter-theme": "*",
     "cwp/agency-extensions": "*"
   },
