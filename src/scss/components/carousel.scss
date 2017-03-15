@@ -18,7 +18,7 @@
     border-top: 1px solid rgba($theme-bg-lighter, .5);
     color: $carousel-text-color;
 
-    // if links are not on image use dark text shadow to break coloured underlines with decenders
+    // If links are not on image use dark text shadow to break coloured underlines with decenders
     a {
       @include textShadowToCropUnderline ($theme-bg);
       color: $carousel-text-color;
@@ -32,7 +32,7 @@
       color: $carousel-text-color;
     }
 
-    // remove lighter border-top if there is an image
+    // Remove lighter border-top if there is an image
     &.carousel-has-image {
       border-top-color: $theme-bg;
 
@@ -50,8 +50,10 @@
       position: relative;
       background-image: linear-gradient(to bottom, lighten($brand-primary, 20%) 50%, rgba($brand-primary, 0) 50%);
       background-repeat: repeat-x;
-      background-size: 2px 2px; // height of line, repeated dot for underline width (only half of size is seen)
-      background-position: 0 ($line-height-computed + $padding-large-vertical); // position of line from top
+      // Height of line, repeated dot for underline width (only half of size is seen)
+      background-size: 2px 2px;
+      // Position of line from top
+      background-position: 0 ($line-height-computed + $padding-large-vertical);
       padding-left: 0;
       padding-right: 0;
 
@@ -65,7 +67,8 @@
 // Carousel content
 .carousel-content > p {
   // Mimic .lead
-  margin-bottom: $line-height-computed * 1.25; // Increase distance between text and actions
+  // Increase distance between text and actions
+  margin-bottom: $line-height-computed * 1.25;
   font-size: floor(($font-size-base * 1.15));
   font-weight: 300;
   line-height: 1.4;
@@ -89,10 +92,13 @@
 .carousel-controls-wrapper {
   position: absolute;
   bottom: 10px;
-  left: 50%; // center
+  // Center
+  left: 50%;
   z-index: 2;
-  width: 60%; // not to obstruct left/right arrows
-  margin-left: -30%; // back half of width to center
+  // Not to obstruct left/right arrows
+  width: 60%;
+  // Back half of width to center
+  margin-left: -30%;
   text-align: center;
 }
 

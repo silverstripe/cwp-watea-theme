@@ -95,7 +95,8 @@
 
       .dropdown-menu {
         padding: 0;
-        background-color: $theme-bg-lighter; // requires nesting
+        // Requires nesting
+        background-color: $theme-bg-lighter;
       }
     }
 
@@ -139,13 +140,14 @@
       }
     }
 
-    .navbar-nav > .nav-item { // requires further nesting
+    // Requires further nesting
+    .navbar-nav > .nav-item {
       margin-bottom: -$nav-hover-border-width;
     }
 
     // 1st level with dropdown
     .dropdown {
-      // allow space for caret
+      // Allow space for caret
       padding-right: $navbar-padding-horizontal + 6px; // 6px approx half width of icon
 
       > .link {

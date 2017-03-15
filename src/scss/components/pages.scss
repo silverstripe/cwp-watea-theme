@@ -1,5 +1,4 @@
 // Generic page styles
-
 .main {
   // Add underline to links in general content areas only
   a {
@@ -89,8 +88,8 @@
 .jumbotron {
   padding-top: 0;
   padding-bottom: 0;
-  margin-top: -$line-height-computed;           //24px
-  margin-bottom: $line-height-computed * 3;   //72px
+  margin-top: -$line-height-computed; //24px
+  margin-bottom: $line-height-computed * 3; //72px
 }
 
 // Align homepage content with sidebar news header
@@ -127,7 +126,7 @@
   }
 }
 
-// News/events/blog items adjustment to bring only the first of the articles inline with the sidebar
+// News/Events/Blog items adjustment to bring only the first of the articles inline with the sidebar
 .news-events-article,
 .blog-entry {
   &:first-child h2 {
