@@ -6,10 +6,8 @@
 }
 
 // Adds text shadow to links, which have custom underline colour to break the line for type decenders
-@mixin textShadowToCropUnderline($shadowColor) {
-  text-shadow: .03em 0 $shadowColor, -.03em 0 $shadowColor, 0 .03em $shadowColor, 0 -.03em $shadowColor, .06em 0 $shadowColor,
-  -.06em 0 $shadowColor, .09em 0 $shadowColor, -.09em 0 $shadowColor, .12em 0 $shadowColor, -.12em 0 $shadowColor,
-  .15em 0 $shadowColor, -.15em 0 $shadowColor;
+@mixin textShadowToCropUnderline($shadow-color) {
+  text-shadow: .03em 0 $shadow-color, -.03em 0 $shadow-color, 0 .03em $shadow-color, 0 -.03em $shadow-color, .06em 0 $shadow-color, -.06em 0 $shadow-color, .09em 0 $shadow-color, -.09em 0 $shadow-color, .12em 0 $shadow-color, -.12em 0 $shadow-color, .15em 0 $shadow-color, -.15em 0 $shadow-color;
 }
 
 @mixin customUnderline($underline-color) {
