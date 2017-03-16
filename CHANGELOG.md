@@ -1,5 +1,33 @@
 # Changelog
 
+## 0.3.0 (2017-03-16)
+
+* Consistency with class names across all sitewide widgets (Paul Clarke)
+* Toggle caret-down and caret-up on hover/active for navigation dropdowns (Robbie Averill)
+* FIX position for menu on sub-page of active item (Paul Clarke)
+* FIX margin-top on carousel needs to include 1px border - add comment (Robbie Averill)
+* CWPT-480: Override accessibility-plugin space bar handler for navbar (Robbie Averill)
+* CWPT-481 add correct variable in mixin, rm i. fa-language class (Sacha Judd)
+* CWPT-481 add comments, move end-of-line to above lines (Sacha Judd)
+* FIX Require cwp/cwp 1.6@dev, add BSD-3 clause license (Robbie Averill)
+* CWPT-445: Fix some linting errors, include jQuery from Page template (Robbie Averill)
+* Update fav icons to standard (not recompressed) (Paul Clarke)
+* CWPT-475: Update dist from starter theme, includes .external::after with left: 3px (Robbie Averill)
+* Increase contrast (Paul Clarke)
+* Use more BEM structure without underscores, css tidyup (Paul Clarke)
+* Add css conventions to project (Paul Clarke)
+* Move stuff around and rename some components/includes and reduce nesting (Paul Clarke)
+* FIX Add "footer-site" class to page footer (Robbie Averill)
+* CWPT-429 add .footer-site to scss (Sacha Judd)
+* CWPT-385: Update readme to reflect critical use information, link to external Watea docs (Robbie Averill)
+* Change class names to BS style (Paul Clarke)
+* Carousel refactor and additional style additions (Paul Clarke)
+* Uncomment PDF section with instructions to documentation on how to re-enable PDF Link (Sacha Judd)
+* Fix placeholder SASS definitions by redefining them so they aren't truncated (Sacha Judd)
+* CWPT-450: Add screen reader caption "search" to search button in header (Robbie Averill)
+* CWPT-462: Fix alignment of first article heading in news, events and blog pages versus sidebar (Robbie Averill)
+* CWPT-457: Apply sidebar header styles to "sidebar" container h3 elements instead of specific selector (Robbie Averill)
+
 ## 0.2.0 (2017-03-09)
 
 * Rebuild dist files (Robbie Averill)
