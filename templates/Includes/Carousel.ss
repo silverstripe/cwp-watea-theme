@@ -1,18 +1,18 @@
 <% if $VisibleCarouselItems %>
-    <div <% if $VisibleCarouselItems.Count > 1 %>id="carousel-slide" data-ride="carousel"<% end_if %>
-      class="carousel slide text-center">
+
+    <%-- Determine if a carousel or single item --%>
+    <% if $VisibleCarouselItems.Count > 1 %>
+        <div id="carousel-slide" data-ride="carousel" class="carousel slide text-center">
+    <% else %>
+        <div class="carousel slide text-center carousel-static">
+    <% end_if %>
 
       <div class="carousel-inner">
           <% if $VisibleCarouselItems.Count > 1 %>
 
-          <%-- Introduction text for screen readers --%>
-          <div tabindex="0" class="sr-only">
-            <%t CwpCarousel.INSTRUCTIONS "Carousel content with {count} slides. Currently it is autoplaying. Press tab to navigate to the carousel controls." count=$VisibleCarouselItems.Count %>
-          </div>
-
           <div class="carousel-interface">
 
-            <div class="controls-wrapper">
+            <div class="carousel-controls-wrapper">
 
               <%-- Indicators --%>
               <ol class="carousel-indicators" role="tablist">
@@ -23,10 +23,10 @@
 
               <%-- Play or Pause --%>
               <div class="carousel-play-controls">
-                <button type="button" class="btn btn-link btn-sm" id="carousel-pause" aria-label="<%t CwpCarousel.PAUSESLIDE "Pause carousel slides." %>">
+                <button type="button" class="btn btn-link btn-sm" id="carousel-pause" aria-label="Autoplaying carousel with slides. <%t CwpCarousel.PAUSESLIDE "Click to pause carousel slides." %>">
                   <i class="fa fa-pause" aria-hidden="true"></i>
                 </button>
-                <button type="button" class="btn btn-link btn-sm" id="carousel-play" aria-label="<%t CwpCarousel.PLAYSLIDE "Play carousel slides." %>" style="display:none;">
+                <button type="button" class="btn btn-link btn-sm" id="carousel-play" aria-label="Paused carousel with slides. <%t CwpCarousel.PLAYSLIDE "Click to play carousel slides." %>" style="display:none;">
                   <i class="fa fa-play" aria-hidden="true"></i>
                 </button>
               </div>
@@ -35,13 +35,13 @@
 
             <%-- Controls --%>
             <div class="carousel-controls">
-              <button class="right carousel-control" href="#carousel-slide" data-slide="next">
-                <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
-                <span class="sr-only"><%t CwpCarousel.NEXT "Go to next slide." %></span>
-              </button>
               <button class="left carousel-control" href="#carousel-slide" data-slide="prev">
-                <i class="fa fa-angle-left fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
                 <span class="sr-only"><%t CwpCarousel.PREVIOUS "Go to previous slide." %></span>
+              </button>
+              <button class="right carousel-control" href="#carousel-slide" data-slide="next">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                <span class="sr-only"><%t CwpCarousel.NEXT "Go to next slide." %></span>
               </button>
             </div>
 
@@ -56,6 +56,8 @@
                 <% if $Title %> aria-labelledby="carousel-title-{$Pos}"<% end_if %>
                 <% if $Content %> aria-describedby="carousel-desc-{$Pos}"<% end_if %>>
 
+                <div class="carousel-mask"></div>
+
                 <% if $Content || $Title || $PrimaryCallToActionLabel || $SecondaryCallToActionLabel %>
                     <div class="container">
                         <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
@@ -64,7 +66,7 @@
                             <% end_if %>
 
                             <% if $Content %>
-                              <div id="carousel-desc-{$Pos}">$Content</div>
+                              <div class="carousel-content" id="carousel-desc-{$Pos}">$Content</div>
                             <% end_if %>
 
                             <% if $PrimaryCallToActionLabel || $SecondaryCallToActionLabel %>
@@ -87,7 +89,6 @@
                     </div>
                 <% end_if %>
 
-                <div class="carousel-mask"></div>
               </div>
           <% end_loop %>
       </div>

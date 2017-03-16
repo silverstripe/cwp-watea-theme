@@ -19,10 +19,11 @@
         <main id="main" class="main">
             $Layout
         </main>
-        <% include FooterQuicklinks %>
-        <footer>
+        <% include PageShowcase %>
+        <footer class="footer-site">
             <% include Footer %>
         </footer>
+        <% require javascript('framework/thirdparty/jquery/jquery.js') %>
         <script src="{$ThemeDir}/dist/js/main.js"></script>
         <script src="$ThemeDir(watea)/dist/js/main.js"></script>
         <% if $SiteConfig.GACode %>

@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "./";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -78,16 +78,23 @@ module.exports = jQuery;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap_accessibility_plugin_plugins_js_bootstrap_accessibility__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap_accessibility_plugin_plugins_js_bootstrap_accessibility__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap_accessibility_plugin_plugins_js_bootstrap_accessibility___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_bootstrap_accessibility_plugin_plugins_js_bootstrap_accessibility__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_carousel__ = __webpack_require__(3);
-// Accessibility plugin (needs to be in this order)
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_navigation__ = __webpack_require__(4);
+/**
+ * The PayPal Accessibility Plugin adds accessibility improvements over the top of Bootstrap
+ * components. It is designed to work in the background. If you experience any quirks, please
+ * take a look at its source code.
+ */
 
 
 // Define local components
 
 
+
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__components_carousel__["a" /* default */])();
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__components_navigation__["a" /* default */])();
 
 /***/ }),
 /* 2 */
@@ -102,7 +109,9 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__components_carousel__["a" /* 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+/* eslint-disable */
 
+/* eslint-enable */
 
 /* harmony default export */ __webpack_exports__["a"] = function () {
   // Carousel Documentation: https://paypal.github.io/bootstrap-accessibility-plugin/demo.html#carousel
@@ -131,6 +140,27 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__components_carousel__["a" /* 
 
 /***/ }),
 /* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+/* eslint-disable */
+
+/* eslint-enable */
+
+/* harmony default export */ __webpack_exports__["a"] = function () {
+  /**
+   * Unbind the space bar handler that is added in the bootstrap-accessibility plugin,
+   * the functionality is recreated in this component.
+   *
+   * See: bootstrap-accessibility.js, line 130 (ish)
+   */
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).off('keydown.bs.dropdown.data-api', '[data-toggle=dropdown], [role=menu]', __WEBPACK_IMPORTED_MODULE_0_jquery___default.a.fn.dropdown.Constructor.prototype.keydown);
+};
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -543,7 +573,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__components_carousel__["a" /* 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);

@@ -13,7 +13,6 @@
 }
 
 .main-nav {
-
   .navbar {
     z-index: $zindex-navbar;
   }
@@ -27,9 +26,14 @@
     }
   }
 
-  // Change caret icon for theme
+  // Change caret icon for dropdown to .fa-angle-down
   .fa-caret-down:before {
     content: "\F107";
+  }
+
+  // Change caret icon for active dropdown to .fa-angle-up
+  .fa-caret-up:before {
+    content: "\F106";
   }
 
   .dropdown {
@@ -70,15 +74,19 @@
     .dropdown-menu a {
       position: relative;
 
-      &:hover:before,
-      &:focus:before {
-        content: "";
+      &:before {
+        transition: background-color 300ms ease-out;
         width: $nav-hover-border-width;
+        content: "";
         height: 100%;
-        background: $brand-primary;
         position: absolute;
         top: 0;
         left: 0;
+      }
+
+      &:hover:before,
+      &:focus:before {
+        background: $brand-primary;
       }
     }
 
@@ -95,7 +103,8 @@
 
       .dropdown-menu {
         padding: 0;
-        background-color: $theme-bg-lighter; // requires nesting
+        // Requires nesting
+        background-color: $theme-bg-lighter;
       }
     }
 
@@ -115,8 +124,13 @@
 
     // 1st level
     .nav-item {
+      > .section {
+        border-bottom: $nav-hover-border-width solid $navbar-default-brand-hover-bg;
+      }
+
       > .link {
         border-bottom: $nav-hover-border-width solid $navbar-default-brand-hover-bg;
+        transition: border-color 300ms ease-out;
 
         &:focus,
         &:hover {
@@ -139,13 +153,14 @@
       }
     }
 
-    .navbar-nav > .nav-item { // requires further nesting
+    // Requires further nesting
+    .navbar-nav > .nav-item {
       margin-bottom: -$nav-hover-border-width;
     }
 
     // 1st level with dropdown
     .dropdown {
-      // allow space for caret
+      // Allow space for caret
       padding-right: $navbar-padding-horizontal + 6px; // 6px approx half width of icon
 
       > .link {

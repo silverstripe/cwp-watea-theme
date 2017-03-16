@@ -2,7 +2,7 @@
   <div class="clearfix">
   <% if $SiteConfig.FacebookURL || $SiteConfig.TwitterUsername %>
 
-    <div class="footer_nav-links footer_social-links" role="complementary">
+    <div class="footer-nav-links footer-social-links" role="complementary">
     <% if $SiteConfig.FacebookURL %>
       <a class="fa fa-facebook" href="http://www.facebook.com/$SiteConfig.FacebookURL" title='<%t CWP.Footer.FollowOnFacebook "Follow us on Facebook" %>'>
         <span class="sr-only"><%t CWP.Footer.FollowOnFacebook "Follow us on Facebook" %></span>
@@ -17,7 +17,7 @@
     <% end_if %>
 
     <% if $Footer.Children %>
-    <nav class="footer_nav-links" aria-label="Footer navigation">
+    <nav class="footer-nav-links" aria-label="Footer navigation">
     <% loop $Footer.Children %>
       <a href="$Link" class="$LinkingMode <% if $LinkingMode = current %> active<% end_if %>">
         $MenuTitle.XML
@@ -29,8 +29,8 @@
 
   <hr class="hidden-md hidden-lg">
 
-  <div class="footer_govt-logo">
-    <a class="footer_brand-secondary"
+  <div class="footer-govt-logo">
+    <a class="footer-brand-secondary"
       <% if $SiteConfig.FooterLogoSecondaryLink %>
         href="$SiteConfig.FooterLogoSecondaryLink">
       <% else %>
@@ -52,7 +52,7 @@
       />
     </a>
 
-    <a class="footer_nzgovt-logo"
+    <a class="footer-nzgovt-logo"
       <% if $SiteConfig.FooterLogoLink %>
         href="$SiteConfig.FooterLogoLink">
       <% else %>

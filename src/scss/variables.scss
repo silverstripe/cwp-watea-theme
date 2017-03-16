@@ -46,7 +46,7 @@ $link-hover-decoration: underline !default;
 
 
 //Font selected from google fonts
-@import url("//fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,600,600i,700,700ii&subset=latin-ext");
+@import url("//fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700ii&subset=latin-ext");
 
 //== Typography
 //
@@ -506,9 +506,9 @@ $pager-disabled-color:                 $pagination-disabled-color !default;
 //##
 
 $jumbotron-padding:              30px !default;
-$jumbotron-color:                inherit !default;
-$jumbotron-bg:                   $gray-lighter !default;
-$jumbotron-heading-color:        inherit !default;
+$jumbotron-color:                white !default;
+$jumbotron-bg:                   $theme-bg !default;
+$jumbotron-heading-color:        $jumbotron-color !default;
 $jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
 $jumbotron-heading-font-size:    ceil(($font-size-base * 4.5)) !default;
 
@@ -823,19 +823,20 @@ $breadcrumb-separator:          "/" !default;
 //
 //##
 
-$carousel-text-shadow:                        0 1px 2px rgba(0, 0, 0, .6) !default;
-$carousel-text-color:                         #fff !default;
-$carousel-control-color:                      #fff !default;
+$carousel-text-shadow:                        0 1px 3px rgba(0, 0, 0, .3) !default;
+$carousel-text-color:                         $jumbotron-color !default;
+$carousel-control-color:                      $carousel-text-color !default;
 $carousel-control-width:                      15% !default;
-$carousel-control-opacity:                    .5 !default;
-$carousel-control-font-size:                  20px !default;
+$carousel-control-opacity:                    1 !default;
+$carousel-control-font-size:                  64px !default;
+$carousel-indicator-active-bg:                $carousel-text-color !default;
+$carousel-indicator-border-color:             $carousel-text-color !default;
+$carousel-caption-color:                      $carousel-text-color !default;
 
-$carousel-indicator-active-bg:                #fff !default;
-$carousel-indicator-border-color:             #fff !default;
+// Meets 3:1 for large text (if using small text this should meet contrast of 4.5:1 to $carousel-text-color)
+$carousel-mask-bg-color:                      rgba($theme-bg-lighter, 0.55) !default;
+$carousel-link-underline-color:               lighten($brand-primary, 20%);
 
-$carousel-caption-color:                      #fff !default;
-
-$carousel-mask-bg-color:                      rgba(0, 31, 44, 0.45) !default;
 
 //== Close
 //

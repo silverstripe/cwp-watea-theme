@@ -12,10 +12,6 @@ body > header {
     @include form-controls-style();
     text-transform: capitalize;
     padding: $padding-base-horizontal 15px;
-
-    i.fa-language {
-      margin-right: $padding-large-vertical !important;
-    }
   }
 
   .dropdown-toggle:focus,
@@ -24,7 +20,8 @@ body > header {
     border-color: $dropdown-bg;
     background-color: $navbar-default-link-active-color;
 
-    &.btn { // Requires nesting
+    // Requires nesting
+    &.btn {
       background-color: $navbar-default-link-active-color;
       color: $link-color;
     }
@@ -42,12 +39,29 @@ body > header {
     border-color: $brand-primary;
     margin-top: 0;
 
+    // Show focus on all links (override BS)
     > .active > a:focus {
-      @include outline-focus(); // Show focus on all links (override BS)
+      @include outline-focus();
     }
   }
 }
 
+// These must be separate to work
+.site-header-search .form-control::-webkit-input-placeholder {
+  color: $navbar-default-link-active-color;
+}
+
+.site-header-search .form-control:-moz-placeholder {
+  color: $navbar-default-link-active-color;
+}
+
+.site-header-search .form-control::-moz-placeholder {
+  color: $navbar-default-link-active-color;
+}
+
+.site-header-search .form-control:-ms-input-placeholder {
+  color: $navbar-default-link-active-color;
+}
 
 // Main site header search
 .site-header-search {
@@ -66,13 +80,6 @@ body > header {
     box-shadow: none;
     padding: $padding-large-vertical $padding-large-horizontal;
     height: ($line-height-computed + ($padding-large-vertical * 2) + 2);
-
-    &::-webkit-input-placeholder,
-    &:-moz-placeholder,
-    &::-moz-placeholder,
-    &:-ms-input-placeholder {
-      color: $navbar-default-link-active-color;
-    }
   }
 
   // Search button hover
@@ -98,15 +105,15 @@ body > header {
   width: auto;
 }
 
-//Accessibilty links to navigation
+// Accessibilty links to navigation
 .skip-links a {
   color: $navbar-default-link-color;
   background: $navbar-default-bg;
 }
 
 // Mobile only
+// Site header
 @media (max-width: $grid-float-breakpoint-max) {
-  // Site header
   .site-header {
     min-height: 111px;
 
