@@ -26,9 +26,14 @@
     }
   }
 
-  // Change caret icon for theme
+  // Change caret icon for dropdown to .fa-angle-down
   .fa-caret-down:before {
     content: "\F107";
+  }
+
+  // Change caret icon for active dropdown to .fa-angle-up
+  .fa-caret-up:before {
+    content: "\F106";
   }
 
   .dropdown {
