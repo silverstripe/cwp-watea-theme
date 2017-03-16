@@ -14,6 +14,7 @@
   }
 }
 
+// General pages
 .page-utilities {
   border-top: 1px solid $gray-lighter;
   padding-top: $line-height-computed;
@@ -73,13 +74,13 @@
 }
 
 // Page sidebar
-.sidebar-header {
+.page-sidebar-header {
   border-bottom: 1px solid $gray;
   padding-bottom: 8px;
   margin-top: 4px;
 }
 
-.sidebar-nav a {
+.page-sidebar-nav a {
   padding: $padding-base-vertical / 2 0;
   display: block;
 }
