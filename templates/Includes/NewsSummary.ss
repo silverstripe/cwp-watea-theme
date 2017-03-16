@@ -1,4 +1,4 @@
-<h3 class="sidebar-header h4"><%t NewsPage.NEWSHEADING "News" %></h3>
+<h3 class="h4 page-sidebar-header"><%t NewsPage.NEWSHEADING "News" %></h3>
 
 <% loop $getNewsItems(3) %>
     <article class="news-item">
