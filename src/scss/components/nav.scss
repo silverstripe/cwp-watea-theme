@@ -13,7 +13,6 @@
 }
 
 .main-nav {
-
   .navbar {
     z-index: $zindex-navbar;
   }
@@ -70,15 +69,19 @@
     .dropdown-menu a {
       position: relative;
 
-      &:hover:before,
-      &:focus:before {
-        content: "";
+      &:before {
+        transition: background-color 300ms ease-out;
         width: $nav-hover-border-width;
+        content: "";
         height: 100%;
-        background: $brand-primary;
         position: absolute;
         top: 0;
         left: 0;
+      }
+
+      &:hover:before,
+      &:focus:before {
+        background: $brand-primary;
       }
     }
 
@@ -116,8 +119,13 @@
 
     // 1st level
     .nav-item {
+      > .section {
+        border-bottom: $nav-hover-border-width solid $navbar-default-brand-hover-bg;
+      }
+
       > .link {
         border-bottom: $nav-hover-border-width solid $navbar-default-brand-hover-bg;
+        transition: border-color 300ms ease-out;
 
         &:focus,
         &:hover {
