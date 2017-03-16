@@ -1,5 +1,6 @@
 .carousel {
-  margin-top: -$line-height-computed;
+  // The navbar has a 1px border on the bottom, so adding it to the margin
+  margin-top: -($line-height-computed + 1);
   margin-bottom: $jumbotron-padding * 2;
 
   .container {
