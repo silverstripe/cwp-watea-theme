@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.0-beta1 (2017-03-20)
+
+* FIX Linting errors: remove blank lines, add trailing comma. Ignore third party components. (Robbie Averill)
+* Add border top only, not all the way around of tables (Paul Clarke)
+
 ## 0.3.0 (2017-03-16)
 
 * Consistency with class names across all sitewide widgets (Paul Clarke)
