@@ -13,8 +13,6 @@ export default function () {
     .off(
       'keydown.bs.dropdown.data-api',
       '[data-toggle=dropdown], [role=menu]',
-      $.fn.dropdown.Constructor.prototype.keydown
+      $.fn.dropdown.Constructor.prototype.keydown,
     );
-
-
 }

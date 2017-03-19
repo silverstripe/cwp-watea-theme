@@ -82,12 +82,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap_accessibility_plugin_plugins_js_bootstrap_accessibility___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_bootstrap_accessibility_plugin_plugins_js_bootstrap_accessibility__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_carousel__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_navigation__ = __webpack_require__(4);
+/* eslint-disable */
 /**
  * The PayPal Accessibility Plugin adds accessibility improvements over the top of Bootstrap
  * components. It is designed to work in the background. If you experience any quirks, please
  * take a look at its source code.
  */
 
+/* eslint-enable */
 
 // Define local components
 
