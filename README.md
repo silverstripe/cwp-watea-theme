@@ -2,6 +2,8 @@
 
 This theme is a [subtheme](https://docs.silverstripe.org/en/3/developer_guides/templates/themes) of the [Starter theme](https://gitlab.cwp.govt.nz/cwp/starter-theme). It provides a more visually appealing example for starting a theme for a CWP website.
 
+![Screenshot](docs/images/screenshot.jpg)
+
 ## Installation
 
 Install this theme module with Composer:
