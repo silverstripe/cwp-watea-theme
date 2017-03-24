@@ -16,7 +16,7 @@ composer require cwp/watea-theme
 
 You can find documentation on how to use this theme in the CWP Developer Documentation: [Using the Wātea theme](https://gitlab.cwp.govt.nz/cwp/cwp/blob/1.6/docs/en/01_Working_with_projects/14_Using_the_Watea_theme.md).
 
-You may also find the documentation for the Starter theme useful: [Customising the starter theme](https://gitlab.cwp.govt.nz/cwp/cwp/blob/1.6/docs/en/01_Working_with_projects/05_customising_the_starter_theme.md).
+You may also find the documentation for the Starter theme useful: [Customising the starter theme](https://gitlab.cwp.govt.nz/cwp/cwp/blob/1.6/docs/en/01_Working_with_projects/05_Customising_the_starter_theme.md).
 
 ## Requirements
 
