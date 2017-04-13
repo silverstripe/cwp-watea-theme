@@ -115,7 +115,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__components_navigation__["a" /
 
 /* eslint-enable */
 
-/* harmony default export */ __webpack_exports__["a"] = function () {
+/* harmony default export */ __webpack_exports__["a"] = (function () {
   // Carousel Documentation: https://paypal.github.io/bootstrap-accessibility-plugin/demo.html#carousel
 
   var $carousel = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.carousel');
@@ -138,7 +138,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__components_navigation__["a" /
     $carouselPlay.hide();
     $carouselPause.show().focus();
   });
-};
+});
 
 /***/ }),
 /* 4 */
@@ -151,7 +151,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__components_navigation__["a" /
 
 /* eslint-enable */
 
-/* harmony default export */ __webpack_exports__["a"] = function () {
+/* harmony default export */ __webpack_exports__["a"] = (function () {
   /**
    * Unbind the space bar handler that is added in the bootstrap-accessibility plugin,
    * the functionality is recreated in this component.
@@ -159,7 +159,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__components_navigation__["a" /
    * See: bootstrap-accessibility.js, line 130 (ish)
    */
   __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).off('keydown.bs.dropdown.data-api', '[data-toggle=dropdown], [role=menu]', __WEBPACK_IMPORTED_MODULE_0_jquery___default.a.fn.dropdown.Constructor.prototype.keydown);
-};
+});
 
 /***/ }),
 /* 5 */
