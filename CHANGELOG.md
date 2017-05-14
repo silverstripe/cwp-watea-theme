@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-rc1 (2017-05-15)
+
+* Fix typo in link to documentation (Elliot Sawyer)
+* Fix build issue caused by recent webpack update (elliot sawyer)
+* DOCS Add screenshot to readme (Robbie Averill)
+
 ## 1.0.0-beta1 (2017-03-20)
 
 * FIX Linting errors: remove blank lines, add trailing comma. Ignore third party components. (Robbie Averill)
