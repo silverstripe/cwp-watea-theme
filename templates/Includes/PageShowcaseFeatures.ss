@@ -3,7 +3,7 @@
         <h2 class="h4">$FeatureOneTitle</h2>
         $FeatureOneContent
         <% if $FeatureOneLink && $FeatureOneButtonText %>
-            <p><a href="$FeatureOneLink.Link" title="$FeatureOneButtonText">$FeatureOneButtonText</a></p>
+            <p><a href="$FeatureOneLink.Link">$FeatureOneButtonText</a></p>
         <% end_if %>
     </div>
 <% end_if %>
@@ -12,7 +12,7 @@
         <h2 class="h4">$FeatureTwoTitle</h2>
         $FeatureTwoContent
         <% if $FeatureTwoLink && $FeatureTwoButtonText %>
-            <p><a href="$FeatureTwoLink.Link" title="$FeatureTwoButtonText">$FeatureTwoButtonText</a></p>
+            <p><a href="$FeatureTwoLink.Link">$FeatureTwoButtonText</a></p>
         <% end_if %>
     </div>
 <% end_if %>
