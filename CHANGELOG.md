@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2 (2017-06-22)
+
+* FIX Remove duplicate title attribute content (Robbie Averill)
+
 ## 1.0.1 (2017-06-19)
 
 * Update starter-theme (Sacha Judd)
