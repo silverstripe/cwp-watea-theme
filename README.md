@@ -22,7 +22,10 @@ You may also find the documentation for the Starter theme useful: [Customising t
 
 * [Composer](https://getcomposer.org)
 * `cwp/starter-theme`: The foundation theme for this subtheme, via Composer
-* `cwp/agency-extensions`: Provides additional functionality to the CMS for agency-style websites, via Composer
+
+## Suggested module
+
+The [agency-extensions](https://gitlab.cwp.govt.nz/cwp/agency-extensions) module provides additional functionality to the CMS for agency-style websites.
 
 ### Development requirements
 
