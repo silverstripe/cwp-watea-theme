@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.0 (2017-09-08)
+
+* Add keyword (jovenden) - 138d5f0
+* Remove CWP requirement (jovenden) - a1c5677
+
 ## 1.0.2 (2017-06-22)
 
 * FIX Remove duplicate title attribute content (Robbie Averill)
