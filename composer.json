@@ -2,14 +2,21 @@
   "name": "cwp/watea-theme",
   "description": "CWP Watea theme",
   "type": "silverstripe-theme",
-  "keywords": ["silverstripe", "theme"],
+  "keywords": ["silverstripe", "theme", "cwp"],
   "license": "BSD-3-Clause",
   "require": {
-    "cwp/cwp": "^1.6",
-    "cwp/starter-theme": "^1.0",
-    "cwp/agency-extensions": "^1.0"
+    "cwp/starter-theme": "^1.1"
   },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.cwp.govt.nz/"
+    }
+  ],
   "extra": {
     "installer-name": "starter_watea"
+  },
+  "suggest": {
+    "cwp/agency-extensions": "Much of the functionality in this theme is enabled by this module"
   }
 }
