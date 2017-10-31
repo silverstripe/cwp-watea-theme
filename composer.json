@@ -14,7 +14,7 @@
     }
   ],
   "extra": {
-    "installer-name": "starter_watea",
+    "installer-name": "watea",
     "branch-alias": {
       "dev-master": "2.x-dev"
     }
