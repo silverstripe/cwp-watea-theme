@@ -41,7 +41,7 @@
       <% if $SiteConfig.FooterLogoSecondary %>
         src="$SiteConfig.FooterLogoSecondary.URL"
       <% else %>
-        src="$ThemeDir(watea)/images/cwp-logo.png"
+        src="themes/watea/images/cwp-logo.png"
       <% end_if %>
 
       <% if $SiteConfig.FooterLogoSecondaryDescription %>
@@ -63,7 +63,7 @@
       <% if $SiteConfig.FooterLogo %>
         src="$SiteConfig.FooterLogo.URL"
       <% else %>
-        src="$ThemeDir(watea)/images/newzealand-government-footer.png"
+        src="themes/watea/images/newzealand-government-footer.png"
       <% end_if %>
 
       <% if $SiteConfig.FooterLogoDescription %>
