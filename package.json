@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.cwp.govt.nz/cwp/watea-theme.git"
+    "url": "https://github.com/silverstripe/cwp-watea-theme"
   },
   "license": "BSD-3-Clause",
   "dependencies": {
