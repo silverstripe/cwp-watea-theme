@@ -15,7 +15,7 @@
   },
   "license": "BSD-3-Clause",
   "dependencies": {
-    "bootstrap-accessibility-plugin": "^1.0.2",
+    "bootstrap-accessibility-plugin": "1.0.2",
     "laravel-mix": "^0.5",
     "path": "^0.12.7"
   },
