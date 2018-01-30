@@ -1,14 +1,14 @@
-<% if $VisibleCarouselItems %>
+<% if $CarouselItems %>
 
     <%-- Determine if a carousel or single item --%>
-    <% if $VisibleCarouselItems.Count > 1 %>
+    <% if $CarouselItems.Count > 1 %>
         <div id="carousel-slide" data-ride="carousel" class="carousel slide text-center">
     <% else %>
         <div class="carousel slide text-center carousel-static">
     <% end_if %>
 
       <div class="carousel-inner">
-          <% if $VisibleCarouselItems.Count > 1 %>
+          <% if $CarouselItems.Count > 1 %>
 
           <div class="carousel-interface">
 
@@ -16,7 +16,7 @@
 
               <%-- Indicators --%>
               <ol class="carousel-indicators" role="tablist">
-                <% loop $VisibleCarouselItems %>
+                <% loop $CarouselItems %>
                   <li data-target="#carousel-slide" data-slide-to="$Pos(0)" class="<% if $Pos == 1 %>active<% end_if %>" name="carousel-item-{$Pos}"></li>
                 <% end_loop %>
               </ol>
@@ -48,7 +48,7 @@
           </div>
           <% end_if %>
 
-          <% loop $VisibleCarouselItems %>
+          <% loop $CarouselItems %>
 
               <%-- Items --%>
               <div class="<% if First %>active <% end_if %>item <% if $Image %>carousel-has-image<% end_if %>"
