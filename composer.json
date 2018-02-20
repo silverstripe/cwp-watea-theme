@@ -17,7 +17,12 @@
     "installer-name": "watea",
     "branch-alias": {
       "dev-master": "2.x-dev"
-    }
+    },
+    "expose": [
+      "dist",
+      "ico",
+      "images"
+    ]
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
