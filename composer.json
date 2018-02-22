@@ -1,32 +1,36 @@
 {
-  "name": "cwp/watea-theme",
-  "description": "CWP Watea theme",
-  "type": "silverstripe-theme",
-  "keywords": ["silverstripe", "theme", "cwp"],
-  "license": "BSD-3-Clause",
-  "require": {
-    "cwp/starter-theme": "2.x-dev"
-  },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://packages.cwp.govt.nz/"
-    }
-  ],
-  "extra": {
-    "installer-name": "watea",
-    "branch-alias": {
-      "dev-master": "2.x-dev"
+    "name": "cwp/watea-theme",
+    "description": "CWP Watea theme",
+    "type": "silverstripe-theme",
+    "keywords": [
+        "silverstripe",
+        "theme",
+        "cwp"
+    ],
+    "license": "BSD-3-Clause",
+    "require": {
+        "cwp/starter-theme": "2.0.0-rc1"
     },
-    "expose": [
-      "dist",
-      "ico",
-      "images"
-    ]
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "suggest": {
-    "cwp/agency-extensions": "Much of the functionality in this theme is enabled by this module"
-  }
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.cwp.govt.nz/"
+        }
+    ],
+    "extra": {
+        "installer-name": "watea",
+        "branch-alias": {
+            "dev-master": "2.x-dev"
+        },
+        "expose": [
+            "dist",
+            "ico",
+            "images"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "suggest": {
+        "cwp/agency-extensions": "Much of the functionality in this theme is enabled by this module"
+    }
 }
