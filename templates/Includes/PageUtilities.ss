@@ -17,7 +17,9 @@
                         for configuration instructions --%>
                         <%-- <% if $PdfLink %>
                             <li>
-                                <a href="$PdfLink" class="btn btn-link  fa fa-file-pdf-o"><%t CWP.Home.PDF "Export PDF" %></a>
+                                <a href="$PdfLink" class="btn btn-link fa fa-file-pdf-o">
+                                    <span class="sr-only"><%t CWP.Home.PDF "Export PDF" %></span>
+                                </a>
                             </li>
                         <% end_if %> --%>
 
