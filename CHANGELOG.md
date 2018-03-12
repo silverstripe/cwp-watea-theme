@@ -1,8 +1,14 @@
 # Changelog
 
+## 1.1.1 (2017-09-18)
 ## 1.0.3 (2017-09-18)
 
 * Wrap the NewsSummary in an if, incase there's not news items (jovenden) - aaee070
+
+## 1.1.0 (2017-09-08)
+
+* Add keyword (jovenden) - 138d5f0
+* Remove CWP requirement (jovenden) - a1c5677
 
 ## 1.0.2 (2017-06-22)
 

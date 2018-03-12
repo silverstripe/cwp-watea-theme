@@ -1,6 +1,6 @@
 # CWP Wātea theme
 
-This theme is a [subtheme](https://docs.silverstripe.org/en/3/developer_guides/templates/themes) of the [Starter theme](https://gitlab.cwp.govt.nz/cwp/starter-theme). It provides a more visually appealing example for starting a theme for a CWP website.
+This theme is a [subtheme](https://docs.silverstripe.org/en/3/developer_guides/templates/themes) of the [Starter theme](https://github.com/silverstripe/cwp-starter-theme). It provides a more visually appealing example for starting a theme for a CWP website.
 
 ![Screenshot](docs/images/screenshot.jpg)
 
@@ -14,15 +14,18 @@ composer require cwp/watea-theme
 
 ## Documentation
 
-You can find documentation on how to use this theme in the CWP Developer Documentation: [Using the Wātea theme](https://gitlab.cwp.govt.nz/cwp/cwp/blob/1.6/docs/en/01_Working_with_projects/14_Using_the_Watea_theme.md).
+You can find documentation on how to use this theme in the CWP Developer Documentation: [Using the Wātea theme](https://github.com/silverstripe/cwp/blob/master/docs/en/01_Working_with_projects/14_Using_the_Watea_theme.md).
 
-You may also find the documentation for the Starter theme useful: [Customising the starter theme](https://gitlab.cwp.govt.nz/cwp/cwp/blob/1.6/docs/en/01_Working_with_projects/05_Customising_the_starter_theme.md).
+You may also find the documentation for the Starter theme useful: [Customising the starter theme](https://github.com/silverstripe/cwp/blob/master/docs/en/01_Working_with_projects/05_Customising_the_starter_theme.md).
 
 ## Requirements
 
 * [Composer](https://getcomposer.org)
 * `cwp/starter-theme`: The foundation theme for this subtheme, via Composer
-* `cwp/agency-extensions`: Provides additional functionality to the CMS for agency-style websites, via Composer
+
+## Suggested module
+
+The [agency-extensions](https://github.com/silverstripe/cwp-agencyextensions) module provides additional functionality to the CMS for agency-style websites.
 
 ### Development requirements
 

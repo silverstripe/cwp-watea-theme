@@ -11,11 +11,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.cwp.govt.nz/cwp/watea-theme.git"
+    "url": "https://github.com/silverstripe/cwp-watea-theme"
   },
   "license": "BSD-3-Clause",
   "dependencies": {
-    "bootstrap-accessibility-plugin": "^1.0.2",
+    "bootstrap-accessibility-plugin": "1.0.2",
     "laravel-mix": "^0.5",
     "path": "^0.12.7"
   },
