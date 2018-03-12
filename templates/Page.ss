@@ -2,7 +2,7 @@
 <html class="no-js" lang="$ContentLocale">
     <head>
         <% base_tag %>
-        <title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> | $SiteConfig.Title</title>
+        <title><% if $MetaTitle %>$MetaTitle.XML<% else %>$Title.XML<% end_if %> | $SiteConfig.Title.XML</title>
         $MetaTags(false)
         <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=10.0,initial-scale=1.0" />
         <% if $RSSLink %>
