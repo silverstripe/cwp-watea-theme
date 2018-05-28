@@ -1,6 +1,6 @@
 # CWP Wātea theme
 
-This theme is a [subtheme](https://docs.silverstripe.org/en/3/developer_guides/templates/themes) of the [Starter theme](https://github.com/silverstripe/cwp-starter-theme). It provides a more visually appealing example for starting a theme for a CWP website.
+The [Wātea theme](https://github.com/silverstripe/cwp-watea-theme) can be installed on top of the [Starter theme](https://github.com/silverstripe/cwp-starter-theme) (see [cascading themes](https://docs.silverstripe.org/en/4/developer_guides/templates/themes)) to provide a more visually appealing start to a CWP website.
 
 ![Screenshot](docs/images/screenshot.jpg)
 
