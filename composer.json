@@ -15,9 +15,6 @@
   ],
   "extra": {
     "installer-name": "watea",
-    "branch-alias": {
-      "dev-master": "2.x-dev"
-    },
     "expose": [
       "dist",
       "ico",
