@@ -1,5 +1,9 @@
 # CWP Wātea theme
 
+[![Build Status](https://travis-ci.org/silverstripe/cwp-watea-theme.svg?branch=master)](https://travis-ci.org/silverstripe/cwp-watea-theme)
+[![Packagist](https://img.shields.io/packagist/v/cwp/watea-theme.svg)](https://packagist.org/packages/cwp/watea-theme)
+[![SilverStripe supported module](https://img.shields.io/badge/silverstripe-supported-0071C4.svg)](https://www.silverstripe.org/software/addons/silverstripe-commercially-supported-module-list/)
+
 The [Wātea theme](https://github.com/silverstripe/cwp-watea-theme) can be installed on top of the [Starter theme](https://github.com/silverstripe/cwp-starter-theme) (see [cascading themes](https://docs.silverstripe.org/en/4/developer_guides/templates/themes)) to provide a more visually appealing start to a CWP website.
 
 ![Screenshot](docs/images/screenshot.jpg)
