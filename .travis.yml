@@ -1,0 +1,35 @@
+language: php
+
+php: 5.6
+
+env:
+  global:
+  - TRAVIS_NODE_VERSION="6"
+
+cache:
+  directories:
+    - node_modules
+
+before_script:
+  # Install composer dependencies
+  - composer validate
+  - composer install --prefer-dist --no-interaction --no-progress --no-suggest --optimize-autoloader --verbose --profile
+
+  # Install node
+  - nvm install "$TRAVIS_NODE_VERSION"
+
+  # Shift the starter theme to a sibling directory of the current (required for npm run build to work)
+  # Note that if Behat or other functional tests are required in future, we'll need to install a CWP installer
+  # project and copy the current working watea dir (installed by Travis) into `themes/watea` instead of doing this.
+  - mv themes/starter ../
+  - (cd ../starter && npm install --silent)
+  - npm install --silent
+
+script:
+  # Linting
+  - npm run lint-js
+  - npm run lint-sass
+  # Check that dist files are built correctly
+  - npm run build
+  - git diff-files --quiet -w --relative=client
+  - git diff --name-status --relative=client
