@@ -1,13 +1,11 @@
+@import "./theme-styles";
+
 // Styles for header, search and language selector
 @mixin form-controls-style() {
-  background: $theme-bg-lighter;
-  border-color: $theme-bg-lighter;
-  color: $navbar-default-link-hover-color;
-}
-
-// Adds text shadow to links, which have custom underline colour to break the line for type decenders
-@mixin textShadowToCropUnderline($shadow-color) {
-  text-shadow: .03em 0 $shadow-color, -.03em 0 $shadow-color, 0 .03em $shadow-color, 0 -.03em $shadow-color, .06em 0 $shadow-color, -.06em 0 $shadow-color, .09em 0 $shadow-color, -.09em 0 $shadow-color, .12em 0 $shadow-color, -.12em 0 $shadow-color, .15em 0 $shadow-color, -.15em 0 $shadow-color;
+  background: transparent;
+  border: 0;
+  color: $btn-primary-color;
+  @include theme-contrast-color("header", "color");
 }
 
 @mixin customUnderline($underline-color) {

@@ -3,6 +3,18 @@
   .navbar-toggle {
     padding: $padding-large-vertical $padding-base-horizontal;
     margin-right: 0;
+
+    .icon-bar {
+      @include theme-contrast-color("header", "background-color");
+    }
+  }
+}
+
+.navbar-default {
+  @include theme-color("nav", "background-color");
+
+  .btn-link {
+    @include theme-contrast-color("nav", "color");
   }
 }
 
@@ -10,19 +22,34 @@
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover {
   background-color: transparent;
+  @include theme-contrast-color("nav", "color");
 }
 
 .main-nav {
   .navbar {
     z-index: $zindex-navbar;
+
+    // Special case for white/light-grey theme
+    body.theme-nav-white &,
+    body.theme-nav-light-grey & {
+      border-bottom: 1px solid $navbar-inverse-border-color;
+    }
+  }
+
+  .navbar-nav > li > a {
+    @include theme-contrast-color("nav", "color");
   }
 
   .nav-item.current > a {
     background-color: $brand-primary;
+    @include theme-color("accent", "background-color");
+    @include theme-contrast-color("accent", "color");
 
     &:focus,
     &:hover {
       background-color: $brand-primary;
+      @include theme-color("accent", "background-color");
+      @include theme-contrast-color("accent", "color");
     }
   }
 
@@ -48,10 +75,13 @@
       &:hover .navbar-touch-caret,
       &:focus .navbar-touch-caret {
         background: $brand-primary;
+        @include theme-color("accent", "background-color");
+        @include theme-contrast-color("accent", "color");
 
         &:hover,
         &:focus {
           background-color: $brand-primary;
+          @include theme-color("accent", "background-color");
         }
       }
     }
@@ -59,7 +89,6 @@
 
   // Mobile only
   @media (max-width: $grid-float-breakpoint-max) {
-
     .navbar-nav {
       margin-top: 0;
       margin-bottom: 0;
@@ -67,6 +96,19 @@
 
     .navbar-collapse {
       box-shadow: none;
+    }
+
+    .navbar-form {
+      @include theme-color("header", "background-color");
+      margin-top: 0;
+      border-top: 1px solid $navbar-border-color;
+      border-color: $navbar-border-color;
+
+      // Special case for white/light-grey theme
+      body.theme-header-white &,
+      body.theme-header-light-grey & {
+        border-color: $navbar-inverse-border-color;
+      }
     }
 
     // Add hover border to left side
@@ -87,6 +129,7 @@
       &:hover:before,
       &:focus:before {
         background: $brand-primary;
+        @include theme-color("accent", "background-color");
       }
     }
 
@@ -105,12 +148,25 @@
         padding: 0;
         // Requires nesting
         background-color: $theme-bg-lighter;
+        @include theme-color("nav", "background-color");
       }
     }
 
-    .open .dropdown-menu > li > a {
-      padding-top: 10px;
-      padding-bottom: 10px;
+    .open .dropdown-menu {
+      > li > a {
+        padding: 10px 15px 10px 35px;
+        @include theme-contrast-color("nav", "color");
+
+        &:hover {
+          @include theme-contrast-color("nav", "color");
+        }
+      }
+
+      .active > a,
+      .active > a:hover,
+      .active > a:focus {
+        @include theme-color("accent", "background-color");
+      }
     }
   }
 
@@ -135,21 +191,41 @@
         &:focus,
         &:hover {
           border-bottom-color: $brand-primary;
+          @include theme-color("accent", "border-bottom-color");
         }
       }
 
       > .current {
         border-bottom: $nav-hover-border-width solid $brand-primary;
+        @include theme-color("accent", "border-bottom-color");
 
         &:focus,
         &:hover {
           border-bottom-color: $brand-primary;
+          @include theme-color("accent", "border-bottom-color");
+        }
+      }
+
+      // hide nav item border bottom with dropdown
+      &.dropdown > a.link {
+        &:focus,
+        &:hover {
+          border-bottom-color: $navbar-default-brand-hover-bg;
         }
       }
 
       > .dropdown-menu {
         margin-top: (-$nav-hover-border-width - 1px);
         margin-left: -1px;
+      }
+
+      .dropdown-menu > li > a {
+        color: $text-color;
+      }
+
+      .dropdown-menu > .active > a {
+        color: $navbar-default-link-active-color;
+        @include theme-color("accent", "background-color");
       }
     }
 
@@ -172,7 +248,20 @@
 
       &.current .navbar-touch-caret {
         border-bottom: $nav-hover-border-width solid $brand-primary;
+        @include theme-color("accent", "border-bottom-color");
       }
+    }
+  }
+}
+
+.nav-pills {
+  // Active state
+  > li.active > a {
+    &,
+    &:hover,
+    &:focus {
+      color: $nav-pills-active-link-hover-color;
+      @include theme-color("accent", "background-color");
     }
   }
 }

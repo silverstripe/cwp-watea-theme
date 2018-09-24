@@ -15,20 +15,22 @@
             <div class="carousel-controls-wrapper">
 
               <%-- Indicators --%>
-              <ol class="carousel-indicators" role="tablist">
-                <% loop $CarouselItems %>
-                  <li data-target="#carousel-slide" data-slide-to="$Pos(0)" class="<% if $Pos == 1 %>active<% end_if %>" name="carousel-item-{$Pos}"></li>
-                <% end_loop %>
-              </ol>
+              <div class="carousel-controls-inner-wrapper">
+                  <ol class="carousel-indicators" role="tablist">
+                    <% loop $CarouselItems %>
+                      <li data-target="#carousel-slide" data-slide-to="$Pos(0)" class="<% if $Pos == 1 %>active<% end_if %>" name="carousel-item-{$Pos}"></li>
+                    <% end_loop %>
+                  </ol>
 
-              <%-- Play or Pause --%>
-              <div class="carousel-play-controls">
-                <button type="button" class="btn btn-link btn-sm" id="carousel-pause" aria-label="Autoplaying carousel with slides. <%t CwpCarousel.PAUSESLIDE "Click to pause carousel slides." %>">
-                  <i class="fa fa-pause" aria-hidden="true"></i>
-                </button>
-                <button type="button" class="btn btn-link btn-sm" id="carousel-play" aria-label="Paused carousel with slides. <%t CwpCarousel.PLAYSLIDE "Click to play carousel slides." %>" style="display:none;">
-                  <i class="fa fa-play" aria-hidden="true"></i>
-                </button>
+                  <%-- Play or Pause --%>
+                  <div class="carousel-play-controls">
+                    <button type="button" class="btn btn-link btn-sm" id="carousel-pause" aria-label="Autoplaying carousel with slides. <%t CwpCarousel.PAUSESLIDE "Click to pause carousel slides." %>">
+                      <i class="fa fa-pause" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn btn-link btn-sm" id="carousel-play" aria-label="Paused carousel with slides. <%t CwpCarousel.PLAYSLIDE "Click to play carousel slides." %>" style="display:none;">
+                      <i class="fa fa-play" aria-hidden="true"></i>
+                    </button>
+                  </div>
               </div>
 
             </div>
