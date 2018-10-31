@@ -4,11 +4,23 @@ body > header {
   color: $navbar-default-color;
 }
 
+.header {
+  @include theme-color("header", "background-color");
+}
+
+.site-header {
+  @include theme-contrast-color("header", "color");
+
+  a {
+    @include theme-contrast-color("header", "color");
+  }
+}
+
 // Language selector
 .language-selector {
   text-transform: capitalize;
 
-  .dropdown-toggle {
+  .btn.dropdown-toggle {
     @include form-controls-style();
     text-transform: capitalize;
     padding: $padding-base-horizontal 15px;
@@ -16,32 +28,21 @@ body > header {
 
   .dropdown-toggle:focus,
   &.open .dropdown-toggle {
+    @include form-controls-style();
     box-shadow: none;
-    border-color: $dropdown-bg;
-    background-color: $navbar-default-link-active-color;
-
-    // Requires nesting
-    &.btn {
-      background-color: $navbar-default-link-active-color;
-      color: $link-color;
-    }
-
-    &:hover,
-    &:active {
-      background-color: $navbar-default-link-active-color;
-      color: $link-color;
-      box-shadow: none;
-      border-color: $dropdown-bg;
-    }
   }
 
   .dropdown-menu {
-    border-color: $brand-primary;
+    border-color: rgba($gray-base, .4);
     margin-top: 0;
 
     // Show focus on all links (override BS)
     > .active > a:focus {
       @include outline-focus();
+    }
+
+    > li > a {
+      color: $gray-dark;
     }
   }
 }
@@ -49,27 +50,38 @@ body > header {
 // These must be separate to work
 .site-header-search .form-control::-webkit-input-placeholder {
   color: $navbar-default-link-active-color;
+  @include theme-contrast-color("header", "color");
 }
 
 .site-header-search .form-control:-moz-placeholder {
   color: $navbar-default-link-active-color;
+  @include theme-contrast-color("header", "color");
 }
 
 .site-header-search .form-control::-moz-placeholder {
   color: $navbar-default-link-active-color;
+  @include theme-contrast-color("header", "color");
 }
 
 .site-header-search .form-control:-ms-input-placeholder {
   color: $navbar-default-link-active-color;
+  @include theme-contrast-color("header", "color");
 }
 
 // Main site header search
 .site-header-search {
-
   .form-control,
   button[type="submit"] {
     height: $navbar-height;
     @include form-controls-style();
+    border: 1px solid rgba($input-bg, .4);
+
+    // Special case for white/light-grey theme
+    body.theme-header-white &,
+    body.theme-header-light-grey & {
+      background: $input-bg;
+      border-color: rgba($gray, .4);
+    }
 
     &:focus {
       @include outline-focus();
@@ -80,11 +92,13 @@ body > header {
     box-shadow: none;
     padding: $padding-large-vertical $padding-large-horizontal;
     height: ($line-height-computed + ($padding-large-vertical * 2) + 2);
+    border-right: 0;
   }
 
   // Search button hover
-  .btn {
+  .btn[type="submit"] {
     padding: $padding-large-vertical $padding-large-horizontal;
+    border-left: 0;
 
     &:active:hover,
     &:active:focus,
@@ -94,6 +108,8 @@ body > header {
       background-color: $brand-primary;
       color: $btn-primary-color;
       border-color: $brand-primary;
+      @include theme-color("accent", "background-color");
+      @include theme-color("accent", "border-color");
     }
   }
 }
@@ -109,6 +125,7 @@ body > header {
 .skip-links a {
   color: $navbar-default-link-color;
   background: $navbar-default-bg;
+  @include theme-color("header", "background-color");
 }
 
 // Mobile only
@@ -119,7 +136,7 @@ body > header {
 
     .site-header-brand {
       margin-right: $line-height-computed * 5.5;
-      font-size: 1.8em;
+      font-size: 1em;
     }
 
     .navbar-toggle,

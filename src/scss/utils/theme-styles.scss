@@ -1,0 +1,148 @@
+// Font selected from google fonts
+@import url("//fonts.googleapis.com/css?family=Fira+Sans:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800ii&subset=latin-ext");
+@import url("//fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,800,800ii&subset=latin-ext");
+
+//
+// Default theme colors
+// --------------------------------------------------
+//
+// This is where all your colours are declared.
+//
+// The key should match the $theme_colors configuration
+// applied to SiteConfig, and is equivalent to
+// the name of the class to apply the theme colour.
+//
+// Classes are in the format of "theme-{$area}-{$color}"
+// and are declared on the body, so that they
+// can be accessed and applied to any element.
+
+$default-theme-colors: (
+  "red": #E51016,
+  "dark-red": #AD161E,
+  "pink": #B32A95,
+  "purple": #6239C8,
+  "blue": #1F6BFE,
+  "dark-blue": #123581,
+  "default-accent": $brand-primary,
+  "default-background": $theme-bg,
+  "teal": #00837A,
+  "green": #298436,
+  "dark-orange": #D34300,
+  "dark-ochre": #947200,
+  "black": #111,
+  "dark-grey": $gray,
+  "light-grey": #EAEAEA,
+  "white": #FFF,
+) !default;
+
+// Empty map for theme colors, override this in your project to add
+// custom colors or edit any default colors
+$custom-theme-colors: () !default;
+
+// Merge $custom-theme-colors into $default-theme-colors
+$theme-colors: map-merge($default-theme-colors, $custom-theme-colors);
+
+//
+// Theme fonts
+// --------------------------------------------------
+//
+// Fonts work similarly to theme colors, with the key
+// matching the $theme_fonts configuration in SiteConfig
+// and the class declared on the <body> element.
+//
+// Each font map includes the key, exact font name, and
+// whether the font is serif or sans-serif so that a
+// relevant fallback font stack can be applied.
+
+$theme-fonts: (
+  nunito: (
+    "Nunito Sans",
+    "sans-serif"
+  ),
+  fira-sans: (
+    "Fira Sans",
+    "sans-serif"
+  ),
+  merriweather: (
+    "Merriweather",
+    "serif"
+  )
+) !default;
+
+
+// Theme color mixin for all areas on the site.
+//
+// Current areas used:
+//
+// Header - .theme-header-{$color}
+//
+// Nav - .theme-nav-{$color}
+//
+// Footer - .theme-footer-{$color}
+//
+// Carousel - .theme-carousel-{$color}
+//   The background colour of the carousel when there is no image set.
+//
+// Accent - .theme-accent-{$color}
+//   Affects colour of buttons, current navigation items etc.
+//
+// Link - .theme-link-{$color}
+//
+// @param {string} $area - Area or element that this theme colour applies to
+// @param {string} $property ["background-color"] - You can specify a different
+// CSS property to use when calling the mixin.
+// @param {string} $modifier ["none"] - Sass function to manipulate the color.
+// @param {number} $amount [0%] - Amount to manipulate by
+//
+// @example: @include theme-color("accent", background-color", "lighten", 20%)
+
+@mixin theme-color($area, $property: "background-color", $modifier: "none", $amount: 0%) {
+  @each $name, $color in $theme-colors {
+    body.theme-#{$area}-#{$name} & {
+      @if ($modifier == "none") {
+        #{$property}: $color;
+      } @else if ($modifier == "lighten") {
+        #{$property}: lighten($color, $amount);
+      } @else if ($modifier == "darken") {
+        #{$property}: darken($color, $amount);
+      }
+    }
+  }
+}
+
+// Theme font mixin to be applied to the whole site.
+//
+// Applies a different fallback font stack depending on if the font is
+// serif, or sans-serif.
+//
+// @example: @include theme-font()
+
+@mixin theme-font() {
+  @each $name, $font in $theme-fonts {
+    &.theme-font-#{$name} {
+      @if (nth($font, 2) == "serif") {
+        font-family: nth($font, 1), Georgia, "Times New Roman", Times, serif;
+      } @else {
+        font-family: nth($font, 1), "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+    }
+  }
+}
+
+// Mixin for providing a color which contrasts against a given area"s color.
+//
+// @param {string} $area - Area or element that this theme colour applies to
+// @param {string} $property ["color"] - You can specify a different
+// CSS property to use when calling the mixin.
+
+@mixin theme-contrast-color($area, $property: "color") {
+  @each $name, $color in $theme-colors {
+    body.theme-#{$area}-#{$name} & {
+      @if ($name == "white" or $name == "light-grey") {
+        #{$property}: $text-color;
+      } @else {
+        #{$property}: #FFF;
+      }
+    }
+  }
+}

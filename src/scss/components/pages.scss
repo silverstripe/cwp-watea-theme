@@ -12,6 +12,11 @@
   .fa {
     text-decoration: none;
   }
+
+  .pagination .active a {
+    @include theme-color("accent", "background-color");
+    @include theme-color("accent", "border-color");
+  }
 }
 
 // General pages
@@ -47,8 +52,8 @@
 
 .page-header {
   padding-bottom: ($line-height-computed / 3) - 2;
-  margin: $line-height-computed 0 ($line-height-computed * 1.5);
-  border-bottom: 2px solid $page-header-border-color;
+  margin: $line-height-computed 0 (($line-height-computed / 2) - 2);
+  border-bottom: 0;
 
   h1,
   .h1,
@@ -57,10 +62,6 @@
   h3,
   .h3 {
     margin-bottom: ($line-height-computed / 3);
-  }
-
-  .breadcrumb {
-    margin-bottom: -$line-height-computed;
   }
 }
 
@@ -103,7 +104,7 @@
   background-color: $gray-lighter;
   border-top: 1px solid darken($gray-lighter, 10%);
   padding-bottom: $line-height-computed;
-  padding-top: $line-height-computed * 3;
+  padding-top: $line-height-computed * 2.5;
 
   a {
     color: $link-color-darker;
@@ -133,4 +134,8 @@
   &:first-child h2 {
     margin-top: 4px;
   }
+}
+
+.h5.news-events-archive-year {
+  margin-top: 3px;
 }
