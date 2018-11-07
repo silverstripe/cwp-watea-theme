@@ -56,7 +56,7 @@
       <% if $SiteConfig.FooterLogoLink %>
         href="$SiteConfig.FooterLogoLink">
       <% else %>
-        href="http://newzealand.govt.nz/">
+        href="https://www.govt.nz/">
       <% end_if %>
 
       <img
@@ -69,7 +69,7 @@
       <% if $SiteConfig.FooterLogoDescription %>
         alt="$SiteConfig.FooterLogoDescription"
       <% else %>
-        alt="<%t CWP.Footer.GovAlt "newzealand.govt.nz - connecting you to New Zealand central &amp; local government services" %>"
+        alt="<%t CWP.Footer.GovAlt "Govt.nz - connecting you to New Zealand central &amp; local government services" %>"
       <% end_if %>
       />
     </a>
