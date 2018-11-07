@@ -4,9 +4,11 @@
     <% loop $getNewsItems(3) %>
         <article class="news-item">
             <h4 class="h5"><a href="{$Link}">{$Title}</a></h4>
-            <p class="meta-info">
-                <time datetime="$Created.Nice">{$Created.Nice}</time>
-            </p>
+            <% if $Date %>
+                <p class="meta-info">
+                    <time datetime="$Date.Nice">{$Date.Nice}</time>
+                </p>
+            <% end_if %>
             <% if $Abstract %>
                 <p>{$Abstract}</p>
             <% else %>
