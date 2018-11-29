@@ -6,7 +6,7 @@ mix.setPublicPath(
   path.resolve(__dirname, 'dist')
 );
 
-mix.sass('src/scss/main.scss', 'css/main.css');
+mix.sass('src/scss/main.scss', 'css/main.css').options({ processCssUrls: false });
 mix.js('src/js/main.js', 'js/main.js');
 
 mix.webpackConfig({
