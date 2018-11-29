@@ -18,7 +18,7 @@
               <div class="carousel-controls-inner-wrapper">
                   <ol class="carousel-indicators" role="tablist">
                     <% loop $CarouselItems %>
-                      <li data-target="#carousel-slide" data-slide-to="$Pos(0)" class="<% if $Pos == 1 %>active<% end_if %>" name="carousel-item-{$Pos}"></li>
+                      <li data-target="#carousel-slide" data-slide-to="$Pos(0)" <% if $Pos == 1 %>class="active"<% end_if %> name="carousel-item-{$Pos}"></li>
                     <% end_loop %>
                   </ol>
 
@@ -37,11 +37,11 @@
 
             <%-- Controls --%>
             <div class="carousel-controls">
-              <button class="left carousel-control" href="#carousel-slide" data-slide="prev">
+              <button class="carousel-item-left carousel-control-prev" href="#carousel-slide" data-slide="prev">
                 <i class="fa fa-angle-left" aria-hidden="true"></i>
                 <span class="sr-only"><%t CwpCarousel.PREVIOUS "Go to previous slide." %></span>
               </button>
-              <button class="right carousel-control" href="#carousel-slide" data-slide="next">
+              <button class="carousel-item-right carousel-control-next" href="#carousel-slide" data-slide="next">
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
                 <span class="sr-only"><%t CwpCarousel.NEXT "Go to next slide." %></span>
               </button>
@@ -53,7 +53,7 @@
           <% loop $CarouselItems %>
 
               <%-- Items --%>
-              <div class="<% if First %>active <% end_if %>item <% if $Image %>carousel-has-image<% end_if %>"
+              <div class="<% if First %>active <% end_if %>carousel-item <% if $Image %>carousel-has-image<% end_if %>"
                 <% if $Image %> style="background-image:url($Image.URL);"<% end_if %>
                 <% if $Title %> aria-labelledby="carousel-title-{$Pos}"<% end_if %>
                 <% if $Content %> aria-describedby="carousel-desc-{$Pos}"<% end_if %>>
