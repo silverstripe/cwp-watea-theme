@@ -63,16 +63,17 @@ h5,
 .h5,
 h6,
 .h6 {
-  margin-top: $line-height-computed;
+  // margin-top: 2.4rem; //$line-height-computed;
 }
 
 h1,
 .h1 {
-  font-size: $font-size-h1;
+  font-size: $h1-font-size;
   line-height: 1.2;
+  font-weight: 600;
 
-  @media (max-width: $screen-xs-max) {
-    font-size: floor(($font-size-base * 2.25));
+  @include media-breakpoint-down(sm) {
+    font-size: ($font-size-base * 2.25);
   }
 
   .theme-font-fira-sans & {
@@ -80,22 +81,22 @@ h1,
   }
 
   .theme-font-merriweather & {
-    font-size: floor(($font-size-base * 2.65));
+    font-size: ($font-size-base * 2.65);
 
-    @media (max-width: $screen-xs-max) {
-      font-size: floor(($font-size-base * 2.25));
+    @include media-breakpoint-down(sm) {
+      font-size: ($font-size-base * 2.25);
     }
   }
 }
 
 h2,
 .h2 {
-  font-size: $font-size-h2;
+  font-size: $h2-font-size;
   font-weight: 600;
   line-height: 1.2;
 
-  @media (max-width: $screen-xs-max) {
-    font-size: floor(($font-size-base * 1.75));
+  @include media-breakpoint-down(sm) {
+    font-size: ($font-size-base * 1.75);
   }
 
   .theme-font-fira-sans & {
@@ -109,7 +110,7 @@ h2,
 
 h3,
 .h3 {
-  font-size: $font-size-h3;
+  font-size: $h3-font-size;
 
   .theme-font-fira-sans & {
     font-weight: 500;
@@ -125,7 +126,7 @@ h4,
 
 h5,
 .h5 {
-  font-size: $font-size-h5;
+  font-size: $h5-font-size;
 
   .theme-font-fira-sans & {
     font-weight: 600;
@@ -134,7 +135,7 @@ h5,
 
 h6,
 .h6 {
-  font-size: $font-size-h6;
+  font-size: $h6-font-size;
 
   .theme-font-fira-sans & {
     font-weight: 600;
@@ -147,9 +148,16 @@ p {
   }
 
   .theme-font-merriweather & {
-    font-size: floor(($font-size-base * 0.875));
+    font-size: ($font-size-base * 0.875);
     line-height: 1.6;
   }
+}
+
+h1,
+.h1,
+h2,
+.h2 {
+  letter-spacing: -.5px;
 }
 
 .lead {
@@ -157,19 +165,19 @@ p {
   font-size: 22px;
   margin-bottom: 33px;
 
-  @media (max-width: $screen-xs-max) {
-    font-size: floor(($font-size-base * 1.25));
+  @include media-breakpoint-down(sm) {
+    font-size: ($font-size-base * 1.25);
   }
 
   .theme-font-merriweather & {
-    font-size: floor(($font-size-base * 1.25));
+    font-size: ($font-size-base * 1.25);
     line-height: 1.5;
   }
 }
 
 blockquote {
   padding: 0 20px;
-  border-left: 5px solid $blockquote-border-color;
+  border-left: 5px solid $primary;
   @include theme-color("accent", "border-color");
 
   p,
@@ -180,7 +188,7 @@ blockquote {
     line-height: 1.4;
 
     .theme-font-merriweather & {
-      font-size: floor(($font-size-base * 1.125));
+      font-size: ($font-size-base * 1.125);
       line-height: 1.5;
     }
   }
@@ -191,11 +199,11 @@ blockquote {
 }
 
 .captionImage { // sass-lint:disable-line class-name-format
-  border-bottom: 2px solid $gray-lighter;
+  border-bottom: 2px solid $gray-200;
 
   p {
     color: $text-muted;
-    font-size: $font-size-small;
+    font-size: $font-size-sm;
   }
 }
 
@@ -254,6 +262,6 @@ tfoot {
   .h3 + &,
   h4 + &,
   .h4 + & {
-    margin-top: -$line-height-computed / 2;
+    // margin-top: -$line-height-computed / 2;
   }
 }

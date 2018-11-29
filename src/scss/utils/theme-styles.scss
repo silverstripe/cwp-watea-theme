@@ -23,15 +23,15 @@ $default-theme-colors: (
   "purple": #6239C8,
   "blue": #1F6BFE,
   "dark-blue": #123581,
-  "default-accent": $brand-primary,
-  "default-background": $theme-bg,
+  "default-accent": $primary,
+  "default-background": $dark,
   "teal": #00837A,
   "green": #298436,
   "dark-orange": #D34300,
   "dark-ochre": #947200,
   "black": #111,
-  "dark-grey": $gray,
-  "light-grey": #EAEAEA,
+  "dark-grey": $gray-800,
+  "light-grey": $gray-300,
   "white": #FFF,
 ) !default;
 
@@ -159,7 +159,7 @@ $theme-fonts: map-merge($default-theme-fonts, $custom-theme-fonts) !default;
   @each $name, $color in $theme-colors {
     body.theme-#{$area}-#{$name} & {
       @if (index($light-colors, $name) != null) {
-        #{$property}: $text-color;
+        #{$property}: $body-color;
       } @else {
         #{$property}: #FFF;
       }
