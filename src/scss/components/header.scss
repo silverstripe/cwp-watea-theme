@@ -1,6 +1,6 @@
 // Header can also be inside articles or sections so limit to site header
 body > header {
-  background: $dark;
+  background: $theme-bg;
   color: $navbar-dark-color;
 }
 
@@ -74,7 +74,6 @@ body > header {
   button[type="submit"] {
     height: 50px;
     @include form-controls-style();
-    //border: 1px solid rgba($input-bg, .4);
 
     // Special case for white/light-grey theme
     body.theme-header-white &,
@@ -91,7 +90,7 @@ body > header {
   .form-control {
     box-shadow: none;
     padding: $input-btn-padding-y-lg $input-btn-padding-x-lg;
-    //height: ($line-height-computed + ($input-btn-padding-y-lg * 2) + 2);
+    height: ($line-height-computed + ($input-btn-padding-y-lg * 2) + .2);
     border-right: 0;
   }
 
@@ -124,7 +123,7 @@ body > header {
 // Accessibilty links to navigation
 .skip-links a {
   color: $navbar-dark-color;
-  background: $dark;
+  background: $theme-bg;
   @include theme-color("header", "background-color");
 }
 

@@ -1,12 +1,12 @@
 .footer-site {
   margin-top: 0;
-  background-color: $dark;
+  background-color: $theme-bg;
   @include theme-color("footer", "background-color");
   padding: ($line-height-computed * 1.8) 0;
 
   // Horizontal divder line
   hr {
-    border-top: 1px solid $light;
+    border-top: 1px solid $theme-bg-lighter;
     @include theme-contrast-color("footer", "border-color");
     margin-bottom: $line-height-computed * 1.5;
 
@@ -49,7 +49,7 @@
     width: 0;
     height: calc(100% + 12px);
     position: absolute;
-    border: 1px solid $light;
+    border: 1px solid $theme-bg-lighter;
     @include theme-contrast-color("footer", "border-color");
     right: 10px;
     top: -6px;

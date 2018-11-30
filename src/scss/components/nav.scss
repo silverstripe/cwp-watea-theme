@@ -147,7 +147,7 @@
       .dropdown-menu {
         padding: 0;
         // Requires nesting
-        background-color: $light;
+        background-color: $theme-bg-lighter;
         @include theme-color("nav", "background-color");
       }
     }
