@@ -84,21 +84,22 @@ $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $lgtblue !default;
-$dark:          $drkblue !default;
+
+$theme-bg-lighter:    $lgtblue !default;
+$theme-bg:            $drkblue !default;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
   (
-    "primary":    $primary,
-    "secondary":  $secondary,
-    "success":    $success,
-    "info":       $info,
-    "warning":    $warning,
-    "danger":     $danger,
-    "light":      $light,
-    "dark":       $dark
+    "primary":          $primary,
+    "secondary":        $secondary,
+    "success":          $success,
+    "info":             $info,
+    "warning":          $warning,
+    "danger":           $danger,
+    "theme-bg":         $theme-bg,
+    "theme-bg-lighter": $theme-bg-lighter
   ),
   $theme-colors
 );
