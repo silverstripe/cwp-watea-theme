@@ -9472,7 +9472,6 @@ button.close {
           backface-visibility: hidden;
   -webkit-perspective: 1000px;
           perspective: 1000px;
-  background-color: purple;
 }
 
 .carousel-item.active,
@@ -14707,9 +14706,10 @@ tfoot th:first-child::before {
 }
 
 .carousel {
-  margin-top: -3.4rem;
+  margin-top: -2.4rem;
   margin-bottom: 4rem;
   border-bottom: 1px solid #dee2e6;
+  z-index: -2;
 }
 
 .carousel .container {
@@ -14999,17 +14999,10 @@ body.theme-carousel-white .carousel .carousel-item h1, body.theme-carousel-white
   border-color: #cccccc;
 }
 
-<<<<<<< HEAD
-.carousel .item .btn {
+.carousel .carousel-item .btn {
   margin-left: 1.08rem;
   margin-right: 1.08rem;
   padding: 1.2rem 1.68rem;
-=======
-.carousel .carousel-item .btn {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  padding: 1rem 1rem;
->>>>>>> feature/sd-73: upgraded Carousel to Bootstrap 4.
 }
 
 body.theme-accent-red .carousel .carousel-item .btn {
@@ -15287,11 +15280,7 @@ body.theme-accent-white .carousel .carousel-item .btn-link:hover {
 
 .carousel-content p {
   margin-bottom: 3rem;
-<<<<<<< HEAD
-  font-size: 1.84rem;
-=======
-  font-size: 1.8rem;
->>>>>>> feature/sd-73: upgraded Carousel to Bootstrap 4.
+  font-size: 2.4rem;
   font-weight: 300;
   line-height: 1.4;
 }
@@ -15539,7 +15528,7 @@ body.theme-carousel-white .carousel-mask {
 }
 
 div.carousel-has-image .carousel-mask {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(33, 67, 80, 0.55);
 }
 
 .footer-site {

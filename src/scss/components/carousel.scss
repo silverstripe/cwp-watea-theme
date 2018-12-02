@@ -1,8 +1,9 @@
 .carousel {
   // The navbar has a 1px border on the bottom, so adding it to the margin
-  margin-top: -($line-height-computed + 1);
+  margin-top: -$line-height-computed;
   margin-bottom: $jumbotron-padding * 2;
   border-bottom: 1px solid $gray-300;
+  z-index: -2;
 
   .container {
     position: relative;
@@ -89,7 +90,7 @@
   // Mimic .lead
   // Increase distance between text and actions
   margin-bottom: $line-height-computed * 1.25;
-  font-size: $font-size-base * 1.15;
+  font-size: $font-size-base * 1.5;
   font-weight: 300;
   line-height: 1.4;
 
