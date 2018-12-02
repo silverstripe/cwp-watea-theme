@@ -14709,7 +14709,6 @@ tfoot th:first-child::before {
   margin-top: -2.4rem;
   margin-bottom: 4rem;
   border-bottom: 1px solid #dee2e6;
-  z-index: -2;
 }
 
 .carousel .container {
