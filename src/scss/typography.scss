@@ -73,7 +73,7 @@ h1,
   font-weight: 600;
 
   @include media-breakpoint-down(sm) {
-    font-size: ($font-size-base * 2.25);
+    font-size: $font-size-base * 2.25;
   }
 
   .theme-font-fira-sans & {
@@ -81,10 +81,10 @@ h1,
   }
 
   .theme-font-merriweather & {
-    font-size: ($font-size-base * 2.65);
+    font-size: $font-size-base * 2.65;
 
     @include media-breakpoint-down(sm) {
-      font-size: ($font-size-base * 2.25);
+      font-size: $font-size-base * 2.25;
     }
   }
 }
@@ -96,7 +96,7 @@ h2,
   line-height: 1.2;
 
   @include media-breakpoint-down(sm) {
-    font-size: ($font-size-base * 1.75);
+    font-size: $font-size-base * 1.75;
   }
 
   .theme-font-fira-sans & {
@@ -148,7 +148,7 @@ p {
   }
 
   .theme-font-merriweather & {
-    font-size: ($font-size-base * 0.875);
+    font-size: $font-size-base * 0.875;
     line-height: 1.6;
   }
 }
@@ -166,11 +166,11 @@ h2,
   margin-bottom: 33px;
 
   @include media-breakpoint-down(sm) {
-    font-size: ($font-size-base * 1.25);
+    font-size: $font-size-base * 1.25;
   }
 
   .theme-font-merriweather & {
-    font-size: ($font-size-base * 1.25);
+    font-size: $font-size-base * 1.25;
     line-height: 1.5;
   }
 }
@@ -188,7 +188,7 @@ blockquote {
     line-height: 1.4;
 
     .theme-font-merriweather & {
-      font-size: ($font-size-base * 1.125);
+      font-size: $font-size-base * 1.125;
       line-height: 1.5;
     }
   }
@@ -248,20 +248,5 @@ tfoot {
   td:first-child::before,
   th:first-child::before {
     content: "\2014 "; // em dash, space
-  }
-}
-
-// Used typically under a header to provide additional info like author or dates.
-.meta-info {
-  header + &,
-  h1 + &,
-  .h1 + &,
-  h2 + &,
-  .h2 + &,
-  h3 + &,
-  .h3 + &,
-  h4 + &,
-  .h4 + & {
-    // margin-top: -$line-height-computed / 2;
   }
 }

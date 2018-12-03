@@ -72,7 +72,7 @@ body > header {
 .site-header-search {
   .form-control,
   button[type="submit"] {
-    height: 50px;
+    height: $navbar-height;
     @include form-controls-style();
 
     // Special case for white/light-grey theme

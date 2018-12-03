@@ -27,7 +27,7 @@
 
 .main-nav {
   .navbar {
-    //z-index: $zindex-navbar;
+    z-index: $zindex-fixed;
 
     // Special case for white/light-grey theme
     body.theme-nav-white &,
