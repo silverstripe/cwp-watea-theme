@@ -4,7 +4,6 @@
         <div class="row">
             <section class="col-lg-7 offset-lg-1">
                 <h1>$Title</h1>
-                <button class="btn-primary">Primary Button</button>
                 <% if $ElementalArea %>
                     <%-- Support for content blocks, if enabled --%>
                     <% if $ElementalArea.RichLinks %>
