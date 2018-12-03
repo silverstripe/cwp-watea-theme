@@ -949,7 +949,7 @@ $carousel-control-next-icon-bg:     str-replace(url("data:image/svg+xml;charset=
 $carousel-transition:               transform .6s ease !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
 
 // Meets 3:1 for large text (if using small text this should meet contrast of 4.5:1 to $carousel-text-color)
-$carousel-mask-bg-color:             rgba($theme-bg-lighter, 0.55) !default;
+$carousel-mask-bg-color:             rgba(0, 0, 0, 0.4) !default;
 $carousel-link-underline-color:      lighten($primary, 20%);
 
 

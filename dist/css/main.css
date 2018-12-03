@@ -15527,7 +15527,7 @@ body.theme-carousel-white .carousel-mask {
 }
 
 div.carousel-has-image .carousel-mask {
-  background: rgba(33, 67, 80, 0.55);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .footer-site {
