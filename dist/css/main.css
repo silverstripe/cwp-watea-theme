@@ -18746,10 +18746,22 @@ body.theme-accent-white .main .pagination .active a {
   margin-top: 3px;
 }
 
+.search-result__title {
+  margin-top: 2.4rem;
+}
+
+.search-result__title--first {
+  margin-top: 0;
+}
+
 .content-block__title {
   font-size: 1.8rem;
 }
 
 .element-holder {
   margin: 0 0 3rem;
+}
+
+.pagination {
+  margin: 2.4rem 0;
 }

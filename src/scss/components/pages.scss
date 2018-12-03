@@ -147,3 +147,11 @@
 .h5.news-events-archive-year {
   margin-top: 3px;
 }
+
+.search-result__title {
+  margin-top: $pagination-padding-x-lg;
+
+  &--first {
+    margin-top: 0;
+  }
+}
