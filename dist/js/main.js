@@ -1,1 +1,582 @@
-!function(t){function e(r){if(a[r])return a[r].exports;var o=a[r]={i:r,l:!1,exports:{}};return t[r].call(o.exports,o,o.exports,e),o.l=!0,o.exports}var a={};e.m=t,e.c=a,e.i=function(t){return t},e.d=function(t,a,r){e.o(t,a)||Object.defineProperty(t,a,{configurable:!1,enumerable:!0,get:r})},e.n=function(t){var a=t&&t.__esModule?function(){return t.default}:function(){return t};return e.d(a,"a",a),a},e.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},e.p="./",e(e.s=6)}([function(t,e){t.exports=jQuery},function(t,e,a){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r=a(5),o=(a.n(r),a(3)),n=a(4);a.i(o.a)(),a.i(n.a)()},function(t,e){},function(t,e,a){"use strict";var r=a(0),o=a.n(r);e.a=function(){var t=o()(".carousel"),e=o()("#carousel-pause"),a=o()("#carousel-play");t.carousel({wrap:!0,interval:1e4}),e.click(function(){t.carousel("pause"),e.hide(),a.show().focus()}),a.click(function(){t.carousel("cycle"),a.hide(),e.show().focus()})}},function(t,e,a){"use strict";var r=a(0),o=a.n(r);e.a=function(){o()(document).off("keydown.bs.dropdown.data-api","[data-toggle=dropdown], [role=menu]",o.a.fn.dropdown.Constructor.prototype.keydown)}},function(t,e,a){(function(t){!function(t){"use strict";var e=function(t){return(t||"ui-id")+"-"+Math.floor(1e3*Math.random()+1)};t(".alert").attr("role","alert"),t(".close").removeAttr("aria-hidden").wrapInner('<span aria-hidden="true"></span>').append('<span class="sr-only">Close</span>');var a=t.fn.tooltip.Constructor.prototype.show,r=t.fn.tooltip.Constructor.prototype.hide;t.fn.tooltip.Constructor.prototype.show=function(){a.apply(this,arguments);var t=this.tip(),r=t.attr("id")||e("ui-tooltip");t.attr({role:"tooltip",id:r}),this.$element.attr("aria-describedby",r)},t.fn.tooltip.Constructor.prototype.hide=function(){return r.apply(this,arguments),y(this.$element,"aria-describedby",this.tip().attr("id")),this};var o=t.fn.popover.Constructor.prototype.setContent;t.fn.popover.Constructor.prototype.hide;t.fn.popover.Constructor.prototype.setContent=function(){o.apply(this,arguments);var t=this.tip(),a=t.attr("id")||e("ui-tooltip");t.attr({role:"alert",id:a}),this.$element.attr("aria-describedby",a),this.$element.focus()},t.fn.popover.Constructor.prototype.hide=function(){r.apply(this,arguments),y(this.$element,"aria-describedby",this.tip().attr("id"))},t(".modal-dialog").attr({role:"document"});var n=t.fn.modal.Constructor.prototype.hide;t.fn.modal.Constructor.prototype.hide=function(){var t=this.$element.parent().find('[data-target="#'+this.$element.attr("id")+'"]');n.apply(this,arguments),t.focus()};var i,s,d="[data-toggle=dropdown]";t(d).parent().find("ul").attr("role","menu").find("li").attr("role","presentation").find("a").attr({role:"menuitem",tabIndex:"-1"}),t(d).attr({"aria-haspopup":"true","aria-expanded":"false"}),t(d).parent().on("shown.bs.dropdown",function(e){i=t(this),i.find(d).attr("aria-expanded","true"),setTimeout(function(){s=t(".dropdown-menu [role=menuitem]:visible",i)[0];try{s.focus()}catch(t){}},200)}),t(d).parent().on("hidden.bs.dropdown",function(e){i=t(this),i.find(d).attr("aria-expanded","false")}),t.fn.dropdown.Constructor.prototype.keydown=function(e){/(32)/.test(e.keyCode)&&(t(this).parent(),t(this).trigger("click"),e.preventDefault()&&e.stopPropagation())},t(document).on("focusout.dropdown.data-api",".dropdown-menu",function(e){var a=t(this),r=this;setTimeout(function(){t.contains(r,document.activeElement)||(a.parent().removeClass("open"),a.parent().find("[data-toggle=dropdown]").attr("aria-expanded","false"))},150)}).on("keydown.bs.dropdown.data-api",d+", [role=menu]",t.fn.dropdown.Constructor.prototype.keydown);var l=t(".nav-tabs"),p=l.children("li"),c=l.find('[data-toggle="tab"], [data-toggle="pill"]');l.attr("role","tablist"),p.attr("role","presentation"),c.attr("role","tab"),c.each(function(a){var r=t(t(this).attr("href")),o=t(this),n=o.attr("id")||e("ui-tab");o.attr("id",n),o.parent().hasClass("active")?(o.attr({tabIndex:"0","aria-expanded":"true","aria-selected":"true","aria-controls":o.attr("href").substr(1)}),r.attr({role:"tabpanel",tabIndex:"0","aria-hidden":"false","aria-labelledby":n})):(o.attr({tabIndex:"-1","aria-expanded":"false","aria-selected":"false","aria-controls":o.attr("href").substr(1)}),r.attr({role:"tabpanel",tabIndex:"-1","aria-hidden":"true","aria-labelledby":n}))}),t.fn.tab.Constructor.prototype.keydown=function(e){var a,r,o=t(this),n=o.closest("ul[role=tablist] "),i=e.which||e.keyCode;if(o=t(this),/(37|38|39|40)/.test(i)){a=n.find("[role=tab]:visible"),r=a.index(a.filter(":focus")),38!=i&&37!=i||r--,39!=i&&40!=i||r++,r<0&&(r=a.length-1),r==a.length&&(r=0);var s=a.eq(r);"tab"===s.attr("role")&&s.tab("show").focus(),e.preventDefault(),e.stopPropagation()}},t(document).on("keydown.tab.data-api",'[data-toggle="tab"], [data-toggle="pill"]',t.fn.tab.Constructor.prototype.keydown);var u=t.fn.tab.Constructor.prototype.activate;t.fn.tab.Constructor.prototype.activate=function(t,e,a){var r=e.find("> .active");r.find("[data-toggle=tab]").attr({tabIndex:"-1","aria-selected":!1,"aria-expanded":!1}),r.filter(".tab-pane").attr({"aria-hidden":!0,tabIndex:"-1"}),u.apply(this,arguments),t.addClass("active"),t.find("[data-toggle=tab]").attr({tabIndex:"0","aria-selected":!0,"aria-expanded":!0}),t.filter(".tab-pane").attr({"aria-hidden":!1,tabIndex:"0"})};var f=t('[data-toggle="collapse"]');f.attr({role:"tab","aria-selected":"false","aria-expanded":"false"}),f.each(function(a){var r=t(this),o=t(r.attr("data-target")?r.attr("data-target"):r.attr("href")),n=r.attr("data-parent"),i=n&&t(n),s=r.attr("id")||e("ui-collapse");t(i).find("div:not(.collapse,.panel-body), h4").attr("role","presentation"),r.attr("id",s),i&&(i.attr({role:"tablist","aria-multiselectable":"true"}),o.hasClass("in")?(r.attr({"aria-controls":r.attr("href").substr(1),"aria-selected":"true","aria-expanded":"true",tabindex:"0"}),o.attr({role:"tabpanel",tabindex:"0","aria-labelledby":s,"aria-hidden":"false"})):(r.attr({"aria-controls":r.attr("href").substr(1),tabindex:"-1"}),o.attr({role:"tabpanel",tabindex:"-1","aria-labelledby":s,"aria-hidden":"true"})))});var h=t.fn.collapse.Constructor.prototype.toggle;t.fn.collapse.Constructor.prototype.toggle=function(){var e,a=this.$parent&&this.$parent.find('[aria-expanded="true"]');if(a){var r,o=a.attr("data-target")||(e=a.attr("href"))&&e.replace(/.*(?=#[^\s]+$)/,""),n=t(o),i=this.$element;this.$parent;this.$parent&&(r=this.$parent.find('[data-toggle=collapse][href="#'+this.$element.attr("id")+'"]')),h.apply(this,arguments),t.support.transition&&this.$element.one(t.support.transition.end,function(){a.attr({"aria-selected":"false","aria-expanded":"false",tabIndex:"-1"}),n.attr({"aria-hidden":"true",tabIndex:"-1"}),r.attr({"aria-selected":"true","aria-expanded":"true",tabIndex:"0"}),i.hasClass("in")?i.attr({"aria-hidden":"false",tabIndex:"0"}):(r.attr({"aria-selected":"false","aria-expanded":"false"}),i.attr({"aria-hidden":"true",tabIndex:"-1"}))})}else h.apply(this,arguments)},t.fn.collapse.Constructor.prototype.keydown=function(e){var a,r,o=t(this),n=o.closest("div[role=tablist] "),i=e.which||e.keyCode;o=t(this),/(32|37|38|39|40)/.test(i)&&(32==i&&o.click(),a=n.find("[role=tab]"),r=a.index(a.filter(":focus")),38!=i&&37!=i||r--,39!=i&&40!=i||r++,r<0&&(r=a.length-1),r==a.length&&(r=0),a.eq(r).focus(),e.preventDefault(),e.stopPropagation())},t(document).on("keydown.collapse.data-api",'[data-toggle="collapse"]',t.fn.collapse.Constructor.prototype.keydown),t(".carousel").each(function(e){var a=t(this),r=a.find('[data-slide="prev"]'),o=a.find('[data-slide="next"]'),n=a.find(".item"),i=n.parent();a.attr({"data-interval":"false","data-wrap":"false"}),i.attr("role","listbox"),n.attr("role","option");var s=document.createElement("span");s.setAttribute("class","sr-only"),s.innerHTML="Previous";var d=document.createElement("span");d.setAttribute("class","sr-only"),d.innerHTML="Next",r.attr("role","button"),o.attr("role","button"),r.append(s),o.append(d),n.each(function(){var e=t(this);e.hasClass("active")?e.attr({"aria-selected":"true",tabindex:"0"}):e.attr({"aria-selected":"false",tabindex:"-1"})})});var b=t.fn.carousel.Constructor.prototype.slide;t.fn.carousel.Constructor.prototype.slide=function(e,a){var r=this.$element.find(".item.active"),o=a||r[e]();b.apply(this,arguments),r.one(t.support.transition.end,function(){r.attr({"aria-selected":!1,tabIndex:"-1"}),o.attr({"aria-selected":!0,tabIndex:"0"})})},t.fn.carousel.Constructor.prototype.keydown=function(e){var a,r=t(this),o=r.closest("div[role=listbox]"),n=o.find("[role=option]"),i=o.parent(),s=e.which||e.keyCode;/(37|38|39|40)/.test(s)&&(a=n.index(n.filter(".active")),37!=s&&38!=s||(i.carousel("prev"),a--,a<0?a=n.length-1:r.prev().focus()),39!=s&&40!=s||(i.carousel("next"),a++,a==n.length?a=0:r.one(t.support.transition.end,function(){r.next().focus()})),e.preventDefault(),e.stopPropagation())},t(document).on("keydown.carousel.data-api","div[role=option]",t.fn.carousel.Constructor.prototype.keydown);var y=function(e,a,r){var o=(e.attr(a)||"").split(/\s+/),n=t.inArray(r,o);-1!==n&&o.splice(n,1),o=t.trim(o.join(" ")),o?e.attr(a,o):e.removeAttr(a)}}(t)}).call(e,a(0))},function(t,e,a){a(1),t.exports=a(2)}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports) {
+
+module.exports = jQuery;
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(2);
+module.exports = __webpack_require__(6);
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap_accessibility_plugin_plugins_js_bootstrap_accessibility__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap_accessibility_plugin_plugins_js_bootstrap_accessibility___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_bootstrap_accessibility_plugin_plugins_js_bootstrap_accessibility__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_carousel__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_navigation__ = __webpack_require__(5);
+/* eslint-disable */
+/**
+ * The PayPal Accessibility Plugin adds accessibility improvements over the top of Bootstrap
+ * components. It is designed to work in the background. If you experience any quirks, please
+ * take a look at its source code.
+ */
+
+/* eslint-enable */
+
+// Define local components
+
+
+
+Object(__WEBPACK_IMPORTED_MODULE_1__components_carousel__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_2__components_navigation__["a" /* default */])();
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+/* ========================================================================
+* Extends Bootstrap v3.1.1
+
+* Copyright (c) <2014> eBay Software Foundation
+
+* All rights reserved.
+
+* Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+* Neither the name of eBay or any of its subsidiaries or affiliates nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+* ======================================================================== */
+
+(function($) {
+  "use strict";
+
+  var uniqueId = function(prefix) {
+      return (prefix || 'ui-id') + '-' + Math.floor((Math.random()*1000)+1)
+  }
+
+  // Alert Extension
+  // ===============================
+
+    $('.alert').attr('role', 'alert')
+    $('.close').removeAttr('aria-hidden').wrapInner('<span aria-hidden="true"></span>').append('<span class="sr-only">Close</span>')
+
+  // TOOLTIP Extension
+  // ===============================
+
+    var showTooltip =    $.fn.tooltip.Constructor.prototype.show
+        , hideTooltip =    $.fn.tooltip.Constructor.prototype.hide
+
+    $.fn.tooltip.Constructor.prototype.show = function () {
+        showTooltip.apply(this, arguments)
+        var $tip = this.tip()
+            , tooltipID = $tip.attr('id') || uniqueId('ui-tooltip')
+        $tip.attr({'role':'tooltip','id' : tooltipID})
+        this.$element.attr('aria-describedby', tooltipID)
+    }
+
+    $.fn.tooltip.Constructor.prototype.hide = function () {
+        hideTooltip.apply(this, arguments)
+        removeMultiValAttributes(this.$element, 'aria-describedby', this.tip().attr('id'))
+        return this
+    }
+
+  // Popover Extension
+  // ===============================
+    var showPopover =   $.fn.popover.Constructor.prototype.setContent
+      , hideTPopover =   $.fn.popover.Constructor.prototype.hide
+
+    $.fn.popover.Constructor.prototype.setContent = function(){
+      showPopover.apply(this, arguments)
+      var $tip = this.tip()
+        , tooltipID = $tip.attr('id') || uniqueId('ui-tooltip')
+      $tip.attr({'role':'alert','id' : tooltipID})
+      this.$element.attr('aria-describedby', tooltipID)
+      this.$element.focus()
+    }
+    $.fn.popover.Constructor.prototype.hide =  function(){
+        hideTooltip.apply(this, arguments)
+        removeMultiValAttributes(this.$element, 'aria-describedby', this.tip().attr('id'))
+    }
+
+  //Modal Extension
+    $('.modal-dialog').attr( {'role' : 'document'})
+    var modalhide =   $.fn.modal.Constructor.prototype.hide
+    $.fn.modal.Constructor.prototype.hide = function(){
+       var modalOpener = this.$element.parent().find('[data-target="#' + this.$element.attr('id') + '"]')
+       modalhide.apply(this, arguments)
+       modalOpener.focus()
+    }
+
+  // DROPDOWN Extension
+  // ===============================
+
+    var toggle   = '[data-toggle=dropdown]'
+      , $par
+      , firstItem
+      , focusDelay = 200
+      , menus = $(toggle).parent().find('ul').attr('role','menu')
+      , lis = menus.find('li').attr('role','presentation')
+
+    lis.find('a').attr({'role':'menuitem', 'tabIndex':'-1'})
+    $(toggle).attr({ 'aria-haspopup':'true', 'aria-expanded': 'false'})
+
+    $(toggle).parent().on('shown.bs.dropdown',function(e){
+      $par = $(this)
+      var $toggle = $par.find(toggle)
+      $toggle.attr('aria-expanded','true')
+
+      setTimeout(function(){
+            firstItem = $('.dropdown-menu [role=menuitem]:visible', $par)[0]
+            try{ firstItem.focus()} catch(ex) {}
+      }, focusDelay)
+    })
+
+    $(toggle).parent().on('hidden.bs.dropdown',function(e){
+      $par = $(this)
+      var $toggle = $par.find(toggle)
+      $toggle.attr('aria-expanded','false')
+    })
+
+    //Adding Space Key Behaviour, opens on spacebar
+    $.fn.dropdown.Constructor.prototype.keydown = function (e) {
+      var  $par
+        , firstItem
+      if (!/(32)/.test(e.keyCode)) return
+        $par = $(this).parent()
+        $(this).trigger ("click")
+        e.preventDefault() && e.stopPropagation()
+    }
+
+    $(document)
+      .on('focusout.dropdown.data-api', '.dropdown-menu', function(e){
+        var $this = $(this)
+                    , that = this
+        setTimeout(function() {
+         if(!$.contains(that, document.activeElement)){
+          $this.parent().removeClass('open')
+          $this.parent().find('[data-toggle=dropdown]').attr('aria-expanded','false')
+         }
+        }, 150)
+       })
+      .on('keydown.bs.dropdown.data-api', toggle + ', [role=menu]' , $.fn.dropdown.Constructor.prototype.keydown)
+
+
+  // Tab Extension
+  // ===============================
+
+    var $tablist = $('.nav-tabs')
+        , $lis = $tablist.children('li')
+        , $tabs = $tablist.find('[data-toggle="tab"], [data-toggle="pill"]')
+
+    $tablist.attr('role', 'tablist')
+    $lis.attr('role', 'presentation')
+    $tabs.attr('role', 'tab')
+
+    $tabs.each(function( index ) {
+      var tabpanel = $($(this).attr('href'))
+        , tab = $(this)
+        , tabid = tab.attr('id') || uniqueId('ui-tab')
+
+        tab.attr('id', tabid)
+
+      if(tab.parent().hasClass('active')){
+        tab.attr( { 'tabIndex' : '0', 'aria-expanded' : 'true', 'aria-selected' : 'true', 'aria-controls': tab.attr('href').substr(1) } )
+        tabpanel.attr({ 'role' : 'tabpanel', 'tabIndex' : '0', 'aria-hidden' : 'false', 'aria-labelledby':tabid })
+      }else{
+        tab.attr( { 'tabIndex' : '-1', 'aria-expanded' : 'false', 'aria-selected' : 'false', 'aria-controls': tab.attr('href').substr(1) } )
+        tabpanel.attr( { 'role' : 'tabpanel', 'tabIndex' : '-1', 'aria-hidden' : 'true', 'aria-labelledby':tabid } )
+      }
+    })
+
+    $.fn.tab.Constructor.prototype.keydown = function (e) {
+      var $this = $(this)
+      , $items
+      , $ul = $this.closest('ul[role=tablist] ')
+      , index
+      , k = e.which || e.keyCode
+
+      $this = $(this)
+      if (!/(37|38|39|40)/.test(k)) return
+
+      $items = $ul.find('[role=tab]:visible')
+      index = $items.index($items.filter(':focus'))
+
+      if (k == 38 || k == 37) index--                         // up & left
+      if (k == 39 || k == 40) index++                        // down & right
+
+
+      if(index < 0) index = $items.length -1
+      if(index == $items.length) index = 0
+
+      var nextTab = $items.eq(index)
+      if(nextTab.attr('role') ==='tab'){
+
+        nextTab.tab('show')      //Comment this line for dynamically loaded tabPabels, to save Ajax requests on arrow key navigation
+        .focus()
+      }
+      // nextTab.focus()
+
+      e.preventDefault()
+      e.stopPropagation()
+    }
+
+    $(document).on('keydown.tab.data-api','[data-toggle="tab"], [data-toggle="pill"]' , $.fn.tab.Constructor.prototype.keydown)
+
+   var tabactivate =    $.fn.tab.Constructor.prototype.activate;
+   $.fn.tab.Constructor.prototype.activate = function (element, container, callback) {
+      var $active = container.find('> .active')
+      $active.find('[data-toggle=tab]').attr({ 'tabIndex' : '-1','aria-selected' : false,'aria-expanded' : false })
+      $active.filter('.tab-pane').attr({ 'aria-hidden' : true,'tabIndex' : '-1' })
+
+      tabactivate.apply(this, arguments)
+
+      element.addClass('active')
+      element.find('[data-toggle=tab]').attr({ 'tabIndex' : '0','aria-selected' : true,'aria-expanded' : true })
+      element.filter('.tab-pane').attr({ 'aria-hidden' : false,'tabIndex' : '0' })
+   }
+
+
+  // Collapse Extension
+  // ===============================
+
+      var $colltabs =  $('[data-toggle="collapse"]')
+      $colltabs.attr({ 'role':'tab', 'aria-selected':'false', 'aria-expanded':'false' })
+      $colltabs.each(function( index ) {
+        var colltab = $(this)
+        , collpanel = (colltab.attr('data-target')) ? $(colltab.attr('data-target')) : $(colltab.attr('href'))
+        , parent  = colltab.attr('data-parent')
+        , collparent = parent && $(parent)
+        , collid = colltab.attr('id') || uniqueId('ui-collapse')
+
+        $(collparent).find('div:not(.collapse,.panel-body), h4').attr('role','presentation')
+
+          colltab.attr('id', collid)
+          if(collparent){
+            collparent.attr({ 'role' : 'tablist', 'aria-multiselectable' : 'true' })
+            if(collpanel.hasClass('in')){
+              colltab.attr({ 'aria-controls': colltab.attr('href').substr(1), 'aria-selected':'true', 'aria-expanded':'true', 'tabindex':'0' })
+              collpanel.attr({ 'role':'tabpanel', 'tabindex':'0', 'aria-labelledby':collid, 'aria-hidden':'false' })
+            }else{
+              colltab.attr({'aria-controls' : colltab.attr('href').substr(1), 'tabindex':'-1' })
+              collpanel.attr({ 'role':'tabpanel', 'tabindex':'-1', 'aria-labelledby':collid, 'aria-hidden':'true' })
+            }
+          }
+      })
+
+    var collToggle = $.fn.collapse.Constructor.prototype.toggle
+    $.fn.collapse.Constructor.prototype.toggle = function(){
+        var prevTab = this.$parent && this.$parent.find('[aria-expanded="true"]') , href
+
+        if(prevTab){
+          var prevPanel = prevTab.attr('data-target') || (href = prevTab.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')
+          , $prevPanel = $(prevPanel)
+          , $curPanel = this.$element
+          , par = this.$parent
+          , curTab
+
+        if (this.$parent) curTab = this.$parent.find('[data-toggle=collapse][href="#' + this.$element.attr('id') + '"]')
+
+        collToggle.apply(this, arguments)
+
+        if ($.support.transition) {
+          this.$element.one($.support.transition.end, function(){
+
+              prevTab.attr({ 'aria-selected':'false','aria-expanded':'false', 'tabIndex':'-1' })
+              $prevPanel.attr({ 'aria-hidden' : 'true','tabIndex' : '-1'})
+
+              curTab.attr({ 'aria-selected':'true','aria-expanded':'true', 'tabIndex':'0' })
+
+              if($curPanel.hasClass('in')){
+                $curPanel.attr({ 'aria-hidden' : 'false','tabIndex' : '0' })
+              }else{
+                curTab.attr({ 'aria-selected':'false','aria-expanded':'false'})
+                $curPanel.attr({ 'aria-hidden' : 'true','tabIndex' : '-1' })
+              }
+          })
+        }
+      }else{
+        collToggle.apply(this, arguments)
+      }
+    }
+
+    $.fn.collapse.Constructor.prototype.keydown = function (e) {
+      var $this = $(this)
+      , $items
+      , $tablist = $this.closest('div[role=tablist] ')
+      , index
+      , k = e.which || e.keyCode
+
+      $this = $(this)
+      if (!/(32|37|38|39|40)/.test(k)) return
+      if(k==32) $this.click()
+
+      $items = $tablist.find('[role=tab]')
+      index = $items.index($items.filter(':focus'))
+
+      if (k == 38 || k == 37) index--                                        // up & left
+      if (k == 39 || k == 40) index++                        // down & right
+      if(index < 0) index = $items.length -1
+      if(index == $items.length) index = 0
+
+      $items.eq(index).focus()
+
+      e.preventDefault()
+      e.stopPropagation()
+
+    }
+
+    $(document).on('keydown.collapse.data-api','[data-toggle="collapse"]' ,  $.fn.collapse.Constructor.prototype.keydown)
+
+  // Carousel Extension
+  // ===============================
+
+      $('.carousel').each(function (index) {
+        var $this = $(this)
+          , prev = $this.find('[data-slide="prev"]')
+          , next = $this.find('[data-slide="next"]')
+          , $options = $this.find('.item')
+          , $listbox = $options.parent()
+
+        $this.attr( { 'data-interval' : 'false', 'data-wrap' : 'false' } )
+        $listbox.attr('role', 'listbox')
+        $options.attr('role', 'option')
+
+        var spanPrev = document.createElement('span')
+        spanPrev.setAttribute('class', 'sr-only')
+        spanPrev.innerHTML='Previous'
+
+        var spanNext = document.createElement('span')
+        spanNext.setAttribute('class', 'sr-only')
+        spanNext.innerHTML='Next'
+
+        prev.attr('role', 'button')
+        next.attr('role', 'button')
+
+        prev.append(spanPrev)
+        next.append(spanNext)
+
+        $options.each(function () {
+          var item = $(this)
+          if(item.hasClass('active')){
+            item.attr({ 'aria-selected': 'true', 'tabindex' : '0' })
+          }else{
+            item.attr({ 'aria-selected': 'false', 'tabindex' : '-1' })
+          }
+        })
+      })
+
+      var slideCarousel = $.fn.carousel.Constructor.prototype.slide
+      $.fn.carousel.Constructor.prototype.slide = function (type, next) {
+        var $active = this.$element.find('.item.active')
+          , $next = next || $active[type]()
+
+        slideCarousel.apply(this, arguments)
+
+      $active
+        .one($.support.transition.end, function () {
+        $active.attr({'aria-selected':false, 'tabIndex': '-1'})
+        $next.attr({'aria-selected':true, 'tabIndex': '0'})
+        //.focus()
+       })
+      }
+
+    $.fn.carousel.Constructor.prototype.keydown = function (e) {
+     var $this = $(this)
+      , $ul = $this.closest('div[role=listbox]')
+      , $items = $ul.find('[role=option]')
+      , $parent = $ul.parent()
+      , k = e.which || e.keyCode
+      , index
+      , i
+
+      if (!/(37|38|39|40)/.test(k)) return
+
+      index = $items.index($items.filter('.active'))
+      if (k == 37 || k == 38) {                           //  Up
+        $parent.carousel('prev')
+        index--
+        if(index < 0) index = $items.length -1
+        else  $this.prev().focus()
+
+      }
+      if (k == 39 || k == 40) {                          // Down
+        $parent.carousel('next')
+        index++
+        if(index == $items.length) index = 0
+        else  {
+          $this.one($.support.transition.end, function () {
+            $this.next().focus()
+          })
+        }
+
+      }
+
+      e.preventDefault()
+      e.stopPropagation()
+    }
+    $(document).on('keydown.carousel.data-api', 'div[role=option]', $.fn.carousel.Constructor.prototype.keydown)
+
+  // GENERAL UTILITY FUNCTIONS
+  // ===============================
+
+    var removeMultiValAttributes = function (el, attr, val) {
+     var describedby = (el.attr( attr ) || "").split( /\s+/ )
+        , index = $.inArray(val, describedby)
+     if ( index !== -1 ) {
+       describedby.splice( index, 1 )
+     }
+     describedby = $.trim( describedby.join( " " ) )
+     if (describedby ) {
+       el.attr( attr, describedby )
+     } else {
+      el.removeAttr( attr )
+     }
+    }
+
+
+})(jQuery);
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+/* eslint-disable */
+
+/* eslint-enable */
+
+/* harmony default export */ __webpack_exports__["a"] = (function () {
+  // Carousel Documentation: https://paypal.github.io/bootstrap-accessibility-plugin/demo.html#carousel
+
+  var $carousel = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.carousel');
+  var $carouselPause = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#carousel-pause');
+  var $carouselPlay = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#carousel-play');
+
+  $carousel.carousel({
+    wrap: true,
+    interval: 10000
+  });
+
+  $carouselPause.click(function () {
+    $carousel.carousel('pause');
+    $carouselPause.hide();
+    $carouselPlay.show().focus();
+  });
+
+  $carouselPlay.click(function () {
+    $carousel.carousel('cycle');
+    $carouselPlay.hide();
+    $carouselPause.show().focus();
+  });
+});
+
+/***/ }),
+/* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+/* eslint-disable */
+
+/* eslint-enable */
+
+/* harmony default export */ __webpack_exports__["a"] = (function () {
+  /**
+   * Unbind the space bar handler that is added in the bootstrap-accessibility plugin,
+   * the functionality is recreated in this component.
+   *
+   * See: bootstrap-accessibility.js, line 130 (ish)
+   */
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).off('keydown.bs.dropdown.data-api', '[data-toggle=dropdown], [role=menu]', __WEBPACK_IMPORTED_MODULE_0_jquery___default.a.fn.dropdown.Constructor.prototype.keydown);
+});
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ })
+/******/ ]);

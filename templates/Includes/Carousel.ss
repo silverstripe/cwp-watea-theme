@@ -62,7 +62,7 @@
 
                 <% if $Content || $Title || $PrimaryCallToActionLabel || $SecondaryCallToActionLabel %>
                     <div class="container">
-                        <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+                        <div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
                             <% if $Title %>
                                 <h1 id="carousel-title-{$Pos}">$Title</h1>
                             <% end_if %>

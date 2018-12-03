@@ -1,6 +1,6 @@
 .footer-site {
   margin-top: 0;
-  background-color: $navbar-default-bg;
+  background-color: $theme-bg;
   @include theme-color("footer", "background-color");
   padding: ($line-height-computed * 1.8) 0;
 
@@ -10,7 +10,7 @@
     @include theme-contrast-color("footer", "border-color");
     margin-bottom: $line-height-computed * 1.5;
 
-    @media (min-width: $screen-md-min) {
+    @include media-breakpoint-up(md) {
       border-color: transparent;
       margin-top: 12px;
       margin-bottom: 12px;
@@ -19,7 +19,7 @@
 
   a:hover,
   p {
-    color: $navbar-default-link-hover-color;
+    color: $navbar-dark-color;
   }
 }
 
@@ -32,7 +32,7 @@
 
 // Footer navigation and Copyright
 .footer-nav-links a {
-  color: $navbar-default-link-hover-color;
+  color: $navbar-dark-color;
   margin-right: $line-height-computed;
 }
 

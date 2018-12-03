@@ -1,7 +1,7 @@
 // Header can also be inside articles or sections so limit to site header
 body > header {
-  background: $navbar-default-bg;
-  color: $navbar-default-color;
+  background: $theme-bg;
+  color: $navbar-dark-color;
 }
 
 .header {
@@ -23,7 +23,7 @@ body > header {
   .btn.dropdown-toggle {
     @include form-controls-style();
     text-transform: capitalize;
-    padding: $padding-base-horizontal 15px;
+    padding: $btn-padding-x 15px;
   }
 
   .dropdown-toggle:focus,
@@ -33,7 +33,7 @@ body > header {
   }
 
   .dropdown-menu {
-    border-color: rgba($gray-base, .4);
+    border-color: rgba($gray-600, .4);
     margin-top: 0;
 
     // Show focus on all links (override BS)
@@ -42,29 +42,29 @@ body > header {
     }
 
     > li > a {
-      color: $gray-dark;
+      color: $gray-900;
     }
   }
 }
 
 // These must be separate to work
 .site-header-search .form-control::-webkit-input-placeholder {
-  color: $navbar-default-link-active-color;
+  color: $navbar-dark-active-color;
   @include theme-contrast-color("header", "color");
 }
 
 .site-header-search .form-control:-moz-placeholder {
-  color: $navbar-default-link-active-color;
+  color: $navbar-dark-active-color;
   @include theme-contrast-color("header", "color");
 }
 
 .site-header-search .form-control::-moz-placeholder {
-  color: $navbar-default-link-active-color;
+  color: $navbar-dark-active-color;
   @include theme-contrast-color("header", "color");
 }
 
 .site-header-search .form-control:-ms-input-placeholder {
-  color: $navbar-default-link-active-color;
+  color: $navbar-dark-active-color;
   @include theme-contrast-color("header", "color");
 }
 
@@ -74,13 +74,12 @@ body > header {
   button[type="submit"] {
     height: $navbar-height;
     @include form-controls-style();
-    border: 1px solid rgba($input-bg, .4);
 
     // Special case for white/light-grey theme
     body.theme-header-white &,
     body.theme-header-light-grey & {
       background: $input-bg;
-      border-color: rgba($gray, .4);
+      border-color: rgba($gray-600, .4);
     }
 
     &:focus {
@@ -90,14 +89,14 @@ body > header {
 
   .form-control {
     box-shadow: none;
-    padding: $padding-large-vertical $padding-large-horizontal;
-    height: ($line-height-computed + ($padding-large-vertical * 2) + 2);
+    padding: $input-btn-padding-y-lg $input-btn-padding-x-lg;
+    height: ($line-height-computed + ($input-btn-padding-y-lg * 2) + .2);
     border-right: 0;
   }
 
   // Search button hover
   .btn[type="submit"] {
-    padding: $padding-large-vertical $padding-large-horizontal;
+    padding: $input-btn-padding-y-lg $input-btn-padding-x-lg;
     border-left: 0;
 
     &:active:hover,
@@ -105,9 +104,9 @@ body > header {
     &:active,
     &:focus,
     &:hover {
-      background-color: $brand-primary;
-      color: $btn-primary-color;
-      border-color: $brand-primary;
+      background-color: $primary;
+      color: color-yiq($primary);
+      border-color: $primary;
       @include theme-color("accent", "background-color");
       @include theme-color("accent", "border-color");
     }
@@ -123,14 +122,14 @@ body > header {
 
 // Accessibilty links to navigation
 .skip-links a {
-  color: $navbar-default-link-color;
-  background: $navbar-default-bg;
+  color: $navbar-dark-color;
+  background: $theme-bg;
   @include theme-color("header", "background-color");
 }
 
 // Mobile only
 // Site header
-@media (max-width: $grid-float-breakpoint-max) {
+@include media-breakpoint-down(md) {
   .site-header {
     min-height: 111px;
 

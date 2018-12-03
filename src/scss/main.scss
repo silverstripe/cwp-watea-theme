@@ -1,8 +1,77 @@
+
+// Modification and rebuild of these styles will require composer install to pull in starter theme and npm install of
+// the starter theme to pull in bootstrap dependency.
+
+// Load Bootstrap functions as these are required for variables.
+@import "../../themes/starter/node_modules/bootstrap/scss/functions";
+
 // Watea theme specific variables and overrides
 @import "./variables";
 
-// Starter theme styles
-@import "../../../starter/src/scss/main";
+// Starter theme specific variables and overrides
+@import "./variables";
+
+// Third-party libraries
+@import "../../themes/starter/node_modules/font-awesome/scss/font-awesome";
+
+// Bootstrap scss files - functions imported above for variables
+@import "../../themes/starter/node_modules/bootstrap/scss/variables";
+@import "../../themes/starter/node_modules/bootstrap/scss/mixins";
+@import "../../themes/starter/node_modules/bootstrap/scss/root";
+@import "../../themes/starter/node_modules/bootstrap/scss/reboot";
+@import "../../themes/starter/node_modules/bootstrap/scss/type";
+@import "../../themes/starter/node_modules/bootstrap/scss/images";
+@import "../../themes/starter/node_modules/bootstrap/scss/code";
+@import "../../themes/starter/node_modules/bootstrap/scss/grid";
+@import "../../themes/starter/node_modules/bootstrap/scss/tables";
+@import "../../themes/starter/node_modules/bootstrap/scss/forms";
+@import "../../themes/starter/node_modules/bootstrap/scss/buttons";
+@import "../../themes/starter/node_modules/bootstrap/scss/transitions";
+@import "../../themes/starter/node_modules/bootstrap/scss/dropdown";
+@import "../../themes/starter/node_modules/bootstrap/scss/button-group";
+@import "../../themes/starter/node_modules/bootstrap/scss/input-group";
+@import "../../themes/starter/node_modules/bootstrap/scss/custom-forms";
+@import "../../themes/starter/node_modules/bootstrap/scss/nav";
+@import "../../themes/starter/node_modules/bootstrap/scss/navbar";
+@import "../../themes/starter/node_modules/bootstrap/scss/card";
+@import "../../themes/starter/node_modules/bootstrap/scss/breadcrumb";
+@import "../../themes/starter/node_modules/bootstrap/scss/pagination";
+@import "../../themes/starter/node_modules/bootstrap/scss/badge";
+@import "../../themes/starter/node_modules/bootstrap/scss/jumbotron";
+@import "../../themes/starter/node_modules/bootstrap/scss/alert";
+@import "../../themes/starter/node_modules/bootstrap/scss/progress";
+@import "../../themes/starter/node_modules/bootstrap/scss/media";
+@import "../../themes/starter/node_modules/bootstrap/scss/list-group";
+@import "../../themes/starter/node_modules/bootstrap/scss/close";
+@import "../../themes/starter/node_modules/bootstrap/scss/modal";
+@import "../../themes/starter/node_modules/bootstrap/scss/tooltip";
+@import "../../themes/starter/node_modules/bootstrap/scss/popover";
+@import "../../themes/starter/node_modules/bootstrap/scss/carousel";
+@import "../../themes/starter/node_modules/bootstrap/scss/utilities";
+@import "../../themes/starter/node_modules/bootstrap/scss/print";
+
+// Starter theme Mixins
+@import "../../themes/starter/src/scss/utils/mixins";
+
+// Starter theme  Helpers
+@import "../../themes/starter/src/scss/utils/helpers";
+
+// Starter theme components
+@import "../../themes/starter/src/scss/print";
+@import "../../themes/starter/src/scss/typography";
+@import "../../themes/starter/src/scss/components/blocks";
+@import "../../themes/starter/src/scss/components/blog";
+@import "../../themes/starter/src/scss/components/comments";
+@import "../../themes/starter/src/scss/components/footer";
+@import "../../themes/starter/src/scss/components/forms";
+@import "../../themes/starter/src/scss/components/header";
+@import "../../themes/starter/src/scss/components/nav";
+@import "../../themes/starter/src/scss/components/news-events";
+@import "../../themes/starter/src/scss/components/pages";
+@import "../../themes/starter/src/scss/components/search";
+@import "../../themes/starter/src/scss/components/sitemap";
+@import "../../themes/starter/src/scss/components/button";
+
 
 // Watea theme mixins
 @import "./utils/mixins";
