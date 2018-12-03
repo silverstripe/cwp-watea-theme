@@ -16,7 +16,7 @@
 
               <%-- Indicators --%>
               <div class="carousel-controls-inner-wrapper">
-                  <ol class="carousel-indicators" role="tablist">
+                  <ol class="carousel-indicators">
                     <% loop $CarouselItems %>
                       <li data-target="#carousel-slide" data-slide-to="$Pos(0)" <% if $Pos == 1 %>class="active"<% end_if %> name="carousel-item-{$Pos}"></li>
                     <% end_loop %>
