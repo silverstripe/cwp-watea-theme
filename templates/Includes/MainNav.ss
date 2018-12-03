@@ -3,7 +3,7 @@
         <div class="container">
             <div class="col-12">
                 <div class="collapse navbar-collapse" id="navbar-collapse">
-                    <form class="form-inline d-block d-sm-none" action="/search/SearchForm">
+                    <form class="form-inline d-block d-md-none" action="/search/SearchForm">
                         <% include HeaderSearch %>
                     </form>
                     <ul class="nav navbar-nav" role="menubar">

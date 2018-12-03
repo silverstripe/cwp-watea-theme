@@ -329,6 +329,9 @@ $mark-bg:                     #fcf8e3 !default;
 
 $hr-margin-y:                 $spacer !default;
 
+/* Custom */
+$line-height-computed:              ($font-size-base * $line-height-base) !default; // ~24px
+
 
 // Tables
 //
@@ -633,6 +636,9 @@ $zindex-modal:                      1050 !default;
 $zindex-popover:                    1060 !default;
 $zindex-tooltip:                    1070 !default;
 
+/** Custom added - reinstated from BS3. **/
+$zindex-navbar:                     $zindex-dropdown !default;
+
 // Navs
 
 $nav-link-padding-y:                .5rem !default;
@@ -685,6 +691,9 @@ $navbar-light-active-color:         rgba($black, .9) !default;
 $navbar-light-disabled-color:       rgba($black, .3) !default;
 $navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
 $navbar-light-toggler-border-color: rgba($black, .1) !default;
+
+//Custom
+$navbar-height: ($line-height-computed + ($input-btn-padding-y-lg * 2)) + .2;
 
 // Pagination
 
@@ -972,7 +981,6 @@ $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
 
 
 // ## These variables are custom ones used within the starter scss files
-$line-height-computed:              ($font-size-base * $line-height-base) !default; // ~24px
 $image-spacing:                     $line-height-computed !default;
 $label-color:                       #fff !default;
 $carousel-text-shadow:              0 1px 2px rgba(0, 0, 0, .6) !default;

@@ -5,12 +5,15 @@
   "keywords": ["silverstripe", "theme", "cwp"],
   "license": "BSD-3-Clause",
   "require": {
-    "cwp/starter-theme": "^2.0"
+    "cwp/starter-theme": "dev-feature/ss4-demo"
   },
   "repositories": [
     {
       "type": "composer",
       "url": "https://packages.cwp.govt.nz/"
+    }, {
+      "type": "vcs",
+      "url": "https://github.com/silverstripe-superchargers/cwp-starter-theme.git"
     }
   ],
   "extra": {

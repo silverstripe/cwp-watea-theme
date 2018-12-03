@@ -15,7 +15,7 @@
             <span class="site-header-brand-tagline small">$SiteConfig.Tagline</span>
         <% end_if %>
     </div>
-    <div class="navbar-expand-lg navbar-light">
+    <div class="navbar-expand-md navbar-dark">
         <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
             <span class="sr-only"><%t CWP_Header.Toggle "Toggle navigation" %></span>
             <span class="navbar-toggler-icon"></span>

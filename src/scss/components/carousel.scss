@@ -59,9 +59,9 @@
     }
 
     .btn {
-      margin-left: floor($line-height-computed * 0.45);
-      margin-right: floor($line-height-computed * 0.45);
-      padding: floor($line-height-computed * 0.5) floor(($line-height-computed * 0.7));
+      margin-left: $line-height-computed * 0.45;
+      margin-right: $line-height-computed * 0.45;
+      padding: ($line-height-computed * 0.5) ($line-height-computed * 0.7);
       @include theme-contrast-color("accent", "color");
 
       @include media-breakpoint-down(sm) {
@@ -89,12 +89,12 @@
   // Mimic .lead
   // Increase distance between text and actions
   margin-bottom: $line-height-computed * 1.25;
-  font-size: floor(($font-size-base * 1.15));
+  font-size: $font-size-base * 1.15;
   font-weight: 300;
   line-height: 1.4;
 
   @include media-breakpoint-down(sm) {
-    font-size: ($font-size-base * 1.5);
+    font-size: $font-size-base * 1.5;
   }
 
   // Custom carousel link style for theme
