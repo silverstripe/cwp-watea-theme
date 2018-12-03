@@ -18371,9 +18371,6 @@ body.theme-accent-white .main-nav .dropdown.current .navbar-touch-caret:hover, b
   body.theme-accent-white .main-nav .nav-item .dropdown-menu > .active > a {
     background-color: #FFF;
   }
-  .main-nav .navbar-nav > .nav-item {
-    margin-bottom: -4px;
-  }
   .main-nav .dropdown {
     padding-right: 2.2rem;
   }
