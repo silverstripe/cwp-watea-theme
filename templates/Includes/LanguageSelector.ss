@@ -1,6 +1,6 @@
 <% if $Locales %>
     <div class="btn-group pull-right language-selector" id="header-language-toggle">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-language" aria-hidden="true"></i>
             <span class="hidden-xs hidden-sm">
                 $SelectedLanguage

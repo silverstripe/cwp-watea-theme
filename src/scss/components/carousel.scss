@@ -1,6 +1,6 @@
 .carousel {
   // The navbar has a 1px border on the bottom, so adding it to the margin
-  margin-top: -($line-height-computed + 1);
+  margin-top: -$line-height-computed;
   margin-bottom: $jumbotron-padding * 2;
   border-bottom: 1px solid $gray-300;
 
@@ -9,9 +9,9 @@
   }
 
   // Slides
-  .item {
-    padding-top: $jumbotron-padding * 2;
-    padding-bottom: $jumbotron-padding * 3.67;
+  .carousel-item {
+    padding-top: $jumbotron-padding * 3;
+    padding-bottom: $jumbotron-padding * 4.5;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -85,11 +85,11 @@
 }
 
 // Carousel content
-.carousel-content > p {
+.carousel-content p {
   // Mimic .lead
   // Increase distance between text and actions
   margin-bottom: $line-height-computed * 1.25;
-  font-size: $font-size-base * 1.15;
+  font-size: $font-size-base * 1.5;
   font-weight: 300;
   line-height: 1.4;
 
@@ -133,13 +133,20 @@
 }
 
 // Controls navigate left or right
-.carousel-control {
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: transparent;
   z-index: 2;
   border: 0;
+  opacity: 1;
 
-  &.left,
-  &.right {
+  &.carousel-item-left,
+  &.carousel-item-right {
     background-image: none;
+
+    .fa {
+      font-size: $jumbotron-padding * 3.2;
+    }
   }
 
   &:hover {
@@ -158,12 +165,14 @@
   position: static;
   width: auto;
   margin: 0;
-  padding: 7px 0 7px 14px;
+  padding-left: 14px;
 
   li,
   li.active {
+    display: inline-block;
     margin-right: 4px;
     margin-left: 4px;
+    vertical-align: middle;
 
     &:hover {
       border-color: rgba($carousel-caption-color, .8);
@@ -174,7 +183,6 @@
 // Play and pause button
 .carousel-play-controls {
   display: inline-block;
-  bottom: 2px;
   position: relative;
   padding-right: 6px;
 

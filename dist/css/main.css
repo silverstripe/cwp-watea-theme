@@ -14706,7 +14706,7 @@ tfoot th:first-child::before {
 }
 
 .carousel {
-  margin-top: -3.4rem;
+  margin-top: -2.4rem;
   margin-bottom: 4rem;
   border-bottom: 1px solid #dee2e6;
 }
@@ -14715,9 +14715,9 @@ tfoot th:first-child::before {
   position: relative;
 }
 
-.carousel .item {
-  padding-top: 4rem;
-  padding-bottom: 7.34rem;
+.carousel .carousel-item {
+  padding-top: 6rem;
+  padding-bottom: 9rem;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -14725,645 +14725,645 @@ tfoot th:first-child::before {
   color: #fff;
 }
 
-body.theme-carousel-red .carousel .item {
+body.theme-carousel-red .carousel .carousel-item {
   color: #FFF;
 }
 
-body.theme-carousel-dark-red .carousel .item {
+body.theme-carousel-dark-red .carousel .carousel-item {
   color: #FFF;
 }
 
-body.theme-carousel-pink .carousel .item {
+body.theme-carousel-pink .carousel .carousel-item {
   color: #FFF;
 }
 
-body.theme-carousel-purple .carousel .item {
+body.theme-carousel-purple .carousel .carousel-item {
   color: #FFF;
 }
 
-body.theme-carousel-blue .carousel .item {
+body.theme-carousel-blue .carousel .carousel-item {
   color: #FFF;
 }
 
-body.theme-carousel-dark-blue .carousel .item {
+body.theme-carousel-dark-blue .carousel .carousel-item {
   color: #FFF;
 }
 
-body.theme-carousel-default-accent .carousel .item {
+body.theme-carousel-default-accent .carousel .carousel-item {
   color: #FFF;
 }
 
-body.theme-carousel-default-background .carousel .item {
+body.theme-carousel-default-background .carousel .carousel-item {
   color: #FFF;
 }
 
-body.theme-carousel-teal .carousel .item {
+body.theme-carousel-teal .carousel .carousel-item {
   color: #FFF;
 }
 
-body.theme-carousel-green .carousel .item {
+body.theme-carousel-green .carousel .carousel-item {
   color: #FFF;
 }
 
-body.theme-carousel-dark-orange .carousel .item {
+body.theme-carousel-dark-orange .carousel .carousel-item {
   color: #FFF;
 }
 
-body.theme-carousel-dark-ochre .carousel .item {
+body.theme-carousel-dark-ochre .carousel .carousel-item {
   color: #FFF;
 }
 
-body.theme-carousel-black .carousel .item {
+body.theme-carousel-black .carousel .carousel-item {
   color: #FFF;
 }
 
-body.theme-carousel-dark-grey .carousel .item {
+body.theme-carousel-dark-grey .carousel .carousel-item {
   color: #FFF;
 }
 
-body.theme-carousel-light-grey .carousel .item {
+body.theme-carousel-light-grey .carousel .carousel-item {
   color: #555;
 }
 
-body.theme-carousel-white .carousel .item {
+body.theme-carousel-white .carousel .carousel-item {
   color: #555;
 }
 
-.carousel .item a {
+.carousel .carousel-item a {
   color: #fff;
 }
 
-body.theme-carousel-red .carousel .item a {
+body.theme-carousel-red .carousel .carousel-item a {
   color: #FFF;
 }
 
-body.theme-carousel-dark-red .carousel .item a {
+body.theme-carousel-dark-red .carousel .carousel-item a {
   color: #FFF;
 }
 
-body.theme-carousel-pink .carousel .item a {
+body.theme-carousel-pink .carousel .carousel-item a {
   color: #FFF;
 }
 
-body.theme-carousel-purple .carousel .item a {
+body.theme-carousel-purple .carousel .carousel-item a {
   color: #FFF;
 }
 
-body.theme-carousel-blue .carousel .item a {
+body.theme-carousel-blue .carousel .carousel-item a {
   color: #FFF;
 }
 
-body.theme-carousel-dark-blue .carousel .item a {
+body.theme-carousel-dark-blue .carousel .carousel-item a {
   color: #FFF;
 }
 
-body.theme-carousel-default-accent .carousel .item a {
+body.theme-carousel-default-accent .carousel .carousel-item a {
   color: #FFF;
 }
 
-body.theme-carousel-default-background .carousel .item a {
+body.theme-carousel-default-background .carousel .carousel-item a {
   color: #FFF;
 }
 
-body.theme-carousel-teal .carousel .item a {
+body.theme-carousel-teal .carousel .carousel-item a {
   color: #FFF;
 }
 
-body.theme-carousel-green .carousel .item a {
+body.theme-carousel-green .carousel .carousel-item a {
   color: #FFF;
 }
 
-body.theme-carousel-dark-orange .carousel .item a {
+body.theme-carousel-dark-orange .carousel .carousel-item a {
   color: #FFF;
 }
 
-body.theme-carousel-dark-ochre .carousel .item a {
+body.theme-carousel-dark-ochre .carousel .carousel-item a {
   color: #FFF;
 }
 
-body.theme-carousel-black .carousel .item a {
+body.theme-carousel-black .carousel .carousel-item a {
   color: #FFF;
 }
 
-body.theme-carousel-dark-grey .carousel .item a {
+body.theme-carousel-dark-grey .carousel .carousel-item a {
   color: #FFF;
 }
 
-body.theme-carousel-light-grey .carousel .item a {
+body.theme-carousel-light-grey .carousel .carousel-item a {
   color: #555;
 }
 
-body.theme-carousel-white .carousel .item a {
+body.theme-carousel-white .carousel .carousel-item a {
   color: #555;
 }
 
-.carousel .item h1,
-.carousel .item h2,
-.carousel .item h3,
-.carousel .item p {
+.carousel .carousel-item h1,
+.carousel .carousel-item h2,
+.carousel .carousel-item h3,
+.carousel .carousel-item p {
   color: #fff;
 }
 
-body.theme-carousel-red .carousel .item h1, body.theme-carousel-red
-.carousel .item h2, body.theme-carousel-red
-.carousel .item h3, body.theme-carousel-red
-.carousel .item p {
+body.theme-carousel-red .carousel .carousel-item h1, body.theme-carousel-red
+.carousel .carousel-item h2, body.theme-carousel-red
+.carousel .carousel-item h3, body.theme-carousel-red
+.carousel .carousel-item p {
   color: #FFF;
 }
 
-body.theme-carousel-dark-red .carousel .item h1, body.theme-carousel-dark-red
-.carousel .item h2, body.theme-carousel-dark-red
-.carousel .item h3, body.theme-carousel-dark-red
-.carousel .item p {
+body.theme-carousel-dark-red .carousel .carousel-item h1, body.theme-carousel-dark-red
+.carousel .carousel-item h2, body.theme-carousel-dark-red
+.carousel .carousel-item h3, body.theme-carousel-dark-red
+.carousel .carousel-item p {
   color: #FFF;
 }
 
-body.theme-carousel-pink .carousel .item h1, body.theme-carousel-pink
-.carousel .item h2, body.theme-carousel-pink
-.carousel .item h3, body.theme-carousel-pink
-.carousel .item p {
+body.theme-carousel-pink .carousel .carousel-item h1, body.theme-carousel-pink
+.carousel .carousel-item h2, body.theme-carousel-pink
+.carousel .carousel-item h3, body.theme-carousel-pink
+.carousel .carousel-item p {
   color: #FFF;
 }
 
-body.theme-carousel-purple .carousel .item h1, body.theme-carousel-purple
-.carousel .item h2, body.theme-carousel-purple
-.carousel .item h3, body.theme-carousel-purple
-.carousel .item p {
+body.theme-carousel-purple .carousel .carousel-item h1, body.theme-carousel-purple
+.carousel .carousel-item h2, body.theme-carousel-purple
+.carousel .carousel-item h3, body.theme-carousel-purple
+.carousel .carousel-item p {
   color: #FFF;
 }
 
-body.theme-carousel-blue .carousel .item h1, body.theme-carousel-blue
-.carousel .item h2, body.theme-carousel-blue
-.carousel .item h3, body.theme-carousel-blue
-.carousel .item p {
+body.theme-carousel-blue .carousel .carousel-item h1, body.theme-carousel-blue
+.carousel .carousel-item h2, body.theme-carousel-blue
+.carousel .carousel-item h3, body.theme-carousel-blue
+.carousel .carousel-item p {
   color: #FFF;
 }
 
-body.theme-carousel-dark-blue .carousel .item h1, body.theme-carousel-dark-blue
-.carousel .item h2, body.theme-carousel-dark-blue
-.carousel .item h3, body.theme-carousel-dark-blue
-.carousel .item p {
+body.theme-carousel-dark-blue .carousel .carousel-item h1, body.theme-carousel-dark-blue
+.carousel .carousel-item h2, body.theme-carousel-dark-blue
+.carousel .carousel-item h3, body.theme-carousel-dark-blue
+.carousel .carousel-item p {
   color: #FFF;
 }
 
-body.theme-carousel-default-accent .carousel .item h1, body.theme-carousel-default-accent
-.carousel .item h2, body.theme-carousel-default-accent
-.carousel .item h3, body.theme-carousel-default-accent
-.carousel .item p {
+body.theme-carousel-default-accent .carousel .carousel-item h1, body.theme-carousel-default-accent
+.carousel .carousel-item h2, body.theme-carousel-default-accent
+.carousel .carousel-item h3, body.theme-carousel-default-accent
+.carousel .carousel-item p {
   color: #FFF;
 }
 
-body.theme-carousel-default-background .carousel .item h1, body.theme-carousel-default-background
-.carousel .item h2, body.theme-carousel-default-background
-.carousel .item h3, body.theme-carousel-default-background
-.carousel .item p {
+body.theme-carousel-default-background .carousel .carousel-item h1, body.theme-carousel-default-background
+.carousel .carousel-item h2, body.theme-carousel-default-background
+.carousel .carousel-item h3, body.theme-carousel-default-background
+.carousel .carousel-item p {
   color: #FFF;
 }
 
-body.theme-carousel-teal .carousel .item h1, body.theme-carousel-teal
-.carousel .item h2, body.theme-carousel-teal
-.carousel .item h3, body.theme-carousel-teal
-.carousel .item p {
+body.theme-carousel-teal .carousel .carousel-item h1, body.theme-carousel-teal
+.carousel .carousel-item h2, body.theme-carousel-teal
+.carousel .carousel-item h3, body.theme-carousel-teal
+.carousel .carousel-item p {
   color: #FFF;
 }
 
-body.theme-carousel-green .carousel .item h1, body.theme-carousel-green
-.carousel .item h2, body.theme-carousel-green
-.carousel .item h3, body.theme-carousel-green
-.carousel .item p {
+body.theme-carousel-green .carousel .carousel-item h1, body.theme-carousel-green
+.carousel .carousel-item h2, body.theme-carousel-green
+.carousel .carousel-item h3, body.theme-carousel-green
+.carousel .carousel-item p {
   color: #FFF;
 }
 
-body.theme-carousel-dark-orange .carousel .item h1, body.theme-carousel-dark-orange
-.carousel .item h2, body.theme-carousel-dark-orange
-.carousel .item h3, body.theme-carousel-dark-orange
-.carousel .item p {
+body.theme-carousel-dark-orange .carousel .carousel-item h1, body.theme-carousel-dark-orange
+.carousel .carousel-item h2, body.theme-carousel-dark-orange
+.carousel .carousel-item h3, body.theme-carousel-dark-orange
+.carousel .carousel-item p {
   color: #FFF;
 }
 
-body.theme-carousel-dark-ochre .carousel .item h1, body.theme-carousel-dark-ochre
-.carousel .item h2, body.theme-carousel-dark-ochre
-.carousel .item h3, body.theme-carousel-dark-ochre
-.carousel .item p {
+body.theme-carousel-dark-ochre .carousel .carousel-item h1, body.theme-carousel-dark-ochre
+.carousel .carousel-item h2, body.theme-carousel-dark-ochre
+.carousel .carousel-item h3, body.theme-carousel-dark-ochre
+.carousel .carousel-item p {
   color: #FFF;
 }
 
-body.theme-carousel-black .carousel .item h1, body.theme-carousel-black
-.carousel .item h2, body.theme-carousel-black
-.carousel .item h3, body.theme-carousel-black
-.carousel .item p {
+body.theme-carousel-black .carousel .carousel-item h1, body.theme-carousel-black
+.carousel .carousel-item h2, body.theme-carousel-black
+.carousel .carousel-item h3, body.theme-carousel-black
+.carousel .carousel-item p {
   color: #FFF;
 }
 
-body.theme-carousel-dark-grey .carousel .item h1, body.theme-carousel-dark-grey
-.carousel .item h2, body.theme-carousel-dark-grey
-.carousel .item h3, body.theme-carousel-dark-grey
-.carousel .item p {
+body.theme-carousel-dark-grey .carousel .carousel-item h1, body.theme-carousel-dark-grey
+.carousel .carousel-item h2, body.theme-carousel-dark-grey
+.carousel .carousel-item h3, body.theme-carousel-dark-grey
+.carousel .carousel-item p {
   color: #FFF;
 }
 
-body.theme-carousel-light-grey .carousel .item h1, body.theme-carousel-light-grey
-.carousel .item h2, body.theme-carousel-light-grey
-.carousel .item h3, body.theme-carousel-light-grey
-.carousel .item p {
+body.theme-carousel-light-grey .carousel .carousel-item h1, body.theme-carousel-light-grey
+.carousel .carousel-item h2, body.theme-carousel-light-grey
+.carousel .carousel-item h3, body.theme-carousel-light-grey
+.carousel .carousel-item p {
   color: #555;
 }
 
-body.theme-carousel-white .carousel .item h1, body.theme-carousel-white
-.carousel .item h2, body.theme-carousel-white
-.carousel .item h3, body.theme-carousel-white
-.carousel .item p {
+body.theme-carousel-white .carousel .carousel-item h1, body.theme-carousel-white
+.carousel .carousel-item h2, body.theme-carousel-white
+.carousel .carousel-item h3, body.theme-carousel-white
+.carousel .carousel-item p {
   color: #555;
 }
 
-.carousel .item.carousel-has-image[class] h1,
-.carousel .item.carousel-has-image[class] h2,
-.carousel .item.carousel-has-image[class] h3,
-.carousel .item.carousel-has-image[class] p,
-.carousel .item.carousel-has-image[class] a {
+.carousel .carousel-item.carousel-has-image[class] h1,
+.carousel .carousel-item.carousel-has-image[class] h2,
+.carousel .carousel-item.carousel-has-image[class] h3,
+.carousel .carousel-item.carousel-has-image[class] p,
+.carousel .carousel-item.carousel-has-image[class] a {
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-.carousel .item.carousel-has-image[class] .btn {
+.carousel .carousel-item.carousel-has-image[class] .btn {
   text-shadow: none;
 }
 
-.carousel .item.carousel-has-image[class] .btn-link {
+.carousel .carousel-item.carousel-has-image[class] .btn-link {
   color: #fff;
   border-color: #fff;
 }
 
-.carousel .item.carousel-has-image[class] .btn-link:hover {
+.carousel .carousel-item.carousel-has-image[class] .btn-link:hover {
   border-color: #cccccc;
 }
 
-.carousel .item .btn {
+.carousel .carousel-item .btn {
   margin-left: 1.08rem;
   margin-right: 1.08rem;
   padding: 1.2rem 1.68rem;
 }
 
-body.theme-accent-red .carousel .item .btn {
+body.theme-accent-red .carousel .carousel-item .btn {
   color: #FFF;
 }
 
-body.theme-accent-dark-red .carousel .item .btn {
+body.theme-accent-dark-red .carousel .carousel-item .btn {
   color: #FFF;
 }
 
-body.theme-accent-pink .carousel .item .btn {
+body.theme-accent-pink .carousel .carousel-item .btn {
   color: #FFF;
 }
 
-body.theme-accent-purple .carousel .item .btn {
+body.theme-accent-purple .carousel .carousel-item .btn {
   color: #FFF;
 }
 
-body.theme-accent-blue .carousel .item .btn {
+body.theme-accent-blue .carousel .carousel-item .btn {
   color: #FFF;
 }
 
-body.theme-accent-dark-blue .carousel .item .btn {
+body.theme-accent-dark-blue .carousel .carousel-item .btn {
   color: #FFF;
 }
 
-body.theme-accent-default-accent .carousel .item .btn {
+body.theme-accent-default-accent .carousel .carousel-item .btn {
   color: #FFF;
 }
 
-body.theme-accent-default-background .carousel .item .btn {
+body.theme-accent-default-background .carousel .carousel-item .btn {
   color: #FFF;
 }
 
-body.theme-accent-teal .carousel .item .btn {
+body.theme-accent-teal .carousel .carousel-item .btn {
   color: #FFF;
 }
 
-body.theme-accent-green .carousel .item .btn {
+body.theme-accent-green .carousel .carousel-item .btn {
   color: #FFF;
 }
 
-body.theme-accent-dark-orange .carousel .item .btn {
+body.theme-accent-dark-orange .carousel .carousel-item .btn {
   color: #FFF;
 }
 
-body.theme-accent-dark-ochre .carousel .item .btn {
+body.theme-accent-dark-ochre .carousel .carousel-item .btn {
   color: #FFF;
 }
 
-body.theme-accent-black .carousel .item .btn {
+body.theme-accent-black .carousel .carousel-item .btn {
   color: #FFF;
 }
 
-body.theme-accent-dark-grey .carousel .item .btn {
+body.theme-accent-dark-grey .carousel .carousel-item .btn {
   color: #FFF;
 }
 
-body.theme-accent-light-grey .carousel .item .btn {
+body.theme-accent-light-grey .carousel .carousel-item .btn {
   color: #555;
 }
 
-body.theme-accent-white .carousel .item .btn {
+body.theme-accent-white .carousel .carousel-item .btn {
   color: #555;
 }
 
 @media (max-width: 767.98px) {
-  .carousel .item .btn {
+  .carousel .carousel-item .btn {
     margin-bottom: 1rem;
   }
 }
 
-.carousel .item .btn-link {
+.carousel .carousel-item .btn-link {
   position: relative;
   border: 1px solid #39b4ee;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-body.theme-accent-red .carousel .item .btn-link {
+body.theme-accent-red .carousel .carousel-item .btn-link {
   border-color: #E51016;
 }
 
-body.theme-accent-dark-red .carousel .item .btn-link {
+body.theme-accent-dark-red .carousel .carousel-item .btn-link {
   border-color: #AD161E;
 }
 
-body.theme-accent-pink .carousel .item .btn-link {
+body.theme-accent-pink .carousel .carousel-item .btn-link {
   border-color: #B32A95;
 }
 
-body.theme-accent-purple .carousel .item .btn-link {
+body.theme-accent-purple .carousel .carousel-item .btn-link {
   border-color: #6239C8;
 }
 
-body.theme-accent-blue .carousel .item .btn-link {
+body.theme-accent-blue .carousel .carousel-item .btn-link {
   border-color: #1F6BFE;
 }
 
-body.theme-accent-dark-blue .carousel .item .btn-link {
+body.theme-accent-dark-blue .carousel .carousel-item .btn-link {
   border-color: #123581;
 }
 
-body.theme-accent-default-accent .carousel .item .btn-link {
+body.theme-accent-default-accent .carousel .carousel-item .btn-link {
   border-color: #0F7EB2;
 }
 
-body.theme-accent-default-background .carousel .item .btn-link {
+body.theme-accent-default-background .carousel .carousel-item .btn-link {
   border-color: #343a40;
 }
 
-body.theme-accent-teal .carousel .item .btn-link {
+body.theme-accent-teal .carousel .carousel-item .btn-link {
   border-color: #00837A;
 }
 
-body.theme-accent-green .carousel .item .btn-link {
+body.theme-accent-green .carousel .carousel-item .btn-link {
   border-color: #298436;
 }
 
-body.theme-accent-dark-orange .carousel .item .btn-link {
+body.theme-accent-dark-orange .carousel .carousel-item .btn-link {
   border-color: #D34300;
 }
 
-body.theme-accent-dark-ochre .carousel .item .btn-link {
+body.theme-accent-dark-ochre .carousel .carousel-item .btn-link {
   border-color: #947200;
 }
 
-body.theme-accent-black .carousel .item .btn-link {
+body.theme-accent-black .carousel .carousel-item .btn-link {
   border-color: #111;
 }
 
-body.theme-accent-dark-grey .carousel .item .btn-link {
+body.theme-accent-dark-grey .carousel .carousel-item .btn-link {
   border-color: #343a40;
 }
 
-body.theme-accent-light-grey .carousel .item .btn-link {
+body.theme-accent-light-grey .carousel .carousel-item .btn-link {
   border-color: #dee2e6;
 }
 
-body.theme-accent-white .carousel .item .btn-link {
+body.theme-accent-white .carousel .carousel-item .btn-link {
   border-color: #FFF;
 }
 
-body.theme-carousel-red .carousel .item .btn-link {
+body.theme-carousel-red .carousel .carousel-item .btn-link {
   color: #FFF;
 }
 
-body.theme-carousel-dark-red .carousel .item .btn-link {
+body.theme-carousel-dark-red .carousel .carousel-item .btn-link {
   color: #FFF;
 }
 
-body.theme-carousel-pink .carousel .item .btn-link {
+body.theme-carousel-pink .carousel .carousel-item .btn-link {
   color: #FFF;
 }
 
-body.theme-carousel-purple .carousel .item .btn-link {
+body.theme-carousel-purple .carousel .carousel-item .btn-link {
   color: #FFF;
 }
 
-body.theme-carousel-blue .carousel .item .btn-link {
+body.theme-carousel-blue .carousel .carousel-item .btn-link {
   color: #FFF;
 }
 
-body.theme-carousel-dark-blue .carousel .item .btn-link {
+body.theme-carousel-dark-blue .carousel .carousel-item .btn-link {
   color: #FFF;
 }
 
-body.theme-carousel-default-accent .carousel .item .btn-link {
+body.theme-carousel-default-accent .carousel .carousel-item .btn-link {
   color: #FFF;
 }
 
-body.theme-carousel-default-background .carousel .item .btn-link {
+body.theme-carousel-default-background .carousel .carousel-item .btn-link {
   color: #FFF;
 }
 
-body.theme-carousel-teal .carousel .item .btn-link {
+body.theme-carousel-teal .carousel .carousel-item .btn-link {
   color: #FFF;
 }
 
-body.theme-carousel-green .carousel .item .btn-link {
+body.theme-carousel-green .carousel .carousel-item .btn-link {
   color: #FFF;
 }
 
-body.theme-carousel-dark-orange .carousel .item .btn-link {
+body.theme-carousel-dark-orange .carousel .carousel-item .btn-link {
   color: #FFF;
 }
 
-body.theme-carousel-dark-ochre .carousel .item .btn-link {
+body.theme-carousel-dark-ochre .carousel .carousel-item .btn-link {
   color: #FFF;
 }
 
-body.theme-carousel-black .carousel .item .btn-link {
+body.theme-carousel-black .carousel .carousel-item .btn-link {
   color: #FFF;
 }
 
-body.theme-carousel-dark-grey .carousel .item .btn-link {
+body.theme-carousel-dark-grey .carousel .carousel-item .btn-link {
   color: #FFF;
 }
 
-body.theme-carousel-light-grey .carousel .item .btn-link {
+body.theme-carousel-light-grey .carousel .carousel-item .btn-link {
   color: #555;
 }
 
-body.theme-carousel-white .carousel .item .btn-link {
+body.theme-carousel-white .carousel .carousel-item .btn-link {
   color: #555;
 }
 
-.carousel .item .btn-link:hover {
+.carousel .carousel-item .btn-link:hover {
   border-color: #97d8f6;
 }
 
-body.theme-accent-red .carousel .item .btn-link:hover {
+body.theme-accent-red .carousel .carousel-item .btn-link:hover {
   border-color: #f4676b;
 }
 
-body.theme-accent-dark-red .carousel .item .btn-link:hover {
+body.theme-accent-dark-red .carousel .carousel-item .btn-link:hover {
   border-color: #e7424b;
 }
 
-body.theme-accent-pink .carousel .item .btn-link:hover {
+body.theme-accent-pink .carousel .carousel-item .btn-link:hover {
   border-color: #db68c2;
 }
 
-body.theme-accent-purple .carousel .item .btn-link:hover {
+body.theme-accent-purple .carousel .carousel-item .btn-link:hover {
   border-color: #a189de;
 }
 
-body.theme-accent-blue .carousel .item .btn-link:hover {
+body.theme-accent-blue .carousel .carousel-item .btn-link:hover {
   border-color: #85aefe;
 }
 
-body.theme-accent-dark-blue .carousel .item .btn-link:hover {
+body.theme-accent-dark-blue .carousel .carousel-item .btn-link:hover {
   border-color: #1e5adb;
 }
 
-body.theme-accent-default-accent .carousel .item .btn-link:hover {
+body.theme-accent-default-accent .carousel .carousel-item .btn-link:hover {
   border-color: #39b4ee;
 }
 
-body.theme-accent-default-background .carousel .item .btn-link:hover {
+body.theme-accent-default-background .carousel .carousel-item .btn-link:hover {
   border-color: #626d78;
 }
 
-body.theme-accent-teal .carousel .item .btn-link:hover {
+body.theme-accent-teal .carousel .carousel-item .btn-link:hover {
   border-color: #00e9d9;
 }
 
-body.theme-accent-green .carousel .item .btn-link:hover {
+body.theme-accent-green .carousel .carousel-item .btn-link:hover {
   border-color: #4cc75d;
 }
 
-body.theme-accent-dark-orange .carousel .item .btn-link:hover {
+body.theme-accent-dark-orange .carousel .carousel-item .btn-link:hover {
   border-color: #ff793a;
 }
 
-body.theme-accent-dark-ochre .carousel .item .btn-link:hover {
+body.theme-accent-dark-ochre .carousel .carousel-item .btn-link:hover {
   border-color: #fac100;
 }
 
-body.theme-accent-black .carousel .item .btn-link:hover {
+body.theme-accent-black .carousel .carousel-item .btn-link:hover {
   border-color: #444444;
 }
 
-body.theme-accent-dark-grey .carousel .item .btn-link:hover {
+body.theme-accent-dark-grey .carousel .carousel-item .btn-link:hover {
   border-color: #626d78;
 }
 
-body.theme-accent-light-grey .carousel .item .btn-link:hover {
+body.theme-accent-light-grey .carousel .carousel-item .btn-link:hover {
   border-color: white;
 }
 
-body.theme-accent-white .carousel .item .btn-link:hover {
+body.theme-accent-white .carousel .carousel-item .btn-link:hover {
   border-color: white;
 }
 
-.carousel-content > p {
+.carousel-content p {
   margin-bottom: 3rem;
-  font-size: 1.84rem;
+  font-size: 2.4rem;
   font-weight: 300;
   line-height: 1.4;
 }
 
 @media (max-width: 767.98px) {
-  .carousel-content > p {
+  .carousel-content p {
     font-size: 2.4rem;
   }
 }
 
-.carousel-content > p a {
+.carousel-content p a {
   border-bottom: 1px solid #39b4ee;
   text-decoration: none;
 }
 
-body.theme-accent-red .carousel-content > p a {
+body.theme-accent-red .carousel-content p a {
   border-bottom-color: #E51016;
 }
 
-body.theme-accent-dark-red .carousel-content > p a {
+body.theme-accent-dark-red .carousel-content p a {
   border-bottom-color: #AD161E;
 }
 
-body.theme-accent-pink .carousel-content > p a {
+body.theme-accent-pink .carousel-content p a {
   border-bottom-color: #B32A95;
 }
 
-body.theme-accent-purple .carousel-content > p a {
+body.theme-accent-purple .carousel-content p a {
   border-bottom-color: #6239C8;
 }
 
-body.theme-accent-blue .carousel-content > p a {
+body.theme-accent-blue .carousel-content p a {
   border-bottom-color: #1F6BFE;
 }
 
-body.theme-accent-dark-blue .carousel-content > p a {
+body.theme-accent-dark-blue .carousel-content p a {
   border-bottom-color: #123581;
 }
 
-body.theme-accent-default-accent .carousel-content > p a {
+body.theme-accent-default-accent .carousel-content p a {
   border-bottom-color: #0F7EB2;
 }
 
-body.theme-accent-default-background .carousel-content > p a {
+body.theme-accent-default-background .carousel-content p a {
   border-bottom-color: #343a40;
 }
 
-body.theme-accent-teal .carousel-content > p a {
+body.theme-accent-teal .carousel-content p a {
   border-bottom-color: #00837A;
 }
 
-body.theme-accent-green .carousel-content > p a {
+body.theme-accent-green .carousel-content p a {
   border-bottom-color: #298436;
 }
 
-body.theme-accent-dark-orange .carousel-content > p a {
+body.theme-accent-dark-orange .carousel-content p a {
   border-bottom-color: #D34300;
 }
 
-body.theme-accent-dark-ochre .carousel-content > p a {
+body.theme-accent-dark-ochre .carousel-content p a {
   border-bottom-color: #947200;
 }
 
-body.theme-accent-black .carousel-content > p a {
+body.theme-accent-black .carousel-content p a {
   border-bottom-color: #111;
 }
 
-body.theme-accent-dark-grey .carousel-content > p a {
+body.theme-accent-dark-grey .carousel-content p a {
   border-bottom-color: #343a40;
 }
 
-body.theme-accent-light-grey .carousel-content > p a {
+body.theme-accent-light-grey .carousel-content p a {
   border-bottom-color: #dee2e6;
 }
 
-body.theme-accent-white .carousel-content > p a {
+body.theme-accent-white .carousel-content p a {
   border-bottom-color: #FFF;
 }
 
-div.carousel-has-image .carousel-content > p a {
+div.carousel-has-image .carousel-content p a {
   border-color: #fff;
 }
 
-.carousel-content > p a:hover {
+.carousel-content p a:hover {
   border-bottom: 0;
 }
 
@@ -15382,20 +15382,33 @@ div.carousel-has-image .carousel-content > p a {
   background: rgba(0, 0, 0, 0.2);
 }
 
-.carousel-control {
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: transparent;
   z-index: 2;
   border: 0;
+  opacity: 1;
 }
 
-.carousel-control.left, .carousel-control.right {
+.carousel-control-prev.carousel-item-left, .carousel-control-prev.carousel-item-right,
+.carousel-control-next.carousel-item-left,
+.carousel-control-next.carousel-item-right {
   background-image: none;
 }
 
-.carousel-control:hover {
+.carousel-control-prev.carousel-item-left .fa, .carousel-control-prev.carousel-item-right .fa,
+.carousel-control-next.carousel-item-left .fa,
+.carousel-control-next.carousel-item-right .fa {
+  font-size: 6.4rem;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
   background-color: rgba(85, 85, 85, 0.2);
 }
 
-.carousel-control:focus {
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
@@ -15406,13 +15419,15 @@ div.carousel-has-image .carousel-content > p a {
   position: static;
   width: auto;
   margin: 0;
-  padding: 7px 0 7px 14px;
+  padding-left: 14px;
 }
 
 .carousel-indicators li,
 .carousel-indicators li.active {
+  display: inline-block;
   margin-right: 4px;
   margin-left: 4px;
+  vertical-align: middle;
 }
 
 .carousel-indicators li:hover,
@@ -15422,7 +15437,6 @@ div.carousel-has-image .carousel-content > p a {
 
 .carousel-play-controls {
   display: inline-block;
-  bottom: 2px;
   position: relative;
   padding-right: 6px;
 }
@@ -18356,9 +18370,6 @@ body.theme-accent-white .main-nav .dropdown.current .navbar-touch-caret:hover, b
   }
   body.theme-accent-white .main-nav .nav-item .dropdown-menu > .active > a {
     background-color: #FFF;
-  }
-  .main-nav .navbar-nav > .nav-item {
-    margin-bottom: -4px;
   }
   .main-nav .dropdown {
     padding-right: 2.2rem;
