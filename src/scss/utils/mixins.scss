@@ -2,9 +2,8 @@
 
 // Styles for header, search and language selector
 @mixin form-controls-style() {
-  background: $theme-bg-lighter;
+  background: transparent;
   border: 0;
-  border-radius: 0;
   color: $label-color;
   @include theme-contrast-color("header", "color");
 }
