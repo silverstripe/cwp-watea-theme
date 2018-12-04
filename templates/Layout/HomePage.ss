@@ -2,7 +2,7 @@
 <div class="home-page">
     <div class="container">
         <div class="row">
-            <section class="col-lg-7">
+            <section class="col-lg-8">
                 <h1>$Title</h1>
                 <% if $ElementalArea %>
                     <%-- Support for content blocks, if enabled --%>
