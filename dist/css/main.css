@@ -13849,6 +13849,10 @@ body > header .open > a:focus {
   margin: 3rem 0;
 }
 
+.element-holder:first-child {
+  margin-top: 0;
+}
+
 .element-holder:last-child {
   margin-bottom: 0;
 }
