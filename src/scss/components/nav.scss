@@ -10,8 +10,12 @@
   }
 }
 
-.navbar-default {
+.navbar-dark {
   @include theme-color("nav", "background-color");
+
+  .navbar-nav .nav-link:hover {
+    @include theme-contrast-color("nav", "color");
+  }
 
   .btn-link {
     @include theme-contrast-color("nav", "color");
@@ -19,8 +23,8 @@
 }
 
 // Override BS default behavior
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover {
+.navbar-dark .navbar-nav > .open > a,
+.navbar-dark .navbar-nav > .open > a:hover {
   background-color: transparent;
   @include theme-contrast-color("nav", "color");
 }
