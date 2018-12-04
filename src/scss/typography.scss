@@ -147,7 +147,7 @@ h2,
 
 .lead {
   font-weight: 300;
-  font-size: 22px;
+  font-size: $font-size-lg;
   margin-bottom: 33px;
 
   @include media-breakpoint-down(sm) {

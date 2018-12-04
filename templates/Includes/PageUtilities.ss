@@ -1,7 +1,7 @@
 <% if $ShowPageUtilities %>
     <div class="container">
         <div class="row">
-            <div class="col-lg-10 offset-lg-1">
+            <div class="col-lg-12">
                 <div class="page-utilities clearfix">
                     <% if $LastEdited %>
                         <% include LastModified %>
