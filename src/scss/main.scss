@@ -75,6 +75,7 @@
 
 // Watea theme mixins
 @import "./utils/mixins";
+@import "./utils/elemental";
 
 // Watea theme styles
 @import "./typography";
@@ -84,3 +85,4 @@
 @import "./components/header";
 @import "./components/nav";
 @import "./components/pages";
+@import "./components/content-block";
