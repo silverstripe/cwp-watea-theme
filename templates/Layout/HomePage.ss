@@ -21,7 +21,7 @@
                 <% end_if %>
             </section>
 
-            <aside class="col-lg-3 offset-lg-1">
+            <aside class="col-lg-3 offset-lg-1 sidebar">
                 <% include NewsSummary %>
             </aside>
         </div>
