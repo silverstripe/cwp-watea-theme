@@ -1,6 +1,6 @@
-<article class="listing__item" data-highlight="$Query.ATT">
+<article class="listing__item listing__item--search-result" data-highlight="$Query.ATT">
     <header>
-        <h1 class="h3">
+        <h1 class="h4">
             <a href="$Link" title="$Title">$Title</a>
         </h1>
     </header>
