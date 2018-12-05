@@ -18746,10 +18746,26 @@ body.theme-accent-white .main .pagination .active a {
   margin-top: 3px;
 }
 
+.listing__item {
+  margin-bottom: 3rem;
+}
+
+.listing__item--news-events {
+  margin-bottom: 4.2rem;
+}
+
+.listing__item:first-child .h3 {
+  margin-top: 1.8rem;
+}
+
 .content-block__title {
   font-size: 1.8rem;
 }
 
 .element-holder {
   margin: 0 0 3rem;
+}
+
+.pagination {
+  margin: 2.4rem 0;
 }
