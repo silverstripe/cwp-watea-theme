@@ -18753,14 +18753,35 @@ body.theme-accent-white .main .pagination .active a {
 }
 
 .page-sidebar-header {
-  border-bottom: 1px solid #555;
-  padding-bottom: 8px;
-  margin-top: 4px;
+  border-bottom: 1px solid #adb5bd;
+  padding-bottom: 1.5rem;
+  margin-top: 0.4rem;
+  margin-bottom: 1.8rem;
 }
 
 .page-sidebar-nav a {
   padding: 0.4rem 0;
   display: block;
+}
+
+.news-item {
+  margin-bottom: 2.5rem;
+}
+
+.news-item:last-child {
+  margin-bottom: 0;
+}
+
+.news-item__heading {
+  margin-bottom: 0.2rem;
+}
+
+.news-item .meta-info {
+  margin-bottom: 0.5rem;
+}
+
+.news-item .summary {
+  font-size: 1.4rem;
 }
 
 .jumbotron {
