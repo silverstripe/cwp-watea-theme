@@ -13845,18 +13845,6 @@ body > header .open > a:focus {
   color: #fff;
 }
 
-.element-holder {
-  margin: 3rem 0;
-}
-
-.element-holder:first-child {
-  margin-top: 0;
-}
-
-.element-holder:last-child {
-  margin-bottom: 0;
-}
-
 body.theme-font-nunito {
   font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -18760,4 +18748,8 @@ body.theme-accent-white .main .pagination .active a {
 
 .content-block__title {
   font-size: 1.8rem;
+}
+
+.element-holder {
+  margin: 0 0 3rem;
 }
