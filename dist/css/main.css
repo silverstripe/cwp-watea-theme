@@ -18753,9 +18753,9 @@ body.theme-accent-white .main .pagination .active a {
 }
 
 .page-sidebar-header {
-  border-bottom: 1px solid #bbbbbb;
-  padding-bottom: 15px;
-  margin-top: 4px;
+  border-bottom: 1px solid #adb5bd;
+  padding-bottom: 1.5rem;
+  margin-top: 0.4rem;
   margin-bottom: 1.8rem;
 }
 
@@ -18765,7 +18765,7 @@ body.theme-accent-white .main .pagination .active a {
 }
 
 .news-item {
-  margin-bottom: 25px;
+  margin-bottom: 2.5rem;
 }
 
 .news-item:last-child {
@@ -18773,11 +18773,11 @@ body.theme-accent-white .main .pagination .active a {
 }
 
 .news-item__heading {
-  margin-bottom: 2px;
+  margin-bottom: 0.2rem;
 }
 
 .news-item .meta-info {
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
 }
 
 .news-item .summary {
