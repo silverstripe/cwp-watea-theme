@@ -1,6 +1,6 @@
-<article class="result" data-highlight="$Query.ATT">
+<article class="listing__item" data-highlight="$Query.ATT">
     <header>
-        <h1 class="h3 search-result__title<% if $First %>__first<% end_if %>">
+        <h1 class="h3">
             <a href="$Link" title="$Title">$Title</a>
         </h1>
     </header>
