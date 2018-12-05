@@ -14710,7 +14710,7 @@ tfoot th:first-child::before {
 }
 
 .carousel {
-  margin-top: -2.4rem;
+  margin-top: -2rem;
   margin-bottom: 4rem;
   border-bottom: 1px solid #dee2e6;
 }
@@ -17066,6 +17066,8 @@ body.theme-nav-white .navbar-dark .navbar-nav > .open > a, body.theme-nav-white
 
 .main-nav .navbar {
   z-index: 1030;
+  border-bottom: 0;
+  padding-top: 0;
 }
 
 body.theme-nav-white .main-nav .navbar,
@@ -17685,71 +17687,77 @@ body.theme-accent-white .main-nav .dropdown.current .navbar-touch-caret:hover, b
   background-color: #FFF;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   .main-nav .navbar-nav {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
   }
   .main-nav .navbar-collapse {
     -webkit-box-shadow: none;
             box-shadow: none;
-  }
-  .main-nav .navbar-form {
-    margin-top: 0;
     border-top: 1px solid white;
     border-color: white;
+    margin-left: -20px;
+    margin-right: -20px;
   }
-  body.theme-header-red .main-nav .navbar-form {
+  .main-nav .navbar .form-inline {
+    margin-top: 0;
+    padding: 1rem 2rem;
+  }
+  body.theme-header-red .main-nav .navbar .form-inline {
     background-color: #E51016;
   }
-  body.theme-header-dark-red .main-nav .navbar-form {
+  body.theme-header-dark-red .main-nav .navbar .form-inline {
     background-color: #AD161E;
   }
-  body.theme-header-pink .main-nav .navbar-form {
+  body.theme-header-pink .main-nav .navbar .form-inline {
     background-color: #B32A95;
   }
-  body.theme-header-purple .main-nav .navbar-form {
+  body.theme-header-purple .main-nav .navbar .form-inline {
     background-color: #6239C8;
   }
-  body.theme-header-blue .main-nav .navbar-form {
+  body.theme-header-blue .main-nav .navbar .form-inline {
     background-color: #1F6BFE;
   }
-  body.theme-header-dark-blue .main-nav .navbar-form {
+  body.theme-header-dark-blue .main-nav .navbar .form-inline {
     background-color: #123581;
   }
-  body.theme-header-default-accent .main-nav .navbar-form {
+  body.theme-header-default-accent .main-nav .navbar .form-inline {
     background-color: #214350;
   }
-  body.theme-header-default-background .main-nav .navbar-form {
+  body.theme-header-default-background .main-nav .navbar .form-inline {
     background-color: #001F2C;
   }
-  body.theme-header-teal .main-nav .navbar-form {
+  body.theme-header-teal .main-nav .navbar .form-inline {
     background-color: #00837A;
   }
-  body.theme-header-green .main-nav .navbar-form {
+  body.theme-header-green .main-nav .navbar .form-inline {
     background-color: #298436;
   }
-  body.theme-header-dark-orange .main-nav .navbar-form {
+  body.theme-header-dark-orange .main-nav .navbar .form-inline {
     background-color: #D34300;
   }
-  body.theme-header-dark-ochre .main-nav .navbar-form {
+  body.theme-header-dark-ochre .main-nav .navbar .form-inline {
     background-color: #947200;
   }
-  body.theme-header-black .main-nav .navbar-form {
+  body.theme-header-black .main-nav .navbar .form-inline {
     background-color: #111;
   }
-  body.theme-header-dark-grey .main-nav .navbar-form {
+  body.theme-header-dark-grey .main-nav .navbar .form-inline {
     background-color: #343a40;
   }
-  body.theme-header-light-grey .main-nav .navbar-form {
+  body.theme-header-light-grey .main-nav .navbar .form-inline {
     background-color: #dee2e6;
   }
-  body.theme-header-white .main-nav .navbar-form {
+  body.theme-header-white .main-nav .navbar .form-inline {
     background-color: #FFF;
   }
-  body.theme-header-white .main-nav .navbar-form,
-  body.theme-header-light-grey .main-nav .navbar-form {
+  body.theme-header-white .main-nav .navbar .form-inline,
+  body.theme-header-light-grey .main-nav .navbar .form-inline {
     border-color: #dee2e6;
+  }
+  .main-nav .nav-item .nav-link {
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .main-nav .nav-item > a,
   .main-nav .dropdown-menu a {
@@ -17909,8 +17917,16 @@ body.theme-accent-white .main-nav .dropdown.current .navbar-touch-caret:hover, b
   body.theme-nav-white .main-nav .dropdown .dropdown-menu {
     background-color: #FFF;
   }
+  .main-nav .open .dropdown-menu > li {
+    padding: 0;
+  }
+  .main-nav .open .dropdown-menu > li:hover {
+    background-color: transparent;
+  }
   .main-nav .open .dropdown-menu > li > a {
     padding: 10px 15px 10px 35px;
+    color: #fff;
+    display: block;
   }
   body.theme-nav-red .main-nav .open .dropdown-menu > li > a {
     color: #FFF;
@@ -18008,84 +18024,84 @@ body.theme-accent-white .main-nav .dropdown.current .navbar-touch-caret:hover, b
   body.theme-nav-white .main-nav .open .dropdown-menu > li > a:hover {
     color: #555;
   }
-  body.theme-accent-red .main-nav .open .dropdown-menu .active > a, body.theme-accent-red
-  .main-nav .open .dropdown-menu .active > a:hover, body.theme-accent-red
-  .main-nav .open .dropdown-menu .active > a:focus {
+  body.theme-accent-red .main-nav .open .dropdown-menu .active > li > a, body.theme-accent-red
+  .main-nav .open .dropdown-menu .active > li > a:hover, body.theme-accent-red
+  .main-nav .open .dropdown-menu .active > li > a:focus {
     background-color: #E51016;
   }
-  body.theme-accent-dark-red .main-nav .open .dropdown-menu .active > a, body.theme-accent-dark-red
-  .main-nav .open .dropdown-menu .active > a:hover, body.theme-accent-dark-red
-  .main-nav .open .dropdown-menu .active > a:focus {
+  body.theme-accent-dark-red .main-nav .open .dropdown-menu .active > li > a, body.theme-accent-dark-red
+  .main-nav .open .dropdown-menu .active > li > a:hover, body.theme-accent-dark-red
+  .main-nav .open .dropdown-menu .active > li > a:focus {
     background-color: #AD161E;
   }
-  body.theme-accent-pink .main-nav .open .dropdown-menu .active > a, body.theme-accent-pink
-  .main-nav .open .dropdown-menu .active > a:hover, body.theme-accent-pink
-  .main-nav .open .dropdown-menu .active > a:focus {
+  body.theme-accent-pink .main-nav .open .dropdown-menu .active > li > a, body.theme-accent-pink
+  .main-nav .open .dropdown-menu .active > li > a:hover, body.theme-accent-pink
+  .main-nav .open .dropdown-menu .active > li > a:focus {
     background-color: #B32A95;
   }
-  body.theme-accent-purple .main-nav .open .dropdown-menu .active > a, body.theme-accent-purple
-  .main-nav .open .dropdown-menu .active > a:hover, body.theme-accent-purple
-  .main-nav .open .dropdown-menu .active > a:focus {
+  body.theme-accent-purple .main-nav .open .dropdown-menu .active > li > a, body.theme-accent-purple
+  .main-nav .open .dropdown-menu .active > li > a:hover, body.theme-accent-purple
+  .main-nav .open .dropdown-menu .active > li > a:focus {
     background-color: #6239C8;
   }
-  body.theme-accent-blue .main-nav .open .dropdown-menu .active > a, body.theme-accent-blue
-  .main-nav .open .dropdown-menu .active > a:hover, body.theme-accent-blue
-  .main-nav .open .dropdown-menu .active > a:focus {
+  body.theme-accent-blue .main-nav .open .dropdown-menu .active > li > a, body.theme-accent-blue
+  .main-nav .open .dropdown-menu .active > li > a:hover, body.theme-accent-blue
+  .main-nav .open .dropdown-menu .active > li > a:focus {
     background-color: #1F6BFE;
   }
-  body.theme-accent-dark-blue .main-nav .open .dropdown-menu .active > a, body.theme-accent-dark-blue
-  .main-nav .open .dropdown-menu .active > a:hover, body.theme-accent-dark-blue
-  .main-nav .open .dropdown-menu .active > a:focus {
+  body.theme-accent-dark-blue .main-nav .open .dropdown-menu .active > li > a, body.theme-accent-dark-blue
+  .main-nav .open .dropdown-menu .active > li > a:hover, body.theme-accent-dark-blue
+  .main-nav .open .dropdown-menu .active > li > a:focus {
     background-color: #123581;
   }
-  body.theme-accent-default-accent .main-nav .open .dropdown-menu .active > a, body.theme-accent-default-accent
-  .main-nav .open .dropdown-menu .active > a:hover, body.theme-accent-default-accent
-  .main-nav .open .dropdown-menu .active > a:focus {
+  body.theme-accent-default-accent .main-nav .open .dropdown-menu .active > li > a, body.theme-accent-default-accent
+  .main-nav .open .dropdown-menu .active > li > a:hover, body.theme-accent-default-accent
+  .main-nav .open .dropdown-menu .active > li > a:focus {
     background-color: #214350;
   }
-  body.theme-accent-default-background .main-nav .open .dropdown-menu .active > a, body.theme-accent-default-background
-  .main-nav .open .dropdown-menu .active > a:hover, body.theme-accent-default-background
-  .main-nav .open .dropdown-menu .active > a:focus {
+  body.theme-accent-default-background .main-nav .open .dropdown-menu .active > li > a, body.theme-accent-default-background
+  .main-nav .open .dropdown-menu .active > li > a:hover, body.theme-accent-default-background
+  .main-nav .open .dropdown-menu .active > li > a:focus {
     background-color: #001F2C;
   }
-  body.theme-accent-teal .main-nav .open .dropdown-menu .active > a, body.theme-accent-teal
-  .main-nav .open .dropdown-menu .active > a:hover, body.theme-accent-teal
-  .main-nav .open .dropdown-menu .active > a:focus {
+  body.theme-accent-teal .main-nav .open .dropdown-menu .active > li > a, body.theme-accent-teal
+  .main-nav .open .dropdown-menu .active > li > a:hover, body.theme-accent-teal
+  .main-nav .open .dropdown-menu .active > li > a:focus {
     background-color: #00837A;
   }
-  body.theme-accent-green .main-nav .open .dropdown-menu .active > a, body.theme-accent-green
-  .main-nav .open .dropdown-menu .active > a:hover, body.theme-accent-green
-  .main-nav .open .dropdown-menu .active > a:focus {
+  body.theme-accent-green .main-nav .open .dropdown-menu .active > li > a, body.theme-accent-green
+  .main-nav .open .dropdown-menu .active > li > a:hover, body.theme-accent-green
+  .main-nav .open .dropdown-menu .active > li > a:focus {
     background-color: #298436;
   }
-  body.theme-accent-dark-orange .main-nav .open .dropdown-menu .active > a, body.theme-accent-dark-orange
-  .main-nav .open .dropdown-menu .active > a:hover, body.theme-accent-dark-orange
-  .main-nav .open .dropdown-menu .active > a:focus {
+  body.theme-accent-dark-orange .main-nav .open .dropdown-menu .active > li > a, body.theme-accent-dark-orange
+  .main-nav .open .dropdown-menu .active > li > a:hover, body.theme-accent-dark-orange
+  .main-nav .open .dropdown-menu .active > li > a:focus {
     background-color: #D34300;
   }
-  body.theme-accent-dark-ochre .main-nav .open .dropdown-menu .active > a, body.theme-accent-dark-ochre
-  .main-nav .open .dropdown-menu .active > a:hover, body.theme-accent-dark-ochre
-  .main-nav .open .dropdown-menu .active > a:focus {
+  body.theme-accent-dark-ochre .main-nav .open .dropdown-menu .active > li > a, body.theme-accent-dark-ochre
+  .main-nav .open .dropdown-menu .active > li > a:hover, body.theme-accent-dark-ochre
+  .main-nav .open .dropdown-menu .active > li > a:focus {
     background-color: #947200;
   }
-  body.theme-accent-black .main-nav .open .dropdown-menu .active > a, body.theme-accent-black
-  .main-nav .open .dropdown-menu .active > a:hover, body.theme-accent-black
-  .main-nav .open .dropdown-menu .active > a:focus {
+  body.theme-accent-black .main-nav .open .dropdown-menu .active > li > a, body.theme-accent-black
+  .main-nav .open .dropdown-menu .active > li > a:hover, body.theme-accent-black
+  .main-nav .open .dropdown-menu .active > li > a:focus {
     background-color: #111;
   }
-  body.theme-accent-dark-grey .main-nav .open .dropdown-menu .active > a, body.theme-accent-dark-grey
-  .main-nav .open .dropdown-menu .active > a:hover, body.theme-accent-dark-grey
-  .main-nav .open .dropdown-menu .active > a:focus {
+  body.theme-accent-dark-grey .main-nav .open .dropdown-menu .active > li > a, body.theme-accent-dark-grey
+  .main-nav .open .dropdown-menu .active > li > a:hover, body.theme-accent-dark-grey
+  .main-nav .open .dropdown-menu .active > li > a:focus {
     background-color: #343a40;
   }
-  body.theme-accent-light-grey .main-nav .open .dropdown-menu .active > a, body.theme-accent-light-grey
-  .main-nav .open .dropdown-menu .active > a:hover, body.theme-accent-light-grey
-  .main-nav .open .dropdown-menu .active > a:focus {
+  body.theme-accent-light-grey .main-nav .open .dropdown-menu .active > li > a, body.theme-accent-light-grey
+  .main-nav .open .dropdown-menu .active > li > a:hover, body.theme-accent-light-grey
+  .main-nav .open .dropdown-menu .active > li > a:focus {
     background-color: #dee2e6;
   }
-  body.theme-accent-white .main-nav .open .dropdown-menu .active > a, body.theme-accent-white
-  .main-nav .open .dropdown-menu .active > a:hover, body.theme-accent-white
-  .main-nav .open .dropdown-menu .active > a:focus {
+  body.theme-accent-white .main-nav .open .dropdown-menu .active > li > a, body.theme-accent-white
+  .main-nav .open .dropdown-menu .active > li > a:hover, body.theme-accent-white
+  .main-nav .open .dropdown-menu .active > li > a:focus {
     background-color: #FFF;
   }
 }
@@ -18262,6 +18278,8 @@ body.theme-accent-white .main-nav .dropdown.current .navbar-touch-caret:hover, b
   .main-nav .nav-item > .dropdown-menu {
     margin-top: -5px;
     margin-left: -1px;
+    border-radius: 0;
+    min-width: 160px;
   }
   .main-nav .nav-item .dropdown-menu > li > a {
     color: #555;
@@ -18316,6 +18334,9 @@ body.theme-accent-white .main-nav .dropdown.current .navbar-touch-caret:hover, b
   }
   body.theme-accent-white .main-nav .nav-item .dropdown-menu > .active > a {
     background-color: #FFF;
+  }
+  .main-nav .navbar-nav > .nav-item {
+    margin-bottom: -4px;
   }
   .main-nav .dropdown {
     padding-right: 2.2rem;
