@@ -18735,16 +18735,160 @@ body.theme-accent-white .main .pagination .active a {
   margin-top: 3px;
 }
 
+.page-searchform {
+  margin-bottom: 4rem;
+}
+
+.search-results__heading {
+  margin-bottom: 2.1rem;
+  margin-top: 4rem;
+}
+
+.search-results__summary .lead {
+  font-size: 2.2rem;
+}
+
+.search__btn {
+  border: 1px solid;
+  border-left: none;
+  color: #fff;
+  font-weight: 700;
+}
+
+body.theme-accent-red .search__btn {
+  background-color: #E51016;
+}
+
+body.theme-accent-dark-red .search__btn {
+  background-color: #AD161E;
+}
+
+body.theme-accent-pink .search__btn {
+  background-color: #B32A95;
+}
+
+body.theme-accent-purple .search__btn {
+  background-color: #6239C8;
+}
+
+body.theme-accent-blue .search__btn {
+  background-color: #1F6BFE;
+}
+
+body.theme-accent-dark-blue .search__btn {
+  background-color: #123581;
+}
+
+body.theme-accent-default-accent .search__btn {
+  background-color: #214350;
+}
+
+body.theme-accent-default-background .search__btn {
+  background-color: #001F2C;
+}
+
+body.theme-accent-teal .search__btn {
+  background-color: #00837A;
+}
+
+body.theme-accent-green .search__btn {
+  background-color: #298436;
+}
+
+body.theme-accent-dark-orange .search__btn {
+  background-color: #D34300;
+}
+
+body.theme-accent-dark-ochre .search__btn {
+  background-color: #947200;
+}
+
+body.theme-accent-black .search__btn {
+  background-color: #111;
+}
+
+body.theme-accent-dark-grey .search__btn {
+  background-color: #343a40;
+}
+
+body.theme-accent-light-grey .search__btn {
+  background-color: #dee2e6;
+}
+
+body.theme-accent-white .search__btn {
+  background-color: #FFF;
+}
+
+body.theme-accent-red .search__btn {
+  border-color: #E51016;
+}
+
+body.theme-accent-dark-red .search__btn {
+  border-color: #AD161E;
+}
+
+body.theme-accent-pink .search__btn {
+  border-color: #B32A95;
+}
+
+body.theme-accent-purple .search__btn {
+  border-color: #6239C8;
+}
+
+body.theme-accent-blue .search__btn {
+  border-color: #1F6BFE;
+}
+
+body.theme-accent-dark-blue .search__btn {
+  border-color: #123581;
+}
+
+body.theme-accent-default-accent .search__btn {
+  border-color: #214350;
+}
+
+body.theme-accent-default-background .search__btn {
+  border-color: #001F2C;
+}
+
+body.theme-accent-teal .search__btn {
+  border-color: #00837A;
+}
+
+body.theme-accent-green .search__btn {
+  border-color: #298436;
+}
+
+body.theme-accent-dark-orange .search__btn {
+  border-color: #D34300;
+}
+
+body.theme-accent-dark-ochre .search__btn {
+  border-color: #947200;
+}
+
+body.theme-accent-black .search__btn {
+  border-color: #111;
+}
+
+body.theme-accent-dark-grey .search__btn {
+  border-color: #343a40;
+}
+
+body.theme-accent-light-grey .search__btn {
+  border-color: #dee2e6;
+}
+
+body.theme-accent-white .search__btn {
+  border-color: #FFF;
+}
+
 .listing__item {
   margin-bottom: 3rem;
 }
 
 .listing__item--news-events {
   margin-bottom: 4.2rem;
-}
-
-.listing__item:first-child .h3 {
-  margin-top: 1.8rem;
 }
 
 .listing__title {

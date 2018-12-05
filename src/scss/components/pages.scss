@@ -157,7 +157,35 @@
   margin-top: 3px;
 }
 
-// Generic listing classes
+// Search styling
+
+.page-searchform {
+  margin-bottom: 4rem;
+}
+
+.search-results {
+  &__heading {
+    margin-bottom: 2.1rem;
+    margin-top: 4rem;
+  }
+
+  &__summary {
+    .lead {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+.search__btn {
+  @include theme-color("accent", "background-color");
+  @include  theme-color("accent", "border-color");
+  border: 1px solid;
+  border-left: none;
+  color: $white;
+  font-weight: $font-weight-bold;
+}
+
+// Generic listing classes with modifiers
 .listing {
   &__item {
     margin-bottom: 3rem;
@@ -166,8 +194,7 @@
       margin-bottom: 4.2rem;
     }
 
-    &:first-child .h3 {
-      margin-top: 1.8rem;
+    &--search-result {
     }
   }
 
