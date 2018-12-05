@@ -84,9 +84,9 @@
 
 // Page sidebar
 .page-sidebar-header {
-  border-bottom: 1px solid $sidebar-bottom-border-color;
-  padding-bottom: 15px;
-  margin-top: 4px;
+  border-bottom: 1px solid $gray-500;
+  padding-bottom: 1.5rem;
+  margin-top: 0.4rem;
   margin-bottom: 1.8rem;
 }
 
@@ -97,18 +97,18 @@
 
 // News sidebar
 .news-item {
-  margin-bottom: 25px;
+  margin-bottom: 2.5rem;
 
   &:last-child {
     margin-bottom: 0;
   }
 
   &__heading {
-    margin-bottom: 2px;
+    margin-bottom: 0.2rem;
   }
 
   .meta-info {
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
   }
 
   .summary {
