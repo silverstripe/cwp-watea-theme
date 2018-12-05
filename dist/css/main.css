@@ -13728,7 +13728,7 @@ body > header .open > a:focus {
 
 .news-events-item-figure {
   margin-left: 18px;
-  margin-top: 24px;
+  margin-top: 0;
   margin-bottom: 18px;
 }
 
@@ -13738,6 +13738,10 @@ body > header .open > a:focus {
 
 .news-events-article {
   margin-bottom: 4.2rem;
+}
+
+.news-events-tags a.badge {
+  text-decoration: none;
 }
 
 .page-header {
@@ -16442,8 +16446,6 @@ body.theme-header-white .site-header-search .form-control:-ms-input-placeholder 
   background: transparent;
   border: 0;
   color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  margin-left: 1px;
 }
 
 body.theme-header-red .site-header-search .form-control, body.theme-header-red
@@ -18559,15 +18561,6 @@ body.theme-accent-white .nav-pills > li.active > a, body.theme-accent-white .nav
 
 .main a {
   text-decoration: underline;
-}
-
-.main h1 a,
-.main h2 a,
-.main h3 a,
-.main h4 a,
-.main h5 a,
-.main h6 a {
-  text-decoration: none;
 }
 
 .main .pagination a,
