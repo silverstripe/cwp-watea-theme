@@ -148,10 +148,17 @@
   margin-top: 3px;
 }
 
-.search-result__title {
-  margin-top: $pagination-padding-x-lg;
+// Generic listing classes
+.listing {
+  &__item {
+    margin-bottom: 3rem;
 
-  &--first {
-    margin-top: 0;
+    &--news-events {
+      margin-bottom: 4.2rem;
+    }
+
+    &:first-child .h3 {
+      margin-top: 1.8rem;
+    }
   }
 }

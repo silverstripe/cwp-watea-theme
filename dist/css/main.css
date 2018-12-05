@@ -18746,12 +18746,16 @@ body.theme-accent-white .main .pagination .active a {
   margin-top: 3px;
 }
 
-.search-result__title {
-  margin-top: 2.4rem;
+.listing__item {
+  margin-bottom: 3rem;
 }
 
-.search-result__title--first {
-  margin-top: 0;
+.listing__item--news-events {
+  margin-bottom: 4.2rem;
+}
+
+.listing__item:first-child .h3 {
+  margin-top: 1.8rem;
 }
 
 .content-block__title {
