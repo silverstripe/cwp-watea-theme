@@ -14558,7 +14558,7 @@ h2,
 
 .lead {
   font-weight: 300;
-  font-size: 22px;
+  font-size: 1.8rem;
   margin-bottom: 33px;
 }
 
@@ -18744,4 +18744,12 @@ body.theme-accent-white .main .pagination .active a {
 
 .h5.news-events-archive-year {
   margin-top: 3px;
+}
+
+.content-block__title {
+  font-size: 1.8rem;
+}
+
+.element-holder {
+  margin: 0 0 3rem;
 }
