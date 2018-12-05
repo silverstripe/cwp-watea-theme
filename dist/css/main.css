@@ -18561,6 +18561,15 @@ body.theme-accent-white .nav-pills > li.active > a, body.theme-accent-white .nav
   text-decoration: underline;
 }
 
+.main h1 a,
+.main h2 a,
+.main h3 a,
+.main h4 a,
+.main h5 a,
+.main h6 a {
+  text-decoration: none;
+}
+
 .main .pagination a,
 .main .label,
 .main .btn,
@@ -18729,8 +18738,8 @@ body.theme-accent-white .main .pagination .active a {
 
 .page-header {
   padding-bottom: 0.6rem;
-  margin: 2.4rem 0 3.6rem;
-  border-bottom: 2px solid #343a40;
+  margin: 2.4rem 0 1.6rem;
+  border-bottom: none;
 }
 
 .page-header h1,
@@ -18840,6 +18849,10 @@ body.theme-accent-white .main .pagination .active a {
 
 .listing__item:first-child .h3 {
   margin-top: 1.8rem;
+}
+
+.listing__title {
+  margin-bottom: 0.6rem;
 }
 
 .content-block__title {
