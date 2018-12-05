@@ -79,14 +79,36 @@
 
 // Page sidebar
 .page-sidebar-header {
-  border-bottom: 1px solid $gray-600;
-  padding-bottom: 8px;
+  border-bottom: 1px solid $sidebar-bottom-border-color;
+  padding-bottom: 15px;
   margin-top: 4px;
+  margin-bottom: 1.8rem;
 }
 
 .page-sidebar-nav a {
   padding: $navbar-padding-y / 2 0;
   display: block;
+}
+
+// News sidebar
+.news-item {
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__heading {
+    margin-bottom: 2px;
+  }
+
+  .meta-info {
+    margin-bottom: 5px;
+  }
+
+  .summary {
+    font-size: $font-size-sm;
+  }
 }
 
 // Homepage Jumbotron
