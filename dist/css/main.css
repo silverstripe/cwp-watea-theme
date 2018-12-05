@@ -17761,8 +17761,8 @@ body.theme-accent-white .main-nav .dropdown.current .navbar-touch-caret:hover, b
     border-color: #dee2e6;
   }
   .main-nav .nav-item .nav-link {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .main-nav .nav-item > a,
   .main-nav .dropdown-menu a {
