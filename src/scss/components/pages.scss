@@ -89,10 +89,9 @@
 
 // Page sidebar
 .page-sidebar-header {
-  border-bottom: 1px solid $gray-500;
-  padding-bottom: 1.5rem;
+  border-bottom: 1px solid $gray-600;
+  padding-bottom: 0.8rem;
   margin-top: 0.4rem;
-  margin-bottom: 1.8rem;
 }
 
 .page-sidebar-nav a {
@@ -141,7 +140,7 @@
 
 // Page features & quicklinks, used on homepage
 .page-showcase {
-  background-color: lighten($gray-200, 50%);
+  background-color: lighten($gray-200, 0.5);
   border-top: 1px solid darken($gray-300, 10%);
   padding-bottom: $line-height-computed;
   padding-top: $line-height-computed * 2.5;
@@ -169,7 +168,7 @@
 }
 
 .h5.news-events-archive-year {
-  margin-top: 3px;
+  margin-top: 0.3rem;
 }
 
 // Search styling
@@ -186,6 +185,11 @@
 
   &__summary {
     margin-bottom: 3.3rem;
+
+    .text-muted {
+      margin-bottom: 0;
+      margin-top: 0.9rem;
+    }
   }
 
   &__message {
