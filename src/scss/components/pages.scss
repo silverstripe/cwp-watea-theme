@@ -19,11 +19,8 @@
     @include theme-color("accent", "border-color");
 
     &:hover {
-      border-color: lighten($primary, 40%);
-      background-color: lighten($primary, 40%);
       color: $white;
-      @include theme-color("accent", "background-color", "darken", 5%);
-      @include theme-color("accent", "border-color", "darken", 5%);
+      cursor: default;
     }
   }
 }
