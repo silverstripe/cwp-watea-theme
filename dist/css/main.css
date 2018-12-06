@@ -16907,6 +16907,14 @@ body.theme-nav-white .navbar-dark {
   background-color: #FFF;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+  color: #ced4da;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+
 body.theme-nav-red .navbar-dark .navbar-nav .nav-link:hover {
   color: #FFF;
 }

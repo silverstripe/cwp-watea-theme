@@ -13,8 +13,13 @@
 .navbar-dark {
   @include theme-color("nav", "background-color");
 
-  .navbar-nav .nav-link:hover {
-    @include theme-contrast-color("nav", "color");
+  .navbar-nav .nav-link {
+    color: $gray-400;
+
+    &:hover {
+      color: $white;
+      @include theme-contrast-color("nav", "color");
+    }
   }
 
   .btn-link {
