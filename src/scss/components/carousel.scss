@@ -203,7 +203,7 @@
 // Overlay carousel mask
 .carousel-mask {
   position: absolute;
-  background: $jumbotron-bg;
+  background: $theme-bg;
   @include theme-color("carousel", "background-color");
   top: 0;
   left: 0;
