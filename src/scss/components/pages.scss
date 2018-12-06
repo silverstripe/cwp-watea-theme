@@ -17,6 +17,14 @@
   .pagination .active a {
     @include theme-color("accent", "background-color");
     @include theme-color("accent", "border-color");
+
+    &:hover {
+      border-color: lighten($primary, 40%);
+      background-color: lighten($primary, 40%);
+      color: $white;
+      @include theme-color("accent", "background-color", "darken", 5%);
+      @include theme-color("accent", "border-color", "darken", 5%);
+    }
   }
 }
 
@@ -126,7 +134,7 @@
 
 // Page features & quicklinks, used on homepage
 .page-showcase {
-  background-color: lighten($gray-200, 0.5);
+  background-color: lighten($gray-200, 50%);
   border-top: 1px solid darken($gray-300, 10%);
   padding-bottom: $line-height-computed;
   padding-top: $line-height-computed * 2.5;
@@ -160,7 +168,7 @@
 // Search styling
 
 .page-searchform {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .search-results {
@@ -170,19 +178,31 @@
   }
 
   &__summary {
-    .lead {
-      font-size: 2.2rem;
-    }
+    margin-bottom: 3.3rem;
+  }
+
+  &__message {
+    font-size: 2.2rem;
+    margin: 0;
   }
 }
 
 .search__btn {
+  background-color: darken($blue, 35%);
+  border: 1px solid darken($blue, 35%);
   @include theme-color("accent", "background-color");
   @include  theme-color("accent", "border-color");
-  border: 1px solid;
   border-left: none;
   color: $white;
   font-weight: $font-weight-bold;
+
+  &:hover {
+    border-color: lighten($primary, 40%);
+    background-color: lighten($primary, 40%);
+    color: $white;
+    @include theme-color("accent", "background-color", "darken", 5%);
+    @include theme-color("accent", "border-color", "darken", 5%);
+  }
 }
 
 // Generic listing classes with modifiers
@@ -195,6 +215,19 @@
     }
 
     &--search-result {
+      margin-bottom: 3.7rem;
+
+      .h4 {
+        margin-bottom: 0.5rem;
+      }
+
+      .breadcrumb {
+        margin-bottom: 0.7rem;
+
+        &-item {
+          font-size: font-size-sm;
+        }
+      }
     }
   }
 
