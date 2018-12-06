@@ -54,8 +54,8 @@
 
 .page-header {
   padding-bottom: 0.6rem;
-  margin: $line-height-computed 0 ($line-height-computed * 1.5);
-  border-bottom: 2px solid $page-header-border-color;
+  margin: $line-height-computed 0 1.6rem;
+  border-bottom: none;
 
 
   h1,
@@ -177,5 +177,9 @@
     &:first-child .h3 {
       margin-top: 1.8rem;
     }
+  }
+
+  &__title {
+    margin-bottom: 0.6rem;
   }
 }

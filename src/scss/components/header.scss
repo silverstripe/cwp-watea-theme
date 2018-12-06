@@ -74,8 +74,6 @@ body > header {
   button[type="submit"] {
     height: $navbar-height;
     @include form-controls-style();
-    border: 1px solid rgba($input-bg, .4);
-    margin-left: 1px;
 
     // Special case for white/light-grey theme
     body.theme-header-white &,
