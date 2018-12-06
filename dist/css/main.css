@@ -18668,10 +18668,9 @@ body.theme-accent-white .main .pagination .active a {
 }
 
 .page-sidebar-header {
-  border-bottom: 1px solid #adb5bd;
-  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #555;
+  padding-bottom: 0.8rem;
   margin-top: 0.4rem;
-  margin-bottom: 1.8rem;
 }
 
 .page-sidebar-nav a {
@@ -18711,7 +18710,7 @@ body.theme-accent-white .main .pagination .active a {
 }
 
 .page-showcase {
-  background-color: white;
+  background-color: #eaedf0;
   border-top: 1px solid #c1c9d0;
   padding-bottom: 2.4rem;
   padding-top: 6rem;
@@ -18737,7 +18736,7 @@ body.theme-accent-white .main .pagination .active a {
 }
 
 .h5.news-events-archive-year {
-  margin-top: 3px;
+  margin-top: 0.3rem;
 }
 
 .page-searchform {
@@ -18751,6 +18750,11 @@ body.theme-accent-white .main .pagination .active a {
 
 .search-results__summary {
   margin-bottom: 3.3rem;
+}
+
+.search-results__summary .text-muted {
+  margin-bottom: 0;
+  margin-top: 0.9rem;
 }
 
 .search-results__message {
