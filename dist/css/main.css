@@ -16907,68 +16907,12 @@ body.theme-nav-white .navbar-dark {
   background-color: #FFF;
 }
 
-body.theme-nav-red .navbar-dark .navbar-nav .nav-link:hover {
-  color: #FFF;
+.navbar-dark .navbar-nav .nav-link {
+  color: #ced4da;
 }
 
-body.theme-nav-dark-red .navbar-dark .navbar-nav .nav-link:hover {
-  color: #FFF;
-}
-
-body.theme-nav-pink .navbar-dark .navbar-nav .nav-link:hover {
-  color: #FFF;
-}
-
-body.theme-nav-purple .navbar-dark .navbar-nav .nav-link:hover {
-  color: #FFF;
-}
-
-body.theme-nav-blue .navbar-dark .navbar-nav .nav-link:hover {
-  color: #FFF;
-}
-
-body.theme-nav-dark-blue .navbar-dark .navbar-nav .nav-link:hover {
-  color: #FFF;
-}
-
-body.theme-nav-default-accent .navbar-dark .navbar-nav .nav-link:hover {
-  color: #FFF;
-}
-
-body.theme-nav-default-background .navbar-dark .navbar-nav .nav-link:hover {
-  color: #FFF;
-}
-
-body.theme-nav-teal .navbar-dark .navbar-nav .nav-link:hover {
-  color: #FFF;
-}
-
-body.theme-nav-green .navbar-dark .navbar-nav .nav-link:hover {
-  color: #FFF;
-}
-
-body.theme-nav-dark-orange .navbar-dark .navbar-nav .nav-link:hover {
-  color: #FFF;
-}
-
-body.theme-nav-dark-ochre .navbar-dark .navbar-nav .nav-link:hover {
-  color: #FFF;
-}
-
-body.theme-nav-black .navbar-dark .navbar-nav .nav-link:hover {
-  color: #FFF;
-}
-
-body.theme-nav-dark-grey .navbar-dark .navbar-nav .nav-link:hover {
-  color: #FFF;
-}
-
-body.theme-nav-light-grey .navbar-dark .navbar-nav .nav-link:hover {
-  color: #555;
-}
-
-body.theme-nav-white .navbar-dark .navbar-nav .nav-link:hover {
-  color: #555;
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #fff;
 }
 
 body.theme-nav-red .navbar-dark .btn-link {
@@ -17129,70 +17073,6 @@ body.theme-nav-light-grey .main-nav .navbar {
   border-bottom: 1px solid #dee2e6;
 }
 
-body.theme-nav-red .main-nav .navbar-nav > li > a {
-  color: #FFF;
-}
-
-body.theme-nav-dark-red .main-nav .navbar-nav > li > a {
-  color: #FFF;
-}
-
-body.theme-nav-pink .main-nav .navbar-nav > li > a {
-  color: #FFF;
-}
-
-body.theme-nav-purple .main-nav .navbar-nav > li > a {
-  color: #FFF;
-}
-
-body.theme-nav-blue .main-nav .navbar-nav > li > a {
-  color: #FFF;
-}
-
-body.theme-nav-dark-blue .main-nav .navbar-nav > li > a {
-  color: #FFF;
-}
-
-body.theme-nav-default-accent .main-nav .navbar-nav > li > a {
-  color: #FFF;
-}
-
-body.theme-nav-default-background .main-nav .navbar-nav > li > a {
-  color: #FFF;
-}
-
-body.theme-nav-teal .main-nav .navbar-nav > li > a {
-  color: #FFF;
-}
-
-body.theme-nav-green .main-nav .navbar-nav > li > a {
-  color: #FFF;
-}
-
-body.theme-nav-dark-orange .main-nav .navbar-nav > li > a {
-  color: #FFF;
-}
-
-body.theme-nav-dark-ochre .main-nav .navbar-nav > li > a {
-  color: #FFF;
-}
-
-body.theme-nav-black .main-nav .navbar-nav > li > a {
-  color: #FFF;
-}
-
-body.theme-nav-dark-grey .main-nav .navbar-nav > li > a {
-  color: #FFF;
-}
-
-body.theme-nav-light-grey .main-nav .navbar-nav > li > a {
-  color: #555;
-}
-
-body.theme-nav-white .main-nav .navbar-nav > li > a {
-  color: #555;
-}
-
 .main-nav .nav-item.current > a {
   background-color: #0F7EB2;
 }
@@ -17327,6 +17207,7 @@ body.theme-accent-white .main-nav .nav-item.current > a {
 
 .main-nav .nav-item.current > a:focus, .main-nav .nav-item.current > a:hover {
   background-color: #0F7EB2;
+  color: #fff;
 }
 
 body.theme-accent-red .main-nav .nav-item.current > a:focus, body.theme-accent-red .main-nav .nav-item.current > a:hover {
