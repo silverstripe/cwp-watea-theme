@@ -104,8 +104,8 @@
       box-shadow: none;
       border-top: 1px solid $navbar-dark-color;
       border-color: $navbar-dark-color;
-      margin-left: -20px;
-      margin-right: -20px;
+      margin-left: -($grid-gutter-width / 2);
+      margin-right: -($grid-gutter-width / 2);
     }
 
     .navbar {
@@ -123,8 +123,8 @@
     }
 
     .nav-item .nav-link {
-      padding-left: 15px;
-      padding-right: 15px;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
 
     // Add hover border to left side
@@ -169,7 +169,6 @@
     }
 
     .open .dropdown-menu {
-
       > li {
         padding: 0;
 
