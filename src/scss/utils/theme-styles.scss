@@ -155,13 +155,13 @@ $theme-fonts: map-merge($default-theme-fonts, $custom-theme-fonts) !default;
 // @param {string} $property ["color"] - You can specify a different
 // CSS property to use when calling the mixin.
 
-@mixin theme-contrast-color($area, $property: "color") {
+@mixin theme-contrast-color($area, $property: "color", $white: #FFF) {
   @each $name, $color in $theme-colors {
     body.theme-#{$area}-#{$name} & {
       @if (index($light-colors, $name) != null) {
         #{$property}: $body-color;
       } @else {
-        #{$property}: #FFF;
+        #{$property}: $white;
       }
     }
   }
