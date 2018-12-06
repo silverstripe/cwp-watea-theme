@@ -6769,11 +6769,11 @@ body.theme-link-dark-blue a {
 }
 
 body.theme-link-default-accent a {
-  color: #0F7EB2;
+  color: #214350;
 }
 
 body.theme-link-default-background a {
-  color: #343a40;
+  color: #001F2C;
 }
 
 body.theme-link-teal a {
@@ -6838,11 +6838,11 @@ body.theme-accent-dark-blue .btn-default {
 }
 
 body.theme-accent-default-accent .btn-default {
-  border-color: #0F7EB2;
+  border-color: #214350;
 }
 
 body.theme-accent-default-background .btn-default {
-  border-color: #343a40;
+  border-color: #001F2C;
 }
 
 body.theme-accent-teal .btn-default {
@@ -6902,11 +6902,11 @@ body.theme-accent-dark-blue .btn-default {
 }
 
 body.theme-accent-default-accent .btn-default {
-  color: #0F7EB2;
+  color: #214350;
 }
 
 body.theme-accent-default-background .btn-default {
-  color: #343a40;
+  color: #001F2C;
 }
 
 body.theme-accent-teal .btn-default {
@@ -6966,11 +6966,11 @@ body.theme-accent-dark-blue .btn-default:hover, body.theme-accent-dark-blue .btn
 }
 
 body.theme-accent-default-accent .btn-default:hover, body.theme-accent-default-accent .btn-default:focus {
-  border-color: #0b5d83;
+  border-color: #12252c;
 }
 
 body.theme-accent-default-background .btn-default:hover, body.theme-accent-default-background .btn-default:focus {
-  border-color: #1d2124;
+  border-color: black;
 }
 
 body.theme-accent-teal .btn-default:hover, body.theme-accent-teal .btn-default:focus {
@@ -7030,11 +7030,11 @@ body.theme-accent-dark-blue .btn-primary {
 }
 
 body.theme-accent-default-accent .btn-primary {
-  background-color: #0F7EB2;
+  background-color: #214350;
 }
 
 body.theme-accent-default-background .btn-primary {
-  background-color: #343a40;
+  background-color: #001F2C;
 }
 
 body.theme-accent-teal .btn-primary {
@@ -7094,11 +7094,11 @@ body.theme-accent-dark-blue .btn-primary {
 }
 
 body.theme-accent-default-accent .btn-primary {
-  border-color: #0F7EB2;
+  border-color: #214350;
 }
 
 body.theme-accent-default-background .btn-primary {
-  border-color: #343a40;
+  border-color: #001F2C;
 }
 
 body.theme-accent-teal .btn-primary {
@@ -7222,11 +7222,11 @@ body.theme-accent-dark-blue .btn-primary:hover, body.theme-accent-dark-blue .btn
 }
 
 body.theme-accent-default-accent .btn-primary:hover, body.theme-accent-default-accent .btn-primary:focus {
-  background-color: #0b5d83;
+  background-color: #12252c;
 }
 
 body.theme-accent-default-background .btn-primary:hover, body.theme-accent-default-background .btn-primary:focus {
-  background-color: #1d2124;
+  background-color: black;
 }
 
 body.theme-accent-teal .btn-primary:hover, body.theme-accent-teal .btn-primary:focus {
@@ -7286,11 +7286,11 @@ body.theme-accent-dark-blue .btn-primary:hover, body.theme-accent-dark-blue .btn
 }
 
 body.theme-accent-default-accent .btn-primary:hover, body.theme-accent-default-accent .btn-primary:focus {
-  border-color: #0b5d83;
+  border-color: #12252c;
 }
 
 body.theme-accent-default-background .btn-primary:hover, body.theme-accent-default-background .btn-primary:focus {
-  border-color: #1d2124;
+  border-color: black;
 }
 
 body.theme-accent-teal .btn-primary:hover, body.theme-accent-teal .btn-primary:focus {
@@ -7497,11 +7497,11 @@ body.theme-accent-dark-blue blockquote {
 }
 
 body.theme-accent-default-accent blockquote {
-  border-color: #0F7EB2;
+  border-color: #214350;
 }
 
 body.theme-accent-default-background blockquote {
-  border-color: #343a40;
+  border-color: #001F2C;
 }
 
 body.theme-accent-teal blockquote {
