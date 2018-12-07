@@ -3,7 +3,7 @@
 // the starter theme to pull in bootstrap dependency.
 
 // Load Bootstrap functions as these are required for variables.
-@import "../../themes/starter/node_modules/bootstrap/scss/functions";
+@import "../../../starter/node_modules/bootstrap/scss/functions";
 
 // Watea theme specific variables and overrides
 @import "./variables";
@@ -12,65 +12,65 @@
 @import "./variables";
 
 // Third-party libraries
-@import "../../themes/starter/node_modules/font-awesome/scss/font-awesome";
+@import "../../../starter/node_modules/font-awesome/scss/font-awesome";
 
 // Bootstrap scss files - functions imported above for variables
-@import "../../themes/starter/node_modules/bootstrap/scss/variables";
-@import "../../themes/starter/node_modules/bootstrap/scss/mixins";
-@import "../../themes/starter/node_modules/bootstrap/scss/root";
-@import "../../themes/starter/node_modules/bootstrap/scss/reboot";
-@import "../../themes/starter/node_modules/bootstrap/scss/type";
-@import "../../themes/starter/node_modules/bootstrap/scss/images";
-@import "../../themes/starter/node_modules/bootstrap/scss/code";
-@import "../../themes/starter/node_modules/bootstrap/scss/grid";
-@import "../../themes/starter/node_modules/bootstrap/scss/tables";
-@import "../../themes/starter/node_modules/bootstrap/scss/forms";
-@import "../../themes/starter/node_modules/bootstrap/scss/buttons";
-@import "../../themes/starter/node_modules/bootstrap/scss/transitions";
-@import "../../themes/starter/node_modules/bootstrap/scss/dropdown";
-@import "../../themes/starter/node_modules/bootstrap/scss/button-group";
-@import "../../themes/starter/node_modules/bootstrap/scss/input-group";
-@import "../../themes/starter/node_modules/bootstrap/scss/custom-forms";
-@import "../../themes/starter/node_modules/bootstrap/scss/nav";
-@import "../../themes/starter/node_modules/bootstrap/scss/navbar";
-@import "../../themes/starter/node_modules/bootstrap/scss/card";
-@import "../../themes/starter/node_modules/bootstrap/scss/breadcrumb";
-@import "../../themes/starter/node_modules/bootstrap/scss/pagination";
-@import "../../themes/starter/node_modules/bootstrap/scss/badge";
-@import "../../themes/starter/node_modules/bootstrap/scss/jumbotron";
-@import "../../themes/starter/node_modules/bootstrap/scss/alert";
-@import "../../themes/starter/node_modules/bootstrap/scss/progress";
-@import "../../themes/starter/node_modules/bootstrap/scss/media";
-@import "../../themes/starter/node_modules/bootstrap/scss/list-group";
-@import "../../themes/starter/node_modules/bootstrap/scss/close";
-@import "../../themes/starter/node_modules/bootstrap/scss/modal";
-@import "../../themes/starter/node_modules/bootstrap/scss/tooltip";
-@import "../../themes/starter/node_modules/bootstrap/scss/popover";
-@import "../../themes/starter/node_modules/bootstrap/scss/carousel";
-@import "../../themes/starter/node_modules/bootstrap/scss/utilities";
-@import "../../themes/starter/node_modules/bootstrap/scss/print";
+@import "../../../starter/node_modules/bootstrap/scss/variables";
+@import "../../../starter/node_modules/bootstrap/scss/mixins";
+@import "../../../starter/node_modules/bootstrap/scss/root";
+@import "../../../starter/node_modules/bootstrap/scss/reboot";
+@import "../../../starter/node_modules/bootstrap/scss/type";
+@import "../../../starter/node_modules/bootstrap/scss/images";
+@import "../../../starter/node_modules/bootstrap/scss/code";
+@import "../../../starter/node_modules/bootstrap/scss/grid";
+@import "../../../starter/node_modules/bootstrap/scss/tables";
+@import "../../../starter/node_modules/bootstrap/scss/forms";
+@import "../../../starter/node_modules/bootstrap/scss/buttons";
+@import "../../../starter/node_modules/bootstrap/scss/transitions";
+@import "../../../starter/node_modules/bootstrap/scss/dropdown";
+@import "../../../starter/node_modules/bootstrap/scss/button-group";
+@import "../../../starter/node_modules/bootstrap/scss/input-group";
+@import "../../../starter/node_modules/bootstrap/scss/custom-forms";
+@import "../../../starter/node_modules/bootstrap/scss/nav";
+@import "../../../starter/node_modules/bootstrap/scss/navbar";
+@import "../../../starter/node_modules/bootstrap/scss/card";
+@import "../../../starter/node_modules/bootstrap/scss/breadcrumb";
+@import "../../../starter/node_modules/bootstrap/scss/pagination";
+@import "../../../starter/node_modules/bootstrap/scss/badge";
+@import "../../../starter/node_modules/bootstrap/scss/jumbotron";
+@import "../../../starter/node_modules/bootstrap/scss/alert";
+@import "../../../starter/node_modules/bootstrap/scss/progress";
+@import "../../../starter/node_modules/bootstrap/scss/media";
+@import "../../../starter/node_modules/bootstrap/scss/list-group";
+@import "../../../starter/node_modules/bootstrap/scss/close";
+@import "../../../starter/node_modules/bootstrap/scss/modal";
+@import "../../../starter/node_modules/bootstrap/scss/tooltip";
+@import "../../../starter/node_modules/bootstrap/scss/popover";
+@import "../../../starter/node_modules/bootstrap/scss/carousel";
+@import "../../../starter/node_modules/bootstrap/scss/utilities";
+@import "../../../starter/node_modules/bootstrap/scss/print";
 
 // Starter theme Mixins
-@import "../../themes/starter/src/scss/utils/mixins";
+@import "../../../starter/src/scss/utils/mixins";
 
 // Starter theme  Helpers
-@import "../../themes/starter/src/scss/utils/helpers";
+@import "../../../starter/src/scss/utils/helpers";
 
 // Starter theme components
-@import "../../themes/starter/src/scss/print";
-@import "../../themes/starter/src/scss/typography";
-@import "../../themes/starter/src/scss/components/blocks";
-@import "../../themes/starter/src/scss/components/blog";
-@import "../../themes/starter/src/scss/components/comments";
-@import "../../themes/starter/src/scss/components/footer";
-@import "../../themes/starter/src/scss/components/forms";
-@import "../../themes/starter/src/scss/components/header";
-@import "../../themes/starter/src/scss/components/nav";
-@import "../../themes/starter/src/scss/components/news-events";
-@import "../../themes/starter/src/scss/components/pages";
-@import "../../themes/starter/src/scss/components/search";
-@import "../../themes/starter/src/scss/components/sitemap";
-@import "../../themes/starter/src/scss/components/button";
+@import "../../../starter/src/scss/print";
+@import "../../../starter/src/scss/typography";
+@import "../../../starter/src/scss/components/blocks";
+@import "../../../starter/src/scss/components/blog";
+@import "../../../starter/src/scss/components/comments";
+@import "../../../starter/src/scss/components/footer";
+@import "../../../starter/src/scss/components/forms";
+@import "../../../starter/src/scss/components/header";
+@import "../../../starter/src/scss/components/nav";
+@import "../../../starter/src/scss/components/news-events";
+@import "../../../starter/src/scss/components/pages";
+@import "../../../starter/src/scss/components/search";
+@import "../../../starter/src/scss/components/sitemap";
+@import "../../../starter/src/scss/components/button";
 
 
 // Watea theme mixins
