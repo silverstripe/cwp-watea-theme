@@ -36,6 +36,8 @@
 .main-nav {
   .navbar {
     z-index: $zindex-fixed;
+    border-bottom: 0;
+    padding-top: 0;
 
     // Special case for white/light-grey theme
     body.theme-nav-white &,
@@ -93,27 +95,36 @@
   }
 
   // Mobile only
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     .navbar-nav {
-      margin-top: 0;
-      margin-bottom: 0;
+      margin: 0;
     }
 
     .navbar-collapse {
       box-shadow: none;
-    }
-
-    .navbar-form {
-      @include theme-color("header", "background-color");
-      margin-top: 0;
       border-top: 1px solid $navbar-dark-color;
       border-color: $navbar-dark-color;
+      margin-left: -($grid-gutter-width / 2);
+      margin-right: -($grid-gutter-width / 2);
+    }
 
-      // Special case for white/light-grey theme
-      body.theme-header-white &,
-      body.theme-header-light-grey & {
-        border-color: $gray-300;
+    .navbar {
+      .form-inline {
+        @include theme-color("header", "background-color");
+        margin-top: 0;
+        padding: 1rem 2rem;
+
+        // Special case for white/light-grey theme
+        body.theme-header-white &,
+        body.theme-header-light-grey & {
+          border-color: $gray-300;
+        }
       }
+    }
+
+    .nav-item .nav-link {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
 
     // Add hover border to left side
@@ -158,8 +169,19 @@
     }
 
     .open .dropdown-menu {
+      > li {
+        padding: 0;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+
       > li > a {
         padding: 10px 15px 10px 35px;
+        color: color-yiq($theme-bg-lighter);
+        display: block;
+
         @include theme-contrast-color("nav", "color");
 
         &:hover {
@@ -167,9 +189,9 @@
         }
       }
 
-      .active > a,
-      .active > a:hover,
-      .active > a:focus {
+      .active > li > a,
+      .active > li > a:hover,
+      .active > li > a:focus {
         @include theme-color("accent", "background-color");
       }
     }
@@ -222,6 +244,8 @@
       > .dropdown-menu {
         margin-top: (-$nav-hover-border-width - 1px);
         margin-left: -1px;
+        border-radius: 0;
+        min-width: 160px;
       }
 
       .dropdown-menu > li > a {
@@ -235,9 +259,9 @@
     }
 
     // Requires further nesting
-    // .navbar-nav > .nav-item {
-    //   margin-bottom: -$nav-hover-border-width;
-    // }
+     .navbar-nav > .nav-item {
+       margin-bottom: -$nav-hover-border-width;
+     }
 
     // 1st level with dropdown
     .dropdown {
