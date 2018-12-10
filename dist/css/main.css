@@ -16451,6 +16451,7 @@ body.theme-header-white .site-header-search .form-control:-ms-input-placeholder 
   background: transparent;
   border: 0;
   color: #fff;
+  border: 1px solid rgba(85, 85, 85, 0.4);
 }
 
 body.theme-header-red .site-header-search .form-control, body.theme-header-red
@@ -17761,8 +17762,8 @@ body.theme-accent-white .main-nav .dropdown.current .navbar-touch-caret:hover, b
     border-color: #dee2e6;
   }
   .main-nav .nav-item .nav-link {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
   .main-nav .nav-item > a,
   .main-nav .dropdown-menu a {
