@@ -13844,6 +13844,11 @@ body > header .open > a:focus {
   border-bottom-left-radius: 0;
 }
 
+.btn-secondary:hover {
+  background: inherit;
+  border-color: #adb5bd;
+}
+
 .btn-secondary.btn-primary {
   background-color: #0F7EB2;
   color: #fff;
