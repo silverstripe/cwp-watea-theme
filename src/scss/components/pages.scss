@@ -153,14 +153,6 @@
   }
 }
 
-// News/Events/Blog items adjustment to bring only the first of the articles inline with the sidebar
-.news-events-article,
-.blog-entry {
-  &:first-child h2 {
-    margin-top: 1.8rem;
-  }
-}
-
 .h5.news-events-archive-year {
   margin-top: 3px;
 }

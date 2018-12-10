@@ -18730,11 +18730,6 @@ body.theme-accent-white .main .pagination .active a {
   margin-bottom: 0.8rem;
 }
 
-.news-events-article:first-child h2,
-.blog-entry:first-child h2 {
-  margin-top: 1.8rem;
-}
-
 .h5.news-events-archive-year {
   margin-top: 3px;
 }
