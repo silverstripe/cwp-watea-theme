@@ -16073,6 +16073,10 @@ body.theme-header-white .site-header a {
   text-transform: capitalize;
 }
 
+.language-selector__dropdown {
+  z-index: 1040;
+}
+
 .language-selector .btn.dropdown-toggle {
   background: transparent;
   border: 0;
@@ -16143,6 +16147,12 @@ body.theme-header-light-grey .language-selector .btn.dropdown-toggle {
 
 body.theme-header-white .language-selector .btn.dropdown-toggle {
   color: #555;
+}
+
+.language-selector .dropdown-toggle::after {
+  border: none;
+  margin: 0;
+  visibility: none;
 }
 
 .language-selector .dropdown-toggle:focus,
