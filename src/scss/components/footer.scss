@@ -36,7 +36,7 @@
 
 // Footer navigation and Copyright
 .footer-nav-links a {
-  color: $navbar-dark-color !important;
+  @include theme-contrast-color('footer', 'color');
   margin-right: $line-height-computed;
   @include theme-contrast-color("footer");
 }
