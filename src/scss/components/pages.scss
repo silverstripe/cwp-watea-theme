@@ -94,6 +94,14 @@
   display: block;
 }
 
+.page-sidebar-widget {
+  @include media-breakpoint-down(sm) {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 // News sidebar
 .news-item {
   margin-bottom: 2.5rem;
@@ -190,6 +198,25 @@
     font-size: 2.2rem;
     margin: 0;
   }
+}
+
+// Blog holder/page
+.blog-holder__content {
+  margin-bottom: 4rem;
+}
+
+.blog-entry__paginated {
+  margin-bottom: 4rem;
+
+  &:last-child {
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.h5.news-events-archive-year {
+  margin-top: 3px;
 }
 
 // Generic listing classes with modifiers
