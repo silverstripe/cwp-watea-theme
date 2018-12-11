@@ -6,7 +6,7 @@
                     <% if $LastEdited %>
                         <% include LastModified %>
                     <% end_if %>
-                    <ul class="list-inline pull-right page-utilities-actions">
+                    <ul class="list-inline float-right page-utilities-actions">
                         <li>
                             <a href="#" class="btn btn-link fa fa-print" onclick="window.print(); return false;">
                                 <span class="sr-only"><%t SilverStripe\\Forms\\GridField\\GridField.Print "Print" %></span>

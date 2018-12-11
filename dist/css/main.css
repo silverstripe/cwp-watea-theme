@@ -16451,6 +16451,7 @@ body.theme-header-white .site-header-search .form-control:-ms-input-placeholder 
   background: transparent;
   border: 0;
   color: #fff;
+  border: 1px solid rgba(85, 85, 85, 0.4);
 }
 
 body.theme-header-red .site-header-search .form-control, body.theme-header-red
