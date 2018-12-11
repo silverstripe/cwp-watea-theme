@@ -20,10 +20,20 @@ body > header {
 .language-selector {
   text-transform: capitalize;
 
+  &__dropdown {
+    z-index: $zindex-modal-backdrop;
+  }
+
   .btn.dropdown-toggle {
     @include form-controls-style();
     text-transform: capitalize;
     padding: $btn-padding-x 15px;
+  }
+
+  .dropdown-toggle::after {
+    border: none;
+    margin: 0;
+    visibility: none;
   }
 
   .dropdown-toggle:focus,

@@ -1,15 +1,15 @@
 <% if $Locales %>
-    <div class="btn-group float-right language-selector" id="header-language-toggle">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <div class="dropdown float-right language-selector" id="header-language-toggle">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-language" aria-hidden="true"></i>
             <span class="hidden-xs hidden-sm">
                 $SelectedLanguage
             </span>
             <i class="fa fa-angle-down" aria-hidden="true"></i>
         </button>
-        <ul class="dropdown-menu dropdown-menu-right">
+        <ul class="dropdown-menu dropdown-menu-right language-selector__dropdown">
             <% loop $Locales %>
-                <li <% if $LinkingMode == 'Current' %> class="active"<% end_if %>>
+                <li class="dropdown-item <% if $LinkingMode == 'Current' %> active<% end_if %>">
                     <a href="$Link" lang="$LocaleRFC1766">
                         <%-- Note: if you have multiple locales within the same language, you can use $Title instead --%>
                         $LanguageNative
