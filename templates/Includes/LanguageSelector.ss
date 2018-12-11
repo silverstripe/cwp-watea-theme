@@ -2,10 +2,10 @@
     <div class="dropdown float-right language-selector" id="header-language-toggle">
         <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-language" aria-hidden="true"></i>
-            <span class="hidden-xs hidden-sm">
+            <span class="d-none d-sm-inline-block">
                 $SelectedLanguage
             </span>
-            <i class="fa fa-angle-down" aria-hidden="true"></i>
+            <i class="fa fa-angle-down d-none d-sm-inline-block" aria-hidden="true"></i>
         </button>
         <ul class="dropdown-menu dropdown-menu-right language-selector__dropdown">
             <% loop $Locales %>
