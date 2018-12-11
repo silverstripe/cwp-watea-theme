@@ -18694,6 +18694,10 @@ body.theme-accent-white .main .pagination .active a {
   font-size: 1.4rem;
 }
 
+.blog-tags-widget a {
+  text-decoration: none;
+}
+
 .jumbotron {
   padding-top: 0;
   padding-bottom: 0;
