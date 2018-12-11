@@ -197,24 +197,6 @@
   }
 }
 
-.search__btn {
-  background-color: $lgtblue;
-  border: 1px solid $lgtblue;
-  @include theme-color("accent", "background-color");
-  @include  theme-color("accent", "border-color");
-  border-left: none;
-  color: $white;
-  font-weight: $font-weight-bold;
-
-  &:hover {
-    border-color: lighten($primary, 40%);
-    background-color: lighten($primary, 40%);
-    color: $white;
-    @include theme-color("accent", "background-color", "darken", 5%);
-    @include theme-color("accent", "border-color", "darken", 5%);
-  }
-}
-
 // Generic listing classes with modifiers
 .listing {
   &__item {
