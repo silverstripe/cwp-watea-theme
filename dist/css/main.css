@@ -13728,7 +13728,7 @@ body > header .open > a:focus {
 
 .news-events-item-figure {
   margin-left: 18px;
-  margin-top: 0;
+  margin-top: 24px;
   margin-bottom: 18px;
 }
 
@@ -13738,10 +13738,6 @@ body > header .open > a:focus {
 
 .news-events-article {
   margin-bottom: 4.2rem;
-}
-
-.news-events-tags a.badge {
-  text-decoration: none;
 }
 
 .page-header {
@@ -18894,8 +18890,8 @@ body.theme-accent-white .main .pagination .active a {
 }
 
 .search__btn {
-  background-color: #00254d;
-  border: 1px solid #00254d;
+  background-color: #214350;
+  border: 1px solid #214350;
   border-left: none;
   color: #fff;
   font-weight: 700;

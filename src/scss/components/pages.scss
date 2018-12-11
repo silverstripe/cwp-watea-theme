@@ -198,8 +198,8 @@
 }
 
 .search__btn {
-  background-color: darken($blue, 35%);
-  border: 1px solid darken($blue, 35%);
+  background-color: $lgtblue;
+  border: 1px solid $lgtblue;
   @include theme-color("accent", "background-color");
   @include  theme-color("accent", "border-color");
   border-left: none;
