@@ -15704,8 +15704,71 @@ body.theme-footer-white .footer-site hr {
 }
 
 .footer-nav-links a {
-  color: white !important;
   margin-right: 2.4rem;
+}
+
+body.theme-footer-red .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-dark-red .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-pink .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-purple .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-blue .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-dark-blue .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-default-accent .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-default-background .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-teal .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-green .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-dark-orange .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-dark-ochre .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-black .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-dark-grey .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-light-grey .footer-nav-links a {
+  color: #555;
+}
+
+body.theme-footer-white .footer-nav-links a {
+  color: #555;
 }
 
 .footer-social-links .fa {
