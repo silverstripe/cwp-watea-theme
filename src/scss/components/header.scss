@@ -14,69 +14,69 @@ body > header {
   a {
     @include theme-contrast-color("header", "color");
   }
-}
 
-// Language selector
-.language-selector {
-  display: inline-block;
-  margin-right: 0 !important;
-  position: relative;
-  right: 1rem;
-  text-transform: capitalize;
-  top: 0;
-
-  @include media-breakpoint-up(sm) {
-    margin-right: 0.5rem !important;
-  }
-
-  &__dropdown {
-    z-index: $zindex-modal-backdrop;
-  }
-
-  .btn.dropdown-toggle {
-    display: inline-flex;
-    justify-content: center;
-    @include form-controls-style();
-    text-transform: capitalize;
-    padding: $btn-padding-x 0.5rem;
-
-    @include media-breakpoint-up(sm) {
-      display: inline-block;
-      padding: $btn-padding-x 1.5rem;
-    }
-  }
-
-  .fa.fa-language {
+  // Language selector
+  .language-selector {
+    display: inline-block;
     margin-right: 0;
+    position: relative;
+    right: 1rem;
+    text-transform: capitalize;
+    top: 0;
 
     @include media-breakpoint-up(sm) {
-      margin-right: 0.8rem;
-    }
-  }
-
-  .dropdown-toggle::after {
-    border: none;
-    margin: 0;
-    visibility: none;
-  }
-
-  .dropdown-toggle:focus,
-  &.open .dropdown-toggle {
-    @include form-controls-style();
-    box-shadow: none;
-  }
-
-  .dropdown-menu {
-    border-color: rgba($gray-600, .4);
-    margin-top: 0;
-
-    // Show focus on all links (override BS)
-    > .active > a:focus {
-      @include outline-focus();
+      margin-right: 0.5rem;
     }
 
-    > li > a {
-      color: $gray-900;
+    &__dropdown {
+      z-index: $zindex-modal-backdrop;
+    }
+
+    .btn.dropdown-toggle {
+      display: inline-flex;
+      justify-content: center;
+      @include form-controls-style();
+      text-transform: capitalize;
+      padding: $btn-padding-x 0.5rem;
+
+      @include media-breakpoint-up(sm) {
+        display: inline-block;
+        padding: $btn-padding-x 1.5rem;
+      }
+    }
+
+    .fa.fa-language {
+      margin-right: 0;
+
+      @include media-breakpoint-up(sm) {
+        margin-right: 0.8rem;
+      }
+    }
+
+    .dropdown-toggle::after {
+      border: none;
+      margin: 0;
+      visibility: none;
+    }
+
+    .dropdown-toggle:focus,
+    &.open .dropdown-toggle {
+      @include form-controls-style();
+      box-shadow: none;
+    }
+
+    .dropdown-menu {
+      border-color: rgba($gray-600, .4);
+      margin-top: 0;
+
+      // Show focus on all links (override BS)
+      > .active > a:focus {
+        @include outline-focus();
+      }
+
+      > li > a {
+        color: $gray-900;
+      }
     }
   }
 }
