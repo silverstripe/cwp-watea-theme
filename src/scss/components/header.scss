@@ -46,11 +46,7 @@ body > header {
     }
 
     .fa.fa-language {
-      margin-right: 0;
-
-      @include media-breakpoint-up(sm) {
-        margin-right: 0.8rem;
-      }
+      margin-right: 0.8rem;
     }
 
     .dropdown-toggle::after {
@@ -76,6 +72,10 @@ body > header {
 
       > li > a {
         color: $gray-900;
+
+        &:hover {
+          background-color: $table-hover-bg;
+        }
       }
     }
   }
@@ -169,7 +169,7 @@ body > header {
     min-height: 111px;
 
     .site-header-brand {
-      max-width: 19.5rem;
+      max-width: 19rem;
       font-size: 1em;
     }
   }
