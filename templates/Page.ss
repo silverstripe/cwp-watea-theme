@@ -8,7 +8,7 @@
         <% if $RSSLink %>
         <link rel='alternate' type='application/rss+xml' title='RSS' href='$RSSLink'>
         <% end_if %>
-        <% require themedCss('dist/css/main.css') %>
+        <% require css('$ThemeDir/dist/css/main.css') %>
         <% include Favicon %>
     </head>
     <body class="$ClassName

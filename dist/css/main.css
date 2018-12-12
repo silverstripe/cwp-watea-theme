@@ -13177,53 +13177,6 @@ pre {
   font-size: 1.4rem;
 }
 
-.banner-element {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-}
-
-.container .banner-element.jumbotron {
-  padding: 0;
-  margin: 2.4rem 0;
-}
-
-.silverstripe__elementalbannerblock__block__bannerblock {
-  background-color: #001F2C;
-}
-
-.banner-element__image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  max-height: 450px;
-  opacity: .55;
-}
-
-.banner-element__image img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-}
-
-.banner-element__content {
-  left: 0;
-  position: absolute;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-  color: #fff;
-}
-
-.file-element__file {
-  margin-bottom: 4.8rem;
-}
-
 .blog-summary-img {
   padding-top: 2.4rem;
   margin-left: 2.4rem;
@@ -19273,4 +19226,34 @@ body.theme-accent-white .main .pagination .active a {
 
 .pagination {
   margin: 2.4rem 0;
+}
+
+.element-holder {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.element-holder .banner-element__image--watea {
+  min-height: 20rem;
+  max-height: 40rem;
+}
+
+.element-holder .banner-element__content--watea {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  height: 100%;
+  padding: 2rem;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .element-holder .banner-element__content--watea {
+    width: 60%;
+  }
+}
+
+.element-holder .banner-element__title--watea {
+  color: #fff;
 }
