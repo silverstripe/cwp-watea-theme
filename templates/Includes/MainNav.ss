@@ -20,8 +20,8 @@
 
                                     <ul class="dropdown-menu" role="menu" aria-hidden="true">
                                         <% loop $Children %>
-                                            <li role="menuitem" class="dropdown-item <% if $LinkingMode = current %>active <% end_if %>">
-                                                <a role="menuitem" href="$Link" <% if $LinkingMode = current %>aria-label="current page" <% end_if %>>$MenuTitle.XML</a>
+                                            <li role="menuitem" <% if $LinkingMode = current %>class="active"<% end_if %>>
+                                                <a role="menuitem" class="dropdown-item" href="$Link" <% if $LinkingMode = current %>aria-label="current page" <% end_if %>>$MenuTitle.XML</a>
                                             </li>
                                         <% end_loop %>
                                     </ul>

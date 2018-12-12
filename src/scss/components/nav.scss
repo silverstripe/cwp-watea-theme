@@ -102,6 +102,16 @@
     }
   }
 
+  .dropdown-menu {
+    .dropdown-item {
+      padding: 0 1.5rem;
+
+      &:not(.active):hover {
+        background-color: $table-hover-bg;
+      }
+    }
+  }
+
   // Mobile only
   @include media-breakpoint-down(sm) {
     .navbar-nav {
@@ -264,11 +274,10 @@
         }
       }
 
-      .dropdown-menu > .active {
+      .dropdown-menu > .active > a {
+        color: $navbar-dark-active-color;
+        @include theme-color("accent", "background-color");
 
-        > a {
-          color: $navbar-dark-active-color;
-        }
       }
     }
 
