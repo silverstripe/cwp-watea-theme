@@ -17081,6 +17081,134 @@ body.theme-nav-light-grey .main-nav .navbar {
   border-bottom: 1px solid #dee2e6;
 }
 
+body.theme-nav-red .main-nav .navbar-nav > li > a {
+  color: #ced4da;
+}
+
+body.theme-nav-dark-red .main-nav .navbar-nav > li > a {
+  color: #ced4da;
+}
+
+body.theme-nav-pink .main-nav .navbar-nav > li > a {
+  color: #ced4da;
+}
+
+body.theme-nav-purple .main-nav .navbar-nav > li > a {
+  color: #ced4da;
+}
+
+body.theme-nav-blue .main-nav .navbar-nav > li > a {
+  color: #ced4da;
+}
+
+body.theme-nav-dark-blue .main-nav .navbar-nav > li > a {
+  color: #ced4da;
+}
+
+body.theme-nav-default-accent .main-nav .navbar-nav > li > a {
+  color: #ced4da;
+}
+
+body.theme-nav-default-background .main-nav .navbar-nav > li > a {
+  color: #ced4da;
+}
+
+body.theme-nav-teal .main-nav .navbar-nav > li > a {
+  color: #ced4da;
+}
+
+body.theme-nav-green .main-nav .navbar-nav > li > a {
+  color: #ced4da;
+}
+
+body.theme-nav-dark-orange .main-nav .navbar-nav > li > a {
+  color: #ced4da;
+}
+
+body.theme-nav-dark-ochre .main-nav .navbar-nav > li > a {
+  color: #ced4da;
+}
+
+body.theme-nav-black .main-nav .navbar-nav > li > a {
+  color: #ced4da;
+}
+
+body.theme-nav-dark-grey .main-nav .navbar-nav > li > a {
+  color: #ced4da;
+}
+
+body.theme-nav-light-grey .main-nav .navbar-nav > li > a {
+  color: #555;
+}
+
+body.theme-nav-white .main-nav .navbar-nav > li > a {
+  color: #555;
+}
+
+body.theme-nav-red .main-nav .navbar-nav > li > a:hover {
+  color: #FFF;
+}
+
+body.theme-nav-dark-red .main-nav .navbar-nav > li > a:hover {
+  color: #FFF;
+}
+
+body.theme-nav-pink .main-nav .navbar-nav > li > a:hover {
+  color: #FFF;
+}
+
+body.theme-nav-purple .main-nav .navbar-nav > li > a:hover {
+  color: #FFF;
+}
+
+body.theme-nav-blue .main-nav .navbar-nav > li > a:hover {
+  color: #FFF;
+}
+
+body.theme-nav-dark-blue .main-nav .navbar-nav > li > a:hover {
+  color: #FFF;
+}
+
+body.theme-nav-default-accent .main-nav .navbar-nav > li > a:hover {
+  color: #FFF;
+}
+
+body.theme-nav-default-background .main-nav .navbar-nav > li > a:hover {
+  color: #FFF;
+}
+
+body.theme-nav-teal .main-nav .navbar-nav > li > a:hover {
+  color: #FFF;
+}
+
+body.theme-nav-green .main-nav .navbar-nav > li > a:hover {
+  color: #FFF;
+}
+
+body.theme-nav-dark-orange .main-nav .navbar-nav > li > a:hover {
+  color: #FFF;
+}
+
+body.theme-nav-dark-ochre .main-nav .navbar-nav > li > a:hover {
+  color: #FFF;
+}
+
+body.theme-nav-black .main-nav .navbar-nav > li > a:hover {
+  color: #FFF;
+}
+
+body.theme-nav-dark-grey .main-nav .navbar-nav > li > a:hover {
+  color: #FFF;
+}
+
+body.theme-nav-light-grey .main-nav .navbar-nav > li > a:hover {
+  color: #555;
+}
+
+body.theme-nav-white .main-nav .navbar-nav > li > a:hover {
+  color: #555;
+}
+
 .main-nav .nav-item.current > a {
   background-color: #0F7EB2;
 }
@@ -18606,6 +18734,11 @@ body.theme-accent-white .main .pagination .active a {
   border-color: #FFF;
 }
 
+.main .pagination .active a:hover {
+  color: #fff;
+  cursor: default;
+}
+
 .page-utilities {
   border-top: 1px solid #dee2e6;
   padding-top: 2.4rem;
@@ -18663,10 +18796,9 @@ body.theme-accent-white .main .pagination .active a {
 }
 
 .page-sidebar-header {
-  border-bottom: 1px solid #adb5bd;
-  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #555;
+  padding-bottom: 0.8rem;
   margin-top: 0.4rem;
-  margin-bottom: 1.8rem;
 }
 
 .page-sidebar-nav a {
@@ -18710,8 +18842,7 @@ body.theme-accent-white .main .pagination .active a {
 }
 
 .page-showcase {
-  background-color: #eaedf0;
-  border-top: 1px solid #c1c9d0;
+  background-color: #f5f6f5;
   padding-bottom: 2.4rem;
   padding-top: 6rem;
 }
@@ -18736,7 +18867,30 @@ body.theme-accent-white .main .pagination .active a {
 }
 
 .h5.news-events-archive-year {
-  margin-top: 3px;
+  margin-top: 0.3rem;
+}
+
+.page-searchform {
+  margin-bottom: 3rem;
+}
+
+.search-results__heading {
+  margin-bottom: 2.1rem;
+  margin-top: 4rem;
+}
+
+.search-results__summary {
+  margin-bottom: 3.3rem;
+}
+
+.search-results__summary .text-muted {
+  margin-bottom: 0;
+  margin-top: 0.9rem;
+}
+
+.search-results__message {
+  font-size: 2.2rem;
+  margin: 0;
 }
 
 .listing__item {
@@ -18747,8 +18901,20 @@ body.theme-accent-white .main .pagination .active a {
   margin-bottom: 4.2rem;
 }
 
-.listing__item:first-child .h3 {
-  margin-top: 1.8rem;
+.listing__item--search-result {
+  margin-bottom: 3.7rem;
+}
+
+.listing__item--search-result .h4 {
+  margin-bottom: 0.5rem;
+}
+
+.listing__item--search-result .breadcrumb {
+  margin-bottom: 0.7rem;
+}
+
+.listing__item--search-result .breadcrumb-item {
+  font-size: font-size-sm;
 }
 
 .listing__title {
