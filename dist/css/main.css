@@ -18806,6 +18806,12 @@ body.theme-accent-white .main .pagination .active a {
   display: block;
 }
 
+@media (max-width: 767.98px) {
+  .page-sidebar-widget:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .news-item {
   margin-bottom: 2.5rem;
 }
@@ -18891,6 +18897,24 @@ body.theme-accent-white .main .pagination .active a {
 .search-results__message {
   font-size: 2.2rem;
   margin: 0;
+}
+
+.blog-holder__content {
+  margin-bottom: 4rem;
+}
+
+.blog-entry--paginated {
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 576px) {
+  .blog-entry--paginated:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.h5.news-events-archive-year {
+  margin-top: 3px;
 }
 
 .listing__item {
