@@ -15542,7 +15542,7 @@ div.carousel-has-image .carousel-mask {
 .footer-site {
   margin-top: 0;
   background-color: #001F2C;
-  padding: 4.32rem 0;
+  padding: 4.5rem 0 3.5rem;
 }
 
 body.theme-footer-red .footer-site {
@@ -15612,6 +15612,7 @@ body.theme-footer-white .footer-site {
 .footer-site hr {
   border-top: 1px solid #214350;
   margin-bottom: 3.6rem;
+  opacity: 0.2;
 }
 
 body.theme-footer-red .footer-site hr {
@@ -15681,8 +15682,7 @@ body.theme-footer-white .footer-site hr {
 @media (min-width: 768px) {
   .footer-site hr {
     border-color: transparent;
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin: 3.5rem 0 3.2rem;
   }
 }
 
@@ -15697,14 +15697,89 @@ body.theme-footer-white .footer-site hr {
   margin-bottom: 2.4rem;
 }
 
+@media (min-width: 992px) {
+  .footer-govt-logo a {
+    margin: 0;
+  }
+}
+
 .footer-nav-links a {
-  color: white;
   margin-right: 2.4rem;
+}
+
+body.theme-footer-red .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-dark-red .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-pink .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-purple .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-blue .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-dark-blue .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-default-accent .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-default-background .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-teal .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-green .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-dark-orange .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-dark-ochre .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-black .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-dark-grey .footer-nav-links a {
+  color: #FFF;
+}
+
+body.theme-footer-light-grey .footer-nav-links a {
+  color: #555;
+}
+
+body.theme-footer-white .footer-nav-links a {
+  color: #555;
 }
 
 .footer-social-links .fa {
   font-size: 2.2rem;
-  margin-bottom: 2.88rem;
+  margin-bottom: 2.4rem;
+}
+
+@media (min-width: 992px) {
+  .footer-social-links .fa {
+    margin-bottom: 0;
+  }
 }
 
 .footer-brand-secondary::after {
@@ -15712,9 +15787,10 @@ body.theme-footer-white .footer-site hr {
   width: 0;
   height: calc(100% + 12px);
   position: absolute;
-  border: 1px solid #214350;
+  border-left: 1px solid #214350;
   right: 10px;
   top: -6px;
+  opacity: 0.2;
 }
 
 body.theme-footer-red .footer-brand-secondary::after {
