@@ -19233,12 +19233,12 @@ body.theme-accent-white .main .pagination .active a {
           box-sizing: border-box;
 }
 
-.element-holder .banner-element__image--watea {
+.element-holder .banner-element__image {
   min-height: 20rem;
   max-height: 40rem;
 }
 
-.element-holder .banner-element__content--watea {
+.element-holder .banner-element__content {
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   height: 100%;
@@ -19249,11 +19249,11 @@ body.theme-accent-white .main .pagination .active a {
 }
 
 @media (min-width: 576px) {
-  .element-holder .banner-element__content--watea {
+  .element-holder .banner-element__content {
     width: 60%;
   }
 }
 
-.element-holder .banner-element__title--watea {
+.element-holder .banner-element__title {
   color: #fff;
 }
