@@ -6769,7 +6769,7 @@ body.theme-link-dark-blue a {
 }
 
 body.theme-link-default-accent a {
-  color: #214350;
+  color: #0F7EB2;
 }
 
 body.theme-link-default-background a {
@@ -6838,7 +6838,7 @@ body.theme-accent-dark-blue .btn-default {
 }
 
 body.theme-accent-default-accent .btn-default {
-  border-color: #214350;
+  border-color: #0F7EB2;
 }
 
 body.theme-accent-default-background .btn-default {
@@ -6902,7 +6902,7 @@ body.theme-accent-dark-blue .btn-default {
 }
 
 body.theme-accent-default-accent .btn-default {
-  color: #214350;
+  color: #0F7EB2;
 }
 
 body.theme-accent-default-background .btn-default {
@@ -6966,7 +6966,7 @@ body.theme-accent-dark-blue .btn-default:hover, body.theme-accent-dark-blue .btn
 }
 
 body.theme-accent-default-accent .btn-default:hover, body.theme-accent-default-accent .btn-default:focus {
-  border-color: #12252c;
+  border-color: #0b5d83;
 }
 
 body.theme-accent-default-background .btn-default:hover, body.theme-accent-default-background .btn-default:focus {
@@ -7030,7 +7030,7 @@ body.theme-accent-dark-blue .btn-primary {
 }
 
 body.theme-accent-default-accent .btn-primary {
-  background-color: #214350;
+  background-color: #0F7EB2;
 }
 
 body.theme-accent-default-background .btn-primary {
@@ -7094,7 +7094,7 @@ body.theme-accent-dark-blue .btn-primary {
 }
 
 body.theme-accent-default-accent .btn-primary {
-  border-color: #214350;
+  border-color: #0F7EB2;
 }
 
 body.theme-accent-default-background .btn-primary {
@@ -7222,7 +7222,7 @@ body.theme-accent-dark-blue .btn-primary:hover, body.theme-accent-dark-blue .btn
 }
 
 body.theme-accent-default-accent .btn-primary:hover, body.theme-accent-default-accent .btn-primary:focus {
-  background-color: #12252c;
+  background-color: #0b5d83;
 }
 
 body.theme-accent-default-background .btn-primary:hover, body.theme-accent-default-background .btn-primary:focus {
@@ -7286,7 +7286,7 @@ body.theme-accent-dark-blue .btn-primary:hover, body.theme-accent-dark-blue .btn
 }
 
 body.theme-accent-default-accent .btn-primary:hover, body.theme-accent-default-accent .btn-primary:focus {
-  border-color: #12252c;
+  border-color: #0b5d83;
 }
 
 body.theme-accent-default-background .btn-primary:hover, body.theme-accent-default-background .btn-primary:focus {
@@ -7497,7 +7497,7 @@ body.theme-accent-dark-blue blockquote {
 }
 
 body.theme-accent-default-accent blockquote {
-  border-color: #214350;
+  border-color: #0F7EB2;
 }
 
 body.theme-accent-default-background blockquote {
