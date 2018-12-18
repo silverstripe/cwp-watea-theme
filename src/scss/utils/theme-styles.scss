@@ -114,7 +114,7 @@ $theme-fonts: map-merge($default-theme-fonts, $custom-theme-fonts) !default;
 // @param {string} $modifier ["none"] - Sass function to manipulate the color.
 // @param {number} $amount [0%] - Amount to manipulate by
 //
-// @example: @include theme-color("accent", background-color", "lighten", 20%)
+// @example: @include theme-color("accent", "background-color", "lighten", 20%)
 
 @mixin theme-color($area, $property: "background-color", $modifier: "none", $amount: 0%) {
   @each $name, $color in $theme-colors {

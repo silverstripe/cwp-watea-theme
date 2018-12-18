@@ -258,11 +258,17 @@
 
       .dropdown-menu > li > a {
         color: $body-color;
+
+        &:active {
+          color: $white;
+        }
       }
 
-      .dropdown-menu > .active > a {
-        color: $navbar-dark-active-color;
-        @include theme-color("accent", "background-color");
+      .dropdown-menu > .active {
+
+        > a {
+          color: $navbar-dark-active-color;
+        }
       }
     }
 
@@ -291,6 +297,13 @@
   }
 }
 
+.dropdown-item {
+  &.active,
+  &:active {
+    @include theme-color("accent", "background-color");
+  }
+}
+
 .nav-pills {
   // Active state
   > li.active > a {
@@ -300,5 +313,15 @@
       //color: $nav-pills-active-link-hover-color;
       @include theme-color("accent", "background-color");
     }
+  }
+}
+
+.badge-primary {
+  @include theme-color("accent", "background-color");
+  @include theme-contrast-color("accent", "color");
+
+  &:hover,
+  &:focus {
+    @include theme-color("accent", "background-color", "darken", 10%);
   }
 }
