@@ -19052,6 +19052,15 @@ body.theme-accent-white .main .pagination .active a {
   margin-bottom: 0.6rem;
 }
 
+.registry__section {
+  margin-bottom: 3rem;
+}
+
+p.registry__label {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
 .content-block__title {
   font-size: 1.8rem;
 }
