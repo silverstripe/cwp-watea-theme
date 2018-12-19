@@ -14,10 +14,6 @@
     left: 0;
     top: 0;
     width: 100%;
-
-    @include media-breakpoint-up(sm) {
-      width: 60%;
-    }
   }
 
   .banner-element__title {
