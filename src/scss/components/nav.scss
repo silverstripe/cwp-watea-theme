@@ -105,6 +105,7 @@
   .dropdown-menu {
     .dropdown-item {
       padding: 0 1.5rem;
+      line-height: 3rem;
 
       &:not(.active):hover {
         background-color: $table-hover-bg;

@@ -17883,6 +17883,7 @@ body.theme-accent-white .main-nav .dropdown.current .navbar-touch-caret:hover, b
 
 .main-nav .dropdown-menu .dropdown-item {
   padding: 0 1.5rem;
+  line-height: 3rem;
 }
 
 .main-nav .dropdown-menu .dropdown-item:not(.active):hover {
