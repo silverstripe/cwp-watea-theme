@@ -35,12 +35,26 @@ $default-theme-colors: (
   "white": #FFF,
 ) !default;
 
+//
+// Default light colors
+// --------------------------------------------------
+//
+// This is where all your light colours are declared.
+
+$default-light-colors: (
+  "light-grey",
+  "white"
+) !default;
+
 // Empty map for theme colors, override this in your project to add
 // custom colors or edit any default colors
 $custom-theme-colors: () !default;
+$custom-light-colors: () !default;
 
 // Merge $custom-theme-colors into $default-theme-colors
-$theme-colors: map-merge($default-theme-colors, $custom-theme-colors);
+$theme-colors: map-merge($default-theme-colors, $custom-theme-colors) !default;
+// Merge $custom-light-colors into $default-light-colors
+$light-colors: join($default-light-colors, $custom-light-colors) !default;
 
 //
 // Theme fonts
@@ -54,7 +68,7 @@ $theme-colors: map-merge($default-theme-colors, $custom-theme-colors);
 // whether the font is serif or sans-serif so that a
 // relevant fallback font stack can be applied.
 
-$theme-fonts: (
+$default-theme-fonts: (
   nunito: (
     "Nunito Sans",
     "sans-serif"
@@ -69,6 +83,12 @@ $theme-fonts: (
   )
 ) !default;
 
+// Empty map for theme fonts, override this in your project to add
+// custom fonts or edit any default fonts
+$custom-theme-fonts: () !default;
+
+// Merge $custom-theme-fonts into $default-theme-fonts
+$theme-fonts: map-merge($default-theme-fonts, $custom-theme-fonts) !default;
 
 // Theme color mixin for all areas on the site.
 //
@@ -138,7 +158,7 @@ $theme-fonts: (
 @mixin theme-contrast-color($area, $property: "color") {
   @each $name, $color in $theme-colors {
     body.theme-#{$area}-#{$name} & {
-      @if ($name == "white" or $name == "light-grey") {
+      @if (index($light-colors, $name) != null) {
         #{$property}: $text-color;
       } @else {
         #{$property}: #FFF;
