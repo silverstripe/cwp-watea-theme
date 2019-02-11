@@ -32,8 +32,8 @@
 
 // Footer navigation and Copyright
 .footer-nav-links a {
-  color: $navbar-default-link-hover-color;
   margin-right: $line-height-computed;
+  @include theme-contrast-color("footer");
 }
 
 // Social media icons
