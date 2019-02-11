@@ -40,6 +40,11 @@
 .footer-social-links .fa {
   font-size: 2.2rem;
   margin-bottom: $line-height-computed * 1.2;
+
+  &:hover,
+  &:focus {
+    opacity: .8;
+  }
 }
 
 // Secondary branding logo (defaults to CWP logo)
