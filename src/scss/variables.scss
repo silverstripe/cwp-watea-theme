@@ -38,7 +38,7 @@ $grays: map-merge(
     "800": $gray-800,
     "900": $gray-900
   ),
-  $grays
+  $grays // sass-lint:disable-line indentation
 );
 
 
@@ -60,23 +60,23 @@ $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $colors: map-merge(
   (
-    "blue":       $blue,
-    "indigo":     $indigo,
-    "purple":     $purple,
-    "pink":       $pink,
-    "red":        $red,
-    "orange":     $orange,
-    "yellow":     $yellow,
-    "green":      $green,
-    "teal":       $teal,
-    "cyan":       $cyan,
-    "white":      $white,
-    "gray":       $gray-600,
-    "gray-dark":  $gray-800,
-    "watea-dark": $drkblue,
-    "watea-light":$lgtblue
+    "blue":        $blue,
+    "indigo":      $indigo,
+    "purple":      $purple,
+    "pink":        $pink,
+    "red":         $red,
+    "orange":      $orange,
+    "yellow":      $yellow,
+    "green":       $green,
+    "teal":        $teal,
+    "cyan":        $cyan,
+    "white":       $white,
+    "gray":        $gray-600,
+    "gray-dark":   $gray-800,
+    "watea-dark":  $drkblue,
+    "watea-light": $lgtblue
   ),
-  $colors
+  $colors // sass-lint:disable-line indentation
 );
 
 $primary:       #0F7EB2 !default;
@@ -102,7 +102,7 @@ $theme-colors: map-merge(
     "theme-bg":         $theme-bg,
     "theme-bg-lighter": $theme-bg-lighter
   ),
-  $theme-colors
+  $theme-colors // sass-lint:disable-line indentation
 );
 
 // Set a specific jump point for requesting color jumps
@@ -147,7 +147,7 @@ $spacers: map-merge(
     4: ($spacer * 1.5),
     5: ($spacer * 3)
   ),
-  $spacers
+  $spacers // sass-lint:disable-line indentation
 );
 
 // This variable affects the `.h-*` and `.w-*` classes.
@@ -161,7 +161,7 @@ $sizes: map-merge(
     100: 100%,
     auto: auto
   ),
-  $sizes
+  $sizes // sass-lint:disable-line indentation
 );
 
 // Body
@@ -330,7 +330,7 @@ $mark-bg:                     #fcf8e3 !default;
 
 $hr-margin-y:                 $spacer !default;
 
-/* Custom */
+// Custom
 $line-height-computed:              ($font-size-base * $line-height-base) !default; // ~24px
 
 
@@ -637,7 +637,7 @@ $zindex-modal:                      1050 !default;
 $zindex-popover:                    1060 !default;
 $zindex-tooltip:                    1070 !default;
 
-/** Custom added - reinstated from BS3. **/
+// Custom added - reinstated from BS3.
 $zindex-navbar:                     $zindex-dropdown !default;
 
 // Navs

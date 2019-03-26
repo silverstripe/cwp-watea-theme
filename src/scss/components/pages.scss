@@ -60,7 +60,7 @@
 .page-header {
   padding-bottom: 0.6rem;
   margin: $line-height-computed 0 1.6rem;
-  border-bottom: none;
+  border-bottom: 0;
 
 
   h1,
@@ -175,7 +175,7 @@
 }
 
 .h5.news-events-archive-year {
-  margin-top: 0.3rem;
+  margin-top: 3px;
 }
 
 // Search styling
@@ -218,10 +218,6 @@
       margin-bottom: 0;
     }
   }
-}
-
-.h5.news-events-archive-year {
-  margin-top: 3px;
 }
 
 // Generic listing classes with modifiers

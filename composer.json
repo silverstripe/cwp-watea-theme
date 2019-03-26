@@ -7,15 +7,6 @@
   "require": {
     "cwp/starter-theme": "dev-feature/ss4-demo"
   },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://packages.cwp.govt.nz/"
-    }, {
-      "type": "vcs",
-      "url": "https://github.com/silverstripe-superchargers/cwp-starter-theme.git"
-    }
-  ],
   "extra": {
     "installer-name": "watea",
     "branch-alias": {
