@@ -52,7 +52,7 @@ $custom-theme-colors: () !default;
 $custom-light-colors: () !default;
 
 // Merge $custom-theme-colors into $default-theme-colors
-$theme-colors: map-merge($default-theme-colors, $custom-theme-colors) !default;
+$all-theme-colors: map-merge($default-theme-colors, $custom-theme-colors) !default;
 // Merge $custom-light-colors into $default-light-colors
 $light-colors: join($default-light-colors, $custom-light-colors) !default;
 
@@ -117,7 +117,7 @@ $theme-fonts: map-merge($default-theme-fonts, $custom-theme-fonts) !default;
 // @example: @include theme-color("accent", "background-color", "lighten", 20%)
 
 @mixin theme-color($area, $property: "background-color", $modifier: "none", $amount: 0%) {
-  @each $name, $color in $theme-colors {
+  @each $name, $color in $all-theme-colors {
     body.theme-#{$area}-#{$name} & {
       @if ($modifier == "none") {
         #{$property}: $color;
@@ -156,7 +156,7 @@ $theme-fonts: map-merge($default-theme-fonts, $custom-theme-fonts) !default;
 // CSS property to use when calling the mixin.
 
 @mixin theme-contrast-color($area, $property: "color", $white: #FFF) {
-  @each $name, $color in $theme-colors {
+  @each $name, $color in $all-theme-colors {
     body.theme-#{$area}-#{$name} & {
       @if (index($light-colors, $name) != null) {
         #{$property}: $body-color;
