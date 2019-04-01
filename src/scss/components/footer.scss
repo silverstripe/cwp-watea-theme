@@ -4,7 +4,7 @@
   @include theme-color("footer", "background-color");
   padding: ($line-height-computed * 1.8) 0;
 
-  // Horizontal divder line
+  // Horizontal divider line
   hr {
     border-top: 1px solid $theme-bg-lighter;
     @include theme-contrast-color("footer", "border-color");
@@ -32,6 +32,7 @@
 
 // Footer navigation and Copyright
 .footer-nav-links a {
+  color: $navbar-default-link-hover-color;
   margin-right: $line-height-computed;
   @include theme-contrast-color("footer");
 }
