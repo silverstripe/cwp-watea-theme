@@ -62,7 +62,7 @@ body > header {
     }
 
     .dropdown-menu {
-      border-color: rgba($gray-600, .4);
+      border-color: $gray-500;
       margin-top: 0;
 
       // Show focus on all links (override BS)
@@ -107,13 +107,13 @@ body > header {
   .form-control,
   button[type="submit"] {
     @include form-controls-style();
-    border: 1px solid rgba($gray-600, .4);
+    border: 1px solid $gray-600;
 
     // Special case for white/light-grey theme
     body.theme-header-white &,
     body.theme-header-light-grey & {
       background: $input-bg;
-      border-color: rgba($gray-600, .4);
+      border-color: $gray-600;
     }
 
     &:focus {
