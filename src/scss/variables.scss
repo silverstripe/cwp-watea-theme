@@ -34,20 +34,20 @@ $grays: map-merge(
     $grays
 );
 
-$blue:    #007bff !default;
+$blue:    #0F7EB2 !default; // Original: #007bff !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
-$red:     #dc3545 !default;
+$red:     #d4423c !default; // Original: #dc3545 !default;
 $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
-$green:   #28a745 !default;
-$teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
+$green:   #008a00 !default; // Original: #28a745 !default;
+$teal:    #00837a !default; // Original: #20c997 !default;
+$cyan:    #008489 !default; // Original: #17a2b8 !default;
 // Custom variables for the Watea theme
 $lgtblue: #214350 !default;
 $drkblue: #001F2C !default;
-$lgtgrey: #f5f6f5 !default;
+$lgtgrey: #eaeaea !default;
 // End custom variables
 
 $colors: () !default;
@@ -76,7 +76,7 @@ $colors: map-merge(
 );
 
 $primary:       $blue !default;
-$secondary:     $gray-600 !default; // @todo check with Paul in case this should be white still
+$secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
