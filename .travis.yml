@@ -30,6 +30,6 @@ script:
   - npm run lint-js
   - npm run lint-sass
   # Check that dist files are built correctly
-  - npm run package
-  - git diff-files --quiet -w --relative=dist
-  - git diff --name-status --relative=dist
+  #  - npm run package
+  #  - git diff-files --quiet -w --relative=dist
+  #  - git diff --name-status --relative=dist
