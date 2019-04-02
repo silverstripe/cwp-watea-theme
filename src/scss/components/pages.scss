@@ -79,8 +79,8 @@
 }
 
 .label-primary {
-  @include theme-color('accent', 'background-color');
-  @include theme-contrast-color('accent', 'color');
+  @include theme-color("accent", "background-color");
+  @include theme-contrast-color("accent", "color");
 }
 
 .well {
