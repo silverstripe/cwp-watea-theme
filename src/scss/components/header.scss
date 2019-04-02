@@ -52,7 +52,7 @@ body > header {
     .dropdown-toggle::after {
       border: 0;
       margin: 0;
-      visibility: none;
+      visibility: hidden;
     }
 
     .dropdown-toggle:focus,
@@ -106,7 +106,6 @@ body > header {
 .site-header-search {
   .form-control,
   button[type="submit"] {
-    height: $navbar-height;
     @include form-controls-style();
     border: 1px solid rgba($gray-600, .4);
 
@@ -125,7 +124,7 @@ body > header {
   .form-control {
     box-shadow: none;
     padding: $input-btn-padding-y-lg $input-btn-padding-x-lg;
-    height: ($line-height-computed + ($input-btn-padding-y-lg * 2) + .2);
+    height: auto;
     border-right: 0;
   }
 

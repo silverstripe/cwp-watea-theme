@@ -1163,7 +1163,6 @@ $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts" !default;
 
 // Custom added navbar styles
 $zindex-navbar:                     $zindex-dropdown !default; // - reinstated from BS3.
-$navbar-height: ($line-height-computed + ($input-btn-padding-y-lg * 2)) + .2;
 $nav-hover-border-width:            4px !default; // Custom Navbar hover border
 
 // Meets 3:1 for large text (if using small text this should meet contrast of 4.5:1 to $carousel-text-color)
