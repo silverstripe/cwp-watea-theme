@@ -289,9 +289,6 @@
 
     // 1st level with dropdown
     .dropdown {
-      // Allow space for caret
-      padding-right: $input-padding-x-lg + 0.6rem; // 6px approx half width of icon
-
       > .link {
         &:focus,
         &:hover {
