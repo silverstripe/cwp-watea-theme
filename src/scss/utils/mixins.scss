@@ -4,7 +4,7 @@
 @mixin form-controls-style() {
   background: transparent;
   border: 0;
-  color: $label-color;
+  color: $white;
   @include theme-contrast-color("header", "color");
 }
 
