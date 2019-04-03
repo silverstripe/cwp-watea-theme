@@ -729,7 +729,7 @@ $nav-divider-margin-y:              $spacer / 2 !default;
 $navbar-padding-y:                  $spacer / 2 !default;
 $navbar-padding-x:                  $spacer !default;
 
-$navbar-nav-link-padding-x:         .5rem !default;
+$navbar-nav-link-padding-x:         1rem !default; // Original: .5rem !default;
 
 $navbar-brand-font-size:            $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
@@ -749,9 +749,9 @@ $navbar-dark-disabled-color:        rgba($white, .5) !default; // From rgba($whi
 $navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"), "#", "%23") !default;
 $navbar-dark-toggler-border-color:  rgba($white, .1) !default;
 
-$navbar-light-color:                rgba($black, .65) !default; // From rgba($black, .5)
-$navbar-light-hover-color:          rgba($black, .8) !default; // From rgba($black, .75)
-$navbar-light-active-color:         rgba($black, .95) !default; // From rgba($black, .9)
+$navbar-light-color:                $gray-600 !default; // Original: rgba($black, .65) !default; // From rgba($black, .5)
+$navbar-light-hover-color:          $gray-800 !default; // Original: rgba($black, .8) !default; // From rgba($black, .75)
+$navbar-light-active-color:         $gray-800 !default; // Original: rgba($black, .95) !default; // From rgba($black, .9)
 $navbar-light-disabled-color:       rgba($black, .5) !default; // From rgba($black, .3)
 $navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"), "#", "%23") !default;
 $navbar-light-toggler-border-color: rgba($black, .1) !default;

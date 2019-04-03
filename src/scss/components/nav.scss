@@ -1,15 +1,4 @@
 // Main navigation
-@include media-breakpoint-down(md) {
-  .navbar-toggle {
-    padding: $input-padding-y-lg $input-padding-x-lg;
-    margin-right: 0;
-
-    .icon-bar {
-      @include theme-contrast-color("header", "background-color");
-    }
-  }
-}
-
 .navbar-dark {
   @include theme-color("nav", "background-color");
 
@@ -24,13 +13,6 @@
   .btn-link {
     @include theme-contrast-color("nav", "color");
   }
-}
-
-// Override BS default behavior
-.navbar-dark .navbar-nav > .open > a,
-.navbar-dark .navbar-nav > .open > a:hover {
-  background-color: transparent;
-  @include theme-contrast-color("nav", "color");
 }
 
 .main-nav {
@@ -104,12 +86,40 @@
 
   .dropdown-menu {
     .dropdown-item {
-      padding: 0 1.5rem;
-      line-height: 3rem;
+      padding: $nav-link-padding-y $navbar-padding-x * 2.5;
 
-      &:not(.active):hover {
-        background-color: $table-hover-bg;
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: transparent;
       }
+    }
+  }
+
+  // Desktop
+  @include media-breakpoint-up(md) {
+    .dropdown-menu {
+      .dropdown-item {
+        padding: $nav-link-padding-y $navbar-padding-x;
+      }
+    }
+  }
+
+  .active {
+    // Top level links with sub-menus underneath them
+    .dropdown-item,
+    .dropdown-item:hover,
+    .dropdown-item:focus,
+    .dropdown-item:active {
+      background-color: transparent;
+    }
+
+    // Specific active links in a sub-menu
+    > .dropdown-item,
+    > .dropdown-item:hover,
+    > .dropdown-item:active,
+    > .dropdown-item:focus {
+      background-color: $primary;
     }
   }
 
@@ -141,11 +151,6 @@
       }
     }
 
-    .nav-item .nav-link {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
-
     // Add hover border to left side
     .nav-item > a,
     .dropdown-menu a {
@@ -171,7 +176,7 @@
     // Dropdown
     .dropdown {
       // Change caret direction pointing up
-      &.open .navbar-touch-caret .fa-caret-down:before {
+      &.show .navbar-touch-caret .fa-caret-down:before {
         content: "\f106";
       }
 
@@ -181,34 +186,36 @@
 
       .dropdown-menu {
         padding: 0;
-        // Requires nesting
-        background-color: $theme-bg-lighter;
         @include theme-color("nav", "background-color");
       }
     }
 
-    .open .dropdown-menu {
+    .show .dropdown-menu {
       > li {
         padding: 0;
-
-        &:hover {
-          background-color: transparent;
-        }
+        //
+        //&:active,
+        //&:focus,
+        //&:hover {
+        //  background-color: transparent;
+        //}
       }
 
       > li > a {
-        padding: 10px 15px 10px 35px;
         color: color-yiq($theme-bg-lighter);
         display: block;
 
         @include theme-contrast-color("nav", "color");
 
+        &:active,
+        &:focus,
         &:hover {
           @include theme-contrast-color("nav", "color");
         }
       }
 
       .active > li > a,
+      .active > li > a:active,
       .active > li > a:hover,
       .active > li > a:focus {
         @include theme-color("accent", "background-color");
@@ -218,12 +225,6 @@
 
   // Desktop only
   @include media-breakpoint-up(md) {
-
-    .nav-item > a {
-      padding-top: $input-padding-y-lg;
-      padding-bottom: $input-padding-y-lg;
-    }
-
     // 1st level
     .nav-item {
       > .section {
@@ -265,14 +266,6 @@
         margin-left: -1px;
         border-radius: 0;
         min-width: 160px;
-      }
-
-      .dropdown-menu > li > a {
-        color: $body-color;
-
-        &:active {
-          color: $white;
-        }
       }
 
       .dropdown-menu > .active > a {
@@ -317,7 +310,6 @@
     &,
     &:hover,
     &:focus {
-      //color: $nav-pills-active-link-hover-color;
       @include theme-color("accent", "background-color");
     }
   }
