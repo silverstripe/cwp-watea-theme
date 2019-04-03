@@ -5,7 +5,7 @@
   "keywords": ["silverstripe", "theme", "cwp"],
   "license": "BSD-3-Clause",
   "require": {
-    "cwp/starter-theme": "dev-feature/ss4-demo"
+    "cwp/starter-theme": "3.x-dev"
   },
   "extra": {
     "installer-name": "watea",
