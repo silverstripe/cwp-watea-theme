@@ -28,12 +28,12 @@
 // General pages
 .page-utilities {
   border-top: 1px solid $gray-300;
-  padding-top: 2.4rem;
-  padding-bottom: 0.5rem;
+  padding-top: $line-height-computed;
+  padding-bottom: $line-height-computed / 5;
 
   .fa {
     color: $gray-600;
-    font-size: 2rem;
+    font-size: 1.5rem;
 
     &:hover {
       color: $gray-600;
