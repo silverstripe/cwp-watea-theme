@@ -1,7 +1,7 @@
 // Main navigation
-@media (max-width: $grid-float-breakpoint-max) {
+@include media-breakpoint-down(md) {
   .navbar-toggle {
-    padding: $padding-large-vertical $padding-base-horizontal;
+    padding: $input-padding-y-lg $input-padding-x-lg;
     margin-right: 0;
 
     .icon-bar {
@@ -10,8 +10,16 @@
   }
 }
 
-.navbar-default {
+.navbar-dark {
   @include theme-color("nav", "background-color");
+
+  .navbar-nav .nav-link {
+    color: $gray-400;
+
+    &:hover {
+      color: $white;
+    }
+  }
 
   .btn-link {
     @include theme-contrast-color("nav", "color");
@@ -19,37 +27,44 @@
 }
 
 // Override BS default behavior
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover {
+.navbar-dark .navbar-nav > .open > a,
+.navbar-dark .navbar-nav > .open > a:hover {
   background-color: transparent;
   @include theme-contrast-color("nav", "color");
 }
 
 .main-nav {
   .navbar {
-    z-index: $zindex-navbar;
+    z-index: $zindex-fixed;
+    border-bottom: 0;
+    padding-top: 0;
 
     // Special case for white/light-grey theme
     body.theme-nav-white &,
     body.theme-nav-light-grey & {
-      border-bottom: 1px solid $navbar-inverse-border-color;
+      border-bottom: 1px solid $gray-300;
     }
   }
 
   .navbar-nav > li > a {
-    @include theme-contrast-color("nav", "color");
+    @include theme-contrast-color("nav", "color", $gray-400);
+
+    &:hover {
+      @include theme-contrast-color("nav", "color");
+    }
   }
 
   .nav-item.current > a {
-    background-color: $brand-primary;
+    background-color: $primary;
     @include theme-color("accent", "background-color");
     @include theme-contrast-color("accent", "color");
 
     &:focus,
     &:hover {
-      background-color: $brand-primary;
+      background-color: $primary;
       @include theme-color("accent", "background-color");
       @include theme-contrast-color("accent", "color");
+      color: $white;
     }
   }
 
@@ -74,41 +89,61 @@
       .navbar-touch-caret,
       &:hover .navbar-touch-caret,
       &:focus .navbar-touch-caret {
-        background: $brand-primary;
+        background: $primary;
         @include theme-color("accent", "background-color");
         @include theme-contrast-color("accent", "color");
 
         &:hover,
         &:focus {
-          background-color: $brand-primary;
+          background-color: $primary;
           @include theme-color("accent", "background-color");
         }
       }
     }
   }
 
+  .dropdown-menu {
+    .dropdown-item {
+      padding: 0 1.5rem;
+      line-height: 3rem;
+
+      &:not(.active):hover {
+        background-color: $table-hover-bg;
+      }
+    }
+  }
+
   // Mobile only
-  @media (max-width: $grid-float-breakpoint-max) {
+  @include media-breakpoint-down(sm) {
     .navbar-nav {
-      margin-top: 0;
-      margin-bottom: 0;
+      margin: 0;
     }
 
     .navbar-collapse {
       box-shadow: none;
+      border-top: 1px solid $navbar-dark-color;
+      border-color: $navbar-dark-color;
+      margin-left: -($grid-gutter-width / 2);
+      margin-right: -($grid-gutter-width / 2);
     }
 
-    .navbar-form {
-      @include theme-color("header", "background-color");
-      margin-top: 0;
-      border-top: 1px solid $navbar-border-color;
-      border-color: $navbar-border-color;
+    .navbar {
+      .form-inline {
+        @include theme-color("header", "background-color");
+        margin-top: 0;
+        padding: 1rem 2rem;
 
-      // Special case for white/light-grey theme
-      body.theme-header-white &,
-      body.theme-header-light-grey & {
-        border-color: $navbar-inverse-border-color;
+        // Special case for white/light-grey theme
+        body.theme-header-white &,
+        body.theme-header-light-grey & {
+          border-color: $gray-300;
+        }
       }
+    }
+
+    .nav-item .nav-link {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
 
     // Add hover border to left side
@@ -128,7 +163,7 @@
 
       &:hover:before,
       &:focus:before {
-        background: $brand-primary;
+        background: $primary;
         @include theme-color("accent", "background-color");
       }
     }
@@ -141,7 +176,7 @@
       }
 
       .navbar-touch-caret {
-        padding-left: $navbar-padding-horizontal;
+        padding-left: $input-padding-x-lg;
       }
 
       .dropdown-menu {
@@ -153,8 +188,19 @@
     }
 
     .open .dropdown-menu {
+      > li {
+        padding: 0;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+
       > li > a {
         padding: 10px 15px 10px 35px;
+        color: color-yiq($theme-bg-lighter);
+        display: block;
+
         @include theme-contrast-color("nav", "color");
 
         &:hover {
@@ -162,46 +208,46 @@
         }
       }
 
-      .active > a,
-      .active > a:hover,
-      .active > a:focus {
+      .active > li > a,
+      .active > li > a:hover,
+      .active > li > a:focus {
         @include theme-color("accent", "background-color");
       }
     }
   }
 
   // Desktop only
-  @media (min-width: $grid-float-breakpoint-max) {
+  @include media-breakpoint-up(md) {
 
     .nav-item > a {
-      padding-top: $navbar-padding-vertical;
-      padding-bottom: $navbar-padding-vertical;
+      padding-top: $input-padding-y-lg;
+      padding-bottom: $input-padding-y-lg;
     }
 
     // 1st level
     .nav-item {
       > .section {
-        border-bottom: $nav-hover-border-width solid $navbar-default-brand-hover-bg;
+        border-bottom: $nav-hover-border-width solid transparent;
       }
 
       > .link {
-        border-bottom: $nav-hover-border-width solid $navbar-default-brand-hover-bg;
+        border-bottom: $nav-hover-border-width solid transparent;
         transition: border-color 300ms ease-out;
 
         &:focus,
         &:hover {
-          border-bottom-color: $brand-primary;
+          border-bottom-color: $primary;
           @include theme-color("accent", "border-bottom-color");
         }
       }
 
       > .current {
-        border-bottom: $nav-hover-border-width solid $brand-primary;
+        border-bottom: $nav-hover-border-width solid $primary;
         @include theme-color("accent", "border-bottom-color");
 
         &:focus,
         &:hover {
-          border-bottom-color: $brand-primary;
+          border-bottom-color: $primary;
           @include theme-color("accent", "border-bottom-color");
         }
       }
@@ -210,22 +256,29 @@
       &.dropdown > a.link {
         &:focus,
         &:hover {
-          border-bottom-color: $navbar-default-brand-hover-bg;
+          border-bottom-color: transparent;
         }
       }
 
       > .dropdown-menu {
         margin-top: (-$nav-hover-border-width - 1px);
         margin-left: -1px;
+        border-radius: 0;
+        min-width: 160px;
       }
 
       .dropdown-menu > li > a {
-        color: $text-color;
+        color: $body-color;
+
+        &:active {
+          color: $white;
+        }
       }
 
       .dropdown-menu > .active > a {
-        color: $navbar-default-link-active-color;
+        color: $navbar-dark-active-color;
         @include theme-color("accent", "background-color");
+
       }
     }
 
@@ -236,21 +289,25 @@
 
     // 1st level with dropdown
     .dropdown {
-      // Allow space for caret
-      padding-right: $navbar-padding-horizontal + 6px; // 6px approx half width of icon
-
       > .link {
         &:focus,
         &:hover {
-          border-bottom-color: $navbar-default-brand-hover-bg;
+          border-bottom-color: transparent;
         }
       }
 
       &.current .navbar-touch-caret {
-        border-bottom: $nav-hover-border-width solid $brand-primary;
+        border-bottom: $nav-hover-border-width solid $primary;
         @include theme-color("accent", "border-bottom-color");
       }
     }
+  }
+}
+
+.dropdown-item {
+  &.active,
+  &:active {
+    @include theme-color("accent", "background-color");
   }
 }
 
@@ -260,8 +317,18 @@
     &,
     &:hover,
     &:focus {
-      color: $nav-pills-active-link-hover-color;
+      //color: $nav-pills-active-link-hover-color;
       @include theme-color("accent", "background-color");
     }
+  }
+}
+
+.badge-primary {
+  @include theme-color("accent", "background-color");
+  @include theme-contrast-color("accent", "color");
+
+  &:hover,
+  &:focus {
+    @include theme-color("accent", "background-color", "darken", 10%);
   }
 }

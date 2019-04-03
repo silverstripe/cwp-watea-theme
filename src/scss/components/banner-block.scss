@@ -1,0 +1,22 @@
+.element-holder {
+  box-sizing: border-box;
+
+  .banner-element__image {
+    min-height: 20rem;
+    max-height: 40rem;
+  }
+
+  .banner-element__content {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: $white;
+    height: 100%;
+    padding: 2rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .banner-element__title {
+    color: $white;
+  }
+}

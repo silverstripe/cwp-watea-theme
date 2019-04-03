@@ -5,14 +5,8 @@
   "keywords": ["silverstripe", "theme", "cwp"],
   "license": "BSD-3-Clause",
   "require": {
-    "cwp/starter-theme": "^2.0"
+    "cwp/starter-theme": "3.x-dev"
   },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://packages.cwp.govt.nz/"
-    }
-  ],
   "extra": {
     "installer-name": "watea",
     "branch-alias": {

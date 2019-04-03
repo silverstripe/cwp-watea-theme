@@ -1,7 +1,7 @@
 // Header can also be inside articles or sections so limit to site header
 body > header {
-  background: $navbar-default-bg;
-  color: $navbar-default-color;
+  background: $theme-bg;
+  color: $navbar-dark-color;
 }
 
 .header {
@@ -14,57 +14,91 @@ body > header {
   a {
     @include theme-contrast-color("header", "color");
   }
-}
 
-// Language selector
-.language-selector {
-  text-transform: capitalize;
-
-  .btn.dropdown-toggle {
-    @include form-controls-style();
+  // Language selector
+  .language-selector {
+    display: inline-block;
+    margin-right: 0;
+    position: relative;
+    right: 1rem;
     text-transform: capitalize;
-    padding: $padding-base-horizontal 15px;
-  }
+    top: 0;
 
-  .dropdown-toggle:focus,
-  &.open .dropdown-toggle {
-    @include form-controls-style();
-    box-shadow: none;
-  }
-
-  .dropdown-menu {
-    border-color: rgba($gray-base, .4);
-    margin-top: 0;
-
-    // Show focus on all links (override BS)
-    > .active > a:focus {
-      @include outline-focus();
+    @include media-breakpoint-up(sm) {
+      margin-right: 0.5rem;
     }
 
-    > li > a {
-      color: $gray-dark;
+    &__dropdown {
+      z-index: $zindex-modal-backdrop;
+    }
+
+    .btn.dropdown-toggle {
+      display: inline-flex;
+      justify-content: center;
+      @include form-controls-style();
+      text-transform: capitalize;
+      padding: $btn-padding-x 0.5rem;
+
+      @include media-breakpoint-up(sm) {
+        display: inline-block;
+        padding: $btn-padding-x 1.5rem;
+      }
+    }
+
+    .fa.fa-language {
+      margin-right: 0.8rem;
+    }
+
+    .dropdown-toggle::after {
+      border: 0;
+      margin: 0;
+      visibility: hidden;
+    }
+
+    .dropdown-toggle:focus,
+    &.open .dropdown-toggle {
+      @include form-controls-style();
+      box-shadow: none;
+    }
+
+    .dropdown-menu {
+      border-color: $gray-500;
+      margin-top: 0;
+
+      // Show focus on all links (override BS)
+      > .active > a:focus {
+        @include outline-focus();
+      }
+
+      > li > a {
+        color: $gray-900;
+
+        &:hover {
+          background-color: $table-hover-bg;
+        }
+      }
     }
   }
 }
 
 // These must be separate to work
 .site-header-search .form-control::-webkit-input-placeholder {
-  color: $navbar-default-link-active-color;
+  color: $navbar-dark-active-color;
   @include theme-contrast-color("header", "color");
 }
 
 .site-header-search .form-control:-moz-placeholder {
-  color: $navbar-default-link-active-color;
+  color: $navbar-dark-active-color;
   @include theme-contrast-color("header", "color");
 }
 
 .site-header-search .form-control::-moz-placeholder {
-  color: $navbar-default-link-active-color;
+  color: $navbar-dark-active-color;
   @include theme-contrast-color("header", "color");
 }
 
 .site-header-search .form-control:-ms-input-placeholder {
-  color: $navbar-default-link-active-color;
+  color: $navbar-dark-active-color;
   @include theme-contrast-color("header", "color");
 }
 
@@ -72,15 +106,14 @@ body > header {
 .site-header-search {
   .form-control,
   button[type="submit"] {
-    height: $navbar-height;
     @include form-controls-style();
-    border: 1px solid rgba($input-bg, .4);
+    border: 1px solid $gray-600;
 
     // Special case for white/light-grey theme
     body.theme-header-white &,
     body.theme-header-light-grey & {
       background: $input-bg;
-      border-color: rgba($gray, .4);
+      border-color: $gray-600;
     }
 
     &:focus {
@@ -90,14 +123,14 @@ body > header {
 
   .form-control {
     box-shadow: none;
-    padding: $padding-large-vertical $padding-large-horizontal;
-    height: ($line-height-computed + ($padding-large-vertical * 2) + 2);
+    padding: $input-btn-padding-y-lg $input-btn-padding-x-lg;
+    height: auto;
     border-right: 0;
   }
 
   // Search button hover
   .btn[type="submit"] {
-    padding: $padding-large-vertical $padding-large-horizontal;
+    padding: $input-btn-padding-y-lg $input-btn-padding-x-lg;
     border-left: 0;
 
     &:active:hover,
@@ -105,9 +138,9 @@ body > header {
     &:active,
     &:focus,
     &:hover {
-      background-color: $brand-primary;
-      color: $btn-primary-color;
-      border-color: $brand-primary;
+      background-color: $primary;
+      color: color-yiq($primary);
+      border-color: $primary;
       @include theme-color("accent", "background-color");
       @include theme-color("accent", "border-color");
     }
@@ -123,35 +156,20 @@ body > header {
 
 // Accessibilty links to navigation
 .skip-links a {
-  color: $navbar-default-link-color;
-  background: $navbar-default-bg;
+  color: $navbar-dark-color;
+  background: $theme-bg;
   @include theme-color("header", "background-color");
 }
 
 // Mobile only
 // Site header
-@media (max-width: $grid-float-breakpoint-max) {
+@include media-breakpoint-down(md) {
   .site-header {
     min-height: 111px;
 
     .site-header-brand {
-      margin-right: $line-height-computed * 5.5;
+      max-width: 19rem;
       font-size: 1em;
-    }
-
-    .navbar-toggle,
-    .language-selector {
-      position: absolute;
-      top: $line-height-computed * 1.2;
-    }
-
-    .navbar-toggle {
-      right: $line-height-computed * 0.6;
-      padding: 17px 10px;
-    }
-
-    .language-selector {
-      right: $line-height-computed * 2.8;
     }
   }
 }

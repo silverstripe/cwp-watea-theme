@@ -4,7 +4,7 @@
 @mixin form-controls-style() {
   background: transparent;
   border: 0;
-  color: $btn-primary-color;
+  color: $white;
   @include theme-contrast-color("header", "color");
 }
 
@@ -29,3 +29,4 @@
     text-shadow: none;
   }
 }
+

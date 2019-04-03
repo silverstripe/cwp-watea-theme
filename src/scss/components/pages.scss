@@ -1,4 +1,5 @@
 // Generic page styles
+
 .main {
   // Add underline to links in general content areas only
   a {
@@ -16,21 +17,26 @@
   .pagination .active a {
     @include theme-color("accent", "background-color");
     @include theme-color("accent", "border-color");
+
+    &:hover {
+      color: $white;
+      cursor: default;
+    }
   }
 }
 
 // General pages
 .page-utilities {
-  border-top: 1px solid $gray-lighter;
-  padding-top: $line-height-computed;
-  padding-bottom: $line-height-computed / 5;
+  border-top: 1px solid $gray-300;
+  padding-top: 2.4rem;
+  padding-bottom: 0.5rem;
 
   .fa {
-    color: $gray-light;
+    color: $gray-600;
     font-size: 2rem;
 
     &:hover {
-      color: $gray;
+      color: $gray-600;
     }
   }
 }
@@ -41,19 +47,21 @@
 
   > li {
     padding: 0;
+    display: inline-block;
   }
 }
 
 .page-utilities-last-modified {
-  color: $gray-light;
+  color: $gray-600;
   float: left;
   text-align: left;
 }
 
 .page-header {
-  padding-bottom: ($line-height-computed / 3) - 2;
-  margin: $line-height-computed 0 (($line-height-computed / 2) - 2);
+  padding-bottom: 0.6rem;
+  margin: $line-height-computed 0 1.6rem;
   border-bottom: 0;
+
 
   h1,
   .h1,
@@ -66,13 +74,13 @@
 }
 
 .label {
-  border-radius: $border-radius-base;
+  border-radius: $border-radius;
   padding-bottom: .2em;
 }
 
 .label-primary {
-  @include theme-color('accent', 'background-color');
-  @include theme-contrast-color('accent', 'color');
+  @include theme-color("accent", "background-color");
+  @include theme-contrast-color("accent", "color");
 }
 
 .well {
@@ -81,14 +89,48 @@
 
 // Page sidebar
 .page-sidebar-header {
-  border-bottom: 1px solid $gray;
-  padding-bottom: 8px;
-  margin-top: 4px;
+  border-bottom: 1px solid $gray-600;
+  padding-bottom: 0.8rem;
+  margin-top: 0.4rem;
 }
 
 .page-sidebar-nav a {
-  padding: $padding-base-vertical / 2 0;
+  padding: $navbar-padding-y / 2 0;
   display: block;
+}
+
+.page-sidebar-widget {
+  @include media-breakpoint-down(sm) {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// News sidebar
+.news-item {
+  margin-bottom: 2.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__heading {
+    margin-bottom: 0.2rem;
+  }
+
+  .meta-info {
+    margin-bottom: 0.5rem;
+  }
+
+  .summary {
+    font-size: $font-size-sm;
+  }
+}
+
+// Blogholder widget
+.blog-tags-widget a {
+  text-decoration: none;
 }
 
 // Homepage Jumbotron
@@ -106,8 +148,7 @@
 
 // Page features & quicklinks, used on homepage
 .page-showcase {
-  background-color: $gray-lighter;
-  border-top: 1px solid darken($gray-lighter, 10%);
+  background-color: $lgtgrey;
   padding-bottom: $line-height-computed;
   padding-top: $line-height-computed * 2.5;
 
@@ -133,14 +174,79 @@
   }
 }
 
-// News/Events/Blog items adjustment to bring only the first of the articles inline with the sidebar
-.news-events-article,
-.blog-entry {
-  &:first-child h2 {
-    margin-top: 4px;
+.h5.news-events-archive-year {
+  margin-top: 3px;
+}
+
+// Search styling
+
+.page-searchform {
+  margin-bottom: 3rem;
+}
+
+.search-results {
+  &__heading {
+    margin-bottom: 2.1rem;
+    margin-top: 4rem;
+  }
+
+  &__summary {
+    margin-bottom: 3.3rem;
+
+    .text-muted {
+      margin-bottom: 0;
+      margin-top: 0.9rem;
+    }
+  }
+
+  &__message {
+    font-size: 2.2rem;
+    margin: 0;
   }
 }
 
-.h5.news-events-archive-year {
-  margin-top: 3px;
+// Blog holder/page
+.blog-holder__content {
+  margin-bottom: 4rem;
+}
+
+.blog-entry--paginated {
+  margin-bottom: 4rem;
+
+  &:last-child {
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Generic listing classes with modifiers
+.listing {
+  &__item {
+    margin-bottom: 3rem;
+
+    &--news-events {
+      margin-bottom: 4.2rem;
+    }
+
+    &--search-result {
+      margin-bottom: 3.7rem;
+
+      .h4 {
+        margin-bottom: 0.5rem;
+      }
+
+      .breadcrumb {
+        margin-bottom: 0.7rem;
+
+        &-item {
+          font-size: $font-size-sm;
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 0.6rem;
+  }
 }

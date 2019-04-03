@@ -1,25 +1,25 @@
 .footer-site {
   margin-top: 0;
-  background-color: $navbar-default-bg;
+  background-color: $theme-bg;
   @include theme-color("footer", "background-color");
-  padding: ($line-height-computed * 1.8) 0;
+  padding: 4.5rem 0 3.5rem;
 
   // Horizontal divder line
   hr {
     border-top: 1px solid $theme-bg-lighter;
     @include theme-contrast-color("footer", "border-color");
     margin-bottom: $line-height-computed * 1.5;
+    opacity: 0.2;
 
-    @media (min-width: $screen-md-min) {
+    @include media-breakpoint-up(md) {
       border-color: transparent;
-      margin-top: 12px;
-      margin-bottom: 12px;
+      margin: 3.5rem 0 3.2rem;
     }
   }
 
   a:hover,
   p {
-    color: $navbar-default-link-hover-color;
+    color: $navbar-dark-color;
   }
 }
 
@@ -27,11 +27,16 @@
 .footer-govt-logo a {
   position: relative;
   display: inline-block;
-  margin-bottom: $line-height-computed;
+  margin-bottom: 2.4rem;
+
+  @include media-breakpoint-up(lg) {
+    margin: 0;
+  }
 }
 
 // Footer navigation and Copyright
 .footer-nav-links a {
+  @include theme-contrast-color("footer", "color");
   margin-right: $line-height-computed;
   @include theme-contrast-color("footer");
 }
@@ -39,7 +44,11 @@
 // Social media icons
 .footer-social-links .fa {
   font-size: 2.2rem;
-  margin-bottom: $line-height-computed * 1.2;
+  margin-bottom: $line-height-computed;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 0;
+  }
 
   &:hover,
   &:focus {
@@ -54,10 +63,11 @@
     width: 0;
     height: calc(100% + 12px);
     position: absolute;
-    border: 1px solid $theme-bg-lighter;
+    border-left: 1px solid $theme-bg-lighter;
     @include theme-contrast-color("footer", "border-color");
     right: 10px;
     top: -6px;
+    opacity: 0.2;
   }
 
   img {
@@ -67,3 +77,4 @@
     width: auto;
   }
 }
+

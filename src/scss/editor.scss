@@ -1,0 +1,25 @@
+// Bootstrap functions
+@import "../../../starter/node_modules/bootstrap/scss/functions";
+
+// Our styling variables
+@import "./variables";
+
+// sass-lint:disable clean-import-paths
+@import "../../../starter/node_modules/bootstrap/scss/mixins";
+@import "../../../starter/node_modules/bootstrap/scss/variables";
+@import "../../../starter/node_modules/bootstrap/scss/alert";
+@import "../../../starter/node_modules/bootstrap/scss/tables";
+@import "../../../starter/node_modules/bootstrap/scss/media";
+@import "../../../starter/node_modules/bootstrap/scss/type";
+@import "../../../starter/node_modules/bootstrap/scss/utilities";
+@import "../../../starter/node_modules/font-awesome/scss/font-awesome";
+// sass-lint:enable clean-import-paths
+
+@import "./utils/mixins";
+@import "./utils/theme-styles";
+@import "./typography";
+
+// Base font sizing
+html {
+  font-size: 62.5%; // Adjusted so that 36px is equal to 3.6rem
+}

@@ -23,15 +23,15 @@ $default-theme-colors: (
   "purple": #6239C8,
   "blue": #1F6BFE,
   "dark-blue": #123581,
-  "default-accent": $brand-primary,
+  "default-accent": $primary,
   "default-background": $theme-bg,
   "teal": #00837A,
   "green": #298436,
   "dark-orange": #D34300,
   "dark-ochre": #947200,
   "black": #111,
-  "dark-grey": $gray,
-  "light-grey": #EAEAEA,
+  "dark-grey": $gray-800,
+  "light-grey": $gray-300,
   "white": #FFF,
 ) !default;
 
@@ -52,7 +52,7 @@ $custom-theme-colors: () !default;
 $custom-light-colors: () !default;
 
 // Merge $custom-theme-colors into $default-theme-colors
-$theme-colors: map-merge($default-theme-colors, $custom-theme-colors) !default;
+$all-theme-colors: map-merge($default-theme-colors, $custom-theme-colors) !default;
 // Merge $custom-light-colors into $default-light-colors
 $light-colors: join($default-light-colors, $custom-light-colors) !default;
 
@@ -114,10 +114,10 @@ $theme-fonts: map-merge($default-theme-fonts, $custom-theme-fonts) !default;
 // @param {string} $modifier ["none"] - Sass function to manipulate the color.
 // @param {number} $amount [0%] - Amount to manipulate by
 //
-// @example: @include theme-color("accent", background-color", "lighten", 20%)
+// @example: @include theme-color("accent", "background-color", "lighten", 20%)
 
 @mixin theme-color($area, $property: "background-color", $modifier: "none", $amount: 0%) {
-  @each $name, $color in $theme-colors {
+  @each $name, $color in $all-theme-colors {
     body.theme-#{$area}-#{$name} & {
       @if ($modifier == "none") {
         #{$property}: $color;
@@ -155,13 +155,13 @@ $theme-fonts: map-merge($default-theme-fonts, $custom-theme-fonts) !default;
 // @param {string} $property ["color"] - You can specify a different
 // CSS property to use when calling the mixin.
 
-@mixin theme-contrast-color($area, $property: "color") {
-  @each $name, $color in $theme-colors {
+@mixin theme-contrast-color($area, $property: "color", $white: #FFF) {
+  @each $name, $color in $all-theme-colors {
     body.theme-#{$area}-#{$name} & {
       @if (index($light-colors, $name) != null) {
-        #{$property}: $text-color;
+        #{$property}: $body-color;
       } @else {
-        #{$property}: #FFF;
+        #{$property}: $white;
       }
     }
   }
