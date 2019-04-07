@@ -324,3 +324,18 @@
     @include theme-color("accent", "background-color", "darken", 10%);
   }
 }
+
+// Desktop only: add menu item hover colour for sub-navigations
+@include media-breakpoint-up(md) {
+  .navbar-nav {
+    .dropdown-menu {
+      .dropdown-item {
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: $gray-100;
+        }
+      }
+    }
+  }
+}
