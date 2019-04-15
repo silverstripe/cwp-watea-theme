@@ -4,7 +4,7 @@
   @include theme-color("footer", "background-color");
   padding: ($line-height-computed * 1.8) 0;
 
-  // Horizontal divder line
+  // Horizontal divider line
   hr {
     border-top: 1px solid $theme-bg-lighter;
     @include theme-contrast-color("footer", "border-color");
@@ -34,12 +34,18 @@
 .footer-nav-links a {
   color: $navbar-default-link-hover-color;
   margin-right: $line-height-computed;
+  @include theme-contrast-color("footer");
 }
 
 // Social media icons
 .footer-social-links .fa {
   font-size: 2.2rem;
   margin-bottom: $line-height-computed * 1.2;
+
+  &:hover,
+  &:focus {
+    opacity: .8;
+  }
 }
 
 // Secondary branding logo (defaults to CWP logo)
