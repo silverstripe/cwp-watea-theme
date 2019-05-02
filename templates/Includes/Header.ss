@@ -7,9 +7,8 @@
                     src="$SiteConfig.Logo.URL" width="$SiteConfig.Logo.Width" height="$SiteConfig.Logo.Height"
                     alt="$SiteConfig.Title"
                     aria-hidden="true" />
-            <% else %>
-                <span>$SiteConfig.Title</span>
             <% end_if %>
+            <span<% if $SiteConfig.Logo %> class="sr-only"<% end_if %>>$SiteConfig.Title</span>
         </a>
         <% if $SiteConfig.Tagline %>
             <span class="site-header-brand-tagline small">$SiteConfig.Tagline</span>
