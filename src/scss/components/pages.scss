@@ -208,6 +208,12 @@
     font-size: 2.2rem;
     margin: 0;
   }
+
+  &__no-result {
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 // Blog holder/page
