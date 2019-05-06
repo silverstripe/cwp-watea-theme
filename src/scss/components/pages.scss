@@ -152,14 +152,8 @@
   padding-bottom: $line-height-computed;
   padding-top: $line-height-computed * 2.5;
 
-  // NB: nested for specifity against Wātea plus colour picker
-  &,
-  .page-showcase-quicklinks,
-  .page-showcase-feature {
-    a {
-      color: $link-color-darker;
-      text-decoration: underline;
-    }
+  a {
+    @include theme-color("accent", "color", "darken", 5%);
   }
 }
 

@@ -3,20 +3,9 @@
   margin-top: 0;
   background-color: $theme-bg;
   @include theme-color("footer", "background-color");
-  color: $white;
 
-  // Nested for specificity against the Watea plus body classes
-  .container a {
-    &,
-    &:hover,
-    &:focus,
-    &:active {
-      color: $white;
-    }
-
-    &:hover {
-      text-decoration: underline;
-    }
+  a {
+    @include theme-contrast-color("footer", "color");
   }
 
   // Don't add underlines when hovering over the government logos
@@ -83,6 +72,10 @@
 // Desktop only
 @include media-breakpoint-up(md) {
   .footer-site-divider {
-    border-color: transparent !important; // Sorry, the theme colour picker specificity is strong.
+    display: none;
+  }
+
+  .footer-govt-logo {
+    margin-top: $navbar-padding-y * 6;
   }
 }
