@@ -41,7 +41,7 @@ body > header {
 
       @include media-breakpoint-up(sm) {
         display: inline-block;
-        padding: $btn-padding-x 1.5rem;
+        padding: $input-btn-padding-y-lg 1.5rem;
       }
     }
 
