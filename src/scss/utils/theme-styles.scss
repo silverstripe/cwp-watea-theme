@@ -132,8 +132,8 @@ $theme-fonts: map-merge($default-theme-fonts, $custom-theme-fonts) !default;
 
 // Theme font mixin to be applied to the whole site.
 //
-// Applies a different fallback font stack depending on if the font is
-// serif, or sans-serif.
+// Applies a different fallback font stack depending on if the font is serif, or sans-serif. It's unlikely that
+// you will need to use this, since the font family is defined at the upper level.
 //
 // @example: @include theme-font()
 
@@ -149,11 +149,11 @@ $theme-fonts: map-merge($default-theme-fonts, $custom-theme-fonts) !default;
   }
 }
 
-// Mixin for providing a color which contrasts against a given area"s color.
+// Mixin for providing a color which contrasts against a given area's color.
 //
 // @param {string} $area - Area or element that this theme colour applies to
-// @param {string} $property ["color"] - You can specify a different
-// CSS property to use when calling the mixin.
+// @param {string} $property ["color"] - You can specify a different CSS property to use when calling the mixin.
+// @param {string} $white [#FFF] - The default light colour that will be used if the area is dark.
 
 @mixin theme-contrast-color($area, $property: "color", $white: #FFF) {
   @each $name, $color in $all-theme-colors {
