@@ -138,6 +138,13 @@ p {
   }
 }
 
+ul,
+ol {
+  .theme-font-fira-sans & {
+    font-weight: 300;
+  }
+}
+
 h1,
 .h1,
 h2,

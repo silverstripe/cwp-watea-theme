@@ -1,19 +1,22 @@
-.element-holder {
+.silverstripe__elementalbannerblock__block__bannerblock {
   box-sizing: border-box;
-
-  .banner-element__image {
-    min-height: 20rem;
-    max-height: 40rem;
-  }
 
   .banner-element__content {
     background-color: rgba(0, 0, 0, 0.5);
     color: $white;
     height: 100%;
-    padding: 2rem;
     left: 0;
     top: 0;
     width: 100%;
+    display: flex;
+    align-items: center;
+
+    // IE 10 Flex Item Overflow Issue
+    // https://stackoverflow.com/questions/16808815/ie10-flexbox-p-element-non-wrapping
+    * {
+      max-width: 100%;
+      flex-shrink: 1;
+    }
   }
 
   .banner-element__title {

@@ -153,8 +153,7 @@
   padding-top: $line-height-computed * 2.5;
 
   a {
-    color: $link-color-darker;
-    text-decoration: underline;
+    @include theme-color("accent", "color", "darken", 5%);
   }
 }
 
@@ -202,6 +201,12 @@
   &__message {
     font-size: 2.2rem;
     margin: 0;
+  }
+
+  &__no-result {
+    p:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 

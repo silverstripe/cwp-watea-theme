@@ -131,10 +131,6 @@
 
     .navbar-collapse {
       box-shadow: none;
-      border-top: 1px solid $navbar-dark-color;
-      border-color: $navbar-dark-color;
-      margin-left: -($grid-gutter-width / 2);
-      margin-right: -($grid-gutter-width / 2);
     }
 
     .navbar {
@@ -193,12 +189,6 @@
     .show .dropdown-menu {
       > li {
         padding: 0;
-        //
-        //&:active,
-        //&:focus,
-        //&:hover {
-        //  background-color: transparent;
-        //}
       }
 
       > li > a {
