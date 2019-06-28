@@ -13,13 +13,13 @@
         <% if $SiteConfig.FacebookURL || $SiteConfig.TwitterUsername %>
             <div class="footer-social-links col-auto order-1 order-md-3">
                 <% if $SiteConfig.FacebookURL %>
-                    <a class="fa fa-facebook" href="http://www.facebook.com/$SiteConfig.FacebookURL" title='<%t CWP.Footer.FollowOnFacebook "Follow us on Facebook" %>'>
+                    <a class="fa fa-facebook" href="http://www.facebook.com/$SiteConfig.FacebookURL">
                         <span class="sr-only"><%t CWP.Footer.FollowOnFacebook "Follow us on Facebook" %></span>
                     </a>
                 <% end_if %>
 
                 <% if $SiteConfig.TwitterUsername %>
-                    <a class="fa fa-twitter" href="http://www.twitter.com/$SiteConfig.TwitterUsername" title='<%t CWP.Footer.FollowOnTwitter "Follow us on Twitter" %>'>
+                    <a class="fa fa-twitter" href="http://www.twitter.com/$SiteConfig.TwitterUsername">
                         <span class="sr-only"><%t CWP.Footer.FollowOnTwitter "Follow us on Twitter" %></span>
                     </a>
                 <% end_if %>
