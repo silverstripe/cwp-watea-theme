@@ -1,5 +1,5 @@
 <div class="main-nav">
-    <nav class="navbar navbar-expand-md navbar-dark" aria-label="<%t CWP_Theme.MAIN_NAVIGATION 'Main navigation' %>">
+    <nav class="navbar navbar-expand-md navbar-dark" aria-label="<%t CWP_Theme.MAIN 'Main' %>" role="navigation">
         <div class="container">
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <div class="d-block d-md-none border-bottom border-top">

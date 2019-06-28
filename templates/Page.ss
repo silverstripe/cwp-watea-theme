@@ -19,15 +19,15 @@
         <% if $SiteConfig.FooterBackground %>theme-footer-{$SiteConfig.FooterBackground}<% end_if %>
         <% if $SiteConfig.AccentColor %>theme-accent-{$SiteConfig.AccentColor}<% end_if %>
         <% if $SiteConfig.TextLinkColor %>theme-link-{$SiteConfig.TextLinkColor}<% end_if %>">
-        <header class="header">
+        <header class="header" role="banner">
             <% include Header %>
             <% include MainNav %>
         </header>
-        <main id="main" class="main">
+        <main id="main" class="main" role="main">
             $Layout
         </main>
         <% include PageShowcase %>
-        <footer class="footer-site">
+        <footer class="footer-site" role="contentinfo">
             <% include Footer %>
         </footer>
         <% require javascript('//code.jquery.com/jquery-3.3.1.min.js') %>
