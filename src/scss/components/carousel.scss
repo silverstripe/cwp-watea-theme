@@ -129,7 +129,8 @@
 
 .carousel-controls-inner-wrapper {
   display: inline-block;
-  background: rgba(0, 0, 0, .2);
+  @include theme-color("nav", "background-color");
+  border-radius: $border-radius-sm;
 }
 
 // Controls navigate left or right
@@ -174,9 +175,10 @@
     margin-right: 4px;
     margin-left: 4px;
     vertical-align: middle;
+    @include theme-contrast-color("nav", "background-color");
 
     &:hover {
-      border-color: rgba($carousel-caption-color, .8);
+      opacity: .8;
     }
   }
 }
@@ -188,10 +190,10 @@
   padding-right: 6px;
 
   .btn-link {
-    color: $carousel-caption-color;
+    @include theme-contrast-color("nav", "color");
 
     &:hover {
-      color: rgba($carousel-caption-color, .8);
+      opacity: .8;
     }
   }
 }
