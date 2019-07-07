@@ -8,6 +8,7 @@ export default function () {
   const $carousel = $('.carousel');
   const $carouselPause = $('#carousel-pause');
   const $carouselPlay = $('#carousel-play');
+  const $carouselSlideTitle = $('#carousel-slide-title');
 
   $carousel.carousel({
     wrap: true,
@@ -24,5 +25,13 @@ export default function () {
     $carousel.carousel('cycle');
     $carouselPlay.hide();
     $carouselPause.show().focus();
+  });
+
+  const $carouselControlButtons = $('.carousel-controls button, .carousel-indicators button');
+
+  $carouselControlButtons.click(() => {
+    $carousel.one('slide.bs.carousel', (event) => {
+      $carouselSlideTitle.text($(event.relatedTarget).data('title'));
+    });
   });
 }

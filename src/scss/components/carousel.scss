@@ -90,7 +90,7 @@
   // Increase distance between text and actions
   margin-bottom: $line-height-computed * 1.25;
   font-size: $font-size-base * 1.5;
-  font-weight: 300;
+  font-weight: $font-weight-light;
   line-height: 1.4;
 
   @include media-breakpoint-down(sm) {
@@ -128,9 +128,10 @@
 }
 
 .carousel-controls-inner-wrapper {
-  display: inline-block;
+  display: inline-flex;
   @include theme-color("nav", "background-color");
   border-radius: $border-radius-sm;
+  padding: 0 #{$spacer - $btn-padding-x-sm} 0 $spacer;
 }
 
 // Controls navigate left or right
@@ -146,7 +147,7 @@
     background-image: none;
 
     .fa {
-      font-size: $jumbotron-padding * 3.2;
+      font-size: 4rem;
     }
   }
 
@@ -163,37 +164,55 @@
 
 // Carousel slides indicators
 .carousel-indicators {
-  display: inline-block;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 0;
+  margin-right: $line-height-computed / 2;
   position: static;
-  width: auto;
-  margin: 0;
-  padding-left: 14px;
 
-  li,
-  li.active {
-    display: inline-block;
-    margin-right: 4px;
-    margin-left: 4px;
-    vertical-align: middle;
+  .active::before {
     @include theme-contrast-color("nav", "background-color");
+    opacity: 1;
+  }
+
+  .carousel-indicator-button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    width: $carousel-indicator-width;
+    height: 100%;
+    padding: 0;
+    @include transition($carousel-indicator-transition);
+
+    &::before {
+      content: "";
+      @include theme-contrast-color("nav", "background-color");
+      opacity: $carousel-control-opacity;
+      width: 100%;
+      margin: 0 $carousel-indicator-spacer;
+      height: $carousel-indicator-height;
+    }
 
     &:hover {
-      opacity: .8;
+      &::before {
+        opacity: $carousel-control-hover-opacity;
+      }
     }
   }
 }
 
 // Play and pause button
 .carousel-play-controls {
-  display: inline-block;
   position: relative;
-  padding-right: 6px;
 
   .btn-link {
     @include theme-contrast-color("nav", "color");
 
     &:hover {
-      opacity: .8;
+      opacity: $carousel-control-hover-opacity;
     }
   }
 }
