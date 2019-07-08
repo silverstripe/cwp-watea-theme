@@ -29,10 +29,10 @@
   }
 
   .navbar-nav > li > a {
-    @include theme-contrast-color("nav", "color", $gray-400);
+    @include theme-contrast-color("nav", "color");
 
     &:hover {
-      @include theme-contrast-color("nav", "color");
+      @include theme-contrast-color("nav", "color", $gray-400);
     }
   }
 
