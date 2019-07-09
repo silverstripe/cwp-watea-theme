@@ -288,9 +288,15 @@
 }
 
 .dropdown-item {
+  // Extra specificity to override header link colour set by the theme colour picker
+  body .site-header .dropdown & {
+    color: inherit;
+  }
+
   &.active,
   &:active {
     @include theme-color("accent", "background-color");
+    @include theme-contrast-color("accent", "color");
   }
 }
 
