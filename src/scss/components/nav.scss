@@ -13,6 +13,18 @@
   .btn-link {
     @include theme-contrast-color("nav", "color");
   }
+
+  .navbar-toggler {
+    border: 0;
+  }
+
+  // Special case for white/light-grey theme
+  .navbar-toggler-icon {
+    body.theme-header-white &,
+    body.theme-header-light-grey & {
+      background: $navbar-light-toggler-icon-bg;
+    }
+  }
 }
 
 .main-nav {
@@ -133,11 +145,23 @@
       box-shadow: none;
     }
 
+    .search-container {
+      border-top: 1px solid rgba(255, 255, 255, .5);
+      border-bottom: 1px solid rgba(255, 255, 255, .5);
+
+      // Special case for white/light-grey theme
+      body.theme-header-white &,
+      body.theme-header-light-grey & {
+        border-top: 1px solid $gray-400;
+        border-bottom: 1px solid $gray-400;
+      }
+    }
+
     .navbar {
       .form-inline {
         @include theme-color("header", "background-color");
         margin-top: 0;
-        padding: 1rem 2rem;
+        padding: 1rem 0;
 
         // Special case for white/light-grey theme
         body.theme-header-white &,
