@@ -25,10 +25,10 @@
 
                   <%-- Play or Pause --%>
                   <div class="carousel-play-controls">
-                    <button type="button" class="btn btn-link btn-sm" id="carousel-pause" aria-label="Autoplaying carousel with slides. <%t CwpCarousel.PAUSESLIDE "Click to pause carousel slides." %>">
+                    <button type="button" class="btn btn-sm carousel-controls" id="carousel-pause" aria-label="Autoplaying carousel with slides. <%t CwpCarousel.PAUSESLIDE "Click to pause carousel slides." %>">
                       <i class="fa fa-pause" aria-hidden="true"></i>
                     </button>
-                    <button type="button" class="btn btn-link btn-sm" id="carousel-play" aria-label="Paused carousel with slides. <%t CwpCarousel.PLAYSLIDE "Click to play carousel slides." %>" style="display:none;">
+                    <button type="button" class="btn btn-sm carousel-controls" id="carousel-play" aria-label="Paused carousel with slides. <%t CwpCarousel.PLAYSLIDE "Click to play carousel slides." %>" style="display:none;">
                       <i class="fa fa-play" aria-hidden="true"></i>
                     </button>
                   </div>
@@ -76,18 +76,16 @@
                             <% end_if %>
 
                             <% if $PrimaryCallToActionLabel || $SecondaryCallToActionLabel %>
-                                <p>
-                                    <% if $PrimaryCallToActionLabel %>
-                                        <a class="btn btn-primary btn-lg" href="{$PrimaryCallToAction.Link}">
-                                            $PrimaryCallToActionLabel
-                                        </a>
-                                    <% end_if %>
-                                    <% if $SecondaryCallToActionLabel %>
-                                        <a class="btn btn-lg btn-link" href="{$SecondaryCallToAction.Link}">
-                                            $SecondaryCallToActionLabel
-                                        </a>
-                                    <% end_if %>
-                                </p>
+                                <% if $PrimaryCallToActionLabel %>
+                                    <a class="btn btn-primary btn-lg" href="{$PrimaryCallToAction.Link}">
+                                        $PrimaryCallToActionLabel
+                                    </a>
+                                <% end_if %>
+                                <% if $SecondaryCallToActionLabel %>
+                                <a class="btn btn-lg btn-outline-light carousel-secondary-action" href="{$SecondaryCallToAction.Link}">
+                                        $SecondaryCallToActionLabel
+                                    </a>
+                                <% end_if %>
                             <% end_if %>
                         </div>
                     </div>

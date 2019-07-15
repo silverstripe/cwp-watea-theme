@@ -2,8 +2,8 @@ body {
   @include theme-font;
 }
 
-a {
-  @include theme-color("link", "color");
+a:not(.btn) {
+  @include theme-color("accent", "color");
 }
 
 .btn {
