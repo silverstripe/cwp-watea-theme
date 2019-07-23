@@ -19,11 +19,6 @@
     color: $carousel-caption-color;
     @include theme-contrast-color("carousel", "color");
 
-    a {
-      color: $carousel-caption-color;
-      @include theme-contrast-color("carousel", "color");
-    }
-
     h1,
     h2,
     h3,
@@ -38,49 +33,34 @@
       h2,
       h3,
       p,
-      a {
+      a:not(.btn) {
         color: $carousel-caption-color;
         // Add text shadow to all text if there is an image
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-      }
-
-      .btn {
-        text-shadow: none;
-      }
-
-      .btn-link {
-        color: $carousel-caption-color;
-        border-color: $carousel-control-color;
-
-        &:hover {
-          border-color: darken($carousel-control-color, 20%);
-        }
       }
     }
 
     .btn {
       margin-left: $line-height-computed * 0.45;
       margin-right: $line-height-computed * 0.45;
-      padding: ($line-height-computed * 0.5) ($line-height-computed * 0.7);
-      @include theme-contrast-color("accent", "color");
 
       @include media-breakpoint-down(sm) {
         margin-bottom: floor($line-height-computed * 0.45);
       }
     }
 
-    .btn-link {
-      position: relative;
-      border: 1px solid lighten($primary, 20%);
-      @include theme-color("accent", "border-color");
+    &:not(.carousel-has-image) .carousel-secondary-action {
       @include theme-contrast-color("carousel", "color");
-      transition: all 0.3s ease;
+      border-color: currentColor;
 
       &:hover {
-        border-color: lighten($primary, 40%);
-        @include theme-color("accent", "border-color", "lighten", 20%);
+        @include theme-contrast-color("carousel", "color", #000);
       }
     }
+  }
+
+  .theme-carousel-default-background & a:not(.btn) {
+    color: $carousel-caption-color;
   }
 }
 
@@ -99,16 +79,13 @@
 
   // Custom carousel link style for theme
   a {
-    border-bottom: 1px solid lighten($primary, 20%);
+    border-width: 0 0 1px 0;
+    border-style: solid;
     @include theme-color("accent", "border-bottom-color");
     text-decoration: none;
 
-    div.carousel-has-image & {
-      border-color: $carousel-control-color;
-    }
-
     &:hover {
-      border-bottom: 0;
+      @include theme-color("accent", "border-bottom-color", "lighten", 20%);
     }
   }
 }
@@ -147,20 +124,23 @@
     background-image: none;
 
     .fa {
-      font-size: 4rem;
+      font-size: 3.5rem;
+      padding: 0 14px 2px;
+      border-radius: $border-radius-sm;
+      background-color: rgba(0, 0, 0, 0.3);
     }
   }
 
   &:hover {
     background-color: rgba($gray-600, .2);
     cursor: pointer;
+    opacity: 1;
   }
 
   &:focus {
     @include outline-focus;
   }
 }
-
 
 // Carousel slides indicators
 .carousel-indicators {
@@ -170,11 +150,6 @@
   margin-left: 0;
   margin-right: $line-height-computed / 2;
   position: static;
-
-  .active::before {
-    @include theme-contrast-color("nav", "background-color");
-    opacity: 1;
-  }
 
   .carousel-indicator-button {
     display: flex;
@@ -196,10 +171,13 @@
       height: $carousel-indicator-height;
     }
 
-    &:hover {
-      &::before {
-        opacity: $carousel-control-hover-opacity;
-      }
+    &:hover::before {
+      opacity: $carousel-control-hover-opacity;
+    }
+
+    &.active::before {
+      @include theme-contrast-color("nav", "background-color");
+      opacity: 1;
     }
   }
 }
@@ -208,7 +186,7 @@
 .carousel-play-controls {
   position: relative;
 
-  .btn-link {
+  .carousel-controls {
     @include theme-contrast-color("nav", "color");
 
     &:hover {
