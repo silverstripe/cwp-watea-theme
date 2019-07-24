@@ -2,7 +2,7 @@ body {
   @include theme-font;
 }
 
-a:not(.btn) {
+a:not(.btn, .dropdown-item) {
   @include theme-color("accent", "color");
 }
 
