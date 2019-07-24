@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="<%t CWP_Theme.MAIN 'Main' %>" role="navigation">
         <div class="container">
             <div class="collapse navbar-collapse" id="navbar-collapse">
-                <div class="d-block d-md-none border-bottom border-top">
+                <div class="d-block d-md-none search-container">
                     <form class="form-inline" action="/search/SearchForm">
                         <% include HeaderSearch ExtraClass="col-12 pt-2 pb-2" %>
                     </form>
