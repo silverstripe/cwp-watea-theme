@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "watch": "webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js --watch",
-    "build": "yarn lint && webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "package": "yarn lint && NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "dev": "yarn lint && webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "build": "yarn lint && NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "lint": "yarn lint-js; yarn lint-sass",
     "lint-js": "node_modules/.bin/eslint src/js",
     "lint-sass": "node_modules/.bin/sass-lint -v"
@@ -16,7 +16,6 @@
   },
   "license": "BSD-3-Clause",
   "dependencies": {
-    "laravel-mix": "^4.0.0",
     "path": "^0.12.7"
   },
   "devDependencies": {
@@ -26,9 +25,10 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
+    "laravel-mix": "^4.0.0",
     "sass": "^1.17.3",
     "sass-lint": "^1.10.2",
-    "sass-loader": "7.*",
+    "sass-loader": "^7.0.0",
     "vue-template-compiler": "^2.6.10"
   }
 }
