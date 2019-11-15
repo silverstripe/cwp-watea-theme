@@ -1,6 +1,4 @@
 .carousel {
-  // The navbar has a 1px border on the bottom, so adding it to the margin
-  margin-top: -$line-height-computed + .4rem;
   margin-bottom: $jumbotron-padding * 2;
   border-bottom: 1px solid $gray-300;
 
@@ -19,11 +17,6 @@
     color: $carousel-caption-color;
     @include theme-contrast-color("carousel", "color");
 
-    a {
-      color: $carousel-caption-color;
-      @include theme-contrast-color("carousel", "color");
-    }
-
     h1,
     h2,
     h3,
@@ -38,49 +31,34 @@
       h2,
       h3,
       p,
-      a {
+      a:not(.btn) {
         color: $carousel-caption-color;
         // Add text shadow to all text if there is an image
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-      }
-
-      .btn {
-        text-shadow: none;
-      }
-
-      .btn-link {
-        color: $carousel-caption-color;
-        border-color: $carousel-control-color;
-
-        &:hover {
-          border-color: darken($carousel-control-color, 20%);
-        }
       }
     }
 
     .btn {
       margin-left: $line-height-computed * 0.45;
       margin-right: $line-height-computed * 0.45;
-      padding: ($line-height-computed * 0.5) ($line-height-computed * 0.7);
-      @include theme-contrast-color("accent", "color");
 
       @include media-breakpoint-down(sm) {
         margin-bottom: floor($line-height-computed * 0.45);
       }
     }
 
-    .btn-link {
-      position: relative;
-      border: 1px solid lighten($primary, 20%);
-      @include theme-color("accent", "border-color");
+    &:not(.carousel-has-image) .carousel-secondary-action {
       @include theme-contrast-color("carousel", "color");
-      transition: all 0.3s ease;
+      border-color: currentColor;
 
       &:hover {
-        border-color: lighten($primary, 40%);
-        @include theme-color("accent", "border-color", "lighten", 20%);
+        @include theme-contrast-color("carousel", "color", #000);
       }
     }
+  }
+
+  .theme-carousel-default-background & a:not(.btn) {
+    color: $carousel-caption-color;
   }
 }
 
@@ -90,7 +68,7 @@
   // Increase distance between text and actions
   margin-bottom: $line-height-computed * 1.25;
   font-size: $font-size-base * 1.5;
-  font-weight: 300;
+  font-weight: $font-weight-light;
   line-height: 1.4;
 
   @include media-breakpoint-down(sm) {
@@ -99,16 +77,13 @@
 
   // Custom carousel link style for theme
   a {
-    border-bottom: 1px solid lighten($primary, 20%);
+    border-width: 0 0 1px 0;
+    border-style: solid;
     @include theme-color("accent", "border-bottom-color");
     text-decoration: none;
 
-    div.carousel-has-image & {
-      border-color: $carousel-control-color;
-    }
-
     &:hover {
-      border-bottom: 0;
+      @include theme-color("accent", "border-bottom-color", "lighten", 20%);
     }
   }
 }
@@ -128,8 +103,10 @@
 }
 
 .carousel-controls-inner-wrapper {
-  display: inline-block;
-  background: rgba(0, 0, 0, .2);
+  display: inline-flex;
+  @include theme-color("nav", "background-color");
+  border-radius: $border-radius-sm;
+  padding: 0 #{$spacer - $btn-padding-x-sm} 0 $spacer;
 }
 
 // Controls navigate left or right
@@ -145,13 +122,17 @@
     background-image: none;
 
     .fa {
-      font-size: $jumbotron-padding * 3.2;
+      font-size: 3.5rem;
+      padding: 0 14px 2px;
+      border-radius: $border-radius-sm;
+      background-color: rgba(0, 0, 0, 0.3);
     }
   }
 
   &:hover {
     background-color: rgba($gray-600, .2);
     cursor: pointer;
+    opacity: 1;
   }
 
   &:focus {
@@ -159,39 +140,55 @@
   }
 }
 
-
 // Carousel slides indicators
 .carousel-indicators {
-  display: inline-block;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 0;
+  margin-right: $line-height-computed / 2;
   position: static;
-  width: auto;
-  margin: 0;
-  padding-left: 14px;
 
-  li,
-  li.active {
-    display: inline-block;
-    margin-right: 4px;
-    margin-left: 4px;
-    vertical-align: middle;
+  .carousel-indicator-button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    width: $carousel-indicator-width;
+    height: 100%;
+    padding: 0;
+    @include transition($carousel-indicator-transition);
 
-    &:hover {
-      border-color: rgba($carousel-caption-color, .8);
+    &::before {
+      content: "";
+      @include theme-contrast-color("nav", "background-color");
+      opacity: $carousel-control-opacity;
+      width: 100%;
+      margin: 0 $carousel-indicator-spacer;
+      height: $carousel-indicator-height;
+    }
+
+    &:hover::before {
+      opacity: $carousel-control-hover-opacity;
+    }
+
+    &.active::before {
+      @include theme-contrast-color("nav", "background-color");
+      opacity: 1;
     }
   }
 }
 
 // Play and pause button
 .carousel-play-controls {
-  display: inline-block;
   position: relative;
-  padding-right: 6px;
 
-  .btn-link {
-    color: $carousel-caption-color;
+  .carousel-controls {
+    @include theme-contrast-color("nav", "color");
 
     &:hover {
-      color: rgba($carousel-caption-color, .8);
+      opacity: $carousel-control-hover-opacity;
     }
   }
 }

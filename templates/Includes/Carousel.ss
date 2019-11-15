@@ -2,7 +2,7 @@
 
     <%-- Determine if a carousel or single item --%>
     <% if $CarouselItems.Count > 1 %>
-        <div id="carousel-slide" data-ride="carousel" class="carousel slide text-center">
+        <div id="carousel-slide" data-ride="carousel" class="carousel slide text-center" role="region" aria-label="Slideshow: $CarouselTitle">
     <% else %>
         <div class="carousel slide text-center carousel-static">
     <% end_if %>
@@ -16,18 +16,19 @@
 
               <%-- Indicators --%>
               <div class="carousel-controls-inner-wrapper">
-                  <ol class="carousel-indicators">
+                  <div class="carousel-indicators" aria-label="Slide controls">
                     <% loop $CarouselItems %>
-                      <li data-target="#carousel-slide" data-slide-to="$Pos(0)" <% if $Pos == 1 %>class="active"<% end_if %> name="carousel-item-{$Pos}"></li>
+                        <button data-target="#carousel-slide" data-slide-to="$Pos(0)" class="carousel-indicator-button<% if $Pos == 1 %> active<% end_if %>" name="carousel-item-{$Pos}" aria-label="Slide $Pos of $TotalItems">
+                        </button>
                     <% end_loop %>
-                  </ol>
+                  </div>
 
                   <%-- Play or Pause --%>
                   <div class="carousel-play-controls">
-                    <button type="button" class="btn btn-link btn-sm" id="carousel-pause" aria-label="Autoplaying carousel with slides. <%t CwpCarousel.PAUSESLIDE "Click to pause carousel slides." %>">
+                    <button type="button" class="btn btn-sm carousel-controls" id="carousel-pause" aria-label="Autoplaying carousel with slides. <%t CwpCarousel.PAUSESLIDE "Click to pause carousel slides." %>">
                       <i class="fa fa-pause" aria-hidden="true"></i>
                     </button>
-                    <button type="button" class="btn btn-link btn-sm" id="carousel-play" aria-label="Paused carousel with slides. <%t CwpCarousel.PLAYSLIDE "Click to play carousel slides." %>" style="display:none;">
+                    <button type="button" class="btn btn-sm carousel-controls" id="carousel-play" aria-label="Paused carousel with slides. <%t CwpCarousel.PLAYSLIDE "Click to play carousel slides." %>" style="display:none;">
                       <i class="fa fa-play" aria-hidden="true"></i>
                     </button>
                   </div>
@@ -36,6 +37,7 @@
             </div>
 
             <%-- Controls --%>
+            <div aria-live="polite" id="carousel-slide-title" class="sr-only"></div>
             <div class="carousel-controls">
               <button class="carousel-item-left carousel-control-prev" href="#carousel-slide" data-slide="prev">
                 <i class="fa fa-angle-left" aria-hidden="true"></i>
@@ -56,7 +58,9 @@
               <div class="<% if First %>active <% end_if %>carousel-item <% if $Image %>carousel-has-image<% end_if %>"
                 <% if $Image %> style="background-image:url($Image.Fill(1920,1080).URL);"<% end_if %>
                 <% if $Title %> aria-labelledby="carousel-title-{$Pos}"<% end_if %>
-                <% if $Content %> aria-describedby="carousel-desc-{$Pos}"<% end_if %>>
+                <% if $Content %> aria-describedby="carousel-desc-{$Pos}"<% end_if %>
+                data-title="Slide $Pos of $TotalItems: $Title"
+              >
 
                 <div class="carousel-mask"></div>
 
@@ -72,18 +76,16 @@
                             <% end_if %>
 
                             <% if $PrimaryCallToActionLabel || $SecondaryCallToActionLabel %>
-                                <p>
-                                    <% if $PrimaryCallToActionLabel %>
-                                        <a class="btn btn-primary btn-lg" href="{$PrimaryCallToAction.Link}">
-                                            $PrimaryCallToActionLabel
-                                        </a>
-                                    <% end_if %>
-                                    <% if $SecondaryCallToActionLabel %>
-                                        <a class="btn btn-lg btn-link" href="{$SecondaryCallToAction.Link}">
-                                            $SecondaryCallToActionLabel
-                                        </a>
-                                    <% end_if %>
-                                </p>
+                                <% if $PrimaryCallToActionLabel %>
+                                    <a class="btn btn-primary btn-lg" href="{$PrimaryCallToAction.Link}">
+                                        $PrimaryCallToActionLabel
+                                    </a>
+                                <% end_if %>
+                                <% if $SecondaryCallToActionLabel %>
+                                <a class="btn btn-lg btn-outline-light carousel-secondary-action" href="{$SecondaryCallToAction.Link}">
+                                        $SecondaryCallToActionLabel
+                                    </a>
+                                <% end_if %>
                             <% end_if %>
                         </div>
                     </div>
@@ -92,7 +94,5 @@
               </div>
           <% end_loop %>
       </div>
-      <%-- Announce end of carousel for screen readers --%>
-      <div tabindex="0" class="sr-only"><%t CwpCarousel.ENDOFCAROUSEL "End of carousel." %></div>
     </div>
 <% end_if %>

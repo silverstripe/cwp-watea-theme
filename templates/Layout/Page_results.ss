@@ -20,7 +20,7 @@
                             <% end_if %>
                             <div class="row">
                                 <div class="col-sm-12 col-md-8">
-                                    <p class="lead search-results__message">
+                                    <p class="lead search-results__message" tabindex="-1">
                                         <% if $Original %>
                                             <%t CWP_Search.ShowingResultsInsteadFor 'Showing results for "{query}" instead' query=$Query.XML %>
                                         <% else %>
