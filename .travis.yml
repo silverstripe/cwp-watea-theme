@@ -1,10 +1,30 @@
-language: node_js
+language: php
 
-node_js:
-  - '10'
+php: 7.1
+
+dist: trusty
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install chromium-chromedriver
+
+cache:
+  directories:
+    - $HOME/.composer/cache/files
+
+env:
+  global:
+    - TRAVIS_NODE_VERSION="10"
 
 before_script:
+  - npm install -g nvm
+  - nvm install $TRAVIS_NODE_VERSION
+  - nvm use
+  - npm install -g yarn
   - yarn install
+  - composer require composer/installers:^1.5 cwp/starter-theme:1.x-dev --prefer-source
+  - (cd themes/starter && yarn install)
+  - mv themes/starter ../
 
 script:
   # Linting
