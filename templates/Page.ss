@@ -23,7 +23,7 @@
         <footer class="footer-site">
             <% include Footer %>
         </footer>
-        <% require javascript('//code.jquery.com/jquery-3.3.1.min.js') %>
+        <% require javascript('//code.jquery.com/jquery-3.4.1.min.js') %>
         <% require javascript('themes/starter/dist/js/main.js') %>
         <% require javascript('themes/watea/dist/js/main.js') %>
         <% include GoogleAnalytics %>
