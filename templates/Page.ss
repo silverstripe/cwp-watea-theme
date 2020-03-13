@@ -30,7 +30,7 @@
         <footer class="footer-site" role="contentinfo">
             <% include Footer %>
         </footer>
-        <% require javascript('//code.jquery.com/jquery-3.4.1.min.js') %>
+        <% require javascript('https://code.jquery.com/jquery-3.4.1.min.js') %>
         <% require javascript('themes/starter/dist/js/main.js') %>
         <% require javascript('themes/watea/dist/js/main.js') %>
         <% include GoogleAnalytics %>
