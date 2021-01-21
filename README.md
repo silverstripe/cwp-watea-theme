@@ -1,6 +1,6 @@
 # CWP Wātea theme
 
-[![Build Status](https://travis-ci.org/silverstripe/cwp-watea-theme.svg?branch=master)](https://travis-ci.org/silverstripe/cwp-watea-theme)
+[![Build Status](https://api.travis-ci.com/silverstripe/cwp-watea-theme.svg?branch=3)](https://travis-ci.com/silverstripe/cwp-watea-theme)
 [![Packagist](https://img.shields.io/packagist/v/cwp/watea-theme.svg)](https://packagist.org/packages/cwp/watea-theme)
 [![SilverStripe supported module](https://img.shields.io/badge/silverstripe-supported-0071C4.svg)](https://www.silverstripe.org/software/addons/silverstripe-commercially-supported-module-list/)
 
