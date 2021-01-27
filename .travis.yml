@@ -3,3 +3,12 @@ version: ~> 1.0
 import:
   - silverstripe/silverstripe-travis-shared:config/provision/cwp.yml
   - silverstripe/silverstripe-travis-shared:config/jobs/cwp-recipe-cms-range-npm.yml
+
+before_script:
+  # Shift the starter theme to a sibling directory of the current (required for npm run build to work)
+  # Note that if Behat or other functional tests are required in future, we'll need to install a CWP installer
+  # project and copy the current working watea dir (installed by Travis) into `themes/watea` instead of doing this.
+  - mv themes/starter ../
+  - (cd ../starter && npm install --silent)
+  - npm install --silent
+
