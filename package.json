@@ -8,7 +8,8 @@
     "package": "yarn lint && NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "lint": "yarn lint-js; yarn lint-sass",
     "lint-js": "node_modules/.bin/eslint src/js",
-    "lint-sass": "node_modules/.bin/sass-lint -v"
+    "lint-sass": "node_modules/.bin/sass-lint -v",
+    "test": "echo \"No tests implemented\""
   },
   "repository": {
     "type": "git",
