@@ -71,6 +71,15 @@
   .h3 {
     margin-bottom: ($line-height-computed / 3);
   }
+
+  .fa {
+    color: $gray-600;
+    font-size: 1.5rem;
+
+    &:hover {
+      color: $gray-600;
+    }
+  }
 }
 
 .label {
