@@ -19,5 +19,8 @@ jobs:
     # @import "../../../starter/node_modules/bootstrap/scss/mixins";
     # which isn't possible to resolve in the current shared CI because it assumes that cwp/cwp-starter-theme
     # is installed in a sibling theme dirrectly AND that npm install was run on it
-    run: |
-      echo "Passed"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pass
+        run: |
+          echo "Passed"
