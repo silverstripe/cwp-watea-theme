@@ -1,8 +1,7 @@
 # CWP Wātea theme
 
 [![CI](https://github.com/silverstripe/cwp-watea-theme/actions/workflows/ci.yml/badge.svg)](https://github.com/silverstripe/cwp-watea-theme/actions/workflows/ci.yml)
-[![Packagist](https://img.shields.io/packagist/v/cwp/watea-theme.svg)](https://packagist.org/packages/cwp/watea-theme)
-[![SilverStripe supported module](https://img.shields.io/badge/silverstripe-supported-0071C4.svg)](https://www.silverstripe.org/software/addons/silverstripe-commercially-supported-module-list/)
+[![Silverstripe supported module](https://img.shields.io/badge/silverstripe-supported-0071C4.svg)](https://www.silverstripe.org/software/addons/silverstripe-commercially-supported-module-list/)
 
 The [Wātea theme](https://github.com/silverstripe/cwp-watea-theme) can be installed on top of the
 [Starter theme](https://github.com/silverstripe/cwp-starter-theme) (see
