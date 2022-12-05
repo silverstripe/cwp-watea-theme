@@ -55,7 +55,7 @@
           <% loop $CarouselItems %>
 
               <%-- Items --%>
-              <div class="<% if First %>active <% end_if %>carousel-item <% if $Image %>carousel-has-image<% end_if %>"
+              <div class="<% if $IsFirst %>active <% end_if %>carousel-item <% if $Image %>carousel-has-image<% end_if %>"
                 <% if $Image %> style="background-image:url($Image.Fill(1920,1080).URL);"<% end_if %>
                 <% if $Title %> aria-labelledby="carousel-title-{$Pos}"<% end_if %>
                 <% if $Content %> aria-describedby="carousel-desc-{$Pos}"<% end_if %>
