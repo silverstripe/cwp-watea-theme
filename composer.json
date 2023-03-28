@@ -9,8 +9,8 @@
     ],
     "license": "BSD-3-Clause",
     "require": {
-        "cwp/starter-theme": "3.3.x-dev",
-        "cwp/agency-extensions": "2.7.x-dev"
+        "cwp/starter-theme": "^3.2@dev",
+        "cwp/agency-extensions": "^2.0"
     },
     "extra": {
         "installer-name": "watea",
