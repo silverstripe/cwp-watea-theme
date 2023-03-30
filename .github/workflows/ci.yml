@@ -4,15 +4,10 @@ on:
   push:
   pull_request:
   workflow_dispatch:
-  # Every Monday at 1:30pm UTC
-  schedule:
-    - cron: '30 13 * * 1'
 
 jobs:
   ci:
     name: CI
-    # Only run cron on the silverstripe account
-    if: (github.event_name == 'schedule' && github.repository_owner == 'silverstripe') || (github.event_name != 'schedule')
     # This CI would normally use silverstripe/gha-ci/.github/workflows/ci.yml@v1 however it does not
     # reason being the only job generated is the 'JS' job which includes rebuilding the css
     # This cannot pass because of statements such as editor.scss
