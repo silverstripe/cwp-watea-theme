@@ -5,16 +5,14 @@
 
 The [Wātea theme](https://github.com/silverstripe/cwp-watea-theme) can be installed on top of the
 [Starter theme](https://github.com/silverstripe/cwp-starter-theme) (see
-[cascading themes](https://docs.silverstripe.org/en/4/developer_guides/templates/themes)) to provide a more visually
+[cascading themes](https://docs.silverstripe.org/en/developer_guides/templates/themes)) to provide a more visually
 appealing start to a CWP website.
 
 ![Screenshot](docs/images/screenshot.jpg)
 
 ## Installation
 
-Install this theme module with Composer:
-
-```
+```sh
 composer require cwp/watea-theme
 ```
 
@@ -25,13 +23,6 @@ You can find documentation on how to use this theme in the CWP Developer Documen
 
 You may also find the documentation for the Starter theme useful:
 [Customising the starter theme](https://github.com/silverstripe/cwp/blob/master/docs/en/01_Working_with_projects/05_Customising_the_starter_theme.md).
-
-## Requirements
-
-* [Composer](https://getcomposer.org)
-* `cwp/starter-theme`: The foundation theme for this subtheme, via Composer
-* [`cwp/agency-extensions`](https://github.com/silverstripe/cwp-agencyextensions): provides additional functionality
-  to the CMS for agency-style websites.
 
 ### Development requirements
 
