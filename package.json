@@ -1,11 +1,14 @@
 {
   "name": "cwp-watea-theme",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "private": true,
+  "engines": {
+    "node": "^18.x"
+  },
   "scripts": {
-    "watch": "webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js --watch",
-    "dev": "yarn lint && webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "build": "yarn lint && NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "mix watch",
+    "dev": "mix",
+    "build": "mix --production",
     "lint": "yarn lint-js; yarn lint-sass",
     "lint-js": "node_modules/.bin/eslint src/js",
     "lint-sass": "node_modules/.bin/sass-lint -v",
@@ -17,19 +20,15 @@
   },
   "license": "BSD-3-Clause",
   "dependencies": {
-    "laravel-mix": "^4.0.0",
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "babel-eslint": "^7.1.1",
-    "eslint": "^3.13.1",
-    "eslint-config-airbnb": "^14.0.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^3.0.2",
-    "eslint-plugin-react": "^6.9.0",
+    "@babel/runtime": "^7.20.0",
+    "@silverstripe/eslint-config": "^1.1.0",
+    "laravel-mix": "^6.0.49",
     "sass": "^1.17.3",
     "sass-lint": "^1.10.2",
-    "sass-loader": "7.*",
+    "sass-loader": "^7.3.1",
     "vue-template-compiler": "^2.6.10"
   }
 }
